@@ -15,15 +15,14 @@ $text-color-black: #4e4e4e;
 /*========== Font Weights ==========*/
 $font-regular: 400;
 $font-medium: 500;
+$font-semibold: 600;
 $font-bold: 700;
 
 /*========== Font Sizes ==========*/
 $bigger-font-size: 4.7rem;
 $big-font-size: 2.95rem;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.3rem;
-$h3-font-size: 1rem;
-$normal-font-size: 0.938rem;
+$subtitle-font-size: 1.3rem;
+$normal-font-size: 1.05rem;
 $small-font-size: 0.813rem;
 $smaller-font-size: 0.75rem;
 
@@ -71,8 +70,8 @@ body {
   }
 
   .subtitle {
-    font-size: $h2-font-size;
-    font-weight: $font-bold;
+    font-size: $subtitle-font-size;
+    font-weight: $font-semibold;
   }
 
   .white-container {

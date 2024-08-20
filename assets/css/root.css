@@ -18,7 +18,7 @@ body {
   /*========== General Setup ==========*/
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
-  font-size: 0.938rem;
+  font-size: 1.05rem;
   font-weight: 400;
   color: white;
   letter-spacing: 0.2px;
@@ -45,7 +45,7 @@ body .bigger-title {
 }
 body .subtitle {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 body .white-container {
   background-color: #f4f4f4;
