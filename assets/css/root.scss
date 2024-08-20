@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*=============== VARIABLES ===============*/
+
+/*========== Font Style ==========*/
+$font-family: "Montserrat", sans-serif;
+
+/*========== Colors ==========*/
+$first-color: #0f2c59;
+$secondary-color: #f4f4f4;
+$text-color: #ffff;
+$text-color-alt: #0f2c59;
+$text-color-black: #4e4e4e;
+
+/*========== Font Weights ==========*/
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+/*========== Font Sizes ==========*/
+$bigger-font-size: 4.7rem;
+$big-font-size: 2.95rem;
+$h1-font-size: 1.5rem;
+$h2-font-size: 1.3rem;
+$h3-font-size: 1rem;
+$normal-font-size: 0.938rem;
+$small-font-size: 0.813rem;
+$smaller-font-size: 0.75rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*========== General Setup ==========*/
+  background-color: $first-color;
+  font-family: $font-family;
+  font-size: $normal-font-size;
+  font-weight: $font-regular;
+  color: $text-color;
+  letter-spacing: 0.2px;
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /*=============== REUSABLE CLASSES ===============*/
+  .big-title {
+    font-size: $big-font-size;
+    font-weight: $font-bold;
+  }
+
+  .bigger-title {
+    font-size: $bigger-font-size;
+    font-weight: $font-bold;
+  }
+
+  .subtitle {
+    font-size: $h2-font-size;
+    font-weight: $font-bold;
+  }
+
+  .white-container {
+    background-color: $secondary-color;
+    color: $text-color-black;
+
+    .bigger-title,
+    .big-title,
+    .subtitle {
+      color: $text-color-alt;
+    }
+  }
+
+  /* test class */
+  .root-test-div {
+    height: 50vh;
+  }
+}
