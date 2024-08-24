@@ -1,1 +1,59 @@
 /*============== TOPIC NAME ==============*/
+ @import "../../../../assets/css/root";
+ @mixin ort($dis,$vert){
+    display: $dis;
+    justify-content: $vert;
+}
+
+
+body{
+background-color:#FFFFFF ;
+
+    .mainPage{
+        
+        header{
+            width: 1400px;
+            height: 67px;
+            align-items: center;
+            @include ort(flex,space-between );
+            margin-top: 14px;
+            margin-left: 260px;
+            
+            
+            nav{
+                ul{
+                @include ort(flex,space-between );
+                column-gap: 30px;
+                    li{
+                        list-style-type: none;
+                        
+                        a{
+                            text-decoration: none;
+                            color: #000000;
+                            font-weight: 400;
+                            
+                            
+                        }
+                        
+                        button{
+                            color: #FFFFFF;
+                            background-color: #0F2C59;
+                            border-radius: 23px;
+                            font-size: 18px;
+                            font-weight: 400px;
+                            width: 138px;
+                            height: 47px ;
+                            @include ort(flex,space-around );
+                            align-items: center;
+                            padding: 8px;
+                            border: none;
+                            margin-top: -14px;
+                            
+                        } 
+                        }   
+                        }
+                        }
+                    }
+                    }
+                    
+                   }
