@@ -168,4 +168,54 @@ body .yonetim .members button img {
   padding-bottom: 5px;
   display: flex;
   justify-content: space-around;
+}
+body .tanitim2 p {
+  margin-top: 50px;
+  color: #0F2C59;
+  text-align: center;
+  font-size: 2.95rem;
+  font-weight: 700;
+}
+body .kaptan {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .kaptan .team p {
+  color: #000000;
+}
+body .kaptan .team h3 {
+  color: #0F2C59;
+  font-size: 1.3rem;
+}
+body .kaptan .team img {
+  width: 250px;
+}
+body .kaptan .team button {
+  background-color: #0F2C59;
+  border-radius: 35px;
+  width: 230px;
+  height: 55px;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+}
+body .kaptan .team button p {
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 50px;
+  padding-top: 9px;
+}
+body .kaptan .team button img {
+  width: 100px;
+  height: 50px;
+  padding-left: 60px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */
