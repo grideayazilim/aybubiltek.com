@@ -82,23 +82,90 @@ body .mainPage header nav ul {
 body .mainPage header nav ul li {
   list-style-type: none;
 }
+body .mainPage header nav ul li img {
+  margin-left: 5px;
+  cursor: pointer;
+}
 body .mainPage header nav ul li a {
   text-decoration: none;
   color: #000000;
   font-weight: 400;
 }
 body .mainPage header nav ul li button {
-  color: #FFFFFF;
-  background-color: #0F2C59;
-  border-radius: 23px;
+  font-weight: 400;
   font-size: 18px;
-  font-weight: 400px;
+  color: #FBFBFB;
   width: 138px;
   height: 47px;
+  background-color: #0F2C59;
+  border-radius: 23px;
+  align-items: center;
+  border: none;
   display: flex;
   justify-content: space-around;
-  align-items: center;
   padding: 8px;
-  border: none;
   margin-top: -14px;
+  cursor: pointer;
+}
+body .serit header {
+  width: 1920px;
+  height: 171px;
+  margin-top: 20px;
+  background-color: #0F2C59;
+}
+body .serit header p {
+  font-size: 4.7rem;
+  font-family: 700;
+  margin-left: 600px;
+  padding-top: 40px;
+}
+body .tanitim p {
+  margin-top: 50px;
+  color: #0F2C59;
+  text-align: center;
+  font-size: 2.95rem;
+  font-weight: 700;
+}
+body .yonetim {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .yonetim .members p {
+  color: #000000;
+}
+body .yonetim .members h3 {
+  color: #0F2C59;
+  font-size: 1.3rem;
+}
+body .yonetim .members img {
+  width: 250px;
+}
+body .yonetim .members button {
+  background-color: #0F2C59;
+  border-radius: 35px;
+  width: 230px;
+  height: 55px;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+}
+body .yonetim .members button p {
+  font-weight: 400;
+  font-size: 32px;
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 50px;
+  padding-top: 9px;
+}
+body .yonetim .members button img {
+  width: 100px;
+  height: 50px;
+  padding-left: 60px;
+  padding-top: 12px;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
 }/*# sourceMappingURL=main.css.map */
