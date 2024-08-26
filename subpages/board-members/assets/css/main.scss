@@ -5,137 +5,89 @@
     justify-content: $vert;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
 body{
-background-color:#FFFFFF ;
+background-color:$text-color ;
+font-family: $font-family;
+letter-spacing: 0.2px;
 
-    .mainPage{
-        
-        header{
-            width: 1400px;
-            height: 67px;
-            align-items: center;
-            @include ort(flex,space-between );
-            margin-top: 14px;
-            margin-left: 260px;
-            
-            nav{
-                ul{
-                @include ort(flex,space-between );
-                column-gap: 30px;
-                    li{
-                        list-style-type: none;
 
-                     img{
-                        margin-left: 5px;
-                        cursor: pointer;
-                     }
-                        
-                        a{
-                            text-decoration: none;
-                            color: #000000;
-                            font-weight: 400;
-                        }   
 
-                        button{
-                            font-weight: 400;
-                            font-size: 18px;
-                            color:#FBFBFB ;
-                            width: 138px;
-                            height: 47px;
-                            background-color:#0F2C59 ;
-                            border-radius: 23px;
-                            align-items: center;
-                            border: none;
-                            @include ort(flex,space-around );
-                            padding: 8px;
-                            margin-top: -14px;
-                            cursor: pointer;
-                        }
-                        }
-                        }
-                    }
-                    }      
-                   }
-
-                   .serit{
-                    header{
-                        width: 1920px;
-                        height: 171px;
-                        margin-top: 20px;
-                        background-color:#0F2C59 ;
-                        p{
-                        font-size: $bigger-font-size;
-                        font-family: $font-bold;
-                        margin-left: 600px;
-                        padding-top: 40px;                       
-                    }
-                    }
-                   }
-
-                   .tanitim{
+                   .intro{
 
                     p{
                         margin-top: 50px;
-                        color: #0F2C59;
+                        color: $text-color-alt;
                         text-align: center;
                         font-size: $big-font-size;
                         font-weight: $font-bold;
+                        
                     }
                 
                    }
 
-                   .yonetim{
+                   .manage{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
+                    
+                    
 
                     .members{
+                     text-align: center;
                   p{
+                    margin-top: 10px;
                     color: #000000;
+                    
                   }
 
                   h3{
+                    margin-top: 10px;
                     color: #0F2C59;
                     font-size: $subtitle-font-size;
+                    font-weight: $font-semibold;
                   }
 
                   img{
-
                     width: 250px;
+                    border-radius: 50%;
+
+                    &:hover{
+                      transform: scale(110% , 110%);
+                      transition: 1s;
+                      z-index: -1;
+                      box-shadow: 0 0 20px rgb(56, 56, 183);
+                      
+                    }
                   }
 
                   button{
                     background-color: #0F2C59;
                     border-radius: 35px;
-                    width: 230px;
+                    width: 210px;
                     height: 55px;
                     border: none;
-                    @include ort(flex,space-around );
+                    margin-top: 10px;
+                    margin-bottom: 100px;
+                   
+                    
                       
-                    p{
-                        font-weight: 400;
-                        font-size: 32px;
-                        color:#FFFFFF ;
-                        font-family: $font-family;
-                        padding-left: 40px;
-                        @include ort(flex,space-around );
-                        padding-right: 50px;
-                        padding-top: 9px;
-                    }
-                    img{
-                      
-                        width: 100px; 
-                        height: 50px;
-                        padding-left: 60px;
-                        padding-top: 12px;
-                        padding-bottom: 5px;
-                        @include ort(flex,space-around );
+                   
 
-                    }
                   }
                     }
                    }
 
-                   .tanitim2{
+                   .intro-two{
                     p{
                       margin-top: 50px;
                       color: #0F2C59;
@@ -146,53 +98,49 @@ background-color:#FFFFFF ;
                   }
                    }
 
-                   .kaptan{
+                   .captains{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
 
                     .team{
+                      text-align: center;
                       p{
                         color: #000000;
+                        margin-top: 10px;
                       }
     
                       h3{
+                        margin-top: 10px;
                         color: #0F2C59;
                         font-size: $subtitle-font-size;
+                        font-weight: $font-semibold;
                       }
     
                       img{
     
                         width: 250px;
+                        border-radius: 50%;
+
+                        &:hover{
+                          transform: scale(110% , 110%);
+                          transition: 1s;
+                          z-index: -1;
+                          box-shadow: 0 0 20px rgb(56, 56, 183);
+                        }
                       }
                       button{
                         background-color: #0F2C59;
                         border-radius: 35px;
-                        width: 230px;
+                        width: 210px;
                         height: 55px;
                         border: none;
-                        @include ort(flex,space-around );
+                        margin-top: 10px;
+                        margin-bottom: 100px;
+                      
                      
-                        p{
-                            font-weight: 400;
-                            font-size: 32px;
-                            color:#FFFFFF ;
-                            font-family: $font-family;
-                            padding-left: 40px;
-                            @include ort(flex,space-around );
-                            padding-right: 50px;
-                            padding-top: 9px;
-                            
-                        }
                         
-                        img{
-                          
-                            width: 100px; 
-                            height: 50px;
-                            padding-left: 60px;
-                            padding-top: 12px;
-                            padding-bottom: 5px;
-                            @include ort(flex,space-around );
-                        }
+                        
+                
                       }
 
                     }

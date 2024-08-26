@@ -61,161 +61,104 @@ body .root-test-div {
   height: 50vh;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #FFFFFF;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.2px;
 }
-body .mainPage header {
-  width: 1400px;
-  height: 67px;
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 14px;
-  margin-left: 260px;
+body .intro p {
+  margin-top: 50px;
+  color: #0f2c59;
+  text-align: center;
+  font-size: 2.95rem;
+  font-weight: 700;
 }
-body .mainPage header nav ul {
-  display: flex;
-  justify-content: space-between;
-  -moz-column-gap: 30px;
-       column-gap: 30px;
+body .manage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-body .mainPage header nav ul li {
-  list-style-type: none;
+body .manage .members {
+  text-align: center;
 }
-body .mainPage header nav ul li img {
-  margin-left: 5px;
-  cursor: pointer;
-}
-body .mainPage header nav ul li a {
-  text-decoration: none;
+body .manage .members p {
+  margin-top: 10px;
   color: #000000;
-  font-weight: 400;
 }
-body .mainPage header nav ul li button {
-  font-weight: 400;
-  font-size: 18px;
-  color: #FBFBFB;
-  width: 138px;
-  height: 47px;
+body .manage .members h3 {
+  margin-top: 10px;
+  color: #0F2C59;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+body .manage .members img {
+  width: 250px;
+  border-radius: 50%;
+}
+body .manage .members img:hover {
+  transform: scale(110%, 110%);
+  transition: 1s;
+  z-index: -1;
+  box-shadow: 0 0 20px rgb(56, 56, 183);
+}
+body .manage .members button {
   background-color: #0F2C59;
-  border-radius: 23px;
-  align-items: center;
+  border-radius: 35px;
+  width: 210px;
+  height: 55px;
   border: none;
-  display: flex;
-  justify-content: space-around;
-  padding: 8px;
-  margin-top: -14px;
-  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 100px;
 }
-body .serit header {
-  width: 1920px;
-  height: 171px;
-  margin-top: 20px;
-  background-color: #0F2C59;
-}
-body .serit header p {
-  font-size: 4.7rem;
-  font-family: 700;
-  margin-left: 600px;
-  padding-top: 40px;
-}
-body .tanitim p {
+body .intro-two p {
   margin-top: 50px;
   color: #0F2C59;
   text-align: center;
   font-size: 2.95rem;
   font-weight: 700;
 }
-body .yonetim {
+body .captains {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-body .yonetim .members p {
-  color: #000000;
-}
-body .yonetim .members h3 {
-  color: #0F2C59;
-  font-size: 1.3rem;
-}
-body .yonetim .members img {
-  width: 250px;
-}
-body .yonetim .members button {
-  background-color: #0F2C59;
-  border-radius: 35px;
-  width: 230px;
-  height: 55px;
-  border: none;
-  display: flex;
-  justify-content: space-around;
-}
-body .yonetim .members button p {
-  font-weight: 400;
-  font-size: 32px;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  padding-left: 40px;
-  display: flex;
-  justify-content: space-around;
-  padding-right: 50px;
-  padding-top: 9px;
-}
-body .yonetim .members button img {
-  width: 100px;
-  height: 50px;
-  padding-left: 60px;
-  padding-top: 12px;
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: space-around;
-}
-body .tanitim2 p {
-  margin-top: 50px;
-  color: #0F2C59;
+body .captains .team {
   text-align: center;
-  font-size: 2.95rem;
-  font-weight: 700;
 }
-body .kaptan {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-body .kaptan .team p {
+body .captains .team p {
   color: #000000;
+  margin-top: 10px;
 }
-body .kaptan .team h3 {
+body .captains .team h3 {
+  margin-top: 10px;
   color: #0F2C59;
   font-size: 1.3rem;
+  font-weight: 600;
 }
-body .kaptan .team img {
+body .captains .team img {
   width: 250px;
+  border-radius: 50%;
 }
-body .kaptan .team button {
+body .captains .team img:hover {
+  transform: scale(110%, 110%);
+  transition: 1s;
+  z-index: -1;
+  box-shadow: 0 0 20px rgb(56, 56, 183);
+}
+body .captains .team button {
   background-color: #0F2C59;
   border-radius: 35px;
-  width: 230px;
+  width: 210px;
   height: 55px;
   border: none;
-  display: flex;
-  justify-content: space-around;
-}
-body .kaptan .team button p {
-  font-weight: 400;
-  font-size: 32px;
-  color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
-  padding-left: 40px;
-  display: flex;
-  justify-content: space-around;
-  padding-right: 50px;
-  padding-top: 9px;
-}
-body .kaptan .team button img {
-  width: 100px;
-  height: 50px;
-  padding-left: 60px;
-  padding-top: 12px;
-  padding-bottom: 5px;
-  display: flex;
-  justify-content: space-around;
+  margin-top: 10px;
+  margin-bottom: 100px;
 }/*# sourceMappingURL=main.css.map */
