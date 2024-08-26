@@ -1,1 +1,151 @@
-/*============== TOPIC NAME ==============*//*# sourceMappingURL=main.css.map */
+@charset "UTF-8";
+/*============== TOPIC NAME ==============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============== VARIABLES ===============*/
+/*========== Font Style ==========*/
+/*========== Colors ==========*/
+/*========== Font Weights ==========*/
+/*========== Font Sizes ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*========== General Setup ==========*/
+  background-color: #0f2c59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.2px;
+  /*=============== REUSABLE CLASSES ===============*/
+  /* test class */
+}
+body ul {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .big-title {
+  font-size: 2.95rem;
+  font-weight: 700;
+}
+body .bigger-title {
+  font-size: 4.7rem;
+  font-weight: 700;
+}
+body .subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+body .white-container {
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
+body .white-container .bigger-title,
+body .white-container .big-title,
+body .white-container .subtitle {
+  color: #0f2c59;
+}
+body .root-test-div {
+  height: 50vh;
+}
+
+body {
+  background-color: white;
+}
+
+.header {
+  background-color: #0f2c59;
+  text-align: center;
+  width: 100%;
+  height: 171px;
+  align-items: center;
+  justify-content: center;
+}
+.header .img1 {
+  height: 171px;
+  float: left;
+}
+.header .img2 {
+  height: 171px;
+  float: right;
+}
+.header #big-tit {
+  display: inline;
+  position: relative;
+  top: 20%;
+  background: linear-gradient(to right, #fbfbfb, #ac96fb);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#whi-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 105px;
+  padding: 85px;
+}
+#whi-cont .mini-divs {
+  width: 363px;
+  height: 466px;
+  top: 373px;
+  left: 155px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  text-align: center;
+}
+#whi-cont .mini-divs .p-element {
+  display: inline;
+  width: 248px;
+  height: 49px;
+  margin: 0;
+  padding-bottom: 10px;
+  grid-row: 3/4;
+  align-self: end;
+  justify-self: center;
+}
+#whi-cont .mini-divs .images {
+  width: 363px; /*büyüklük biraz büyük gibi geldi ama figmadaki ölçüyü aldım */
+  height: 363px;
+  top: 373px;
+  left: 155px;
+  border: 4px solid #000000;
+  border-radius: 100%;
+  grid-row: 1/2;
+}
+#whi-cont .mini-divs:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+#whi-cont .mini-divs:hover .images {
+  box-shadow: 0 0 15px 5px #ac96fb;
+}
+
+@media (max-width: 1024px) {
+  #whi-cont {
+    grid-template-columns: repeat(2, 1fr); /* Tabletlerde 2 sütun */
+    width: 100%;
+  }
+}
+/* Telefonlar için düzen */
+@media (max-width: 600px) {
+  #whi-cont {
+    grid-template-columns: 1fr; /* Telefonlarda tek sütun */
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
