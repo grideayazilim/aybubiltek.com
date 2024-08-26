@@ -1,1 +1,172 @@
-/*============== TOPIC NAME ==============*//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============== VARIABLES ===============*/
+/*========== Font Style ==========*/
+/*========== Colors ==========*/
+/*========== Font Weights ==========*/
+/*========== Font Sizes ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*========== General Setup ==========*/
+  background-color: #0f2c59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.2px;
+  /*=============== REUSABLE CLASSES ===============*/
+  /* test class */
+}
+body ul {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .big-title {
+  font-size: 2.95rem;
+  font-weight: 700;
+}
+body .bigger-title {
+  font-size: 4.7rem;
+  font-weight: 700;
+}
+body .subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+body .white-container {
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
+body .white-container .bigger-title,
+body .white-container .big-title,
+body .white-container .subtitle {
+  color: #0f2c59;
+}
+body .root-test-div {
+  height: 50vh;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.first-title {
+  background-color: #0f2c59;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+}
+
+.sponsor-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.big-title {
+  display: flex;
+  justify-content: center;
+  color: #0f2c59;
+}
+
+.my-big-title {
+  font-size: 1.6rem !important;
+}
+
+.bigger-title {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(96.85deg, #FBFBFB 15%, #AC96FB 109.62%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.my-bigger-title {
+  font-size: 2.3rem !important;
+}
+
+.division {
+  margin-top: 3%;
+}
+
+.imgs {
+  width: 70%;
+}
+
+.imgs-kod2 {
+  width: 82%;
+}
+
+.imgs-kod {
+  margin-left: 28%;
+  width: 82%;
+}
+
+#effect {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#effect:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+}
+
+.img-part1 {
+  display: flex;
+  align-items: center;
+  padding-inline: 15%;
+  width: 100%;
+  margin-top: 2%;
+}
+
+.img-part2 {
+  display: flex;
+  align-items: center;
+  padding-inline: 15%;
+  margin-top: 2%;
+}
+
+.img-part3 {
+  display: flex;
+  align-items: center;
+  padding-inline: 15%;
+  display: flex;
+  justify-content: center;
+  padding-left: 37%;
+}
+
+.line {
+  width: 90%;
+  margin-left: 4%;
+  background: rgb(130, 126, 172);
+  height: 0.15rem;
+}
+
+.logo-left {
+  height: 100%;
+  left: -86px;
+  gap: 0px;
+}
+
+.logo-right {
+  height: 100%;
+  left: 1834px;
+  gap: 0px;
+}/*# sourceMappingURL=main.css.map */
