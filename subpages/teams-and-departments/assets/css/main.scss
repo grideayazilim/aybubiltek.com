@@ -6,39 +6,6 @@ body {
   background-color: white; //arkaplan default olarak mavi geldi ama figmada beyaz old için degistirdim
 }
 
-.header {
-  //üstteki mavi sütunun tamamını kapsayan nav
-  background-color: $first-color;
-  text-align: center;
-  width: 100%;
-  height: 171px;
-  align-items: center;
-  justify-content: center;
-
-  .img1 {
-    //sol taraftaki biltek mekanik çark resmi
-    height: 171px;
-    float: left;
-  }
-  .img2 {
-    //sağ taraftaki biltek mekanik çark resmi
-    height: 171px;
-    float: right;
-  }
-  #big-tit {
-    //Takımlar ve departmanlar yazısının id si ,bigger-title classına özellik vermedim diğerlerine etki edebilir diye düşündüm:)
-    display: inline;
-    position: relative;
-    top: 20%;
-    background: linear-gradient(
-      to right,
-      #fbfbfb,
-      #ac96fb
-    ); //degisimli renk kısmının renklerini rootta bulamadım
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 
 #whi-cont {
   //white-container divine Id verdim aynı classı kullanan diger kısımlar etkilenir endisesiyle
@@ -46,13 +13,19 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 105px;
-  padding: 85px;
+  gap: 95px;
+  row-gap: 70px;
+  padding: 70px;
+  justify-items: center;
 
+  a{
+    display: inline-block;
+    width: 257.5px;
+  }
   .mini-divs {
     //her takıma ait resim ve başlığı içeren kucuk divler
-    width: 363px;
-    height: 466px;
+    width: 257.75px;
+    height: 350px;
     top: 373px;
     left: 155px;
     display: grid;
@@ -74,38 +47,60 @@ body {
 
     .images {
       //takım logoları
-      width: 363px; /*büyüklük biraz büyük gibi geldi ama figmadaki ölçüyü aldım */
-      height: 363px;
+      width: 257.75px; 
+      height: 262.31px;
       top: 373px;
       left: 155px;
       border: 4px solid #000000;
       border-radius: 100%;
       grid-row: 1 / 2;
+      justify-self: center;
     }
   }
 
   .mini-divs:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
+    
 
     .images {
       box-shadow: 0 0 15px 5px #ac96fb;
+      
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1199px){
+  #whi-cont {
+    grid-template-columns: repeat(2, 1fr); /* Tabletlerde 2 sütun */
+    overflow: hidden;
+    gap: 10%;
+    row-gap: 5%;
+    padding: 10%;
+    justify-items: center;
+    
+  }
 
-@media (max-width: 1024px) {
+}
+//Büyük telefon küçük tabletler
+@media (min-width: 576px) and (max-width: 767px) {
+
   #whi-cont {
     grid-template-columns: repeat(2, 1fr); /* Tabletlerde 2 sütun */
     width: 100%;
+    overflow: hidden;
+    gap: 5%;
+    padding: 5%;
+    justify-items: center; 
   }
-}
 
+}
 /* Telefonlar için düzen */
 
-@media (max-width: 600px) {
+@media (max-width: 575px) {
   #whi-cont {
     grid-template-columns: 1fr; /* Telefonlarda tek sütun */
     width: 100%;
+    justify-items: center;
+
   }
 }
