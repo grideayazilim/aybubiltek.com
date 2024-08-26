@@ -221,7 +221,7 @@ body {
         width: 40%;
         padding-top: 0.7rem;
 
-        .x {
+        .social-media-icons {
           display: inline-block;
           height: 60px;
           width: 60px;
@@ -267,7 +267,7 @@ body {
           }
         }
 
-        .x:nth-child(1):hover {
+        .social-media-icons:nth-child(1):hover {
           width: 173px;
 
           .icon i {
@@ -275,7 +275,7 @@ body {
           }
         }
 
-        .x:nth-child(2):hover {
+        .social-media-icons:nth-child(2):hover {
           width: 178px;
 
           .icon i {
@@ -283,7 +283,7 @@ body {
           }
         }
 
-        .x:nth-child(3):hover {
+        .social-media-icons:nth-child(3):hover {
           width: 162px;
 
           .icon i {
@@ -291,7 +291,7 @@ body {
           }
         }
 
-        .x:nth-child(4):hover {
+        .social-media-icons:nth-child(4):hover {
           width: 161px;
 
           .icon i {
@@ -299,39 +299,39 @@ body {
           }
         }
 
-        .x:nth-child(1):hover .icon {
+        .social-media-icons:nth-child(1):hover .icon {
           background: #4267b2;
           margin-left: -10px;
         }
 
-        .x:nth-child(2):hover .icon {
+        .social-media-icons:nth-child(2):hover .icon {
           background: #e1306c;
           margin-left: -10px;
         }
 
-        .x:nth-child(3):hover .icon {
+        .social-media-icons:nth-child(3):hover .icon {
           background: #007ebb;
           margin-left: -10px;
         }
 
-        .x:nth-child(4):hover .icon {
+        .social-media-icons:nth-child(4):hover .icon {
           background: #ff0000;
           margin-left: -10px;
         }
 
-        .x:nth-child(1) span {
+        .social-media-icons:nth-child(1) span {
           color: #4267b2;
         }
 
-        .x:nth-child(2) span {
+        .social-media-icons:nth-child(2) span {
           color: #e1306c;
         }
 
-        .x:nth-child(3) span {
+        .social-media-icons:nth-child(3) span {
           color: #007ebb;
         }
 
-        .x:nth-child(4) span {
+        .social-media-icons:nth-child(4) span {
           color: #ff0000;
         }
       }

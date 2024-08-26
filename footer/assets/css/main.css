@@ -219,7 +219,7 @@ body footer .container-logo-icons .wrapper {
   width: 40%;
   padding-top: 0.7rem;
 }
-body footer .container-logo-icons .wrapper .x {
+body footer .container-logo-icons .wrapper .social-media-icons {
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -231,10 +231,10 @@ body footer .container-logo-icons .wrapper .x {
   transition: all 0.4s ease-out;
   overflow: hidden;
 }
-body footer .container-logo-icons .wrapper .x a:visited {
+body footer .container-logo-icons .wrapper .social-media-icons a:visited {
   color: black;
 }
-body footer .container-logo-icons .wrapper .x .icon {
+body footer .container-logo-icons .wrapper .social-media-icons .icon {
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -244,7 +244,7 @@ body footer .container-logo-icons .wrapper .x .icon {
   text-align: center;
   transition: all 0.4s ease-out;
 }
-body footer .container-logo-icons .wrapper .x .icon i {
+body footer .container-logo-icons .wrapper .social-media-icons .icon i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -252,7 +252,7 @@ body footer .container-logo-icons .wrapper .x .icon i {
   line-height: 60px;
   transition: all 0.4s ease-out;
 }
-body footer .container-logo-icons .wrapper .x span {
+body footer .container-logo-icons .wrapper .social-media-icons span {
   color: #000;
   font-size: 20px;
   font-weight: 600;
@@ -260,55 +260,55 @@ body footer .container-logo-icons .wrapper .x span {
   transition: all 0.3s ease-out;
   padding-bottom: 35px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(1):hover {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(1):hover {
   width: 173px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(1):hover .icon i {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(1):hover .icon i {
   color: #fff;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(2):hover {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(2):hover {
   width: 178px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(2):hover .icon i {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(2):hover .icon i {
   color: #fff;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(3):hover {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(3):hover {
   width: 162px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(3):hover .icon i {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(3):hover .icon i {
   color: #fff;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(4):hover {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(4):hover {
   width: 161px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(4):hover .icon i {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(4):hover .icon i {
   color: #fff;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(1):hover .icon {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(1):hover .icon {
   background: #4267b2;
   margin-left: -10px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(2):hover .icon {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(2):hover .icon {
   background: #e1306c;
   margin-left: -10px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(3):hover .icon {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(3):hover .icon {
   background: #007ebb;
   margin-left: -10px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(4):hover .icon {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(4):hover .icon {
   background: #ff0000;
   margin-left: -10px;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(1) span {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(1) span {
   color: #4267b2;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(2) span {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(2) span {
   color: #e1306c;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(3) span {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(3) span {
   color: #007ebb;
 }
-body footer .container-logo-icons .wrapper .x:nth-child(4) span {
+body footer .container-logo-icons .wrapper .social-media-icons:nth-child(4) span {
   color: #ff0000;
 }/*# sourceMappingURL=main.css.map */
