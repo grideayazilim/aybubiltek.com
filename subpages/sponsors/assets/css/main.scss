@@ -5,10 +5,10 @@ body {
 }
 
 .first-title {
-    background-color: $first-color;
     display: flex;
+    justify-content: space-between;
+    background-color: $first-color;
     align-items: center;
-    justify-content: center;
     height: 3.5rem;
 }
 

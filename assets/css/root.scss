@@ -19,6 +19,7 @@ $font-bold: 700;
 
 /*========== Font Sizes ==========*/
 $big-font-size: 3.18rem;
+$bigger-font-size: 3.95rem;
 $subtitle-font-size: 1.55rem;
 $normal-font-size: 1.05rem;
 $small-font-size: 0.813rem;
@@ -74,9 +75,7 @@ body {
 
   .bigger-title {
     font-size: $bigger-font-size;
-
     font-weight: $font-bold;
-
   }
 
   .subtitle {
