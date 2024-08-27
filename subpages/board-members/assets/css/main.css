@@ -16,36 +16,46 @@ html {
 }
 
 body {
-  /*========== General Setup ==========*/
+  /*=============== SETUP ===============*/
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
   font-weight: 400;
   color: white;
   letter-spacing: 0.2px;
-  /*=============== REUSABLE CLASSES ===============*/
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  /* To create a container with a white background and contrasted texts */
+  /* Top part of the subpages */
+  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
   /* test class */
 }
 body ul {
   list-style: none;
 }
 body a {
+  color: white;
   text-decoration: none;
 }
 body img {
   max-width: 100%;
   height: auto;
 }
-body .big-title {
-  font-size: 2.95rem;
-  font-weight: 700;
+body .container {
+  width: 100%;
+  padding-inline: 10%;
 }
 body .bigger-title {
-  font-size: 4.7rem;
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .big-title {
+  font-size: 3.18rem;
   font-weight: 700;
 }
 body .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 600;
 }
 body .white-container {
@@ -54,8 +64,62 @@ body .white-container {
 }
 body .white-container .bigger-title,
 body .white-container .big-title,
-body .white-container .subtitle {
+body .white-container .subtitle,
+body .white-container a {
   color: #0f2c59;
+}
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 136px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .bigger-title,
+  body .big-title {
+    font-size: 2.1rem;
+  }
+  body .subtitle {
+    font-size: 1rem;
+  }
+  body .title-area {
+    height: 95px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.89rem;
+  }
+  body .container {
+    padding-inline: 5%;
+  }
+  body .bigger-title,
+  body .big-title {
+    font-size: 1.2rem;
+  }
+  body .title-area {
+    height: 65px;
+  }
 }
 body .root-test-div {
   height: 50vh;
@@ -76,63 +140,104 @@ body {
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.2px;
 }
-body .intro p {
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 136px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+body .intro-one p {
   margin-top: 50px;
   color: #0f2c59;
   text-align: center;
-  font-size: 2.95rem;
+  font-size: 3.18rem;
   font-weight: 700;
 }
-body .manage {
+@media (max-width: 768px) {
+  body .intro-one p {
+    font-size: 1.2rem;
+  }
+}
+body .manage-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 @media (min-width: 320px) and (max-width: 575px) {
-  body .manage {
+  body .manage-board {
     display: grid;
     grid-template-columns: repeat(1, 5fr);
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  body .manage {
+  body .manage-board {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
   }
 }
-body .manage .members {
+body .manage-board .club-members {
   text-align: center;
 }
-body .manage .members p {
+body .manage-board .club-members p {
   margin-top: 10px;
   color: #000000;
 }
-body .manage .members h3 {
+body .manage-board .club-members h3 {
   margin-top: 10px;
   color: #0f2c59;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 600;
 }
-body .manage .members img {
+@media (max-width: 768px) {
+  body .manage-board .club-members h3 {
+    font-size: 1rem;
+  }
+}
+body .manage-board .club-members img {
   width: 250px;
   border-radius: 50%;
   transition: 0.6s ease-in-out;
 }
-body .manage .members img:hover {
+body .manage-board .club-members img:hover {
   transform: scale(110%, 110%);
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
+@media (max-width: 768px) {
+  body .manage-board .club-members img {
+    width: 180px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1199px) {
-  body .manage .members img {
+  body .manage-board .club-members img {
     width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  body .manage .members img {
+  body .manage-board .club-members img {
     width: calc(250px + (100vw - 1200px) * 0.1);
   }
 }
-body .manage .members button {
+body .manage-board .club-members button {
   background-color: #0f2c59;
   border-radius: 35px;
   width: 210px;
@@ -142,22 +247,38 @@ body .manage .members button {
   margin-bottom: 100px;
   cursor: pointer;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  body .manage .members button {
+@media (min-width: 320px) and (max-width: 1199px) {
+  body .manage-board .club-members button {
     width: 195px;
   }
 }
-body .manage .members button:hover i {
+body .manage-board .club-members button:hover {
+  transform: scale(110%, 110%);
+  transition: 0.5s ease-in-out;
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
+  50% {
+    box-shadow: 0 0 15px darkmagenta;
+  }
+  100% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
+}
+body .manage-board .club-members button:hover i {
   transform: translateX(150px);
 }
-body .manage .members button:hover p {
+body .manage-board .club-members button:hover p {
   opacity: 0;
 }
-body .manage .members button:hover a {
+body .manage-board .club-members button:hover a {
   opacity: 1;
   transform: translateX(-50%);
 }
-body .manage .members button i {
+body .manage-board .club-members button i {
   display: inline-block;
   padding-top: 2px;
   font-size: 32px;
@@ -165,14 +286,14 @@ body .manage .members button i {
   padding-bottom: 10px;
   transition: 0.4s ease-in-out;
 }
-body .manage .members button p {
+body .manage-board .club-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-size: 32px;
   transition: 0.4s ease-in-out;
 }
-body .manage .members button a {
+body .manage-board .club-members button a {
   opacity: 0;
   display: inline-block;
   font-size: 30px;
@@ -189,59 +310,74 @@ body .intro-two p {
   margin-top: 50px;
   color: #0f2c59;
   text-align: center;
-  font-size: 2.95rem;
+  font-size: 3.18rem;
   font-weight: 700;
 }
-body .captains {
+@media (max-width: 768px) {
+  body .intro-two p {
+    font-size: 1.2rem;
+  }
+}
+body .captains-core {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 @media (min-width: 320px) and (max-width: 575px) {
-  body .captains {
+  body .captains-core {
     display: grid;
     grid-template-columns: repeat(1, 5fr);
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  body .captains {
+  body .captains-core {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
   }
 }
-body .captains .team {
+body .captains-core .team-members {
   text-align: center;
 }
-body .captains .team p {
+body .captains-core .team-members p {
   color: #000000;
   margin-top: 10px;
 }
-body .captains .team h3 {
+body .captains-core .team-members h3 {
   margin-top: 10px;
   color: #0f2c59;
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 600;
 }
-body .captains .team img {
+@media (max-width: 768px) {
+  body .captains-core .team-members h3 {
+    font-size: 1rem;
+  }
+}
+body .captains-core .team-members img {
   width: 250px;
   border-radius: 50%;
   transition: 0.6s ease-in-out;
 }
-body .captains .team img:hover {
+body .captains-core .team-members img:hover {
   transform: scale(110%, 110%);
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
+@media (max-width: 768px) {
+  body .captains-core .team-members img {
+    width: 180px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1199px) {
-  body .captains .team img {
+  body .captains-core .team-members img {
     width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  body .captains .team img {
+  body .captains-core .team-members img {
     width: calc(250px + (100vw - 1200px) * 0.1);
   }
 }
-body .captains .team button {
+body .captains-core .team-members button {
   background-color: #0f2c59;
   border-radius: 35px;
   width: 210px;
@@ -251,22 +387,42 @@ body .captains .team button {
   margin-bottom: 100px;
   cursor: pointer;
 }
-@media (min-width: 768px) and (max-width: 1199px) {
-  body .captains .team button {
+@media (min-width: 320px) and (max-width: 1199px) {
+  body .captains-core .team-members button {
     width: 195px;
   }
 }
-body .captains .team button:hover i {
+body .captains-core .team-members button:hover {
+  transform: scale(110%, 110%);
+  transition: 0.5s ease-in-out;
+  animation: shadowPulse 2s ease-in-out infinite;
+}
+@keyframes shadowPulse {
+  0% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
+  50% {
+    box-shadow: 0 0 15px darkmagenta;
+  }
+  100% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
+}
+body .captains-core .team-members button:hover {
+  transform: scale(110%, 110%);
+  transition: 0.5s ease-in-out;
+}
+body .captains-core .team-members button:hover i {
   transform: translateX(150px);
 }
-body .captains .team button:hover p {
+body .captains-core .team-members button:hover p {
   opacity: 0;
 }
-body .captains .team button:hover a {
+body .captains-core .team-members button:hover a {
   opacity: 1;
   transform: translateX(-50%);
 }
-body .captains .team button i {
+body .captains-core .team-members button i {
   display: inline-block;
   padding-top: 2px;
   font-size: 32px;
@@ -274,14 +430,14 @@ body .captains .team button i {
   padding-bottom: 10px;
   transition: 0.4s ease-in-out;
 }
-body .captains .team button p {
+body .captains-core .team-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-size: 32px;
   transition: 0.4s ease-in-out;
 }
-body .captains .team button a {
+body .captains-core .team-members button a {
   opacity: 0;
   display: inline-block;
   font-size: 30px;
