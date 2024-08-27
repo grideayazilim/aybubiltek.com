@@ -4,7 +4,18 @@ body {
   height: 200vh;
 
   nav {
-    transition: color .4s;
+    /*============== BASE ==============*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    padding-inline: 9%;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: color 0.4s;
 
     i {
       background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
@@ -15,25 +26,16 @@ body {
       }
     }
 
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    background-color: transparent;
-    padding-inline: 9%;
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    /*============== LOGO ==============*/
     .nav-logo {
-      transition: filter .4s;
+      transition: filter 0.4s;
 
       .nav-img {
         width: 156px;
       }
     }
 
+    /*============== NAV MENU ==============*/
     .nav-menu {
       transition: right 0.4s;
 
@@ -48,16 +50,34 @@ body {
           transition: color 0.4s, background-position 0.4s, font-weight 0.4s;
 
           .nav-link {
+            position: relative;
             display: block;
             padding: 1.8rem 0.8rem;
-            position: relative;
             background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
             background-clip: text;
-
             transition: color 0.4s, background-position 0.4s, font-weight 0.4s;
           }
 
-          /* item hover */
+          /*======= Features to use in item slide effect =======*/
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 17px;
+            height: 3px;
+            width: 0;
+            transform-origin: left;
+            border-radius: 2px;
+            background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+            transition: 0.3s;
+          }
+
+          &::before {
+            filter: blur(2px);
+          }
+
+          /*======= nav-item hover =======*/
           &:hover {
             .nav-link {
               font-weight: $font-semibold;
@@ -67,9 +87,15 @@ body {
                 transform: rotate(180deg);
               }
             }
+
+            &::after,
+            &::before {
+              width: 100%;
+            }
           }
         }
 
+        /*======= DROPDOWN AREA =======*/
         .activator-item {
           .activator-item-title {
             display: flex;
@@ -79,23 +105,37 @@ body {
 
           .sublist {
             position: absolute;
-            left: -28.5%;
             top: 79px;
+            left: -28.5%;
             width: 160%;
-            opacity: 1;
             height: 0;
+            opacity: 1;
             overflow: hidden;
             text-align: center;
-            box-shadow: 0 10px 16px hsla(0, 0%, 0%, .1);
             background-color: #091a34cd;
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 10px 16px hsla(0, 0%, 0%, 0.1);
             transition: height 0.7s;
 
             .sublist-item {
               transition: background 0.4s;
+
               .nav-link {
+                color: $text-color;
+                font-weight: $font-regular;
+                /* realignment on the nav-link inside dropdown menu */
                 padding-block: 1.6rem;
+              }
+
+              &:hover {
+                color: $text-color;
+                background-color: hsla(217, 70%, 6%, 0.4);
+
+                .nav-link {
+                  color: transparent;
+                  font-weight: $font-semibold;
+                }
               }
             }
           }
@@ -103,54 +143,56 @@ body {
       }
 
       .nav-close {
-        cursor: pointer;
-        display: none;
         position: absolute;
+        display: none;
+        cursor: pointer;
       }
     }
 
-    .right-area {
+    /*============== BUTTON AREA ==============*/
+    .button-area {
       display: flex;
       column-gap: 20px;
 
+      /*======= REGISTER BUTTON =======*/
       .register-button {
-        cursor: pointer;
         position: relative;
         width: 130px;
         height: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         overflow: hidden;
         color: $text-color;
-        transition: .4s;
+        transition: 0.4s;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 10px;
-          height: 10px;
-          top: 0;
-          left: 0;
-          border-top: 2px solid;
-          border-left: 2px solid;
-          transition: 0.4s;
-        }
-
+        /*======= register-button animation =======*/
+        &::before,
         &::after {
           content: "";
           position: absolute;
           width: 10px;
           height: 10px;
+          transition: 0.4s;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+          border-top: 2px solid;
+          border-left: 2px solid;
+        }
+
+        &::after {
           bottom: 0;
           right: 0;
           border-bottom: 2px solid;
           border-right: 2px solid;
-          transition: 0.4s;
         }
 
         &:hover {
-          background:#5286ce;
+          background: #5286ce;
           box-shadow: 0 0 8px #5286ce;
           border-radius: 5px;
           font-weight: $font-medium;
@@ -164,10 +206,11 @@ body {
         }
       }
 
+      /*======= TOGGLE ICON =======*/
       .nav-toggle {
         display: none;
-        font-size: 2rem;
         cursor: pointer;
+        font-size: 2rem;
       }
     }
 
@@ -182,7 +225,7 @@ body {
         height: 100vh;
         width: 50%;
         padding-top: 6rem;
-        box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+        box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
         background-color: #091a34cd;
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
@@ -216,7 +259,7 @@ body {
         }
       }
 
-      .right-area {
+      .button-area {
         .nav-toggle {
           display: block;
         }
@@ -235,169 +278,62 @@ body {
     @media screen and (max-width: 768px) {
       padding-inline: 4%;
 
-      .right-area{
+      .button-area {
         .register-button {
           width: 110px;
           height: 40px;
         }
       }
-      
+
       .nav-logo {
         width: 120px;
       }
     }
-
-    /*========== non-white container hover effect ==========*/
-    &:not(.white-container) {
-      .nav-menu {
-        .nav-list {
-          .nav-item {
-            &::after {
-              content: "";
-              position: absolute;
-              background-image: linear-gradient(
-                120deg,
-                #89f7fe 0%,
-                #66a6ff 100%
-              );
-              height: 3px;
-              width: 0;
-              left: 0;
-              bottom: 17px;
-              border-radius: 2px;
-              transform-origin: left;
-              transition: 0.3s;
-            }
-
-            &::before {
-              content: "";
-              position: absolute;
-              height: 3px;
-              width: 100%;
-              left: 0;
-              bottom: 17px;
-              width: 0;
-              transform-origin: left;
-              transition: 0.3s;
-              background-image: linear-gradient(
-                120deg,
-                #89f7fe 0%,
-                #66a6ff 100%
-              );
-              filter: blur(2px);
-            }
-
-            &:hover {
-              &::after,
-              &::before {
-                width: 100%;
-              }
-            }
-          }
-
-          .activator-item {
-            .sublist {
-              /* sublit hover */
-              .sublist-item {
-                .nav-link {
-                  color: $text-color;
-                  font-weight: $font-regular;
-                }
-
-                &:hover {
-                  color: $text-color;
-                  background-color: hsla(217, 70%, 6%, 0.4);
-
-                  .nav-link {
-                    color: transparent;
-                    font-weight: $font-semibold;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
 
-  /*========== white container hover effect ==========*/
+  /*========== WHITE NAVBAR FEATURES ==========*/
   .white-container {
-    box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
+    /*============== BASE ==============*/
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
 
     i {
       background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: $first-color;
     }
 
-    .nav-logo{
+    .nav-logo {
       filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
     }
 
+    /*============== WHITE NAV MENU ==============*/
     .nav-menu {
       background-color: #f4f4f4;
 
       .nav-list {
         .nav-item {
-          .nav-link {
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-clip: text;
-          }
-
+          .nav-link,
+          &::before,
           &::after {
-            content: "";
-            position: absolute;
             background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 3px;
-            width: 0;
-            left: 0;
-            bottom: 17px;
-            border-radius: 2px;
-            transform-origin: left;
-            transition: 0.3s;
           }
 
           &::before {
-            content: "";
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            left: 0;
-            bottom: 17px;
-            width: 0;
-            transform-origin: left;
-            transition: 0.3s;
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             filter: blur(2px);
-          }
-
-          &:hover {
-            &::after,
-            &::before {
-              width: 100%;
-            }
           }
         }
 
+        /*======= WHITE DROPDOWN AREA =======*/
         .activator-item {
           .sublist {
             background-color: #f4f4f4;
 
-            /* sublit hover */
             .sublist-item {
               .nav-link {
                 color: $text-color-alt;
-                font-weight: $font-regular;
               }
 
               &:hover {
-                color: $text-color-alt;
                 background-color: #dfdfdf;
-
-                .nav-link {
-                  color: transparent;
-                  font-weight: $font-semibold;
-                }
               }
             }
           }
@@ -405,8 +341,9 @@ body {
       }
     }
 
-    .right-area{
-      .register-button{
+    /*============== WHITE BUTTON AREA ==============*/
+    .button-area {
+      .register-button {
         &::before,
         &::after {
           border-color: #5286ce;
@@ -415,6 +352,7 @@ body {
     }
   }
 
+  /* special class to blur navbar */
   .blur-container {
     &::after {
       content: "";
@@ -437,5 +375,3 @@ body {
     width: 100%;
   }
 }
-
-/* ok için de ayrı gradient koydun */
