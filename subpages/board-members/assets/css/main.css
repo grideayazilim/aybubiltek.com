@@ -96,32 +96,71 @@ body .manage .members p {
 }
 body .manage .members h3 {
   margin-top: 10px;
-  color: #0F2C59;
+  color: #0f2c59;
   font-size: 1.3rem;
   font-weight: 600;
 }
 body .manage .members img {
   width: 250px;
   border-radius: 50%;
+  transition: 0.6s ease-in-out;
 }
 body .manage .members img:hover {
   transform: scale(110%, 110%);
-  transition: 1s;
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
 body .manage .members button {
-  background-color: #0F2C59;
+  background-color: #0f2c59;
   border-radius: 35px;
   width: 210px;
   height: 55px;
   border: none;
   margin-top: 10px;
   margin-bottom: 100px;
+  cursor: pointer;
+}
+body .manage .members button:hover i {
+  transform: translateX(150px);
+}
+body .manage .members button:hover p {
+  opacity: 0;
+}
+body .manage .members button:hover a {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+body .manage .members button i {
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 32px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  transition: 0.4s ease-in-out;
+}
+body .manage .members button p {
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  font-size: 32px;
+  transition: 0.4s ease-in-out;
+}
+body .manage .members button a {
+  opacity: 0;
+  display: inline-block;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-bottom: 60px;
+  position: absolute;
+  margin-left: -110px;
+  padding-top: 9px;
+  color: rgb(140, 140, 214);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s ease-in-out;
 }
 body .intro-two p {
   margin-top: 50px;
-  color: #0F2C59;
+  color: #0f2c59;
   text-align: center;
   font-size: 2.95rem;
   font-weight: 700;
@@ -139,26 +178,65 @@ body .captains .team p {
 }
 body .captains .team h3 {
   margin-top: 10px;
-  color: #0F2C59;
+  color: #0f2c59;
   font-size: 1.3rem;
   font-weight: 600;
 }
 body .captains .team img {
   width: 250px;
   border-radius: 50%;
+  transition: 0.6s ease-in-out;
 }
 body .captains .team img:hover {
   transform: scale(110%, 110%);
-  transition: 1s;
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
 body .captains .team button {
-  background-color: #0F2C59;
+  background-color: #0f2c59;
   border-radius: 35px;
   width: 210px;
   height: 55px;
   border: none;
   margin-top: 10px;
   margin-bottom: 100px;
+  cursor: pointer;
+}
+body .captains .team button:hover i {
+  transform: translateX(150px);
+}
+body .captains .team button:hover p {
+  opacity: 0;
+}
+body .captains .team button:hover a {
+  opacity: 1;
+  transform: translateX(-50%);
+}
+body .captains .team button i {
+  display: inline-block;
+  padding-top: 2px;
+  font-size: 32px;
+  margin-right: 10px;
+  padding-bottom: 10px;
+  transition: 0.4s ease-in-out;
+}
+body .captains .team button p {
+  color: #FFFFFF;
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  font-size: 32px;
+  transition: 0.4s ease-in-out;
+}
+body .captains .team button a {
+  opacity: 0;
+  display: inline-block;
+  font-size: 30px;
+  color: #FFFFFF;
+  padding-bottom: 60px;
+  position: absolute;
+  margin-left: -110px;
+  padding-top: 9px;
+  color: rgb(140, 140, 214);
+  font-family: "Montserrat", sans-serif;
+  transition: 0.4s ease-in-out;
 }/*# sourceMappingURL=main.css.map */
