@@ -87,6 +87,18 @@ body .manage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+@media (min-width: 320px) and (max-width: 575px) {
+  body .manage {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  body .manage {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
 body .manage .members {
   text-align: center;
 }
@@ -110,6 +122,16 @@ body .manage .members img:hover {
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .manage .members img {
+    width: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  body .manage .members img {
+    width: calc(250px + (100vw - 1200px) * 0.1);
+  }
+}
 body .manage .members button {
   background-color: #0f2c59;
   border-radius: 35px;
@@ -119,6 +141,11 @@ body .manage .members button {
   margin-top: 10px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .manage .members button {
+    width: 195px;
+  }
 }
 body .manage .members button:hover i {
   transform: translateX(150px);
@@ -169,6 +196,18 @@ body .captains {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+@media (min-width: 320px) and (max-width: 575px) {
+  body .captains {
+    display: grid;
+    grid-template-columns: repeat(1, 5fr);
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  body .captains {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
 body .captains .team {
   text-align: center;
 }
@@ -192,6 +231,16 @@ body .captains .team img:hover {
   z-index: -1;
   box-shadow: 0 0 20px rgb(56, 56, 183);
 }
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .captains .team img {
+    width: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  body .captains .team img {
+    width: calc(250px + (100vw - 1200px) * 0.1);
+  }
+}
 body .captains .team button {
   background-color: #0f2c59;
   border-radius: 35px;
@@ -201,6 +250,11 @@ body .captains .team button {
   margin-top: 10px;
   margin-bottom: 100px;
   cursor: pointer;
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+  body .captains .team button {
+    width: 195px;
+  }
 }
 body .captains .team button:hover i {
   transform: translateX(150px);

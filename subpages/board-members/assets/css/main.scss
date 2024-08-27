@@ -37,6 +37,21 @@ letter-spacing: 0.2px;
                    .manage{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
+
+
+                    @media(min-width:320px) and (max-width:575px){
+                      display: grid;
+                      grid-template-columns: repeat(1,5fr);
+                    }
+
+
+
+                    @media(min-width:576px) and (max-width:767px){
+                      display: grid;
+                      grid-template-columns: repeat(2, 2fr);
+                    }
+
+                    
                     
                     .members{
                      text-align: center;
@@ -57,6 +72,10 @@ letter-spacing: 0.2px;
                     width: 250px;
                     border-radius: 50%;
                     transition: 0.6s ease-in-out ;
+
+
+
+
                     &:hover{
                       transform: scale(110% , 110%);
                       
@@ -64,6 +83,17 @@ letter-spacing: 0.2px;
                       box-shadow: 0 0 20px rgb(56, 56, 183);
                       
                     }
+
+                    @media(min-width:768px) and (max-width: 1199px){
+                      width: 200px;
+                    }
+
+                    @media(min-width: 1200px){
+                      width: calc(250px + (100vw - 1200px) * 0.1);
+                      
+                    } 
+
+
                   }
 
                   button{
@@ -75,6 +105,10 @@ letter-spacing: 0.2px;
                     margin-top: 10px;
                     margin-bottom: 100px;
                     cursor: pointer;
+
+                    @media(min-width:768px) and (max-width:1199px){
+                      width: 195px;
+                    }
 
                 
 
@@ -146,6 +180,16 @@ letter-spacing: 0.2px;
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
 
+                    @media(min-width:320px) and (max-width:575px){
+                      display: grid;
+                      grid-template-columns: repeat(1,5fr);
+                    }
+
+                    @media(min-width:576px) and (max-width:767px){
+                      display: grid;
+                      grid-template-columns: repeat(2, 2fr);
+                    }
+
                     .team{
                       text-align: center;
                       p{
@@ -170,7 +214,16 @@ letter-spacing: 0.2px;
                           transform: scale(110% , 110%);
                           z-index: -1;
                           box-shadow: 0 0 20px rgb(56, 56, 183);
+
                         }
+
+                        @media(min-width:768px) and (max-width: 1199px){
+                          width: 200px;
+                        }
+
+                        @media(min-width: 1200px){
+                          width: calc(250px + (100vw - 1200px) * 0.1);
+                        } 
                       }
                       button{
                         background-color: $first-color;
@@ -181,6 +234,10 @@ letter-spacing: 0.2px;
                         margin-top: 10px;
                         margin-bottom: 100px;
                         cursor: pointer;
+
+                        @media(min-width:768px) and (max-width:1199px){
+                          width: 195px;
+                        }
 
                         &:hover i{
                           transform: translateX(150px);
