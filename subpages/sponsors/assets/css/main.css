@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
 /*========== Colors ==========*/
@@ -16,56 +15,114 @@ html {
 }
 
 body {
-  /*========== General Setup ==========*/
+  /*=============== SETUP ===============*/
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
   font-weight: 400;
   color: white;
   letter-spacing: 0.2px;
-  /*=============== REUSABLE CLASSES ===============*/
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  /* To create a container with a white background and contrasted texts */
+  /* Top part of the subpages */
+  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
   /* test class */
 }
-
 body ul {
   list-style: none;
 }
-
 body a {
+  color: white;
   text-decoration: none;
 }
-
 body img {
   max-width: 100%;
   height: auto;
 }
-
-body .big-title {
-  font-size: 2.95rem;
-  font-weight: 700;
+body .container {
+  width: 100%;
+  padding-inline: 10%;
 }
-
 body .bigger-title {
-  font-size: 4.7rem;
+  font-size: 3.18rem;
   font-weight: 700;
 }
-
+body .big-title {
+  font-size: 3.18rem;
+}
+body .bigger-title {
+  font-size: 3.95rem;
+  font-weight: 700;
+}
 body .subtitle {
-  font-size: 1.3rem;
+  font-size: 1.55rem;
   font-weight: 600;
 }
-
 body .white-container {
   background-color: #f4f4f4;
   color: #4e4e4e;
 }
-
 body .white-container .bigger-title,
 body .white-container .big-title,
-body .white-container .subtitle {
+body .white-container .subtitle,
+body .white-container a {
   color: #0f2c59;
 }
-
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 136px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .bigger-title,
+  body .big-title {
+    font-size: 2.1rem;
+  }
+  body .subtitle {
+    font-size: 1rem;
+  }
+  body .title-area {
+    height: 95px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.89rem;
+  }
+  body .container {
+    padding-inline: 5%;
+  }
+  body .bigger-title,
+  body .big-title {
+    font-size: 1.2rem;
+  }
+  body .title-area {
+    height: 65px;
+  }
+}
 body .root-test-div {
   height: 50vh;
 }
@@ -74,111 +131,74 @@ body {
   background-color: #f4f4f4;
 }
 
-.first-title {
-  background-color: #0f2c59;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 3.5rem;
+.container {
+  padding: 0% !important;
 }
-
-.sponsor-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.big-title {
-  display: flex;
-  justify-content: center;
-  color: #0f2c59;
-}
-
-.my-big-title {
-  font-size: 1.6rem !important;
-}
-
-.bigger-title {
-  display: flex;
-  justify-content: center;
+.container .bigger-title {
   background: linear-gradient(96.85deg, #FBFBFB 15%, #AC96FB 109.62%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
-.my-bigger-title {
-  font-size: 2.3rem !important;
-}
-
-.division {
-  margin-top: 3%;
-}
-
-.imgs {
-  width: 70%;
-}
-
-.imgs-kod2 {
-  width: 82%;
-}
-
-.imgs-kod {
-  margin-left: 28%;
-  width: 82%;
-}
-
-#effect {
-  transition: all 0.5s ease-in-out;
-  cursor: pointer;
-}
-
-#effect:hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-}
-
-.img-part1 {
+.container .section {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-inline: 15%;
+  box-shadow: 0px 10px 15px -3px rgba(142, 142, 142, 0.1);
+}
+.container .my-big-title {
+  font-size: 1.9rem !important;
+}
+.container .sponsor-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .sponsor-part .division {
+  box-shadow: 0px -17px 15px -3px rgba(142, 142, 142, 0.1);
   width: 100%;
-  margin-top: 2%;
 }
-
-.img-part2 {
-  display: flex;
-  align-items: center;
-  padding-inline: 15%;
-  margin-top: 2%;
-}
-
-.img-part3 {
-  display: flex;
-  align-items: center;
-  padding-inline: 15%;
+.container .sponsor-part .division .big-title {
+  padding: 1rem;
   display: flex;
   justify-content: center;
-  padding-left: 37%;
+  color: #0f2c59;
+}
+.container .sponsor-part .division .image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+.container .sponsor-part .division .sponsor-link {
+  width: 300px;
+  transition: transform 0.4s;
+}
+.container .sponsor-part .division .sponsor-link:hover {
+  transform: scale(110%);
+}
+.container .sponsor-part .division .sponsor-link:hover .img {
+  width: 100%;
+}
+.container .sponsor-part .division .sponsor-link-siber {
+  transition: transform 0.4s;
+}
+.container .sponsor-part .division .sponsor-link-siber:hover {
+  transform: scale(110%);
+}
+.container .sponsor-part .division .sponsor-link-siber:hover .img {
+  width: 100%;
 }
 
-.line {
-  width: 90%;
-  margin-left: 4%;
-  background: rgb(130, 126, 172);
-  height: 0.15rem;
+@media only screen and (max-width: 450px) {
+  .sponsor {
+    font-size: 2.1rem !important;
+  }
 }
-
-.logo-left {
-  height: 100%;
-  left: -86px;
-  gap: 0px;
-}
-
-.logo-right {
-  height: 100%;
-  left: 1834px;
-  gap: 0px;
-}
-
-/*# sourceMappingURL=main.css.map */
+@media only screen and (max-width: 400px) {
+  .sponsor {
+    font-size: 1.7rem !important;
+  }
+}/*# sourceMappingURL=main.css.map */
