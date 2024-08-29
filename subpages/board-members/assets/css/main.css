@@ -196,6 +196,26 @@ body .manage-board {
 }
 body .manage-board .club-members {
   text-align: center;
+  transition: 0.9s ease-in-out;
+  border-radius: 15%;
+  box-sizing: border-box;
+  height: 85%;
+}
+body .manage-board .club-members:hover {
+  transform: scale(110%, 110%);
+  z-index: -1;
+  animation: shadowCard 2s ease-in-out infinite;
+}
+@keyframes shadowCard {
+  0% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
+  50% {
+    box-shadow: 0 0 15px darkmagenta;
+  }
+  100% {
+    box-shadow: 0 0 15px rgb(56, 56, 183);
+  }
 }
 body .manage-board .club-members p {
   margin-top: 10px;
@@ -214,13 +234,7 @@ body .manage-board .club-members h3 {
 }
 body .manage-board .club-members img {
   width: 250px;
-  border-radius: 50%;
   transition: 0.6s ease-in-out;
-}
-body .manage-board .club-members img:hover {
-  transform: scale(110%, 110%);
-  z-index: -1;
-  box-shadow: 0 0 20px rgb(56, 56, 183);
 }
 @media (max-width: 768px) {
   body .manage-board .club-members img {
@@ -290,7 +304,7 @@ body .manage-board .club-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
-  font-size: 32px;
+  font-size: 28px;
   transition: 0.4s ease-in-out;
 }
 body .manage-board .club-members button a {
@@ -434,7 +448,7 @@ body .captains-core .team-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
-  font-size: 32px;
+  font-size: 28px;
   transition: 0.4s ease-in-out;
 }
 body .captains-core .team-members button a {
