@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    transition: color 0.4s;
+    transition: color 0.4s, background 0.8s;
 
     i {
       background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
@@ -37,7 +37,8 @@ body {
 
     /*============== NAV MENU ==============*/
     .nav-menu {
-      transition: right 0.4s;
+      background-color: transparent;
+      transition: right 0.4s, background 0.4s;
 
       .nav-list {
         display: flex;
@@ -125,7 +126,7 @@ body {
                 color: $text-color;
                 font-weight: $font-regular;
                 /* realignment on the nav-link inside dropdown menu */
-                padding-block: 1.6rem;
+                padding: 1.4rem 1.6rem;
               }
 
               &:hover {
@@ -213,10 +214,71 @@ body {
         font-size: 2rem;
       }
     }
+  }
 
-    /* =============== RESPONSIVE DESIGN =============== */
-    /* First breakpoint */
-    @media screen and (max-width: 1300px) {
+  /*========== WHITE NAVBAR FEATURES ==========*/
+  .white-container {
+    /*============== BASE ==============*/
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+
+    i {
+      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: $first-color;
+    }
+
+    .nav-logo {
+      filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+    }
+
+    /*============== WHITE NAV MENU ==============*/
+    .nav-menu {
+      .nav-list {
+        .nav-item {
+          .nav-link,
+          &::before,
+          &::after {
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          }
+
+          &::before {
+            filter: blur(2px);
+          }
+        }
+
+        /*======= WHITE DROPDOWN AREA =======*/
+        .activator-item {
+          .sublist {
+            background-color: #f4f4f4;
+
+            .sublist-item {
+              .nav-link {
+                color: $text-color-alt;
+              }
+
+              &:hover {
+                background-color: #dfdfdf;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /*============== WHITE BUTTON AREA ==============*/
+    .button-area {
+      .register-button {
+        &::before,
+        &::after {
+          border-color: #5286ce;
+        }
+      }
+    }
+  }
+
+  /* =============== RESPONSIVE DESIGN =============== */
+  /* First breakpoint */
+  @media screen and (max-width: 1300px) {
+    nav {
       .nav-menu {
         position: fixed;
         z-index: 101;
@@ -265,17 +327,22 @@ body {
         }
       }
 
-      .white-container {
-        background-color: white;
-      }
-
       .show-menu {
         right: 0;
       }
     }
 
-    /* Second breakpoint */
-    @media screen and (max-width: 768px) {
+    /*======= WHITE RESPONSIVE =======*/
+    .white-container {
+      .nav-menu {
+        background-color: white;
+      }
+    }
+  }
+
+  /* Second breakpoint */
+  @media screen and (max-width: 768px) {
+    nav {
       padding-inline: 4%;
 
       .button-area {
@@ -291,87 +358,34 @@ body {
     }
   }
 
-  /*========== WHITE NAVBAR FEATURES ==========*/
-  .white-container {
-    /*============== BASE ==============*/
-    box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+  /*======= 
+    Classes and ids below belongs to just one element.
 
-    i {
-      background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: $first-color;
-    }
-
-    .nav-logo {
-      filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
-    }
-
-    /*============== WHITE NAV MENU ==============*/
-    .nav-menu {
-      background-color: #f4f4f4;
-
-      .nav-list {
-        .nav-item {
-          .nav-link,
-          &::before,
-          &::after {
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          }
-
-          &::before {
-            filter: blur(2px);
-          }
-        }
-
-        /*======= WHITE DROPDOWN AREA =======*/
-        .activator-item {
-          .sublist {
-            background-color: #f4f4f4;
-
-            .sublist-item {
-              .nav-link {
-                color: $text-color-alt;
-              }
-
-              &:hover {
-                background-color: #dfdfdf;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    /*============== WHITE BUTTON AREA ==============*/
-    .button-area {
-      .register-button {
-        &::before,
-        &::after {
-          border-color: #5286ce;
-        }
-      }
-    }
+    These are created to add blur to the navbar smoothly
+    and properly.
+  =======*/
+  #blur-div{
+    transition: .4s;
   }
 
-  /* special class to blur navbar */
   .blur-container {
-    &::after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: #091a34cd;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-  }
-}
-
-.image {
-  img {
+    content: "";
+    position: absolute;
     width: 100%;
+    height: 100%;
+    background-color: #091a34cd;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .anti-blur{
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
   }
 }

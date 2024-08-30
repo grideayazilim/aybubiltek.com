@@ -15,7 +15,14 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <nav class="blur-container">
+    <!-- Special div to indicate home page -->
+    <div id="home-page"></div>
+
+    <nav>
+      <!--====Background blur of nav====-->
+      <!-- Toggle anti-blur to activate and deactivate blur -->
+      <div class="blur-container anti-blur" id="blur-div"></div>
+
       <div class="nav-logo">
         <img
           src="../assets/media/logo-text.png"
@@ -23,12 +30,14 @@
           class="nav-img"
         />
       </div>
+
       <div class="nav-menu">
         <ul class="nav-list">
           <li class="nav-item">
             <a href="#" class="nav-link">Ana Sayfa</a>
           </li>
 
+          <!--==== Item with dropdown menu ====-->
           <li class="nav-item activator-item">
             <a href="#" class="nav-link activator-item-title"
               >Hakkımızda <i class="ri-arrow-down-s-line"></i></a>
@@ -47,8 +56,30 @@
             </ul>
           </li>
 
-          <li class="nav-item">
-            <a href="#" class="nav-link">Takımlarımız</a>
+          <!--==== Item with dropdown menu ====-->
+          <li class="nav-item activator-item">
+            <a href="#" class="nav-link activator-item-title">Takımlarımız <i class="ri-arrow-down-s-line"></i></a>
+            <ul class="sublist">
+              <li class="sublist-item">
+                <a href="#" class="nav-link">BiltekCyber</a>
+              </li>
+
+              <li class="sublist-item">
+                <a href="#" class="nav-link">Peregrine R&D</a>
+              </li>
+
+              <li class="sublist-item">
+                <a href="#" class="nav-link">Gridea</a>
+              </li>
+
+              <li class="sublist-item">
+                <a href="#" class="nav-link">Yıldırım Roket</a>
+              </li>
+
+              <li class="sublist-item">
+                <a href="#" class="nav-link">Biltek AI</a>
+              </li>
+            </ul>
           </li>
 
           <li class="nav-item">
@@ -79,16 +110,15 @@
       </div>
     </nav>
 
-    <div class="title-area">
+
+    <!-- TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST -->
+    <div class="title-area x">
       <img src="../assets/media/logo-no-text.png" alt="" />
       <img src="../assets/media/logo-no-text.png" alt="" />
 
       <div class="bigger-title">BİLİM VE TEKNOLOJİ TOPLULUĞU</div>
     </div>
 
-    <br />
-    <br />
-    <br />
 
     <div class="container white-container">
       <div class="big-title">TAKIMLARIMIZ</div>

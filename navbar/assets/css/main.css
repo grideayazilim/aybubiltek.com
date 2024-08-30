@@ -99,7 +99,7 @@ body .title-area img:nth-child(2) {
     font-size: 2.1rem;
   }
   body .subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .title-area {
     height: 95px;
@@ -107,14 +107,17 @@ body .title-area img:nth-child(2) {
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 0.89rem;
+    font-size: 0.8rem;
   }
   body .container {
     padding-inline: 5%;
   }
   body .bigger-title,
   body .big-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+  body .subtitle {
+    font-size: 1rem;
   }
   body .title-area {
     height: 65px;
@@ -127,7 +130,15 @@ body .root-test-div {
 body {
   height: 200vh;
   /*========== WHITE NAVBAR FEATURES ==========*/
-  /* special class to blur navbar */
+  /* =============== RESPONSIVE DESIGN =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
+  /*======= 
+    Classes and ids below belongs to just one element.
+
+    These are created to add blur to the navbar smoothly
+    and properly.
+  =======*/
 }
 body nav {
   /*============== BASE ==============*/
@@ -141,13 +152,10 @@ body nav {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  transition: color 0.4s;
+  transition: color 0.4s, background 0.8s;
   /*============== LOGO ==============*/
   /*============== NAV MENU ==============*/
   /*============== BUTTON AREA ==============*/
-  /* =============== RESPONSIVE DESIGN =============== */
-  /* First breakpoint */
-  /* Second breakpoint */
 }
 body nav i {
   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
@@ -165,7 +173,8 @@ body nav .nav-logo .nav-img {
   width: 156px;
 }
 body nav .nav-menu {
-  transition: right 0.4s;
+  background-color: transparent;
+  transition: right 0.4s, background 0.4s;
 }
 body nav .nav-menu .nav-list {
   display: flex;
@@ -243,7 +252,7 @@ body nav .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
   color: white;
   font-weight: 400;
   /* realignment on the nav-link inside dropdown menu */
-  padding-block: 1.6rem;
+  padding: 1.4rem 1.6rem;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
   color: white;
@@ -313,7 +322,44 @@ body nav .button-area .nav-toggle {
   cursor: pointer;
   font-size: 2rem;
 }
+body .white-container {
+  /*============== BASE ==============*/
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+  /*============== WHITE NAV MENU ==============*/
+  /*============== WHITE BUTTON AREA ==============*/
+}
+body .white-container i {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #0f2c59;
+}
+body .white-container .nav-logo {
+  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+}
+body .white-container .nav-menu .nav-list {
+  /*======= WHITE DROPDOWN AREA =======*/
+}
+body .white-container .nav-menu .nav-list .nav-item .nav-link, body .white-container .nav-menu .nav-list .nav-item::before, body .white-container .nav-menu .nav-list .nav-item::after {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+body .white-container .nav-menu .nav-list .nav-item::before {
+  filter: blur(2px);
+}
+body .white-container .nav-menu .nav-list .activator-item .sublist {
+  background-color: #f4f4f4;
+}
+body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
+  color: #0f2c59;
+}
+body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
+  background-color: #dfdfdf;
+}
+body .white-container .button-area .register-button::before, body .white-container .button-area .register-button::after {
+  border-color: #5286ce;
+}
 @media screen and (max-width: 1300px) {
+  body {
+    /*======= WHITE RESPONSIVE =======*/
+  }
   body nav .nav-menu {
     position: fixed;
     z-index: 101;
@@ -352,11 +398,11 @@ body nav .button-area .nav-toggle {
   body nav .button-area .nav-toggle {
     display: block;
   }
-  body nav .white-container {
-    background-color: white;
-  }
   body nav .show-menu {
     right: 0;
+  }
+  body .white-container .nav-menu {
+    background-color: white;
   }
 }
 @media screen and (max-width: 768px) {
@@ -371,44 +417,10 @@ body nav .button-area .nav-toggle {
     width: 120px;
   }
 }
-body .white-container {
-  /*============== BASE ==============*/
-  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
-  /*============== WHITE NAV MENU ==============*/
-  /*============== WHITE BUTTON AREA ==============*/
+body #blur-div {
+  transition: 0.4s;
 }
-body .white-container i {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #0f2c59;
-}
-body .white-container .nav-logo {
-  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
-}
-body .white-container .nav-menu {
-  background-color: #f4f4f4;
-}
-body .white-container .nav-menu .nav-list {
-  /*======= WHITE DROPDOWN AREA =======*/
-}
-body .white-container .nav-menu .nav-list .nav-item .nav-link, body .white-container .nav-menu .nav-list .nav-item::before, body .white-container .nav-menu .nav-list .nav-item::after {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-body .white-container .nav-menu .nav-list .nav-item::before {
-  filter: blur(2px);
-}
-body .white-container .nav-menu .nav-list .activator-item .sublist {
-  background-color: #f4f4f4;
-}
-body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
-  color: #0f2c59;
-}
-body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
-  background-color: #dfdfdf;
-}
-body .white-container .button-area .register-button::before, body .white-container .button-area .register-button::after {
-  border-color: #5286ce;
-}
-body .blur-container::after {
+body .blur-container {
   content: "";
   position: absolute;
   width: 100%;
@@ -421,7 +433,9 @@ body .blur-container::after {
   left: 0;
   z-index: -1;
 }
-
-.image img {
-  width: 100%;
+body .anti-blur {
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
 }/*# sourceMappingURL=main.css.map */
