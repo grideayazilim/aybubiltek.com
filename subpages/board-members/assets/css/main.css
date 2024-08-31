@@ -283,39 +283,42 @@ body .manage-board .club-members button:hover {
   }
 }
 body .manage-board .club-members button:hover i {
-  transform: translateX(140px);
+  transform: translateX(120px);
 }
 body .manage-board .club-members button:hover p {
   opacity: 0;
 }
 body .manage-board .club-members button:hover a {
   opacity: 1;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 body .manage-board .club-members button i {
   display: inline-block;
-  padding-top: 2px;
+  padding-top: 9px;
   font-size: 32px;
-  margin-right: 10px;
+  margin-right: 6px;
   padding-bottom: 10px;
   transition: 0.4s ease-in-out;
+  vertical-align: middle;
 }
 body .manage-board .club-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
-  font-size: 28px;
+  font-size: 24px;
   transition: 0.4s ease-in-out;
+  vertical-align: middle;
+  margin: 0;
 }
 body .manage-board .club-members button a {
   opacity: 0;
   display: inline-block;
-  font-size: 30px;
+  font-size: 24px;
   color: #FFFFFF;
   padding-bottom: 60px;
   position: absolute;
   margin-left: -110px;
-  padding-top: 9px;
+  padding-top: 10px;
   color: rgb(140, 140, 214);
   font-family: "Montserrat", sans-serif;
   transition: 0.4s ease-in-out;
@@ -427,39 +430,42 @@ body .captains-core .team-members button:hover {
   transition: 0.5s ease-in-out;
 }
 body .captains-core .team-members button:hover i {
-  transform: translateX(140px);
+  transform: translateX(120px);
 }
 body .captains-core .team-members button:hover p {
   opacity: 0;
 }
 body .captains-core .team-members button:hover a {
   opacity: 1;
-  transform: translateX(-50%);
+  transform: translateX(-40%);
 }
 body .captains-core .team-members button i {
   display: inline-block;
-  padding-top: 2px;
+  padding-top: 9px;
   font-size: 32px;
-  margin-right: 10px;
+  margin-right: 6px;
   padding-bottom: 10px;
   transition: 0.4s ease-in-out;
+  vertical-align: middle;
 }
 body .captains-core .team-members button p {
   color: #FFFFFF;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
-  font-size: 28px;
+  font-size: 24px;
   transition: 0.4s ease-in-out;
+  vertical-align: middle;
+  margin: 0;
 }
 body .captains-core .team-members button a {
   opacity: 0;
   display: inline-block;
-  font-size: 30px;
+  font-size: 24px;
   color: #FFFFFF;
   padding-bottom: 60px;
   position: absolute;
   margin-left: -110px;
-  padding-top: 9px;
+  padding-top: 10px;
   color: rgb(140, 140, 214);
   font-family: "Montserrat", sans-serif;
   transition: 0.4s ease-in-out;

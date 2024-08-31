@@ -207,7 +207,7 @@ letter-spacing: 0.2px;
                      }
 
                     &:hover i{
-                      transform: translateX(140px);
+                      transform: translateX(120px);
                     }
 
                     &:hover p{
@@ -216,17 +216,18 @@ letter-spacing: 0.2px;
 
                     &:hover a{
                       opacity: 1;
-                      transform:translateX(-50%);
+                      transform:translateX(-40%);
                       
                     }
                    
                     i{
                       display: inline-block;
-                      padding-top: 2px;
+                      padding-top: 9px;
                       font-size: 32px;
-                      margin-right: 10px;
+                      margin-right: 6px;
                       padding-bottom: 10px;
                       transition: 0.4s ease-in-out;
+                      vertical-align: middle;
 
                     }
                    
@@ -234,20 +235,22 @@ letter-spacing: 0.2px;
                       color:#FFFFFF ;
                       font-family: $font-family;
                       display: inline-block;
-                      font-size: 28px;
+                      font-size: 24px;
                       transition: 0.4s ease-in-out;
+                      vertical-align: middle;
+                      margin: 0;
 
                    }
 
                    a{
                     opacity: 0;
                     display: inline-block;
-                    font-size: 30px;
+                    font-size: 24px;
                     color: #FFFFFF;
                     padding-bottom: 60px;
                     position: absolute;
                     margin-left: -110px;
-                    padding-top: 9px;
+                    padding-top: 10px;
                     color: rgb(140, 140, 214);
                     font-family: $font-family;
                     transition: 0.4s ease-in-out;
@@ -371,7 +374,7 @@ letter-spacing: 0.2px;
                        }
 
                         &:hover i{
-                          transform: translateX(140px);
+                          transform: translateX(120px);
                         }
     
                         &:hover p{
@@ -380,17 +383,19 @@ letter-spacing: 0.2px;
     
                         &:hover a{
                           opacity: 1;
-                          transform:translateX(-50%);
+                          transform:translateX(-40%);
                         }
 
                         i{
                           display: inline-block;
-                          padding-top: 2px;
+                          padding-top: 9px;
                           font-size: 32px;
-                          margin-right: 10px;
+                          margin-right: 6px;
                           padding-bottom: 10px;
                           transition: 0.4s ease-in-out;
-                         
+                          vertical-align: middle;
+                          
+                          
                           
                         }
 
@@ -401,9 +406,12 @@ letter-spacing: 0.2px;
                         color: #FFFFFF;
                         font-family: $font-family;
                         display: inline-block ;
-                        font-size: 28px;
+                        font-size: 24px;
                         transition: 0.4s ease-in-out;
+                        vertical-align: middle;
+                        margin: 0;
                         
+                       
                         
                        
                       }
@@ -411,12 +419,12 @@ letter-spacing: 0.2px;
                       a{
                         opacity: 0;
                         display: inline-block;
-                        font-size: 30px;
+                        font-size: 24px;
                         color: #FFFFFF;
                         padding-bottom: 60px;
                         position: absolute;
                         margin-left: -110px;
-                        padding-top: 9px;
+                        padding-top: 10px;
                         color: rgb(140, 140, 214);
                         font-family: $font-family;
                         transition: 0.4s ease-in-out;                   
