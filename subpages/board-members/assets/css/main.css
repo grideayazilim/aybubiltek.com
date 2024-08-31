@@ -218,11 +218,12 @@ body .manage-board .club-members:hover {
   }
 }
 body .manage-board .club-members p {
-  margin-top: 10px;
+  margin-top: 5px;
   color: #000000;
 }
 body .manage-board .club-members h3 {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   color: #0f2c59;
   font-size: 1.55rem;
   font-weight: 600;
@@ -356,10 +357,11 @@ body .captains-core .team-members {
 }
 body .captains-core .team-members p {
   color: #000000;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 body .captains-core .team-members h3 {
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   color: #0f2c59;
   font-size: 1.55rem;
   font-weight: 600;
