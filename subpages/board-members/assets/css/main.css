@@ -196,8 +196,8 @@ body .manage-board {
 }
 body .manage-board .club-members {
   text-align: center;
-  transition: 0.9s ease-in-out;
-  border-radius: 15%;
+  transition: transform 2s ease-in-out;
+  border-radius: 50px;
   box-sizing: border-box;
   height: 85%;
 }
@@ -208,13 +208,13 @@ body .manage-board .club-members:hover {
 }
 @keyframes shadowCard {
   0% {
-    box-shadow: 0 0 15px rgb(56, 56, 183);
+    box-shadow: 0 0 25px rgb(56, 56, 183);
   }
   50% {
-    box-shadow: 0 0 15px darkmagenta;
+    box-shadow: 0 0 25px darkmagenta;
   }
   100% {
-    box-shadow: 0 0 15px rgb(56, 56, 183);
+    box-shadow: 0 0 25px rgb(56, 56, 183);
   }
 }
 body .manage-board .club-members p {
@@ -222,7 +222,7 @@ body .manage-board .club-members p {
   color: #000000;
 }
 body .manage-board .club-members h3 {
-  margin-top: 10px;
+  margin-top: 20px;
   color: #0f2c59;
   font-size: 1.55rem;
   font-weight: 600;
@@ -283,7 +283,7 @@ body .manage-board .club-members button:hover {
   }
 }
 body .manage-board .club-members button:hover i {
-  transform: translateX(150px);
+  transform: translateX(140px);
 }
 body .manage-board .club-members button:hover p {
   opacity: 0;
@@ -356,7 +356,7 @@ body .captains-core .team-members p {
   margin-top: 10px;
 }
 body .captains-core .team-members h3 {
-  margin-top: 10px;
+  margin-top: 20px;
   color: #0f2c59;
   font-size: 1.55rem;
   font-weight: 600;
@@ -427,7 +427,7 @@ body .captains-core .team-members button:hover {
   transition: 0.5s ease-in-out;
 }
 body .captains-core .team-members button:hover i {
-  transform: translateX(150px);
+  transform: translateX(140px);
 }
 body .captains-core .team-members button:hover p {
   opacity: 0;

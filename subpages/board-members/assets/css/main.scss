@@ -93,10 +93,12 @@ letter-spacing: 0.2px;
                     
                     .club-members{
                      text-align: center;
-                     transition: 0.9s ease-in-out ;
-                     border-radius: 15%;
+                     transition: transform 2s ease-in-out ;
+                     border-radius: 50px;
                      box-sizing: border-box;
+                     
                      height: 85%;
+                     
                      
                      
                      
@@ -109,16 +111,18 @@ letter-spacing: 0.2px;
                       animation: shadowCard 2s ease-in-out infinite ;
 
                       @keyframes shadowCard{
+                       
                         0%{
-                          box-shadow: 0 0 15px rgb(56, 56, 183);
+                          box-shadow: 0 0 25px rgb(56, 56, 183);
+                          
                         }
 
                         50%{
-                          box-shadow:0 0 15px darkmagenta ;
+                          box-shadow:0 0 25px darkmagenta ;
                         }
                 
                       100%{
-                        box-shadow: 0 0 15px rgb(56, 56, 183);
+                        box-shadow: 0 0 25px rgb(56, 56, 183);
                       }
                       }
                       
@@ -130,7 +134,7 @@ letter-spacing: 0.2px;
                   }
 
                   h3{
-                    margin-top: 10px;
+                    margin-top: 20px;
                     color: $text-color-alt;
                     font-size: $subtitle-font-size;
                     font-weight: $font-semibold;
@@ -203,7 +207,7 @@ letter-spacing: 0.2px;
                      }
 
                     &:hover i{
-                      transform: translateX(150px);
+                      transform: translateX(140px);
                     }
 
                     &:hover p{
@@ -292,7 +296,7 @@ letter-spacing: 0.2px;
                       }
     
                       h3{
-                        margin-top: 10px;
+                        margin-top: 20px;
                         color: $text-color-alt;
                         font-size: $subtitle-font-size;
                         font-weight: $font-semibold;
@@ -367,7 +371,7 @@ letter-spacing: 0.2px;
                        }
 
                         &:hover i{
-                          transform: translateX(150px);
+                          transform: translateX(140px);
                         }
     
                         &:hover p{
@@ -386,15 +390,22 @@ letter-spacing: 0.2px;
                           margin-right: 10px;
                           padding-bottom: 10px;
                           transition: 0.4s ease-in-out;
+                         
+                          
                         }
+
+                        
 
                         
                       p{
                         color: #FFFFFF;
                         font-family: $font-family;
-                        display: inline-block;
+                        display: inline-block ;
                         font-size: 28px;
                         transition: 0.4s ease-in-out;
+                        
+                        
+                       
                       }
 
                       a{
