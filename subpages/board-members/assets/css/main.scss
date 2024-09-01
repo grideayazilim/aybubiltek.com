@@ -1,8 +1,9 @@
 /*============== TOPIC NAME ==============*/
- @import "../../../../assets/css/root";
- @mixin ort($dis,$vert){
-    display: $dis;
-    justify-content: $vert;
+@import "../../../../assets/css/root";
+
+@mixin ort($dis, $vert) {
+  display: $dis;
+  justify-content: $vert;
 }
 
 * {
@@ -15,430 +16,127 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: white;
 
-body{
-background-color:$text-color ;
-font-family: $font-family;
-letter-spacing: 0.2px;
+  .white-container {
+    position: relative;
+    padding-block: 4rem;
+    text-align: center;
 
+    .big-title {
+      margin-block: 6rem 2rem;
+    }
+  
+    .manage-board {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+  
+      .club-members {
+        width: 300px;
+        display: grid;
+        place-items: center;
+        row-gap: 1.3rem;
+        padding: 2.4rem 1rem 2.4rem;  
+        border-radius: 20px;
+        box-shadow: #0f2d5936 0px 0px 5px 0px;
+        transition: transform 0.4s, box-shadow 0.4s;
 
-.title-area {
-  position: relative;
-  display: grid;
-  align-content: center;
-  width: 100%;
-  height: 136px;
-  text-align: center;
-  padding-inline: 3rem;
-  background-color: $first-color;
-  overflow: hidden;
-  margin-top: 5rem;
+        img {
+          width: 75%;
+          transition: transform 0.4s;
+        }
+  
+        .member-link {
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          font-size: 1.25rem;
+          color: #e5e5e5;
+          background-color: $first-color;
+          padding: 0.5rem 1rem;
+          border-radius: 25px;
+          transition: 0.6s;
+  
+          i,
+          p {
+            transition: transform 0.6s;
+          }
+  
+          i {
+            font-size: 1.75rem;
+          }
+  
+          &:hover {
+            text-shadow: 0 0 10px #e5e5e582;
+            transform: scale(105%);
+            box-shadow: #0f2d5996 0 0 20px 0px;
+  
+            p {
+              transform: translateX(-30px);
+            }
+  
+            i {
+              transform: translateX(100px) rotate(360deg);
+            }
+          }
+        }
 
-  img {
-    position: absolute;
-    height: 100%;
-    width: auto;
-    top: 0;
-
-    &:nth-child(1) {
-      transform: translateX(-50%);
-      left: 0;
+        &:hover {
+          box-shadow: #0f2d5932 0px 7px 29px 0px;
+  
+          img {
+            transform: scale(110%) translateY(-10px);
+          }
+        }
+      }
     }
 
-    &:nth-child(2) {
-      transform: translateX(50%);
-      right: 0;
+    @media screen  and (max-width: 1200px){
+      .big-title{
+        margin-block: 3rem 2rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .manage-board{
+        gap: 2rem;
+        .club-members{
+          width: 300px;
+
+          img{
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 698px) {
+      .manage-board{
+        flex-direction: column;
+
+        .club-members{
+          width: 300px;
+          padding-block: 2rem 1rem;
+
+          img{
+            width: 70%;
+          }
+        }
+      }
     }
   }
 }
-                   .intro-one{
-                    
-                    p{
-                        margin-top: 50px;
-                        color: $text-color-alt;
-                        text-align: center;
-                        font-size: $big-font-size;
-                        font-weight: $font-bold;
 
-                        @media(max-width:768px){
-                        font-size: 1.2rem;
-                    }
+.vector-1{
+  position: absolute;
+  z-index: 0;
+  top: 200px;
 
-
-                    }
-           
-                   
-
-
-                   }
-
-                   .manage-board{
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-
-
-                    @media(min-width:320px) and (max-width:575px){
-                      display: grid;
-                      grid-template-columns: repeat(1,5fr);
-                    }
-
-
-
-                    @media(min-width:576px) and (max-width:767px){
-                      display: grid;
-                      grid-template-columns: repeat(2, 2fr);
-                    }
-
-                    
-                    
-                    .club-members{
-                     text-align: center;
-                     transition: transform 2s ease-in-out ;
-                     border-radius: 50px;
-                     box-sizing: border-box;
-                     
-                     height: 85%;
-                     
-                     
-                     
-                     
-                    
-
-                     &:hover{
-                      transform: scale(110% , 110%);
-                      z-index: -1;
-                      
-                      animation: shadowCard 2s ease-in-out infinite ;
-
-                      @keyframes shadowCard{
-                       
-                        0%{
-                          box-shadow: 0 0 25px rgb(56, 56, 183);
-                          
-                        }
-
-                        50%{
-                          box-shadow:0 0 25px darkmagenta ;
-                        }
-                
-                      100%{
-                        box-shadow: 0 0 25px rgb(56, 56, 183);
-                      }
-                      }
-                      
-                    }
-                  p{
-                    margin-top: 5px;
-                    color: #000000;
-                    
-                  }
-
-                  h3{
-                    margin-top: 30px;
-                    margin-bottom: 20px;
-                    color: $text-color-alt;
-                    font-size: $subtitle-font-size;
-                    font-weight: $font-semibold;
-
-                    @media(max-width: 768px){
-                      font-size :1rem;;
-                    }
-                  }
-
-                  img{
-                    width: 250px;
-                    transition: 0.6s ease-in-out ;
-                    
-
-
-
-
-
-                    @media(max-width:768px){
-                      width: 180px;
-                    }
-
-                    @media(min-width:768px) and (max-width: 1199px){
-                      width: 200px;
-                    }
-
-                    @media(min-width: 1200px){
-                      width: calc(250px + (100vw - 1200px) * 0.1);
-                      
-                    } 
-
-
-                  }
-
-                  button{
-                    background-color: $first-color;
-                    border-radius: 35px;
-                    width: 210px;
-                    height: 55px;
-                    border: none;
-                    margin-top: 10px;
-                    margin-bottom: 100px;
-                    cursor: pointer;
-                   
-
-
-
-                    @media(min-width:320px) and (max-width:1199px){
-                      width: 195px;
-                    }
-
-                    &:hover{
-                      transform: scale(110%, 110%);
-                      transition: 0.5s ease-in-out;
-                      animation: shadowPulse 2s ease-in-out infinite ;
-
-                      @keyframes shadowPulse{
-                        0%{
-                          box-shadow: 0 0 15px rgb(56, 56, 183);
-                        }
-
-                        50%{
-                          box-shadow:0 0 15px darkmagenta ;
-                        }
-                
-                      100%{
-                        box-shadow: 0 0 15px rgb(56, 56, 183);
-                      }
-                      }
-                     }
-
-                    &:hover i{
-                      transform: translateX(120px);
-                    }
-
-                    &:hover p{
-                      opacity: 0;
-                    }
-
-                    &:hover a{
-                      opacity: 1;
-                      transform:translateX(-40%);
-                      
-                    }
-                   
-                    i{
-                      display: inline-block;
-                      padding-top: 9px;
-                      font-size: 32px;
-                      margin-right: 6px;
-                      padding-bottom: 10px;
-                      transition: 0.4s ease-in-out;
-                      vertical-align: middle;
-
-                    }
-                   
-                    p{
-                      color:#FFFFFF ;
-                      font-family: $font-family;
-                      display: inline-block;
-                      font-size: 24px;
-                      transition: 0.4s ease-in-out;
-                      vertical-align: middle;
-                      margin: 0;
-
-                   }
-
-                   a{
-                    opacity: 0;
-                    display: inline-block;
-                    font-size: 24px;
-                    color: #FFFFFF;
-                    padding-bottom: 60px;
-                    position: absolute;
-                    margin-left: -110px;
-                    padding-top: 10px;
-                    color: rgb(140, 140, 214);
-                    font-family: $font-family;
-                    transition: 0.4s ease-in-out;
-                   }
-                                      
-                  }
-
-          
-                    }
-                   }
-                   
-                   .intro-two{
-                    p{
-                      margin-top: 50px;
-                      color: $text-color-alt;
-                      text-align: center;
-                      font-size: $big-font-size;
-                      font-weight: $font-bold;
-
-                      @media(max-width:768px){
-                        font-size: 1.2rem;
-                    }
-
-                  }
-                   }
-
-                   .captains-core{
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-
-                    @media(min-width:320px) and (max-width:575px){
-                      display: grid;
-                      grid-template-columns: repeat(1,5fr);
-                    }
-
-                    @media(min-width:576px) and (max-width:767px){
-                      display: grid;
-                      grid-template-columns: repeat(2, 2fr);
-                    }
-
-                    .team-members{
-                      text-align: center;
-                      
-                      p{
-                        color: #000000;
-                        margin-top: 5px
-                        
-                       
-                      }
-
-                     
-
-                     
-    
-                      h3{
-                        margin-top: 30px;
-                        margin-bottom: 20px;
-                        color: $text-color-alt;
-                        font-size: $subtitle-font-size;
-                        font-weight: $font-semibold;
-
-                        @media(max-width: 768px){
-                          font-size :1rem;;
-                        }
-                      }
-    
-                      img{
-    
-                        width: 250px;
-                        border-radius: 50%;
-                        transition: 0.6s ease-in-out ;
-
-                        &:hover{
-                          transform: scale(110% , 110%);
-                          z-index: -1;
-                          box-shadow: 0 0 20px rgb(56, 56, 183);
-
-                        }
-
-                        @media(max-width:768px){
-                          width: 180px;
-                        }
-
-                        @media(min-width:768px) and (max-width: 1199px){
-                          width: 200px;
-                        }
-
-                        @media(min-width: 1200px){
-                          width: calc(250px + (100vw - 1200px) * 0.1);
-                        } 
-                      }
-                      button{
-                        background-color: $first-color;
-                        border-radius: 35px;
-                        width: 210px;
-                        height: 55px;
-                        border: none;
-                        margin-top: 10px;
-                        margin-bottom: 100px;
-                        cursor: pointer;
-
-                        @media(min-width:320px) and (max-width:1199px){
-                          width: 195px;
-                        }
-
-                        &:hover{
-                          transform: scale(110%, 110%);
-                          transition: 0.5s ease-in-out;
-                          animation: shadowPulse 2s ease-in-out infinite ;
-    
-                          @keyframes shadowPulse{
-                            0%{
-                              box-shadow: 0 0 15px rgb(56, 56, 183);
-                            }
-    
-                            50%{
-                              box-shadow:0 0 15px darkmagenta ;
-                            }
-                    
-                          100%{
-                            box-shadow: 0 0 15px rgb(56, 56, 183);
-                          }
-                          }
-                         }
-
-                       &:hover{
-                        transform: scale(110%, 110%);
-                        transition: 0.5s ease-in-out;
-                       }
-
-                        &:hover i{
-                          transform: translateX(120px);
-                        }
-    
-                        &:hover p{
-                          opacity: 0;
-                        }
-    
-                        &:hover a{
-                          opacity: 1;
-                          transform:translateX(-40%);
-                        }
-
-                        i{
-                          display: inline-block;
-                          padding-top: 9px;
-                          font-size: 32px;
-                          margin-right: 6px;
-                          padding-bottom: 10px;
-                          transition: 0.4s ease-in-out;
-                          vertical-align: middle;
-                          
-                          
-                          
-                        }
-
-                        
-
-                        
-                      p{
-                        color: #FFFFFF;
-                        font-family: $font-family;
-                        display: inline-block ;
-                        font-size: 24px;
-                        transition: 0.4s ease-in-out;
-                        vertical-align: middle;
-                        margin: 0;
-                        
-                       
-                        
-                       
-                      }
-
-                      a{
-                        opacity: 0;
-                        display: inline-block;
-                        font-size: 24px;
-                        color: #FFFFFF;
-                        padding-bottom: 60px;
-                        position: absolute;
-                        margin-left: -110px;
-                        padding-top: 10px;
-                        color: rgb(140, 140, 214);
-                        font-family: $font-family;
-                        transition: 0.4s ease-in-out;                   
-                       }
-                      }
-                    }
-                   }
-                  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
