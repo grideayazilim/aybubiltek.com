@@ -75,12 +75,12 @@ body .title-area {
   display: grid;
   align-content: center;
   width: 100%;
-  height: 136px;
+  height: 107px;
   text-align: center;
   padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
-  margin-top: 5rem;
+  margin-top: 5rem; /* space for navbar */
 }
 body .title-area img {
   position: absolute;
@@ -99,13 +99,14 @@ body .title-area img:nth-child(2) {
 @media screen and (max-width: 1200px) {
   body .bigger-title,
   body .big-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
   body .subtitle {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   body .title-area {
-    height: 95px;
+    margin-top: 3.5rem;
+    height: 85px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -117,10 +118,10 @@ body .title-area img:nth-child(2) {
   }
   body .bigger-title,
   body .big-title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
   body .title-area {
-    height: 65px;
+    height: 68px;
   }
 }
 body .root-test-div {
@@ -128,77 +129,63 @@ body .root-test-div {
 }
 
 body {
-  background-color: #f4f4f4;
+  text-align: center;
 }
-
-.container {
-  padding: 0% !important;
+body .white-container {
+  padding-block: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  justify-content: center;
 }
-.container .bigger-title {
-  background: linear-gradient(96.85deg, #FBFBFB 15%, #AC96FB 109.62%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+body .white-container .division {
+  margin-bottom: 5rem;
 }
-.container .section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0px 10px 15px -3px rgba(142, 142, 142, 0.1);
+body .white-container .division .subtitle {
+  padding: 0.2rem;
 }
-.container .my-big-title {
-  font-size: 1.9rem !important;
-}
-.container .sponsor-part {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.container .sponsor-part .division {
-  box-shadow: 0px -17px 15px -3px rgba(142, 142, 142, 0.1);
+body .white-container .division .line-image img {
   width: 100%;
+  height: auto;
+  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg) brightness(40%);
 }
-.container .sponsor-part .division .big-title {
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  color: #0f2c59;
+body .white-container .division .line {
+  width: 80%;
+  margin: auto;
 }
-.container .sponsor-part .division .image-area {
+body .white-container .division .image-area {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  flex-direction: column;
   padding: 2rem;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
-.container .sponsor-part .division .sponsor-link {
-  width: 300px;
+body .white-container .division .image-area .sponsor-link {
+  width: 250px;
   transition: transform 0.4s;
 }
-.container .sponsor-part .division .sponsor-link:hover {
+body .white-container .division .image-area .sponsor-link .img {
+  width: 100%;
+  height: auto;
+}
+body .white-container .division .image-area .sponsor-link:hover {
   transform: scale(110%);
 }
-.container .sponsor-part .division .sponsor-link:hover .img {
-  width: 100%;
+body .white-container .division:nth-child(1) {
+  margin-top: 2.5rem;
 }
-.container .sponsor-part .division .sponsor-link-siber {
-  transition: transform 0.4s;
+body .white-container .division:nth-child(3) {
+  margin-top: 5rem;
 }
-.container .sponsor-part .division .sponsor-link-siber:hover {
-  transform: scale(110%);
-}
-.container .sponsor-part .division .sponsor-link-siber:hover .img {
-  width: 100%;
-}
-
-@media only screen and (max-width: 450px) {
-  .sponsor {
-    font-size: 2.1rem !important;
+@media screen and (max-width: 1200px) {
+  body .white-container .division .image-area .sponsor-link {
+    width: 300px;
   }
 }
-@media only screen and (max-width: 400px) {
-  .sponsor {
-    font-size: 1.7rem !important;
+@media screen and (max-width: 768px) {
+  body .white-container .division .image-area .sponsor-link {
+    width: 250px;
   }
 }/*# sourceMappingURL=main.css.map */
