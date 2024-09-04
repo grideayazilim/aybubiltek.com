@@ -11,3 +11,7 @@ button.addEventListener("click", (e) => {
     button.classList.remove("animate");
   }, 400);
 });
+
+function goPageTime() {
+  setTimeout(() => window.alert("wdqwe"), 500);
+}
