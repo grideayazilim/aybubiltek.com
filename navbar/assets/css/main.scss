@@ -8,7 +8,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5rem;
+    height: 4.5rem;
     padding-inline: 9%;
     background-color: transparent;
     display: flex;
@@ -29,9 +29,10 @@ body {
     /*============== LOGO ==============*/
     .nav-logo {
       transition: filter 0.4s;
+      height: 75%;
 
       .nav-img {
-        width: 156px;
+        height: 100%;
       }
     }
 
@@ -275,7 +276,7 @@ body {
     }
   }
 
-  /* =============== RESPONSIVE DESIGN =============== */
+  /*=============== RESPONSIVE DESIGN ===============*/
   /* First breakpoint */
   @media screen and (max-width: 1300px) {
     nav {
@@ -322,6 +323,11 @@ body {
       }
 
       .button-area {
+        .register-button{
+          width: 125px;
+          height: 40px;
+        }
+
         .nav-toggle {
           display: block;
         }
@@ -340,20 +346,34 @@ body {
     }
   }
 
+  /* 
+     Navbar height adjustment to 
+     match the responsive design in the root
+  */
+  @media screen and (max-width: 1200px){
+    nav{
+      height: 3.5rem;
+    }
+  }
+
   /* Second breakpoint */
   @media screen and (max-width: 768px) {
     nav {
-      padding-inline: 4%;
+      padding-inline: 7%;
+
+      .nav-menu{
+        width: 80%;
+      }
 
       .button-area {
         .register-button {
-          width: 110px;
-          height: 40px;
+          width: 100px;
+          height: 30px;
         }
-      }
 
-      .nav-logo {
-        width: 120px;
+        .nav-toggle{
+          font-size: 1.25rem;
+        }
       }
     }
   }

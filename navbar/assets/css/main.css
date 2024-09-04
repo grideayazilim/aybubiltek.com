@@ -72,12 +72,12 @@ body .title-area {
   display: grid;
   align-content: center;
   width: 100%;
-  height: 136px;
+  height: 107px;
   text-align: center;
   padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
-  margin-top: 5rem;
+  margin-top: 5rem; /* space for navbar */
 }
 body .title-area img {
   position: absolute;
@@ -96,31 +96,32 @@ body .title-area img:nth-child(2) {
 @media screen and (max-width: 1200px) {
   body .bigger-title,
   body .big-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
   body .subtitle {
     font-size: 1.2rem;
   }
   body .title-area {
-    height: 95px;
+    margin-top: 3.5rem;
+    height: 85px;
   }
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 0.8rem;
+    font-size: 0.89rem;
   }
   body .container {
     padding-inline: 5%;
   }
   body .bigger-title,
   body .big-title {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
   body .subtitle {
     font-size: 1rem;
   }
   body .title-area {
-    height: 65px;
+    height: 68px;
   }
 }
 body .root-test-div {
@@ -130,8 +131,12 @@ body .root-test-div {
 body {
   height: 200vh;
   /*========== WHITE NAVBAR FEATURES ==========*/
-  /* =============== RESPONSIVE DESIGN =============== */
+  /*=============== RESPONSIVE DESIGN ===============*/
   /* First breakpoint */
+  /* 
+     Navbar height adjustment to 
+     match the responsive design in the root
+  */
   /* Second breakpoint */
   /*======= 
     Classes and ids below belongs to just one element.
@@ -145,7 +150,7 @@ body nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 5rem;
+  height: 4.5rem;
   padding-inline: 9%;
   background-color: transparent;
   display: flex;
@@ -168,9 +173,10 @@ body nav i:hover {
 }
 body nav .nav-logo {
   transition: filter 0.4s;
+  height: 75%;
 }
 body nav .nav-logo .nav-img {
-  width: 156px;
+  height: 100%;
 }
 body nav .nav-menu {
   background-color: transparent;
@@ -269,6 +275,7 @@ body nav .nav-menu .nav-close {
 }
 body nav .button-area {
   display: flex;
+  align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   /*======= REGISTER BUTTON =======*/
@@ -395,6 +402,10 @@ body .white-container .button-area .register-button::before, body .white-contain
     right: 3rem;
     font-size: 1.5rem;
   }
+  body nav .button-area .register-button {
+    width: 125px;
+    height: 40px;
+  }
   body nav .button-area .nav-toggle {
     display: block;
   }
@@ -405,16 +416,24 @@ body .white-container .button-area .register-button::before, body .white-contain
     background-color: white;
   }
 }
+@media screen and (max-width: 1200px) {
+  body nav {
+    height: 3.5rem;
+  }
+}
 @media screen and (max-width: 768px) {
   body nav {
-    padding-inline: 4%;
+    padding-inline: 7%;
+  }
+  body nav .nav-menu {
+    width: 80%;
   }
   body nav .button-area .register-button {
-    width: 110px;
-    height: 40px;
+    width: 100px;
+    height: 30px;
   }
-  body nav .nav-logo {
-    width: 120px;
+  body nav .button-area .nav-toggle {
+    font-size: 1.25rem;
   }
 }
 body #blur-div {

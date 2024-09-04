@@ -64,3 +64,5 @@ const handleNavbarBackground = () => {
 };
 
 window.addEventListener("scroll", handleNavbarBackground);
+// to add white-container properly on load
+window.addEventListener("load", handleNavbarBackground);
