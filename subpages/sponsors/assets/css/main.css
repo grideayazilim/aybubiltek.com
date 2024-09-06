@@ -128,21 +128,22 @@ body .root-test-div {
   height: 50vh;
 }
 
-body {
-  text-align: center;
-}
 body .white-container {
-  padding-block: 2rem;
+  /*============== BASE ==============*/
+  text-align: center;
+  padding-block: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  justify-content: center;
+  grid-template-columns: repeat(3, 25%);
   -moz-column-gap: 3rem;
        column-gap: 3rem;
-  justify-content: center;
-}
-body .white-container .division {
-  margin-bottom: 5rem;
+  /*============== SPONSOR CONTAINER ==============*/
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
 }
 body .white-container .division .subtitle {
+  font-weight: 700;
   padding: 0.2rem;
 }
 body .white-container .division .line-image img {
@@ -163,7 +164,7 @@ body .white-container .division .image-area {
   gap: 2rem;
 }
 body .white-container .division .image-area .sponsor-link {
-  width: 250px;
+  width: 90%;
   transition: transform 0.4s;
 }
 body .white-container .division .image-area .sponsor-link .img {
@@ -180,12 +181,25 @@ body .white-container .division:nth-child(3) {
   margin-top: 5rem;
 }
 @media screen and (max-width: 1200px) {
+  body .white-container {
+    grid-template-columns: 50%;
+  }
+  body .white-container .division .subtitle {
+    font-size: 1.75rem;
+  }
   body .white-container .division .image-area .sponsor-link {
-    width: 300px;
+    width: 75%;
+  }
+  body .white-container .division:nth-child(1), body .white-container .division:nth-child(2), body .white-container .division:nth-child(3) {
+    margin: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  body .white-container .division .image-area .sponsor-link {
-    width: 250px;
+  body .white-container {
+    padding-block: 1.75rem;
+    grid-template-columns: 70%;
+  }
+  body .white-container .division .subtitle {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */
