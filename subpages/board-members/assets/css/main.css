@@ -73,7 +73,7 @@ body .title-area {
   display: grid;
   align-content: center;
   width: 100%;
-  height: 115px;
+  height: 136px;
   text-align: center;
   padding-inline: 3rem;
   background-color: #0f2c59;
@@ -125,19 +125,6 @@ body .root-test-div {
   height: 50vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: white;
-}
 body .white-container {
   position: relative;
   padding-block: 4rem;
@@ -146,61 +133,87 @@ body .white-container {
 body .white-container .big-title {
   margin-block: 6rem 2rem;
 }
-body .white-container .manage-board {
+body .white-container .members {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-body .white-container .manage-board .club-members {
+body .white-container .members .member-card {
   width: 300px;
   display: grid;
   place-items: center;
   row-gap: 1.3rem;
-  padding: 2.4rem 1rem 2.4rem;
+  padding: 2.4rem 1rem;
   border-radius: 20px;
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
   transition: transform 0.4s, box-shadow 0.4s;
 }
-body .white-container .manage-board .club-members img {
-  width: 75%;
+body .white-container .members .member-card .image-container {
+  position: relative;
+  display: grid;
+  width: 180px;
+  height: 180px;
+  background-color: burlywood;
+  border-radius: 50%;
+  overflow: hidden;
   transition: transform 0.4s;
 }
-body .white-container .manage-board .club-members .member-link {
+body .white-container .members .member-card .image-container::before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 65px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: indianred;
+  transition: transform 0.4s;
+}
+body .white-container .members .member-card .image-container img {
+  position: relative;
+  justify-self: center;
+  align-self: flex-end;
+  width: 90%;
+  height: auto;
+  transition: transform 0.4s;
+}
+body .white-container .members .member-card .contact {
+  display: grid;
+  row-gap: 0.4rem;
+}
+body .white-container .members .member-card .contact .member-link {
   display: flex;
+  justify-content: center;
   align-items: center;
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
-  font-size: 1.25rem;
   color: #e5e5e5;
   background-color: #0f2c59;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 25px;
   transition: 0.6s;
 }
-body .white-container .manage-board .club-members .member-link i,
-body .white-container .manage-board .club-members .member-link p {
-  transition: transform 0.6s;
+body .white-container .members .member-card .contact .member-link i,
+body .white-container .members .member-card .contact .member-link p {
+  transition: transform 0.4s;
 }
-body .white-container .manage-board .club-members .member-link i {
-  font-size: 1.75rem;
+body .white-container .members .member-card .contact .member-link i {
+  font-size: 1.25rem;
 }
-body .white-container .manage-board .club-members .member-link:hover {
-  text-shadow: 0 0 10px rgba(229, 229, 229, 0.5098039216);
+body .white-container .members .member-card .contact .member-link:hover {
+  text-shadow: 0 0 3px rgba(229, 229, 229, 0.4117647059);
   transform: scale(105%);
-  box-shadow: rgba(15, 45, 89, 0.5882352941) 0 0 20px 0px;
+  box-shadow: rgba(15, 45, 89, 0.5882352941) 0 0 10px 0px;
 }
-body .white-container .manage-board .club-members .member-link:hover p {
-  transform: translateX(-30px);
-}
-body .white-container .manage-board .club-members .member-link:hover i {
-  transform: translateX(100px) rotate(360deg);
-}
-body .white-container .manage-board .club-members:hover {
+body .white-container .members .member-card:hover {
   box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
 }
-body .white-container .manage-board .club-members:hover img {
-  transform: scale(110%) translateY(-10px);
+body .white-container .members .member-card:hover .image-container img {
+  transform: scale(110%);
+}
+body .white-container .members .member-card:hover .image-container::before {
+  transform: scale(400%) translateY(-50%);
 }
 @media screen and (max-width: 1200px) {
   body .white-container .big-title {
@@ -208,35 +221,25 @@ body .white-container .manage-board .club-members:hover img {
   }
 }
 @media screen and (max-width: 768px) {
-  body .white-container .manage-board {
+  body .white-container .members {
     gap: 2rem;
   }
-  body .white-container .manage-board .club-members {
+  body .white-container .members .member-card {
     width: 300px;
   }
-  body .white-container .manage-board .club-members img {
+  body .white-container .members .member-card .image-container {
     width: 70%;
   }
 }
 @media screen and (max-width: 698px) {
-  body .white-container .manage-board {
+  body .white-container .members {
     flex-direction: column;
   }
-  body .white-container .manage-board .club-members {
+  body .white-container .members .member-card {
     width: 300px;
-    padding-block: 2rem 1rem;
+    padding-block: 2rem;
   }
-  body .white-container .manage-board .club-members img {
+  body .white-container .members .member-card .image-container {
     width: 70%;
   }
-}
-
-.vector-1 {
-  position: absolute;
-  z-index: 0;
-  top: 200px;
-}
-.vector-1 img {
-  width: 100%;
-  height: auto;
 }/*# sourceMappingURL=main.css.map */
