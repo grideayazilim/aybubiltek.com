@@ -1,4 +1,3 @@
-/*============== TOPIC NAME ==============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
@@ -126,64 +125,51 @@ body .root-test-div {
   height: 50vh;
 }
 
-body {
-  background-color: white;
+body .departmants {
+  display: grid;
+  row-gap: 3.5rem;
+  padding-block: 2.5rem 4.25rem;
+  text-align: center;
 }
-body .white-container {
-  width: 100%;
-  height: 100%;
-  background-color: white;
+body .departmants .cards-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 4fr;
-  padding: 0 3% 3% 3%;
-  justify-items: center;
-  align-items: center;
+  -moz-column-gap: 2.75rem;
+       column-gap: 2.75rem;
 }
-body .white-container .big-title {
-  text-align: center;
-  grid-column: 1/span 3;
-}
-body .white-container .departmant-divs {
+body .departmants .cards-container .card {
   display: grid;
-  grid-row: 2;
-  justify-items: center;
-  text-align: center;
-  border-radius: 7%;
-  width: 85%;
-  height: 105%;
+  place-items: center;
+  row-gap: 1rem;
+  padding: 2.75rem 1.5rem;
+  border-radius: 35px;
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
-  position: relative;
-  padding: 7% 0 7% 0;
   transition: all 0.4s;
 }
-body .white-container .departmant-divs header {
-  margin: 2%;
-}
-body .white-container .departmant-divs p {
-  margin: 0 13% 0 13%;
-  text-align: left;
-}
-body .white-container .departmant-divs:hover {
+body .departmants .cards-container .card:hover {
   box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
 }
-body .white-container .images {
-  top: 30%;
-  margin: 5%;
-  width: 80%;
-  height: auto;
-  justify-self: center;
+body .departmants img {
+  width: 65%;
 }
-@media (max-width: 620px) {
-  body .white-container {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    padding-top: 5%;
+@media screen and (max-width: 1200px) {
+  body .departmants {
+    row-gap: 2.25rem;
   }
-  body .white-container .departmant-divs {
+}
+@media screen and (max-width: 1000px) {
+  body .departmants .cards-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  body .departmants .card {
+    justify-self: center;
+    width: 60%;
+  }
+}
+@media screen and (max-width: 568px) {
+  body .departmants .card {
+    justify-self: center;
     width: 80%;
-    margin: 5%;
   }
 }/*# sourceMappingURL=main.css.map */
