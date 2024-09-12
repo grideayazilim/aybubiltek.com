@@ -1,13 +1,15 @@
-/*============== değiştir burayı ==============*/
+/*============== DROPDOWN MENU ==============*/
 const activatorItem = document.querySelectorAll(".activator-item");
 
 activatorItem.forEach((item) => {
   const openSubmenu = item.querySelector(".sublist");
 
+  // Show dropdown menu
   item.addEventListener("mouseover", () => {
     openSubmenu.style.height = openSubmenu.scrollHeight + "px";
   });
 
+  // Hide dropdown menu
   item.addEventListener("mouseout", () => {
     openSubmenu.removeAttribute("style");
   });
@@ -30,39 +32,51 @@ closeButton.addEventListener("click", () => {
 
 /*============== BLUR AND WHITEN NAVBAR ==============*/
 const navbar = document.querySelector("nav");
-const blurDiv = document.getElementById("blur-div");
+const blurDivs = document.querySelectorAll(".blur-div");
 let isHomePage = "isHomePage";
 
-//Check if the site is home page
-document.getElementById("home-page") === null
-  ? (isHomePage = false)
-  : (isHomePage = true);
-
 /*
-  Navbar background color structure:
+  Navbar and dropdown menus have 3 classes:
+  1-) 'blur-div'
+  2-) 'anti-blur'
+  3-) 'blur-container'
 
-  At the top of the page:
-    -->If user is in the homepage, transparent background.
-    -->If not, white background.
-  When scrolled:
-    -->Blurred and translucent background.
+  Here is the summary of the algorithm: 'blur-div' is to sign and
+  select the elements that needs to be blurred. 'blur-container' is 
+  always active on these elements and 'anti-blur' is used to deactivate
+  the features provided by 'blur-container'. This process is done to 
+  add and remove blur effect smoothly.
+
+  After the logic above, navbar background color structure is as follows:
+  ->At the top of the page:
+      -->Deactivate blur always
+      -->If user is not in the home page, add white background (white-container)
+  ->When scrolled:
+      -->Activate blur and remove white background
 
   --------------------------------------------------------
 
   handleNavbarBackground implements the structure above.
 */
+document.getElementById("home-page") === null
+  ? (isHomePage = false)
+  : (isHomePage = true);
+
 const handleNavbarBackground = () => {
   if (!isHomePage) navbar.classList.add("white-container");
 
   if (this.scrollY >= 50) {
-    blurDiv.classList.remove("anti-blur");
+    blurDivs.forEach((blurDiv) => blurDiv.classList.remove("anti-blur"));
     if (!isHomePage) navbar.classList.remove("white-container");
   } else {
-    blurDiv.classList.add("anti-blur");
+    blurDivs.forEach((blurDiv) => blurDiv.classList.add("anti-blur"));
     if (!isHomePage) navbar.classList.add("white-container");
   }
 };
 
 window.addEventListener("scroll", handleNavbarBackground);
-// to add white-container properly on load
-window.addEventListener("load", handleNavbarBackground);
+window.onload = handleNavbarBackground;
+
+/*============== NAVIGATE TO TEAM SUBPAGE ==============*/
+const navigateToTeams = (teamId) =>
+  sessionStorage.setItem("selectedTeamId", teamId);

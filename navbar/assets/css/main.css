@@ -129,20 +129,22 @@ body .root-test-div {
 }
 
 body {
-  height: 200vh;
   /*========== WHITE NAVBAR FEATURES ==========*/
   /*=============== RESPONSIVE DESIGN ===============*/
   /* First breakpoint */
+  /* Navbar for mobile devices*/
   /* 
      Navbar height adjustment to 
      match the responsive design in the root
   */
   /* Second breakpoint */
   /*======= 
-    Classes and ids below belongs to just one element.
+    Classes and ids below belongs to just blurred elements.
 
     These are created to add blur to the navbar smoothly
     and properly.
+
+    Check js file to see the algorithm
   =======*/
 }
 body nav {
@@ -152,7 +154,6 @@ body nav {
   width: 100%;
   height: 4.5rem;
   padding-inline: 9%;
-  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -166,14 +167,11 @@ body nav i {
   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   -webkit-background-clip: text;
           background-clip: text;
-  transition: transform 0.4s, color 0.4s;
-}
-body nav i:hover {
-  color: transparent;
+  transition: transform 0.4s;
 }
 body nav .nav-logo {
-  transition: filter 0.4s;
   height: 75%;
+  transition: filter 0.4s;
 }
 body nav .nav-logo .nav-img {
   height: 100%;
@@ -192,7 +190,7 @@ body nav .nav-menu .nav-list {
 }
 body nav .nav-menu .nav-list .nav-item {
   position: relative;
-  transition: color 0.4s, background-position 0.4s, font-weight 0.4s;
+  transition: color 0.4s;
   /*======= Features to use in item slide effect =======*/
   /*======= nav-item hover =======*/
 }
@@ -203,7 +201,7 @@ body nav .nav-menu .nav-list .nav-item .nav-link {
   background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   -webkit-background-clip: text;
           background-clip: text;
-  transition: color 0.4s, background-position 0.4s, font-weight 0.4s;
+  transition: color 0.4s, font-weight 0.4s;
 }
 body nav .nav-menu .nav-list .nav-item::before, body nav .nav-menu .nav-list .nav-item::after {
   content: "";
@@ -225,6 +223,7 @@ body nav .nav-menu .nav-list .nav-item:hover .nav-link {
   color: transparent;
 }
 body nav .nav-menu .nav-list .nav-item:hover .nav-link i {
+  font-weight: initial;
   transform: rotate(180deg);
 }
 body nav .nav-menu .nav-list .nav-item:hover::after, body nav .nav-menu .nav-list .nav-item:hover::before {
@@ -236,20 +235,20 @@ body nav .nav-menu .nav-list .activator-item .activator-item-title {
   -moz-column-gap: 2px;
        column-gap: 2px;
 }
+body nav .nav-menu .nav-list .activator-item .anti-blur {
+  background-color: #0f2c59;
+}
 body nav .nav-menu .nav-list .activator-item .sublist {
   position: absolute;
-  top: 79px;
+  top: 4.65rem;
   left: -28.5%;
   width: 160%;
   height: 0;
   opacity: 1;
   overflow: hidden;
   text-align: center;
-  background-color: rgba(9, 26, 52, 0.8039215686);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 10px 16px hsla(0, 0%, 0%, 0.1);
-  transition: height 0.7s;
+  transition: height 0.7s background 0.4s;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
   transition: background 0.4s;
@@ -257,11 +256,10 @@ body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
   color: white;
   font-weight: 400;
-  /* realignment on the nav-link inside dropdown menu */
+  /* Realignment on the nav-link inside dropdown menu */
   padding: 1.4rem 1.6rem;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
-  color: white;
   background-color: hsla(217, 70%, 6%, 0.4);
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item:hover .nav-link {
@@ -275,7 +273,6 @@ body nav .nav-menu .nav-close {
 }
 body nav .button-area {
   display: flex;
-  align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   /*======= REGISTER BUTTON =======*/
@@ -329,38 +326,33 @@ body nav .button-area .nav-toggle {
   cursor: pointer;
   font-size: 2rem;
 }
-body .white-container {
-  /*============== BASE ==============*/
+body .white-container:is(nav) {
   box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
   /*============== WHITE NAV MENU ==============*/
   /*============== WHITE BUTTON AREA ==============*/
 }
-body .white-container i {
+body .white-container:is(nav) i {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #0f2c59;
 }
-body .white-container .nav-logo {
+body .white-container:is(nav) .nav-logo {
   filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
 }
-body .white-container .nav-menu .nav-list {
+body .white-container:is(nav) .nav-menu .nav-list {
   /*======= WHITE DROPDOWN AREA =======*/
 }
-body .white-container .nav-menu .nav-list .nav-item .nav-link, body .white-container .nav-menu .nav-list .nav-item::before, body .white-container .nav-menu .nav-list .nav-item::after {
+body .white-container:is(nav) .nav-menu .nav-list .nav-item .nav-link, body .white-container:is(nav) .nav-menu .nav-list .nav-item::before, body .white-container:is(nav) .nav-menu .nav-list .nav-item::after {
   background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
-body .white-container .nav-menu .nav-list .nav-item::before {
-  filter: blur(2px);
-}
-body .white-container .nav-menu .nav-list .activator-item .sublist {
+body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist {
   background-color: #f4f4f4;
 }
-body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
+body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
   color: #0f2c59;
 }
-body .white-container .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
+body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
   background-color: #dfdfdf;
 }
-body .white-container .button-area .register-button::before, body .white-container .button-area .register-button::after {
+body .white-container:is(nav) .button-area .register-button::before, body .white-container:is(nav) .button-area .register-button::after {
   border-color: #5286ce;
 }
 @media screen and (max-width: 1300px) {
@@ -377,12 +369,12 @@ body .white-container .button-area .register-button::before, body .white-contain
     padding-top: 6rem;
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
     background-color: rgba(9, 26, 52, 0.8039215686);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   body nav .nav-menu .nav-list {
     flex-direction: column;
-    /* mysterious area to align sidebar effect on items*/
+    /* Mysterious area to align sidebar effect on items */
   }
   body nav .nav-menu .nav-list .nav-item {
     padding-block: 0 17px;
@@ -395,6 +387,13 @@ body .white-container .button-area .register-button::before, body .white-contain
     width: 100%;
     opacity: 1;
     position: static;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
+    /* Set padding value equal to nav-item > nav-link */
+  }
+  body nav .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
+    padding: 1.2rem 4rem;
   }
   body nav .nav-menu .nav-close {
     display: block;
@@ -412,7 +411,7 @@ body .white-container .button-area .register-button::before, body .white-contain
   body nav .show-menu {
     right: 0;
   }
-  body .white-container .nav-menu {
+  body .white-container:is(nav) .nav-menu {
     background-color: white;
   }
 }
@@ -436,7 +435,7 @@ body .white-container .button-area .register-button::before, body .white-contain
     font-size: 1.25rem;
   }
 }
-body #blur-div {
+body .blur-div {
   transition: 0.4s;
 }
 body .blur-container {
