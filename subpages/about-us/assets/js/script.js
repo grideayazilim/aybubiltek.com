@@ -1,73 +1,54 @@
-/*============== DESCRIPTION SLIDER ==============*/
-// Math explanations are in SCSS at mixin 'setContentGrid'
-const titles = document.querySelectorAll(".subtitle");
-const descriptionSlider = document.querySelector(".description-slider");
-const lineSlider = document.querySelector(".current-line");
-
-/*===== Function to slide description and line =====*/
-const slideItems = (title) => {
-  const keyword = title.innerHTML;
-  let containerWidth = document.querySelector(".info").clientWidth;
-  let descriptionLeftPosition = "";
-  let lineLeftPosition = "";
-
-  // Change position values according to which title is clicked
-  if (keyword === "Hakkımızda") {
-    descriptionLeftPosition = 0;
-    lineLeftPosition = 0;
-  } else if (keyword === "Misyonumuz") {
-    descriptionLeftPosition = containerWidth;
-    lineLeftPosition = containerWidth / 3.0;
-  } else if (keyword === "Vizyonumuz") {
-    descriptionLeftPosition = containerWidth * 2;
-    lineLeftPosition = (containerWidth / 3.0) * 2;
-  }
-
-  // Assign the final position values
-  descriptionSlider.style.transform =
-    "translateX(" + -descriptionLeftPosition + "px)";
-  lineSlider.style.transform = "translateX(" + lineLeftPosition + "px)";
-};
-
-titles.forEach((title) => {
-  title.addEventListener("click", () => {
-    // Get current active title
-    const activeTitle = document.querySelector(".active-title");
-    // If selected title is different from the current active title, remove the former active title
-    if (activeTitle != title) {
-      activeTitle.classList.remove("active-title");
-      title.classList.add("active-title");
-    }
-
-    // Invoke function to align the items
-    slideItems(title);
+/*============== UPDATE SLIDER ==============*/
+document.addEventListener("DOMContentLoaded", () => {
+  // Swiper initialization
+  const swiper = new Swiper(".swiper", {
+    // Update slider line when slide changes
+    on: {
+      slideChange: function () {
+        updateSliderLine(this);
+      },
+    },
   });
+
+  updateSliderByTitle(swiper);
+  resetLineWidth(swiper);
 });
 
-/*============== RESET SLIDER ==============*/
-/*
-  When the grid width changes, slider stucks at the former
-  alignment if it is not triggered again, which causes to
-  collapse slider.
-  Therefore, the following function triggers the slider to 
-  the beginning when responsive design is enabled.
-*/
-const resetSliders = () => {
-  let windowWidth = document.body.clientWidth;
+// Elements that are going to be used
+const line = document.querySelector(".current-line");
+const titles = document.querySelectorAll(".subtitle");
 
-  // Activate the process when the responsive design is enabled
-  if (windowWidth <= 1380) {
-    // reset transform
-    descriptionSlider.style.transform = "translateX(0px)";
-    lineSlider.style.transform = "translateX(0px)";
+/*=== Update slider line and titles when slider changes ===*/
+const updateSliderLine = (swiper) => {
+  const slideIndex = swiper.activeIndex;
+  const activeSlide = swiper.slides[slideIndex];
+  const slideWidth = activeSlide.clientWidth / 3.0;
 
-    // reset title activeness
-    titles.forEach((title) => {
-      title.innerHTML === "Hakkımızda"
-        ? title.classList.add("active-title")
-        : title.classList.remove("active-title");
-    });
-  }
+  // Set new features of slider line
+  line.style.width = `${slideWidth}px`;
+  line.style.transform = `translateX(${slideWidth * slideIndex}px)`;
+
+  // Set title activeness
+  titles.forEach((title) => {
+    title.classList.remove("active-title");
+
+    if (parseInt(title.id) === parseInt(slideIndex))
+      title.classList.add("active-title");
+  });
 };
 
-window.addEventListener("resize", resetSliders);
+/*=== Update slider when a title is clicked ===*/
+const updateSliderByTitle = (swiper) => {
+  titles.forEach((title) => {
+    title.addEventListener("click", () => {
+      swiper.slideTo(parseInt(title.id));
+    });
+  });
+};
+
+/*=== Trigger updateSliderLine when resized to realign slider line ===*/
+const resetLineWidth = (swiper) => {
+  window.addEventListener("resize", () => {
+    updateSliderLine(swiper);
+  });
+};

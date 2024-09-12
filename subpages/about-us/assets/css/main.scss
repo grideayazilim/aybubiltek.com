@@ -1,48 +1,25 @@
-/*============== TOPIC NAME ==============*/
 @import "../../../../assets/css/root";
 
-@mixin setContentGrid($leftWidth, $rightWidth) {
-  .content {
-    grid-template-columns: $leftWidth $rightWidth;
-
-    .info {
-      .line-slider {
-        .current-line {
-          width: calc($leftWidth / 3);
-        }
-      }
-
-      .description-slider {
-        width: calc($leftWidth * 3);
-      }
-    }
-  }
-}
-
 body {
-  $description-width: 665px;
-
-  .white-container {
+  .about-us {
     .content {
       display: grid;
       justify-content: center;
-      grid-template-columns: $description-width 570px;
-      gap: 2rem;
+      grid-template-columns: 665px 570px;
+      column-gap: 2rem;
       padding-top: 3.5rem;
 
-      .info {
-        overflow: hidden;
-
+      .description-area {
         .titles {
           display: flex;
           justify-content: space-between;
-          padding-inline: 0.9rem;
+          padding-inline: .9rem;
 
           .subtitle {
             cursor: pointer;
             font-size: 1.8rem;
             font-weight: $font-medium;
-            transition: font-weight 0.4s, transform 0.4s;
+            transition: font-weight .4s, transform .4s;
           }
 
           .active-title {
@@ -51,32 +28,32 @@ body {
           }
         }
 
+        /*============== SLIDER LINE ==============*/
         .line-slider {
-          display: flex;
-          align-items: center;
+          position: relative;
           height: 4px;
-          margin-top: 0.75rem;
+          margin-top: .75rem;
           background-color: #c5c3d1;
 
           .current-line {
-            width: calc($description-width / 3);
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 33.3%;
             height: 10px;
             background-color: $first-color;
-            transition: transform 0.4s;
+            transition: width .3s, transform .3s;
           }
         }
 
-        .description-slider {
-          display: flex;
-          width: calc($description-width * 3);
-          transition: transform 0.4s;
+        /*============== SWIPER DIV ==============*/
+        .description-slider{
+          display: grid;
+          place-items: center;
 
           .description {
-            display: grid;
-            margin-top: 2rem;
-            row-gap: 1rem;
-
             .big-title {
+              margin-block: 1.5rem 1rem;
               font-size: 2.25rem;
               letter-spacing: 2px;
             }
@@ -101,8 +78,8 @@ body {
       }
     }
 
-    .sponsor-area {
-      padding: 5rem 15%;
+    .sponsors {
+      padding: 5rem 10%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -110,24 +87,24 @@ body {
       flex-wrap: wrap;
 
       img {
-        width: 275px;
+        width: 250px;
       }
     }
 
     /*=============== RESPONSIVE DESIGN ===============*/
     /* First breakpoint */
     @media screen and (max-width: 1380px) {
-      @include setContentGrid(550px, 370px);
-
       .content {
-        .info {
+        grid-template-columns: 550px 370px;
+
+        .description-area {
           .titles {
             .subtitle {
               font-size: 1.4rem;
             }
           }
 
-          .description-slider {
+          .description-slider{
             .description {
               .big-title {
                 font-size: 2rem;
@@ -137,19 +114,19 @@ body {
         }
       }
 
-      .sponsor-area {
+      .sponsors {
         img {
-          width: 175px;
+          width: 150px;
         }
       }
     }
 
     /* Second breakpoint */
     @media screen and (max-width: 1100px) {
-      @include setContentGrid(420px, 260px);
-
       .content {
-        .info {
+        grid-template-columns: 420px 260px;
+
+        .description-area {
           .titles {
             .subtitle {
               font-size: 1.1rem;
@@ -175,15 +152,16 @@ body {
 
     /* Third breakpoint */
     @media screen and (max-width: 800px) {
-      @include setContentGrid(450px, 0);
-
       .content {
+        grid-template-columns: 450px 0;
+        column-gap: 0;
         text-align: center;
 
-        .info {
-          .description-slider {
+        .description-area {
+          .description-slider{
             .description {
               .big-title {
+                margin-block: 1.25rem .5rem;
                 font-size: 1.5rem;
               }
             }
@@ -197,13 +175,13 @@ body {
     }
 
     @media screen and (max-width: 495px) {
-      @include setContentGrid(300px, 0);
-
       .content {
-        .info {
+        grid-template-columns: 300px 0;
+
+        .description-area {
           .titles {
             .subtitle {
-              font-size: 0.7rem;
+              font-size: .75rem;
             }
           }
         }
