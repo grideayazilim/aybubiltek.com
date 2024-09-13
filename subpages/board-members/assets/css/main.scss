@@ -1,8 +1,7 @@
-/*============== TOPIC NAME ==============*/
 @import "../../../../assets/css/root";
 
 body {
-  .white-container {
+  .members-container {
     position: relative;
     padding-block: 4rem;
     text-align: center;
@@ -85,7 +84,7 @@ body {
     
             &:hover {
               text-shadow: 0 0 3px #e5e5e569;
-              transform: scale(105%);
+              transform: scale(102%);
               box-shadow: #0f2d5996 0 0 10px 0px;
             }
           }
@@ -95,8 +94,6 @@ body {
           box-shadow: #0f2d5932 0px 7px 29px 0px;
   
           .image-container {
-            //transform: scale(102%) translateY(-10px);
-
             img{
               transform: scale(110%);
             }

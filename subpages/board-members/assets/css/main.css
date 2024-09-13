@@ -1,4 +1,3 @@
-/*============== TOPIC NAME ==============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
@@ -125,21 +124,21 @@ body .root-test-div {
   height: 50vh;
 }
 
-body .white-container {
+body .members-container {
   position: relative;
   padding-block: 4rem;
   text-align: center;
 }
-body .white-container .big-title {
+body .members-container .big-title {
   margin-block: 6rem 2rem;
 }
-body .white-container .members {
+body .members-container .members {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
-body .white-container .members .member-card {
+body .members-container .members .member-card {
   width: 300px;
   display: grid;
   place-items: center;
@@ -149,7 +148,7 @@ body .white-container .members .member-card {
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
   transition: transform 0.4s, box-shadow 0.4s;
 }
-body .white-container .members .member-card .image-container {
+body .members-container .members .member-card .image-container {
   position: relative;
   display: grid;
   width: 180px;
@@ -159,7 +158,7 @@ body .white-container .members .member-card .image-container {
   overflow: hidden;
   transition: transform 0.4s;
 }
-body .white-container .members .member-card .image-container::before {
+body .members-container .members .member-card .image-container::before {
   content: "";
   position: absolute;
   bottom: -20px;
@@ -170,7 +169,7 @@ body .white-container .members .member-card .image-container::before {
   background-color: indianred;
   transition: transform 0.4s;
 }
-body .white-container .members .member-card .image-container img {
+body .members-container .members .member-card .image-container img {
   position: relative;
   justify-self: center;
   align-self: flex-end;
@@ -178,11 +177,11 @@ body .white-container .members .member-card .image-container img {
   height: auto;
   transition: transform 0.4s;
 }
-body .white-container .members .member-card .contact {
+body .members-container .members .member-card .contact {
   display: grid;
   row-gap: 0.4rem;
 }
-body .white-container .members .member-card .contact .member-link {
+body .members-container .members .member-card .contact .member-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,52 +193,52 @@ body .white-container .members .member-card .contact .member-link {
   border-radius: 25px;
   transition: 0.6s;
 }
-body .white-container .members .member-card .contact .member-link i,
-body .white-container .members .member-card .contact .member-link p {
+body .members-container .members .member-card .contact .member-link i,
+body .members-container .members .member-card .contact .member-link p {
   transition: transform 0.4s;
 }
-body .white-container .members .member-card .contact .member-link i {
+body .members-container .members .member-card .contact .member-link i {
   font-size: 1.25rem;
 }
-body .white-container .members .member-card .contact .member-link:hover {
+body .members-container .members .member-card .contact .member-link:hover {
   text-shadow: 0 0 3px rgba(229, 229, 229, 0.4117647059);
-  transform: scale(105%);
+  transform: scale(102%);
   box-shadow: rgba(15, 45, 89, 0.5882352941) 0 0 10px 0px;
 }
-body .white-container .members .member-card:hover {
+body .members-container .members .member-card:hover {
   box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
 }
-body .white-container .members .member-card:hover .image-container img {
+body .members-container .members .member-card:hover .image-container img {
   transform: scale(110%);
 }
-body .white-container .members .member-card:hover .image-container::before {
+body .members-container .members .member-card:hover .image-container::before {
   transform: scale(400%) translateY(-50%);
 }
 @media screen and (max-width: 1200px) {
-  body .white-container .big-title {
+  body .members-container .big-title {
     margin-block: 3rem 2rem;
   }
 }
 @media screen and (max-width: 768px) {
-  body .white-container .members {
+  body .members-container .members {
     gap: 2rem;
   }
-  body .white-container .members .member-card {
+  body .members-container .members .member-card {
     width: 300px;
   }
-  body .white-container .members .member-card .image-container {
+  body .members-container .members .member-card .image-container {
     width: 70%;
   }
 }
 @media screen and (max-width: 698px) {
-  body .white-container .members {
+  body .members-container .members {
     flex-direction: column;
   }
-  body .white-container .members .member-card {
+  body .members-container .members .member-card {
     width: 300px;
     padding-block: 2rem;
   }
-  body .white-container .members .member-card .image-container {
+  body .members-container .members .member-card .image-container {
     width: 70%;
   }
 }/*# sourceMappingURL=main.css.map */
