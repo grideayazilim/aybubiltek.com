@@ -1,1 +1,143 @@
-/*============== TOPIC NAME ==============*/
+@import "../../../../assets/css/root";
+
+body {
+  .members-container {
+    position: relative;
+    padding-block: 4rem;
+    text-align: center;
+
+    .big-title {
+      margin-block: 6rem 2rem;
+    }
+  
+    .members {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+  
+      .member-card {
+        width: 300px;
+        display: grid;
+        place-items: center;
+        row-gap: 1.3rem;
+        padding: 2.4rem 1rem;  
+        border-radius: 20px;
+        box-shadow: #0f2d5936 0px 0px 5px 0px;
+        transition: transform 0.4s, box-shadow 0.4s;
+
+        .image-container {
+          position: relative;
+          display: grid;
+          width: 180px;
+          height: 180px;
+          background-color: burlywood;
+          border-radius: 50%;
+          overflow: hidden;
+          transition: transform 0.4s;
+
+          &::before{
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 65px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: indianred;
+            transition: transform .4s;
+          }
+
+          img{
+            position: relative; // to bring forward
+            justify-self: center;
+            align-self: flex-end;
+            width: 90%;
+            height: auto;
+            transition: transform .4s;
+          }
+        }
+  
+        .contact{
+          display: grid;
+          row-gap: .4rem;
+
+          .member-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.5rem;
+            color: #e5e5e5;
+            background-color: $first-color;
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            transition: 0.6s;
+    
+            i,
+            p {
+              transition: transform 0.4s;
+            }
+    
+            i {
+              font-size: 1.25rem;
+            }
+    
+            &:hover {
+              text-shadow: 0 0 3px #e5e5e569;
+              transform: scale(102%);
+              box-shadow: #0f2d5996 0 0 10px 0px;
+            }
+          }
+        }
+
+        &:hover {
+          box-shadow: #0f2d5932 0px 7px 29px 0px;
+  
+          .image-container {
+            img{
+              transform: scale(110%);
+            }
+
+            &::before{
+              transform: scale(400%) translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    @media screen  and (max-width: 1200px){
+      .big-title{
+        margin-block: 3rem 2rem;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .members{
+        gap: 2rem;
+        .member-card{
+          width: 300px;
+
+          .image-container{
+            width: 70%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 698px) {
+      .members{
+        flex-direction: column;
+
+        .member-card{
+          width: 300px;
+          padding-block: 2rem;
+
+          .image-container{
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
