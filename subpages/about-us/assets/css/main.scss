@@ -1,1 +1,191 @@
-/*============== TOPIC NAME ==============*/
+@import "../../../../assets/css/root";
+
+body {
+  .about-us {
+    .content {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 665px 570px;
+      column-gap: 2rem;
+      padding-top: 3.5rem;
+
+      .description-area {
+        .titles {
+          display: flex;
+          justify-content: space-between;
+          padding-inline: .9rem;
+
+          .subtitle {
+            cursor: pointer;
+            font-size: 1.8rem;
+            font-weight: $font-medium;
+            transition: font-weight .4s, transform .4s;
+          }
+
+          .active-title {
+            font-weight: $font-bold;
+            transform: translateY(-5px);
+          }
+        }
+
+        /*============== SLIDER LINE ==============*/
+        .line-slider {
+          position: relative;
+          height: 4px;
+          margin-top: .75rem;
+          background-color: #c5c3d1;
+
+          .current-line {
+            position: absolute;
+            top: -3px;
+            left: 0;
+            width: 33.3%;
+            height: 10px;
+            background-color: $first-color;
+            transition: width .3s, transform .3s;
+          }
+        }
+
+        /*============== SWIPER DIV ==============*/
+        .description-slider{
+          display: grid;
+          place-items: center;
+
+          .description {
+            .big-title {
+              margin-block: 1.5rem 1rem;
+              font-size: 2.25rem;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+
+      .image-area {
+        display: flex;
+        column-gap: 1rem;
+
+        .column {
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+          width: 50%;
+
+          &:nth-child(2) {
+            margin-top: 7rem;
+          }
+        }
+      }
+    }
+
+    .sponsors {
+      padding: 5rem 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+
+      img {
+        width: 250px;
+      }
+    }
+
+    /*=============== RESPONSIVE DESIGN ===============*/
+    /* First breakpoint */
+    @media screen and (max-width: 1380px) {
+      .content {
+        grid-template-columns: 550px 370px;
+
+        .description-area {
+          .titles {
+            .subtitle {
+              font-size: 1.4rem;
+            }
+          }
+
+          .description-slider{
+            .description {
+              .big-title {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+
+      .sponsors {
+        img {
+          width: 150px;
+        }
+      }
+    }
+
+    /* Second breakpoint */
+    @media screen and (max-width: 1100px) {
+      .content {
+        grid-template-columns: 420px 260px;
+
+        .description-area {
+          .titles {
+            .subtitle {
+              font-size: 1.1rem;
+            }
+
+            .active-title {
+              transform: translateY(-2px);
+            }
+          }
+        }
+
+        .image-area {
+          .column {
+            width: 100%;
+
+            &:nth-child(2) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    /* Third breakpoint */
+    @media screen and (max-width: 800px) {
+      .content {
+        grid-template-columns: 450px 0;
+        column-gap: 0;
+        text-align: center;
+
+        .description-area {
+          .description-slider{
+            .description {
+              .big-title {
+                margin-block: 1.25rem .5rem;
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+
+        .image-area {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 495px) {
+      .content {
+        grid-template-columns: 300px 0;
+
+        .description-area {
+          .titles {
+            .subtitle {
+              font-size: .75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
