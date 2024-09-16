@@ -1,0 +1,245 @@
+@import "../../../../assets/css/root";
+
+body {
+  /*==== Reset CSS from the board-members to fit this page ====*/
+  .members-container {
+    display: grid;
+    row-gap: 2.5rem;
+    padding-block: 0;
+
+    .members {
+      .member-card {
+        .accounts {
+          display: flex;
+          gap: 0.7rem;
+          font-size: 2.25rem;
+
+          .member-link {
+            transition: all 0.4s;
+
+            &:hover {
+              transform: translateY(-3px);
+            }
+          }
+        }
+      }
+    }
+
+    .big-title {
+      padding: 0;
+    }
+  }
+
+  /*============== LANDING PAGE ==============*/
+  .landing-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 5rem;
+    padding: 6rem 12rem 2rem;
+    min-height: 100vh;
+
+    .bg-image{
+      position: absolute;
+      //top: 4rem; // space for navbar, add later
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-image: url(../media/sssssblack.png);
+      background-size: cover;
+      opacity: 0.2;
+      filter: blur(.5px);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      justify-content: center;
+      align-items: center;
+      column-gap: 5rem;
+
+      .team-logo {
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        border-radius: 50%;
+        background-color: $text-color;
+        box-shadow: rgba(255, 255, 255, 0.422) 0 0 35px;
+
+        img {
+          width: 80%;
+          height: auto;
+          filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.352));
+        }
+      }
+
+      .description{
+        display: grid;
+        row-gap: 2rem;
+      }
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 5%;
+      font-size: 3rem;
+    }
+  }
+
+  /*============== WHITE-CONTAINER AREA ==============*/
+  .team-container {
+    padding-bottom: 8rem;
+
+    .big-title {
+      text-align: center;
+      margin: 0 !important;
+      padding-block: 4rem 1.5rem;
+    }
+
+    /*==== Video section ====*/
+    .video-container {
+      .big-title {
+        text-align: left;
+      }
+
+      .team-video {
+        background-color: black;
+        width: 100%;
+      }
+    }
+
+    /*==== Achievements section ====*/
+    .achievements {
+      .achievements-slider {
+        width: 90%;
+        padding-bottom: 6rem;
+      }
+
+      // Swiper button adjustment
+      .swiper-button-prev,
+      .swiper-button-next {
+        &::after{
+          content: "";
+        }
+
+        top: initial;
+        bottom: 0.1rem;
+        width: 50px;
+        height: 50px;
+        background-color: $first-color;
+        color: $text-color;
+        border-radius: 50%;
+        transition: left 0.4s, right 0.4s;
+      }
+
+      .swiper-button-prev {
+        left: 38%;
+
+        &:hover {
+          left: 37.8%;
+        }
+      }
+
+      .swiper-button-next {
+        right: 38%;
+
+        &:hover {
+          right: 37.8%;
+        }
+      }
+
+      // Swiper pagination adjustment
+      .swiper-pagination {
+        bottom: 1.1rem;
+      }
+
+      .swiper-pagination-bullet {
+        opacity: 0.2;
+        transition: opacity 0.6s;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: $first-color;
+        opacity: 1;
+      }
+
+      .achievements__card {
+        .achievements__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  @media (max-width: 1200px){
+    .landing-page {
+      text-align: center;
+      row-gap: 3rem;
+      padding: 6rem 7.5rem;
+
+      .content {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        place-items: center;
+
+        .team-logo {
+          width: 60%;
+        }
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+
+    .team-container {
+      .achievements {
+        .achievements-slider {
+          padding-bottom: 3.5rem;
+        }
+      }
+    }
+  }
+
+  /* Second breakpoint */
+  @media screen and (max-width: 750px) {
+    .landing-page {
+      padding: 6rem 3.5rem;
+
+      .bg-image{
+        background-position: -50px;
+      }
+    }
+
+    .team-container{
+      .big-title{
+        padding-block: 2rem 1rem;
+      }
+    }
+  }
+
+  /* Third breakpoint */
+  @media screen and (max-width: 405px) {
+    .landing-page {
+      .content {
+        // Put the team logo behind
+        .team-logo {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: 150%;
+          transform: translate(-50%, -50%);
+          background-color: transparent;
+          box-shadow: none;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
