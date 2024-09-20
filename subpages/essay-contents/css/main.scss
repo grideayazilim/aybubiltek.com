@@ -1,0 +1,149 @@
+@import "../../../assets/css/root";
+
+
+body{
+    background-color:  #f4f4f4;
+}
+
+
+.white-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.main-content {
+    background-color: white;
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.image-section {
+    width: 30%;
+    text-align: center;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.image-section img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.image-details {
+    font-size: 14px;
+    color: gray;
+}
+
+.brand-name {
+    font-weight: bold;
+    color: rgba(178, 172, 172, 1);
+    margin-bottom: 5px;
+}
+
+.article-section {
+    width: 70%;
+}
+
+.article-section h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+.article-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 1);
+}
+
+.sidebar {
+    background-color: white;
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sidebar h3 {
+    font-size: 20px;
+    width: 20%;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 1);
+    text-align: left;
+    position: relative;
+}
+.sidebar h3::after {
+    content: "";
+    display: block;
+    width: 100%; 
+    height: 2px;
+    background-color: gray;
+    margin: 5px 0 0;
+}
+.article-list {
+    list-style: none;
+}
+
+.article-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: rgba(178, 172, 172, 1);
+}
+
+.article-list img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.image-section .brand-name {
+    font-weight: bold;
+    color: rgba(178, 172, 172, 1);
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.image-section .brand-name::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: rgba(178, 172, 172, 1);
+    margin: 10px auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .image-section, .article-section {
+        width: 100%;
+    }
+}
