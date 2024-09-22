@@ -1,1 +1,65 @@
 /*============== TOPIC NAME ==============*/
+@import "../../../assets/css/root";
+
+body{
+    .white-container{
+        display: flex;
+        justify-content: center;
+        .container{
+            margin-top: 8vh;
+            
+            
+            
+            
+            .content-box{
+                text-decoration: none;
+                padding:4vh;
+                margin: 4vh 0;
+                height: 15vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                color:rgba(0, 0, 0, 1) ;
+                border: 2px solid rgb(95, 87, 87);
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+                .date{
+                    align-items: center;
+                    display: flex;
+                    padding-right: 2vh;
+                    position: absolute;
+                    
+                    img{
+                        margin-left: 2vh;
+
+                        height: 8vh;
+                        width: 1.5px;
+                    }
+                    
+                }
+                .title{
+                    margin-left: 15vh;
+                    
+                }
+                .source{
+                    font-weight: 400;
+                    color:rgba(0, 0, 0, 1) ;
+                }
+            }
+            .content-box:nth-child(2){
+                display: flex;
+                text-align: left;
+            }
+            .content-box:hover{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+                
+            }
+            .content-box:active{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+                transition: box-shadow 0.3s ease;
+                // box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+            }
+        }
+    }
+
+}
