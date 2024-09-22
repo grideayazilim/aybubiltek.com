@@ -1,10 +1,7 @@
 @import "../../../../assets/css/root";
 
 body {
-  background-color: white;
-
-  .white-container {
-    position: relative;
+  .tad-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,14 +11,13 @@ body {
     padding: 4rem 10%;
     
     .team-card {
-      position: relative;
       display: grid;
       place-items: center;
       row-gap: 2.5rem;
       width: 325px;
       height: 410px;
       text-align: center;
-      border-radius: 7%;
+      border-radius: 15px;
       padding: 3rem 0;
       box-shadow: #0f2d5936 0px 0px 5px 0px;
       transition: all 0.4s;
@@ -37,6 +33,7 @@ body {
 
       &:hover {
         box-shadow: #0f2d5932 0px 7px 29px 0px;
+        transform: translateY(-5px);
       }
 
       &:first-child{
@@ -46,6 +43,8 @@ body {
       }
     }
 
+    /*============== RESPONSIVE DESIGN ==============*/
+    /* First breakpoint */
     @media screen and (max-width: 1200px) {
       .team-card{
         width: 275px;
@@ -64,6 +63,7 @@ body {
       }
     }
 
+    /* Second breakpoint */
     @media screen and (max-width: 620px) {
       .team-card{
         width: 250px;

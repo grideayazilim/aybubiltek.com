@@ -125,11 +125,7 @@ body .root-test-div {
   height: 50vh;
 }
 
-body {
-  background-color: white;
-}
-body .white-container {
-  position: relative;
+body .tad-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,48 +133,51 @@ body .white-container {
   gap: 3.5rem 3rem;
   text-align: center;
   padding: 4rem 10%;
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
 }
-body .white-container .team-card {
-  position: relative;
+body .tad-container .team-card {
   display: grid;
   place-items: center;
   row-gap: 2.5rem;
   width: 325px;
   height: 410px;
   text-align: center;
-  border-radius: 7%;
+  border-radius: 15px;
   padding: 3rem 0;
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
   transition: all 0.4s;
 }
-body .white-container .team-card .images {
+body .tad-container .team-card .images {
   width: 70%;
   height: auto;
 }
-body .white-container .team-card p {
+body .tad-container .team-card p {
   align-self: flex-end;
 }
-body .white-container .team-card:hover {
+body .tad-container .team-card:hover {
   box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
+  transform: translateY(-5px);
 }
-body .white-container .team-card:first-child .images {
+body .tad-container .team-card:first-child .images {
   width: 50%;
 }
 @media screen and (max-width: 1200px) {
-  body .white-container .team-card {
+  body .tad-container .team-card {
     width: 275px;
     height: 325px;
     box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
   }
-  body .white-container .team-card .images {
+  body .tad-container .team-card .images {
     width: 50%;
   }
-  body .white-container .team-card:first-child .images {
+  body .tad-container .team-card:first-child .images {
     width: 40%;
   }
 }
 @media screen and (max-width: 620px) {
-  body .white-container .team-card {
+  body .tad-container .team-card {
     width: 250px;
     height: 300px;
   }

@@ -126,50 +126,58 @@ body .root-test-div {
 }
 
 body .departmants {
+  position: relative;
   display: grid;
-  row-gap: 3.5rem;
-  padding-block: 2.5rem 4.25rem;
+  row-gap: 2.5rem;
+  padding-block: 2.5rem 5.25rem;
   text-align: center;
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
+  /* Third breakpoint */
 }
 body .departmants .cards-container {
+  max-width: 1300px;
+  justify-self: center;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 2.75rem;
-       column-gap: 2.75rem;
+  gap: 2rem 2.75rem;
+  grid-template-columns: repeat(3, 350px);
 }
 body .departmants .cards-container .card {
   display: grid;
   place-items: center;
   row-gap: 1rem;
   padding: 2.75rem 1.5rem;
-  border-radius: 35px;
+  border-radius: 15px;
+  background-color: #f4f4f4;
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
   transition: all 0.4s;
 }
-body .departmants .cards-container .card:hover {
-  box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
-}
-body .departmants img {
+body .departmants .cards-container .card img {
   width: 65%;
 }
+body .departmants .cards-container .card:hover {
+  box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
+  transform: translateY(-5px);
+}
 @media screen and (max-width: 1200px) {
-  body .departmants {
-    row-gap: 2.25rem;
-  }
-}
-@media screen and (max-width: 1000px) {
   body .departmants .cards-container {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
-  }
-  body .departmants .card {
-    justify-self: center;
-    width: 60%;
+    grid-template-columns: repeat(3, 250px);
   }
 }
-@media screen and (max-width: 568px) {
-  body .departmants .card {
-    justify-self: center;
-    width: 80%;
+@media screen and (max-width: 950px) {
+  body .departmants .cards-container {
+    grid-template-columns: 325px;
+  }
+}
+@media screen and (max-width: 425px) {
+  body .departmants .cards-container {
+    grid-template-columns: 270px;
+  }
+  body .departmants .cards-container .card {
+    padding: 2rem 1.25rem;
+  }
+  body .departmants .cards-container .card img {
+    width: 50%;
   }
 }/*# sourceMappingURL=main.css.map */
