@@ -117,9 +117,6 @@ body .title-area img:nth-child(2) {
   body .big-title {
     font-size: 1.25rem;
   }
-  body .subtitle {
-    font-size: 1rem;
-  }
   body .title-area {
     height: 68px;
   }
@@ -129,6 +126,7 @@ body .root-test-div {
 }
 
 body .about-us {
+  height: 100%;
   /*=============== RESPONSIVE DESIGN ===============*/
   /* First breakpoint */
   /* Second breakpoint */
@@ -137,96 +135,100 @@ body .about-us {
 body .about-us .content {
   display: grid;
   justify-content: center;
-  grid-template-columns: 665px 570px;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
+  grid-template-columns: 450px 665px;
+  gap: 1.5rem 2rem;
   padding-top: 3.5rem;
+  /* Container that contains line slider and description slider */
+  /*============== SWIPER IMAGES ==============*/
 }
 body .about-us .content .description-area {
+  padding-block: 2rem;
   /*============== SLIDER LINE ==============*/
-  /*============== SWIPER DIV ==============*/
+  /*============== SWIPER DESCRIPTION ==============*/
 }
 body .about-us .content .description-area .titles {
   display: flex;
   justify-content: space-between;
-  padding-inline: 0.9rem;
+  padding-inline: 4.5%;
 }
 body .about-us .content .description-area .titles .subtitle {
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  transition: font-weight 0.4s, transform 0.4s;
+  transition: font-weight 0.4s, transform 0.4s, text-shadow 0.4s;
 }
 body .about-us .content .description-area .titles .active-title {
+  text-shadow: rgba(15, 45, 89, 0.2980392157) 0 0 5px;
   font-weight: 700;
   transform: translateY(-5px);
 }
 body .about-us .content .description-area .line-slider {
   position: relative;
-  height: 4px;
-  margin-top: 0.75rem;
+  height: 3px;
+  margin-top: 0.6rem;
   background-color: #c5c3d1;
 }
 body .about-us .content .description-area .line-slider .current-line {
   position: absolute;
-  top: -3px;
+  top: -2px;
   left: 0;
   width: 33.3%;
-  height: 10px;
+  height: 7px;
   background-color: #0f2c59;
+  box-shadow: rgba(15, 45, 89, 0.3803921569) 0 3px 7px;
   transition: width 0.3s, transform 0.3s;
 }
-body .about-us .content .description-area .description-slider {
-  display: grid;
-  place-items: center;
-}
 body .about-us .content .description-area .description-slider .description .big-title {
-  margin-block: 1.5rem 1rem;
-  font-size: 2.25rem;
-  letter-spacing: 2px;
+  margin-block: 1.25rem 0.75rem;
+  font-size: 1.75rem;
+  letter-spacing: 1px;
 }
-body .about-us .content .image-area {
-  display: flex;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+body .about-us .content .image-slider {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: rgba(15, 45, 89, 0.4823529412) 0px 25px 20px -20px;
 }
-body .about-us .content .image-area .column {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  width: 50%;
-}
-body .about-us .content .image-area .column:nth-child(2) {
-  margin-top: 7rem;
+body .about-us .content .image-slider img {
+  width: 100%;
+  height: 100%;
 }
 body .about-us .sponsors {
-  padding: 5rem 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  padding: 2.5rem 10%;
 }
 body .about-us .sponsors img {
   width: 250px;
 }
-@media screen and (max-width: 1380px) {
+@media screen and (max-width: 1300px) {
   body .about-us .content {
-    grid-template-columns: 550px 370px;
+    grid-template-columns: 800px;
+  }
+  body .about-us .content .description-area .titles {
+    padding-inline: 5%;
   }
   body .about-us .content .description-area .titles .subtitle {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
-  body .about-us .content .description-area .description-slider .description .big-title {
-    font-size: 2rem;
+  body .about-us .content .image-slider {
+    width: 70%;
   }
   body .about-us .sponsors img {
     width: 150px;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 850px) {
   body .about-us .content {
-    grid-template-columns: 420px 260px;
+    grid-template-columns: 450px;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    text-align: center;
+  }
+  body .about-us .content .description-area .titles {
+    padding-inline: 4%;
   }
   body .about-us .content .description-area .titles .subtitle {
     font-size: 1.1rem;
@@ -234,33 +236,20 @@ body .about-us .sponsors img {
   body .about-us .content .description-area .titles .active-title {
     transform: translateY(-2px);
   }
-  body .about-us .content .image-area .column {
-    width: 100%;
-  }
-  body .about-us .content .image-area .column:nth-child(2) {
-    display: none;
-  }
-}
-@media screen and (max-width: 800px) {
-  body .about-us .content {
-    grid-template-columns: 450px 0;
-    -moz-column-gap: 0;
-         column-gap: 0;
-    text-align: center;
-  }
   body .about-us .content .description-area .description-slider .description .big-title {
     margin-block: 1.25rem 0.5rem;
     font-size: 1.5rem;
   }
-  body .about-us .content .image-area {
-    display: none;
-  }
 }
 @media screen and (max-width: 495px) {
   body .about-us .content {
-    grid-template-columns: 300px 0;
+    grid-template-columns: 80%;
+    gap: 0.1rem;
   }
   body .about-us .content .description-area .titles .subtitle {
     font-size: 0.75rem;
+  }
+  body .about-us .content .image-slider {
+    width: 90%;
   }
 }/*# sourceMappingURL=main.css.map */
