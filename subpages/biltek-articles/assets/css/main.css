@@ -1,4 +1,3 @@
-/*============== TOPIC NAME ==============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
@@ -126,51 +125,88 @@ body .root-test-div {
   height: 50vh;
 }
 
-body .white-container {
-  display: flex;
-  justify-content: center;
+body .white-container .articles {
+  display: grid;
+  row-gap: 2rem;
+  padding-block: 3.5rem;
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
 }
-body .white-container .container {
-  margin-top: 8vh;
-}
-body .white-container .container .content-box {
-  text-decoration: none;
-  padding: 4vh;
-  margin: 4vh 0;
-  height: 15vh;
+body .white-container .articles .content-box {
+  color: #4e4e4e;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: rgb(0, 0, 0);
+  padding-inline: 4%;
+  height: 112px;
+  background-color: #f4f4f4;
   border: 2px solid rgb(95, 87, 87);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.2));
+  transition: filter 0.4s, box-shadow 0.4s;
 }
-body .white-container .container .content-box .date {
+body .white-container .articles .content-box .left-area {
+  display: flex;
   align-items: center;
-  display: flex;
-  padding-right: 2vh;
-  position: absolute;
+  gap: 0.7rem 1.5rem;
+  margin-right: 2rem;
 }
-body .white-container .container .content-box .date img {
-  margin-left: 2vh;
-  height: 8vh;
-  width: 1.5px;
+body .white-container .articles .content-box .left-area .vertical-line {
+  width: 2.2px;
+  height: 80px;
+  background-color: #4e4e4e;
 }
-body .white-container .container .content-box .title {
-  margin-left: 15vh;
+body .white-container .articles .content-box .right-area {
+  display: grid;
 }
-body .white-container .container .content-box .source {
-  font-weight: 400;
-  color: rgb(0, 0, 0);
+body .white-container .articles .content-box .right-area .horizontal-line {
+  display: none;
+  justify-self: center;
+  margin-bottom: 0.7rem;
+  width: 10vw;
+  height: 1.5px;
+  background-color: #4e4e4e;
 }
-body .white-container .container .content-box:nth-child(2) {
-  display: flex;
-  text-align: left;
+body .white-container .articles .content-box:hover {
+  /* 
+      Double shadow is used to make smooth transition 
+      between outset and inset shadows 
+  */
+  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
 }
-body .white-container .container .content-box:hover {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+body .white-container .articles .content-box:active {
+  box-shadow: inset 0 -8px 20px rgba(0, 0, 0, 0.2);
 }
-body .white-container .container .content-box:active {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
-  transition: box-shadow 0.3s ease;
+@media screen and (max-width: 1200px) {
+  body .white-container .articles .content-box {
+    height: 100px;
+  }
+  body .white-container .articles .content-box .left-area .vertical-line {
+    height: 72px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body .white-container .articles {
+    text-align: center;
+  }
+  body .white-container .articles .content-box,
+  body .white-container .articles .left-area {
+    flex-direction: column;
+  }
+  body .white-container .articles .content-box {
+    height: 150px;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .white-container .articles .content-box .left-area {
+    margin-right: 0;
+  }
+  body .white-container .articles .content-box .left-area .vertical-line {
+    width: 70%;
+    height: 1.5px;
+  }
+  body .white-container .articles .content-box .right-area .horizontal-line {
+    display: block;
+  }
 }/*# sourceMappingURL=main.css.map */
