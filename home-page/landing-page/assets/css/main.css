@@ -26,15 +26,7 @@ body #landing-page .bg-img {
 body #landing-page .ornament {
   position: absolute;
   top: 175px;
-  width: 10%;
-}
-body #landing-page .navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 5rem;
-  padding-inline: 9%;
-  background-color: transparent;
+  width: 7%;
 }
 body #landing-page .container {
   padding-inline: 12%;
@@ -186,7 +178,7 @@ body #landing-page .container .image-area img {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    padding-top: 10rem;
+    padding-top: 12rem !important;
   }
   body .text-area .subtitle {
     font-size: 1.4rem !important;
@@ -212,6 +204,36 @@ body #landing-page .container .image-area img {
   body .text-area .bigger-title {
     font-size: 3.5rem !important;
   }
+  body .text-area .register-btn {
+    width: 10rem !important;
+    height: 3rem !important;
+    font-size: 1rem !important;
+    line-height: 3rem !important;
+  }
+  body .text-area .register-btn i {
+    font-size: 1rem !important;
+    padding: 0.5rem 0.6rem !important;
+  }
+  body .social-media-area {
+    margin-top: 4rem !important;
+  }
+  body .social-media-area .social-media-button {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  body .social-media-area .social-media-button .icon {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  body .social-media-area .social-media-button .icon i {
+    line-height: 3rem !important;
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (max-width: 850px) {
+  body .text-area {
+    padding-top: 10rem !important;
+  }
 }
 @media screen and (max-width: 650px) {
   body .text-area .subtitle {
@@ -230,5 +252,21 @@ body #landing-page .container .image-area img {
   }
   body .text-area .bigger-title {
     font-size: 2.5rem !important;
+  }
+  body .social-media-area {
+    margin-top: 2rem !important;
+  }
+  body .social-media-area .social-media-button {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    margin: 0 2px !important;
+  }
+  body .social-media-area .social-media-button .icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  body .social-media-area .social-media-button .icon i {
+    line-height: 2.5rem !important;
+    font-size: 1rem !important;
   }
 }/*# sourceMappingURL=main.css.map */

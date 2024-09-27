@@ -6,16 +6,19 @@
     <title>Document</title>
 
     <!--==============INTERNAL CSS==============-->
-    <link rel="stylesheet" href="../../assets/css/root.css">
+    <link rel="stylesheet" href="/assets/css/root.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/navbar/assets/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
-    <section id="landing-page">
-        <img class="bg-img" src="../../assets/media/bg-logo.png" alt="">
+    <section id="landing-page" class="scrollable-element">
+        <img class="bg-img" src="/assets/media/bg-logo.png" alt="">
 
-        <div class="navbar"></div>
-        <img class="ornament" src="../../assets/media/texture.png" alt="">
+        <header id="navbar-placeholder"></header>
+        <div id="home-page"></div>
+        <img class="ornament" src="/assets/media/texture.png" alt="">
         <div class="container">
             <div class="text-area">
                 <p class="subtitle">Ankara Yıldırım Beyazıt Üniversitesi</p>
@@ -56,12 +59,14 @@
             </div>
             </div>
             <div class="image-area">
-                <img src="../../assets/media/logo-with-circle.png" alt="biltek-logo">
+                <img src="/assets/media/logo-with-circle.png" alt="biltek-logo">
             </div>
         </div>
     </section>
     
     <!--==============INTERNAL JS==============-->
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
+    <script src="/navbar/assets/js/script.js" defer></script>
+
 </body>
 </html>
