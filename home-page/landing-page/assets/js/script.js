@@ -5,7 +5,7 @@ function changeImage() {
     console.log(window.innerWidth);
     bgImage.src = "/assets/media/bg-logo-dik.png";
   } else {
-    bgImage.src = "/assets/media/bg-logo.png";
+    bgImage.src = "/assets/media/bg-logo-w-text.png";
   }
 }
 
