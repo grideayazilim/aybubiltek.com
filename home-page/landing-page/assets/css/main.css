@@ -1,1 +1,272 @@
-/*============== TOPIC NAME ==============*//*# sourceMappingURL=main.css.map */
+@import "../../../../assets/css/root.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body a {
+  color: white;
+  text-decoration: none;
+}
+body #landing-page {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+body #landing-page .bg-img {
+  height: 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  opacity: 0.04;
+  position: absolute;
+  z-index: -1;
+}
+body #landing-page .ornament {
+  position: absolute;
+  top: 175px;
+  width: 7%;
+}
+body #landing-page .container {
+  padding-inline: 12%;
+  display: flex;
+  justify-content: space-between;
+}
+body #landing-page .container .text-area {
+  width: 80%;
+  padding-top: 15rem;
+}
+body #landing-page .container .text-area .subtitle {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+body #landing-page .container .text-area .bigger-title {
+  font-size: 4.5rem;
+  margin: 30px 0;
+}
+body #landing-page .container .text-area .text {
+  width: 60%;
+  line-height: 1.5;
+}
+body #landing-page .container .text-area .register-btn {
+  background-color: white;
+  color: #0f2c59;
+  border: none;
+  width: 12rem;
+  height: 3.5rem;
+  text-align: left;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.05rem;
+  line-height: 3.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  margin: 3rem 0;
+}
+body #landing-page .container .text-area .register-btn i {
+  font-size: 1.2rem;
+  margin-left: 0.4rem;
+  margin-right: 10px;
+  background-color: #0f2c59;
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+}
+body #landing-page .container .text-area .register-btn:hover {
+  background-color: #183460;
+  color: white;
+}
+body #landing-page .container .text-area .register-btn:hover i {
+  background-color: white;
+  color: #0f2c59;
+}
+body #landing-page .container .social-media-area {
+  margin-top: 6rem;
+  width: 80%;
+}
+body #landing-page .container .social-media-area .social-media-button {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 5px;
+  background-color: white;
+  overflow: hidden;
+  color: #0f2c59;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-out;
+}
+body #landing-page .container .social-media-area .social-media-button:hover {
+  width: 12rem;
+}
+body #landing-page .container .social-media-area .social-media-button .icon {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+body #landing-page .container .social-media-area .social-media-button .icon i {
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  transition: all 0.5s ease-out;
+  vertical-align: middle;
+}
+body #landing-page .container .social-media-area .social-media-button .icon span {
+  width: 60px;
+  line-height: 2 rem;
+}
+body #landing-page .container .image-area img {
+  position: absolute;
+  right: -3rem;
+  top: 0;
+  width: 60%;
+}
+@media screen and (max-width: 1750px) {
+  body .subtitle {
+    font-size: 1.2rem !important;
+  }
+  body .bigger-title {
+    font-size: 3.5rem !important;
+  }
+  body .image-area img {
+    top: 40px !important;
+  }
+}
+@media screen and (max-width: 1450px) {
+  body .bigger-title {
+    font-size: 3rem !important;
+  }
+  body .image-area img {
+    top: 80px !important;
+  }
+  body .text {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 1300px) {
+  body .bg-img {
+    height: 90% !important;
+  }
+  body .bigger-title {
+    font-size: 2.8rem !important;
+  }
+  body .image-area img {
+    top: 120px !important;
+  }
+  body .text {
+    font-size: 1rem !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body .container {
+    padding-inline: 5% !important;
+  }
+  body .bg-img {
+    width: 70% !important;
+    height: auto !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  body .text-area {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 12rem !important;
+  }
+  body .text-area .subtitle {
+    font-size: 1.4rem !important;
+  }
+  body .text-area .bigger-title {
+    font-size: 4rem !important;
+  }
+  body .text-area .text {
+    margin: 0 auto;
+    font-size: 1rem !important;
+  }
+  body .text-area .social-media-area {
+    margin: 60px auto;
+  }
+  body .image-area img {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body .text-area .subtitle {
+    font-size: 1.2rem !important;
+  }
+  body .text-area .bigger-title {
+    font-size: 3.5rem !important;
+  }
+  body .text-area .register-btn {
+    width: 10rem !important;
+    height: 3rem !important;
+    font-size: 1rem !important;
+    line-height: 3rem !important;
+  }
+  body .text-area .register-btn i {
+    font-size: 1rem !important;
+    padding: 0.5rem 0.6rem !important;
+  }
+  body .social-media-area {
+    margin-top: 4rem !important;
+  }
+  body .social-media-area .social-media-button {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  body .social-media-area .social-media-button .icon {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  body .social-media-area .social-media-button .icon i {
+    line-height: 3rem !important;
+    font-size: 1.2rem !important;
+  }
+}
+@media screen and (max-width: 850px) {
+  body .text-area {
+    padding-top: 10rem !important;
+  }
+}
+@media screen and (max-width: 650px) {
+  body .text-area .subtitle {
+    font-size: 1rem !important;
+  }
+  body .text-area .bigger-title {
+    font-size: 3rem !important;
+  }
+  body .text-area .text {
+    font-size: 0.9rem !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  body .text-area .subtitle {
+    font-size: 0.8rem !important;
+  }
+  body .text-area .bigger-title {
+    font-size: 2.5rem !important;
+  }
+  body .social-media-area {
+    margin-top: 2rem !important;
+  }
+  body .social-media-area .social-media-button {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    margin: 0 2px !important;
+  }
+  body .social-media-area .social-media-button .icon {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  body .social-media-area .social-media-button .icon i {
+    line-height: 2.5rem !important;
+    font-size: 1rem !important;
+  }
+}/*# sourceMappingURL=main.css.map */
