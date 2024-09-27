@@ -1,13 +1,13 @@
 @import "../../../../assets/css/root";
 
 body {
-  .about-us {
-    height: 100%;
+  background-color: $secondary-color;
 
+  .about-us {
     .content {
       display: grid;
       justify-content: center;
-      grid-template-columns: 450px 665px;
+      grid-template-columns: 390px 665px;
       gap: 1.5rem 2rem;
       padding-top: 3.5rem;
 
@@ -28,7 +28,7 @@ body {
           }
 
           .active-title {
-            text-shadow: #0f2d594c 0 0 5px;
+            text-shadow: #0f2d594c 0 0 2px;
             font-weight: $font-bold;
             transform: translateY(-5px);
           }
@@ -56,6 +56,8 @@ body {
         /*============== SWIPER DESCRIPTION ==============*/
         .description-slider {
           .description {
+            padding-block: 1.25rem;
+            
             .big-title {
               margin-block: 1.25rem 0.75rem;
               font-size: 1.75rem;
