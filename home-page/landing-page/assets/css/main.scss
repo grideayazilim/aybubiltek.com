@@ -1,1 +1,298 @@
-/*============== TOPIC NAME ==============*/
+@import "../../../../assets/css/root.css";
+
+$first-color: #0f2c59;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    #landing-page {
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        position: relative;
+        .bg-img {
+            height: 100%;
+            max-width: fit-content;
+            opacity: 0.04;
+            position: absolute;
+            z-index: -1;
+        }
+        .ornament {
+            position: absolute;
+            top: 175px;
+            width: 7%;
+        }
+        .container {
+            padding-inline: 12%;
+            display: flex;
+            justify-content: space-between;
+
+            .text-area {
+                width: 80%;
+                padding-top: 15rem;
+                .subtitle {
+                    font-style: italic;
+                    font-size: 1.4rem;
+                }
+                .bigger-title {
+                    font-size: 4.5rem;
+                    margin: 30px 0;
+                }
+                .text {
+                    width: 60%;
+                    line-height: 1.5;
+                }
+                .register-btn {
+                    background-color: white;
+                    color: $first-color;
+                    border: none;
+                    width: 12rem;
+                    height: 3.5rem;
+                    text-align: left;
+                    border-radius: 50px;
+                    font-weight: 500;
+                    font-size: 1.05rem;
+                    line-height: 3.5rem;
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in-out;
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+                    margin: 3rem 0;
+                    i {
+                        font-size: 1.2rem;
+                        margin-left: 0.4rem;
+                        margin-right: 10px;
+                        background-color: #0f2c59;
+                        color: white;
+                        padding: 0.6rem 0.8rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                .register-btn:hover {
+                    background-color: #183460;
+                    color: white;
+                    i {
+                        background-color: white;
+                        color: $first-color;
+                    }
+                }
+            }
+            .social-media-area {
+                margin-top: 6rem;
+                width: 80%;
+                .social-media-button {
+                    display: inline-block;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    margin: 0 5px;
+                    background-color: white;
+                    overflow: hidden;
+                    color: $first-color;
+                    border-radius: 50px;
+                    cursor: pointer;
+                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+                    transition: all 0.5s ease-out;
+                    &:hover {
+                        width: 12rem;
+                    }
+                    .icon {
+                        display: inline-block;
+                        width: 3.5rem;
+                        height: 3.5rem;
+                        text-align: center;
+                        border-radius: 50px;
+                        box-sizing: border-box;
+                        transition: all 0.3s ease-out;
+                        // vertical-align: middle;
+                        i {
+                            font-size: 1.5rem;
+                            line-height: 3.5rem;
+                            transition: all 0.5s ease-out;
+                            vertical-align: middle;
+                        }
+                        span {
+                            width: 60px;
+                            line-height: 2 rem;
+                        }
+                    }
+                }
+            }
+            .image-area {
+                img {
+                    position: absolute;
+                    right: -3rem;
+                    top: 0;
+                    width: 60%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1750px) {
+        .subtitle {
+            font-size: 1.2rem !important;
+        }
+        .bigger-title {
+            font-size: 3.5rem !important;
+        }
+        .image-area img {
+            top: 40px !important;
+        }
+    }
+
+    @media screen and (max-width: 1450px) {
+        .bigger-title {
+            font-size: 3rem !important;
+        }
+        .image-area img {
+            top: 80px !important;
+        }
+        .text {
+            font-size: 1rem !important;
+        }
+    }
+    @media screen and (max-width: 1300px) {
+        .bg-img {
+            height: 90% !important;
+        }
+        .bigger-title {
+            font-size: 2.8rem !important;
+        }
+        .image-area img {
+            top: 120px !important;
+        }
+        .text {
+            font-size: 1rem !important;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        .container {
+            padding-inline: 5% !important;
+        }
+        .bg-img {
+            width: 70% !important;
+            height: auto !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .text-area {
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            padding-top: 12rem !important;
+
+            .subtitle {
+                font-size: 1.4rem !important;
+            }
+            .bigger-title {
+                font-size: 4rem !important;
+            }
+            .text {
+                margin: 0 auto;
+                font-size: 1rem !important;
+            }
+
+            .social-media-area {
+                margin: 60px auto;
+            }
+        }
+
+        .image-area img {
+            display: none !important;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        .text-area {
+            .subtitle {
+                font-size: 1.2rem !important;
+            }
+            .bigger-title {
+                font-size: 3.5rem !important;
+            }
+            .register-btn{
+                width: 10rem !important;
+                height: 3rem !important;
+                font-size: 1rem !important;
+                line-height: 3rem !important;
+                i {
+                    font-size: 1rem !important;
+                    padding: 0.5rem 0.6rem !important;
+                }
+            }
+        }
+        .social-media-area {
+            margin-top: 4rem !important;
+            .social-media-button {
+                width: 3rem !important;
+                height: 3rem !important;
+                .icon {
+                    width: 3rem !important;
+                    height: 3rem !important;
+                    i {
+                        line-height: 3rem !important;
+                        font-size: 1.2rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    @media screen and (max-width: 850px) {
+        .text-area {
+            padding-top: 10rem !important;
+            
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .text-area {
+            .subtitle {
+                font-size: 1rem !important;
+            }
+            .bigger-title {
+                font-size: 3rem !important;
+            }
+            .text {
+                font-size: 0.9rem !important;
+            }
+        }
+    }
+
+    @media screen and (max-width: 470px) {
+        .text-area {
+            .subtitle {
+                font-size: 0.8rem !important;
+            }
+            .bigger-title {
+                font-size: 2.5rem !important;
+            }
+        }
+        .social-media-area {
+            margin-top: 2rem !important;
+            .social-media-button {
+                width: 2.5rem !important;
+                height: 2.5rem !important;
+                margin: 0 2px !important;
+                .icon {
+                    width: 2.5rem !important;
+                    height: 2.5rem !important;
+                    i {
+                        line-height: 2.5rem !important;
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+}

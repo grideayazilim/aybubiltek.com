@@ -1,41 +1,42 @@
-/*============== DROPDOWN MENU ==============*/
-const activatorItem = document.querySelectorAll(".activator-item");
+function initializeNavbar() {
+  /*============== DROPDOWN MENU ==============*/
+  const activatorItem = document.querySelectorAll(".activator-item");
 
-activatorItem.forEach((item) => {
-  const openSubmenu = item.querySelector(".sublist");
+  activatorItem.forEach((item) => {
+    const openSubmenu = item.querySelector(".sublist");
 
-  // Show dropdown menu
-  item.addEventListener("mouseover", () => {
-    openSubmenu.style.height = openSubmenu.scrollHeight + "px";
+    // Show dropdown menu
+    item.addEventListener("mouseover", () => {
+      openSubmenu.style.height = openSubmenu.scrollHeight + "px";
+    });
+
+    // Hide dropdown menu
+    item.addEventListener("mouseout", () => {
+      openSubmenu.removeAttribute("style");
+    });
   });
 
-  // Hide dropdown menu
-  item.addEventListener("mouseout", () => {
-    openSubmenu.removeAttribute("style");
+  /*============== TOGGLE MENU ==============*/
+  const closeButton = document.querySelector(".nav-close");
+  const toggleButton = document.querySelector(".nav-toggle");
+  const toggleMenu = document.querySelector(".nav-menu");
+
+  // Show menu
+  toggleButton.addEventListener("click", () => {
+    toggleMenu.classList.add("show-menu");
   });
-});
 
-/*============== TOGGLE MENU ==============*/
-const closeButton = document.querySelector(".nav-close");
-const toggleButton = document.querySelector(".nav-toggle");
-const toggleMenu = document.querySelector(".nav-menu");
+  // Close menu
+  closeButton.addEventListener("click", () => {
+    toggleMenu.classList.remove("show-menu");
+  });
 
-// Show menu
-toggleButton.addEventListener("click", () => {
-  toggleMenu.classList.add("show-menu");
-});
+  /*============== BLUR AND WHITEN NAVBAR ==============*/
+  const navbar = document.querySelector("nav");
+  const blurDivs = document.querySelectorAll(".blur-div");
+  let isHomePage = "isHomePage";
 
-// Close menu
-closeButton.addEventListener("click", () => {
-  toggleMenu.classList.remove("show-menu");
-});
-
-/*============== BLUR AND WHITEN NAVBAR ==============*/
-const navbar = document.querySelector("nav");
-const blurDivs = document.querySelectorAll(".blur-div");
-let isHomePage = "isHomePage";
-
-/*
+  /*
   Navbar and dropdown menus have 3 classes:
   1-) 'blur-div'
   2-) 'anti-blur'
@@ -58,14 +59,21 @@ let isHomePage = "isHomePage";
 
   handleNavbarBackground implements the structure above.
 */
+
+
 document.getElementById("home-page") === null
   ? (isHomePage = false)
   : (isHomePage = true);
 
+// Handle navbar background color
 const handleNavbarBackground = () => {
+  // Get scroll position 
+  const scrollableElement = document.getElementsByClassName("scrollable-element")[0] || window;
+  const scrollY = scrollableElement.scrollTop || window.scrollY;
+
   if (!isHomePage) navbar.classList.add("white-container");
 
-  if (this.scrollY >= 50) {
+  if (scrollY >= 50) {
     blurDivs.forEach((blurDiv) => blurDiv.classList.remove("anti-blur"));
     if (!isHomePage) navbar.classList.remove("white-container");
   } else {
@@ -74,9 +82,20 @@ const handleNavbarBackground = () => {
   }
 };
 
-window.addEventListener("scroll", handleNavbarBackground);
+const scrollableElement = document.getElementById("landing-page") || window;
+scrollableElement.addEventListener("scroll", handleNavbarBackground);
+
 window.onload = handleNavbarBackground;
 
-/*============== NAVIGATE TO TEAM SUBPAGE ==============*/
-const navigateToTeams = (teamId) =>
-  sessionStorage.setItem("selectedTeamId", teamId);
+
+  /*============== NAVIGATE TO TEAM SUBPAGE ==============*/
+  const navigateToTeams = (teamId) =>
+    sessionStorage.setItem("selectedTeamId", teamId);
+}
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  initializeNavbar();
+  window.addEventListener("scroll", () => {
+    console.log('Scroll Y:', window.scrollY);
+  });
+});
