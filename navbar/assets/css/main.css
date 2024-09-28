@@ -42,7 +42,9 @@ body img {
   height: auto;
 }
 body .container {
+  max-width: 1800px;
   width: 100%;
+  margin: auto;
   padding-inline: 10%;
 }
 body .bigger-title {
@@ -244,7 +246,7 @@ body nav .nav-menu .nav-list .activator-item .sublist {
   opacity: 1;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 10px 16px hsla(0, 0%, 0%, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.385) 0px 10px 10px;
   transition: height 0.7s background 0.4s;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
@@ -348,6 +350,9 @@ body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist .subl
 }
 body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
   background-color: #dfdfdf;
+}
+body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist .sublist-item:hover .nav-link {
+  color: transparent;
 }
 body .white-container:is(nav) .button-area .register-button::before, body .white-container:is(nav) .button-area .register-button::after {
   border-color: #5286ce;

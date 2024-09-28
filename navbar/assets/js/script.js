@@ -58,44 +58,45 @@ function initializeNavbar() {
   --------------------------------------------------------
 
   handleNavbarBackground implements the structure above.
-*/
+  */
 
+  document.getElementById("home-page") === null
+    ? (isHomePage = false)
+    : (isHomePage = true);
 
-document.getElementById("home-page") === null
-  ? (isHomePage = false)
-  : (isHomePage = true);
-
-// Handle navbar background color
-const handleNavbarBackground = () => {
-  // Get scroll position 
-  const scrollableElement = document.getElementsByClassName("scrollable-element")[0] || window;
-  const scrollY = scrollableElement.scrollTop || window.scrollY;
-
-  if (!isHomePage) navbar.classList.add("white-container");
-
-  if (scrollY >= 50) {
-    blurDivs.forEach((blurDiv) => blurDiv.classList.remove("anti-blur"));
-    if (!isHomePage) navbar.classList.remove("white-container");
-  } else {
-    blurDivs.forEach((blurDiv) => blurDiv.classList.add("anti-blur"));
+  // Handle navbar background color
+  const handleNavbarBackground = () => {
+    console.log(document.getElementById("home-page"));
+    // Get scroll position
     if (!isHomePage) navbar.classList.add("white-container");
+
+    if (window.scrollY >= 50) {
+      blurDivs.forEach((blurDiv) => blurDiv.classList.remove("anti-blur"));
+
+      if (!isHomePage) navbar.classList.remove("white-container");
+    } else {
+      blurDivs.forEach((blurDiv) => blurDiv.classList.add("anti-blur"));
+      if (!isHomePage) navbar.classList.add("white-container");
+    }
+  };
+
+  window.addEventListener("scroll", handleNavbarBackground);
+
+  document.addEventListener("DOMContentLoaded", handleNavbarBackground);
+
+  // interesting
+  if (!document.getElementById("home-page")) {
+    handleNavbarBackground();
   }
-};
-
-const scrollableElement = document.getElementById("landing-page") || window;
-scrollableElement.addEventListener("scroll", handleNavbarBackground);
-
-window.onload = handleNavbarBackground;
-
 
   /*============== NAVIGATE TO TEAM SUBPAGE ==============*/
   const navigateToTeams = (teamId) =>
     sessionStorage.setItem("selectedTeamId", teamId);
 }
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  initializeNavbar();
-  window.addEventListener("scroll", () => {
-    console.log('Scroll Y:', window.scrollY);
-  });
-});
+// document.addEventListener("DOMContentLoaded", (event) => {
+//   initializeNavbar();
+//   window.addEventListener("scroll", () => {
+//     console.log("Scroll Y:", window.scrollY);
+//   });
+// });

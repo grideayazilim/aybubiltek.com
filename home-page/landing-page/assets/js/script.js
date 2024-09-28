@@ -1,23 +1,31 @@
-// Change background image based on window width
-function changeImage() {
-  var bgImage = document.getElementsByClassName("bg-img")[0];
-  if (window.innerWidth <= 1100) {
-    console.log(window.innerWidth);
-    bgImage.src = "/assets/media/bg-logo-dik.png";
-  } else {
-    bgImage.src = "/assets/media/bg-logo.png";
-  }
-}
+/*============== REALIGNING CONTENT ==============*/
+const boxParent = document.querySelector(".container");
+const leftBox = document.querySelector(".left-box");
+const rightBox = document.querySelector(".right-box");
 
-// Call changeImage on page load and window resize
-window.onload = changeImage;
-window.onresize = changeImage;
+// When divs are sorted one under the other, bring the golden div to the top
+const realignContent = () => {
+  if (window.innerWidth <= 1300) boxParent.insertBefore(rightBox, leftBox);
+  else boxParent.insertBefore(leftBox, rightBox);
+};
 
-// Fetch and insert navbar HTML, then initialize it
-fetch("/navbar/index.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("navbar-placeholder").innerHTML = data;
-    initializeNavbar();
-  })
-  .catch((error) => console.error("Error loading navbar:", error));
+window.addEventListener("resize", realignContent);
+window.addEventListener("load", realignContent);
+
+/*============== SOCIAL BUTTON HOVER ==============*/
+const socialButtons = document.querySelectorAll(".social-media-button");
+
+socialButtons.forEach((button) => {
+  const text = button.querySelector("span");
+  console.log(text.scrollWidth);
+
+  // Show dropdown menu
+  button.addEventListener("mouseover", () => {
+    text.style.width = text.scrollWidth + "px";
+  });
+
+  // Hide dropdown menu
+  button.addEventListener("mouseout", () => {
+    text.removeAttribute("style");
+  });
+});
