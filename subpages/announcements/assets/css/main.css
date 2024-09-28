@@ -131,6 +131,7 @@ body .announcements-container {
   padding: 3rem;
   text-align: center;
   width: 100%;
+  padding: 6rem;
   /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
   /* First breakpoint */
   /* Second breakpoint */
@@ -156,6 +157,10 @@ body .announcements-container .announcements .announcement {
   padding-bottom: 1rem;
   background-color: hsla(0, 0%, 100%, 0.447);
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 0px 5px 0px;
+  transition: box-shadow 0.4s ease-in-out;
+}
+body .announcements-container .announcements .announcement:hover {
+  box-shadow: #0f2d59 0px 0px 10px 3px;
 }
 body .announcements-container .announcements .announcement .img-container {
   width: 100%;
@@ -165,7 +170,7 @@ body .announcements-container .announcements .announcement .img-container {
 body .announcements-container .announcements .announcement .img-container img {
   width: 100%;
   height: auto;
-  transition: transform 0.5s;
+  transition: transform 0.4s, filter 0.4s;
 }
 body .announcements-container .announcements .announcement .content {
   display: grid;
@@ -215,7 +220,7 @@ body .announcements-container .announcements .announcement .content .info .annou
   background-color: #f4f4f4;
   border: 2px solid #0f2c59;
   padding: 0.5rem 1rem;
-  transition: 0.7s;
+  transition: 0.4s;
   font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
 }
