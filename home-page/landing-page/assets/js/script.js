@@ -16,7 +16,7 @@ window.addEventListener("load", realignContent);
 const socialButtons = document.querySelectorAll(".social-media-button");
 
 socialButtons.forEach((button) => {
-  const text = button.querySelector("span");
+  const text = button.querySelector(".social-text");
   console.log(text.scrollWidth);
 
   // Show dropdown menu

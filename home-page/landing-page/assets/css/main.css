@@ -79,7 +79,7 @@ body .title-area {
   padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
-  margin-top: 5rem; /* space for navbar */
+  margin-top: 5rem;
 }
 body .title-area img {
   position: absolute;
@@ -95,6 +95,9 @@ body .title-area img:nth-child(2) {
   transform: translateX(50%);
   right: 0;
 }
+body #before-footer-container {
+  padding-bottom: 20rem;
+}
 @media screen and (max-width: 1200px) {
   body .bigger-title,
   body .big-title {
@@ -104,7 +107,7 @@ body .title-area img:nth-child(2) {
     font-size: 1.2rem;
   }
   body .title-area {
-    margin-top: 3.5rem;
+    margin-top: 4rem;
     height: 85px;
   }
 }
@@ -253,14 +256,14 @@ body #landing-page .container .left-box .social-media-area .social-media-button 
   font-size: 1.5rem;
   transition: all 0.5s ease-out;
 }
-body #landing-page .container .left-box .social-media-area .social-media-button span {
+body #landing-page .container .left-box .social-media-area .social-media-button .social-text {
   width: 0;
   transition: width 0.4s, margin-right 0.4s;
 }
 body #landing-page .container .left-box .social-media-area .social-media-button:hover {
   box-shadow: rgba(0, 0, 0, 0.633) 0px 0px 20px;
 }
-body #landing-page .container .left-box .social-media-area .social-media-button:hover span {
+body #landing-page .container .left-box .social-media-area .social-media-button:hover .social-text {
   margin-right: 1.1rem;
 }
 body #landing-page .container .right-box {

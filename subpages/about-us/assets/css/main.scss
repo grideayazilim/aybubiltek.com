@@ -7,14 +7,13 @@ body {
     .content {
       display: grid;
       justify-content: center;
-      grid-template-columns: 390px 665px;
+      align-items: center;
+      grid-template-columns: 380px 700px;
       gap: 1.5rem 2rem;
       padding-top: 3.5rem;
 
       /* Container that contains line slider and description slider */
       .description-area {
-        padding-block: 2rem;
-
         .titles {
           display: flex;
           justify-content: space-between;
@@ -56,7 +55,7 @@ body {
         /*============== SWIPER DESCRIPTION ==============*/
         .description-slider {
           .description {
-            padding-block: 1.25rem;
+            padding-top: 1.25rem;
             
             .big-title {
               margin-block: 1.25rem 0.75rem;
@@ -70,6 +69,7 @@ body {
       /*============== SWIPER IMAGES ==============*/
       .image-slider {
         width: 100%;
+        height: 100%;
         border-radius: 8px;
         box-shadow: #0f2d597b 0px 25px 20px -20px;
 
@@ -84,9 +84,9 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem 2rem;
       flex-wrap: wrap;
-      padding: 2.5rem 10%;
+      padding: 1.25rem 10%;
 
       img {
         width: 250px;
@@ -98,6 +98,7 @@ body {
     @media screen and (max-width: 1300px) {
       .content {
         grid-template-columns: 800px;
+        gap: 2.25rem;
 
         .description-area {
           .titles {
@@ -124,8 +125,7 @@ body {
     /* Second breakpoint */
     @media screen and (max-width: 850px) {
       .content {
-        grid-template-columns: 450px;
-        gap: 0.5rem;
+        grid-template-columns: 600px;
         padding-top: 2rem;
         text-align: center;
 
@@ -134,7 +134,7 @@ body {
             padding-inline: 4%;
 
             .subtitle {
-              font-size: 1.1rem;
+              font-size: 1.3rem;
             }
 
             .active-title {
@@ -154,12 +154,26 @@ body {
       }
     }
 
+    @media screen and (max-width: 650px) {
+      .content {
+        grid-template-columns: 80%;
+        gap: 1.4rem;
+
+        .description-area {
+          .titles {
+            .subtitle {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      
+    }
+
     /* Third breakpoint */
     @media screen and (max-width: 495px) {
       .content {
-        grid-template-columns: 80%;
-        gap: 0.1rem;
-
         .description-area {
           .titles {
             .subtitle {
@@ -169,7 +183,15 @@ body {
         }
 
         .image-slider {
-          width: 90%;
+          width: 85%;
+        }
+      }
+
+      .sponsors{
+        padding-block: 2.5rem;
+
+        img{
+          width: 120px;
         }
       }
     }

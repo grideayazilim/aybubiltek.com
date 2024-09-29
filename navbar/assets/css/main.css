@@ -79,7 +79,7 @@ body .title-area {
   padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
-  margin-top: 5rem; /* space for navbar */
+  margin-top: 5rem;
 }
 body .title-area img {
   position: absolute;
@@ -104,7 +104,7 @@ body .title-area img:nth-child(2) {
     font-size: 1.2rem;
   }
   body .title-area {
-    margin-top: 3.5rem;
+    margin-top: 4rem;
     height: 85px;
   }
 }
@@ -151,11 +151,12 @@ body nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 4.5rem;
+  height: 5rem;
   padding-inline: 9%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 500;
   z-index: 100;
   transition: color 0.4s, background 0.8s;
   /*============== LOGO ==============*/
@@ -246,7 +247,7 @@ body nav .nav-menu .nav-list .activator-item .sublist {
   opacity: 1;
   overflow: hidden;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.385) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.385) 0px 2px 2px;
   transition: height 0.7s background 0.4s;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {

@@ -129,7 +129,7 @@ body {
               }
             }
 
-            span {
+            .social-text {
               width: 0;
               transition: width 0.4s, margin-right 0.4s;
             }
@@ -137,7 +137,7 @@ body {
             &:hover {
               box-shadow: (rgba(0, 0, 0, 0.633) 0px 0px 20px);
 
-              span {
+              .social-text {
                 margin-right: 1.1rem;
               }
             }
