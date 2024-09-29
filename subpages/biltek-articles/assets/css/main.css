@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============== VARIABLES ===============*/
+/*========== Font Style ==========*/
+/*========== Colors ==========*/
+/*========== Font Weights ==========*/
+/*========== Font Sizes ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*=============== SETUP ===============*/
+  background-color: #0f2c59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.2px;
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  /* To create a container with a white background and contrasted texts */
+  /* Top part of the subpages */
+  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
+  /* test class */
+}
+body ul {
+  list-style: none;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .container {
+  width: 100%;
+  padding-inline: 10%;
+}
+body .bigger-title {
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .big-title {
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .subtitle {
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+body .white-container {
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
+body .white-container .bigger-title,
+body .white-container .big-title,
+body .white-container .subtitle,
+body .white-container a {
+  color: #0f2c59;
+}
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 107px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem; /* space for navbar */
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .bigger-title,
+  body .big-title {
+    font-size: 2.2rem;
+  }
+  body .subtitle {
+    font-size: 1.2rem;
+  }
+  body .title-area {
+    margin-top: 3.5rem;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.89rem;
+  }
+  body .container {
+    padding-inline: 5%;
+  }
+  body .bigger-title,
+  body .big-title {
+    font-size: 1.25rem;
+  }
+  body .title-area {
+    height: 68px;
+  }
+}
+body .root-test-div {
+  height: 50vh;
+}
+
+body .white-container .articles {
+  display: grid;
+  row-gap: 2rem;
+  padding-block: 3.5rem;
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
+}
+body .white-container .articles .content-box {
+  color: #4e4e4e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 4%;
+  height: 112px;
+  background-color: #f4f4f4;
+  border: 2px solid rgb(95, 87, 87);
+  filter: drop-shadow(0 0 7px rgba(0, 0, 0, 0.2));
+  transition: filter 0.4s, box-shadow 0.4s;
+}
+body .white-container .articles .content-box .left-area {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem 1.5rem;
+  margin-right: 2rem;
+}
+body .white-container .articles .content-box .left-area .vertical-line {
+  width: 2.2px;
+  height: 80px;
+  background-color: #4e4e4e;
+}
+body .white-container .articles .content-box .right-area {
+  display: grid;
+}
+body .white-container .articles .content-box .right-area .horizontal-line {
+  display: none;
+  justify-self: center;
+  margin-bottom: 0.7rem;
+  width: 10vw;
+  height: 1.5px;
+  background-color: #4e4e4e;
+}
+body .white-container .articles .content-box:hover {
+  /* 
+      Double shadow is used to make smooth transition 
+      between outset and inset shadows 
+  */
+  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+body .white-container .articles .content-box:active {
+  box-shadow: inset 0 -8px 20px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1200px) {
+  body .white-container .articles .content-box {
+    height: 100px;
+  }
+  body .white-container .articles .content-box .left-area .vertical-line {
+    height: 72px;
+  }
+}
+@media screen and (max-width: 550px) {
+  body .white-container .articles {
+    text-align: center;
+  }
+  body .white-container .articles .content-box,
+  body .white-container .articles .left-area {
+    flex-direction: column;
+  }
+  body .white-container .articles .content-box {
+    height: 150px;
+    justify-content: center;
+    gap: 1rem;
+  }
+  body .white-container .articles .content-box .left-area {
+    margin-right: 0;
+  }
+  body .white-container .articles .content-box .left-area .vertical-line {
+    width: 70%;
+    height: 1.5px;
+  }
+  body .white-container .articles .content-box .right-area .horizontal-line {
+    display: block;
+  }
+}/*# sourceMappingURL=main.css.map */
