@@ -51,6 +51,9 @@ body .bigger-title {
 }
 body .big-title {
   font-size: 3.18rem;
+}
+body .bigger-title {
+  font-size: 3.95rem;
   font-weight: 700;
 }
 body .subtitle {

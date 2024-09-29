@@ -1,1 +1,205 @@
-/*============== TOPIC NAME ==============*//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============== VARIABLES ===============*/
+/*========== Font Style ==========*/
+/*========== Colors ==========*/
+/*========== Font Weights ==========*/
+/*========== Font Sizes ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*=============== SETUP ===============*/
+  background-color: #0f2c59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.2px;
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  /* To create a container with a white background and contrasted texts */
+  /* Top part of the subpages */
+  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
+  /* test class */
+}
+body ul {
+  list-style: none;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .container {
+  width: 100%;
+  padding-inline: 10%;
+}
+body .bigger-title {
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .big-title {
+  font-size: 3.18rem;
+}
+body .bigger-title {
+  font-size: 3.95rem;
+  font-weight: 700;
+}
+body .subtitle {
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+body .white-container {
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
+body .white-container .bigger-title,
+body .white-container .big-title,
+body .white-container .subtitle,
+body .white-container a {
+  color: #0f2c59;
+}
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 107px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem; /* space for navbar */
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .bigger-title,
+  body .big-title {
+    font-size: 2.2rem;
+  }
+  body .subtitle {
+    font-size: 1.2rem;
+  }
+  body .title-area {
+    margin-top: 3.5rem;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.89rem;
+  }
+  body .container {
+    padding-inline: 5%;
+  }
+  body .bigger-title,
+  body .big-title {
+    font-size: 1.25rem;
+  }
+  body .title-area {
+    height: 68px;
+  }
+}
+body .root-test-div {
+  height: 50vh;
+}
+
+body .white-container {
+  /*============== BASE ==============*/
+  text-align: center;
+  padding-block: 3rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 25%);
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  /*============== SPONSOR CONTAINER ==============*/
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
+}
+body .white-container .division .subtitle {
+  font-weight: 700;
+  padding: 0.2rem;
+}
+body .white-container .division .line-image img {
+  width: 100%;
+  height: auto;
+  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg) brightness(40%);
+}
+body .white-container .division .line {
+  width: 80%;
+  margin: auto;
+}
+body .white-container .division .image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+}
+body .white-container .division .image-area .sponsor-link {
+  width: 90%;
+  transition: transform 0.4s;
+}
+body .white-container .division .image-area .sponsor-link .img {
+  width: 100%;
+  height: auto;
+}
+body .white-container .division .image-area .sponsor-link:hover {
+  transform: scale(110%);
+}
+body .white-container .division:nth-child(1) {
+  margin-top: 2.5rem;
+}
+body .white-container .division:nth-child(3) {
+  margin-top: 5rem;
+}
+@media screen and (max-width: 1200px) {
+  body .white-container {
+    grid-template-columns: 50%;
+  }
+  body .white-container .division .subtitle {
+    font-size: 1.75rem;
+  }
+  body .white-container .division .image-area .sponsor-link {
+    width: 75%;
+  }
+  body .white-container .division:nth-child(1), body .white-container .division:nth-child(2), body .white-container .division:nth-child(3) {
+    margin: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body .white-container {
+    padding-block: 1.75rem;
+    grid-template-columns: 70%;
+  }
+  body .white-container .division .subtitle {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=main.css.map */
