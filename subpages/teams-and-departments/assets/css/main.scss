@@ -1,1 +1,74 @@
-/*============== TOPIC NAME ==============*/
+@import "../../../../assets/css/root";
+
+body {
+  .tad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.5rem 3rem;
+    text-align: center;
+    padding: 4rem 10%;
+    
+    .team-card {
+      display: grid;
+      place-items: center;
+      row-gap: 2.5rem;
+      width: 325px;
+      height: 410px;
+      text-align: center;
+      border-radius: 15px;
+      padding: 3rem 0;
+      box-shadow: #0f2d5936 0px 0px 5px 0px;
+      transition: all 0.4s;
+
+      .images {
+        width: 70%;
+        height: auto;
+      }
+
+      p{
+        align-self: flex-end;
+      }
+
+      &:hover {
+        box-shadow: #0f2d5932 0px 7px 29px 0px;
+        transform: translateY(-5px);
+      }
+
+      &:first-child{
+        .images{
+          width: 50%;
+        }
+      }
+    }
+
+    /*============== RESPONSIVE DESIGN ==============*/
+    /* First breakpoint */
+    @media screen and (max-width: 1200px) {
+      .team-card{
+        width: 275px;
+        height: 325px;
+        box-shadow: #0f2d5932 0px 7px 29px 0px;
+
+        .images{
+          width: 50%;
+        }
+
+        &:first-child{
+          .images{
+            width: 40%;
+          }
+        }
+      }
+    }
+
+    /* Second breakpoint */
+    @media screen and (max-width: 620px) {
+      .team-card{
+        width: 250px;
+        height: 300px;
+      }
+    }
+  }
+}
