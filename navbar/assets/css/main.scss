@@ -9,11 +9,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 4.5rem;
+    height: $header-height;
     padding-inline: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: $font-medium;
     z-index: 100;
     transition: color .4s, background .8s;
 
@@ -118,7 +119,7 @@ body {
             opacity: 1;
             overflow: hidden;
             text-align: center;
-            box-shadow: 0 10px 16px hsla(0, 0%, 0%, 0.1);
+            box-shadow: rgba(0, 0, 0, 0.385) 0px 2px 2px;
             transition: height .7s background .4s;
 
             .sublist-item {
@@ -252,6 +253,10 @@ body {
 
               &:hover {
                 background-color: #dfdfdf;
+
+                .nav-link{
+                  color: transparent;
+                }
               }
             }
           }
@@ -354,8 +359,10 @@ body {
      match the responsive design in the root
   */
   @media screen and (max-width: 1200px) {
+    $responsive__nav-height: 3.5rem;
+
     nav {
-      height: 3.5rem;
+      height: $responsive__nav-height;
     }
   }
 

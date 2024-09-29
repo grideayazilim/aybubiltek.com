@@ -1,72 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
 
-    <!--==============INTERNAL CSS==============-->
-    <link rel="stylesheet" href="/assets/css/root.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/navbar/assets/css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-</head>
-<body>
+    <!--==============FONTAWESOME==============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--==============NAVBAR CSS==============-->
+    <link rel="stylesheet" href="/navbar/assets/css/main.css" />
+
+    <!--==============MAIN CSS==============-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+
+  <body>
+    <div id="home-page"></div>
+
     <section id="landing-page" class="scrollable-element">
-        <img class="bg-img" src="/assets/media/bg-logo-w-text.png" alt="">
+      <img class="bg-img" src="/assets/media/yeni-logo.png" alt="" />
+      <img class="ornament" src="/assets/media/texture.png" alt="" />
 
-        <header id="navbar-placeholder"></header>
-        <div id="home-page"></div>
-        <img class="ornament" src="/assets/media/texture.png" alt="">
-        <div class="container">
-            <div class="text-area">
-                <p class="subtitle">Ankara Yıldırım Beyazıt Üniversitesi</p>
-                <p class="bigger-title">BİLİM VE TEKNOLOJİ
-                    <br>
-                    TOPLULUĞU</p>
-    
-                <p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores iste incidunt cupiditate voluptatem. Dolores harum accusamus at expedita illum vitae.</p>
-                <button class="register-btn"><i class="fa-solid fa-chevron-right"></i>Kayıt Ol</button>
-                <div class="social-media-area">
-          
-                    <div class="social-media-button">
-                        <div class="icon">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <span style="vertical-align: middle;">
-                            Instagram</span>
-                    </div>
-                    <div class="social-media-button">
-                        <div class="icon">
-                            <i class="fab fa-youtube"></i>
-                        </div>
-                        <span style="vertical-align: middle;">Youtube</span>
-                    </div>
-                    <div class="social-media-button">
-                        <div class="icon">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <span style="vertical-align: middle;">Twitter</span>
-                    </div>
-                    <div class="social-media-button">
-                        <div class="icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <span style="vertical-align: middle;">Linkedin</span>
-                    </div>
-            
+      <header id="navbar-placeholder"></header>
+
+      <div class="container">
+        <div class="left-box">
+          <p class="subtitle">Ankara Yıldırım Beyazıt Üniversitesi</p>
+          <p class="bigger-title">
+            BİLİM VE TEKNOLOJİ
+            <br />
+            TOPLULUĞU
+          </p>
+          <p class="text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores
+            iste incidunt cupiditate voluptatem. Dolores harum accusamus at
+            expedita illum vitae.
+          </p>
+
+          <a href="#" class="register-btn">
+            <div class="arrow">
+              <div class="button-bg-circle"></div>
+              <i class="fa-solid fa-chevron-right"></i>
             </div>
-            </div>
-            <div class="image-area">
-                <img src="/assets/media/logo-with-circle.png" alt="biltek-logo">
-            </div>
+            Kayıt Ol
+          </a>
+
+          <div class="social-media-area">
+            <a class="social-media-button">
+              <div class="icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <p class="social-text">Instagram</p>
+            </a>
+
+            <a class="social-media-button">
+              <div class="icon">
+                <i class="fab fa-youtube"></i>
+              </div>
+              <p class="social-text">Youtube</p>
+            </a>
+
+            <a class="social-media-button">
+              <div class="icon">
+                <i class="fab fa-twitter"></i>
+              </div>
+              <p class="social-text">X</p>
+            </a>
+
+            <a class="social-media-button">
+              <div class="icon">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <p class="social-text">Linkedin</p>
+            </a>
+          </div>
         </div>
-    </section>
-    
-    <!--==============INTERNAL JS==============-->
-    <script src="assets/js/script.js" defer></script>
-    <script src="/navbar/assets/js/script.js" defer></script>
 
-</body>
+        <div class="right-box">
+          <img src="/assets/media/outer-elips.png" alt="" />
+          <img src="/assets/media/inner-elips.png" alt="" />
+          <img class="landing-page__logo" src="/assets/media/logo-no-text.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!--==============NAVBAR JS==============-->
+    <script src="/navbar/assets/js/script.js"></script>
+
+    <!--==============NAVBAR INITIALIZATOR==============-->
+    <script src="/assets/js/initializator.js"></script>
+
+    <!--==============MAIN JS==============-->
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>

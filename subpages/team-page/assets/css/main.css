@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/*=============== VARIABLES ===============*/
+/*========== Font Style ==========*/
+/*========== Colors ==========*/
+/*========== Font Weights ==========*/
+/*========== Font Sizes ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*=============== SETUP ===============*/
+  background-color: #0f2c59;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 0.2px;
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  /* To create a container with a white background and contrasted texts */
+  /* Top part of the subpages */
+  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+  /* First breakpoint */
+  /* Second breakpoint */
+  /* test class */
+}
+body ul {
+  list-style: none;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+body img {
+  max-width: 100%;
+  height: auto;
+}
+body .container {
+  width: 100%;
+  padding-inline: 10%;
+}
+body .bigger-title {
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .big-title {
+  font-size: 3.18rem;
+  font-weight: 700;
+}
+body .subtitle {
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+body .white-container {
+  background-color: #f4f4f4;
+  color: #4e4e4e;
+}
+body .white-container .bigger-title,
+body .white-container .big-title,
+body .white-container .subtitle,
+body .white-container a {
+  color: #0f2c59;
+}
+body .title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  height: 107px;
+  text-align: center;
+  padding-inline: 3rem;
+  background-color: #0f2c59;
+  overflow: hidden;
+  margin-top: 5rem; /* space for navbar */
+}
+body .title-area img {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 0;
+}
+body .title-area img:nth-child(1) {
+  transform: translateX(-50%);
+  left: 0;
+}
+body .title-area img:nth-child(2) {
+  transform: translateX(50%);
+  right: 0;
+}
+@media screen and (max-width: 1200px) {
+  body .bigger-title,
+  body .big-title {
+    font-size: 2.2rem;
+  }
+  body .subtitle {
+    font-size: 1.2rem;
+  }
+  body .title-area {
+    margin-top: 3.5rem;
+    height: 85px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.89rem;
+  }
+  body .container {
+    padding-inline: 5%;
+  }
+  body .bigger-title,
+  body .big-title {
+    font-size: 1.25rem;
+  }
+  body .title-area {
+    height: 68px;
+  }
+}
+body .root-test-div {
+  height: 50vh;
+}
+
+body {
+  /*==== Reset CSS from the board-members to fit this page ====*/
+  /*============== LANDING PAGE ==============*/
+  /*============== WHITE-CONTAINER AREA ==============*/
+  /*============== RESPONSIVE DESIGN ==============*/
+  /* First breakpoint */
+  /* Second breakpoint */
+  /* Third breakpoint */
+}
+body .members-container {
+  display: grid;
+  row-gap: 2.5rem;
+  padding-block: 0;
+}
+body .members-container .members .member-card .accounts {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 2.25rem;
+}
+body .members-container .members .member-card .accounts .member-link {
+  transition: all 0.4s;
+}
+body .members-container .members .member-card .accounts .member-link:hover {
+  transform: translateY(-3px);
+}
+body .members-container .big-title {
+  padding: 0;
+}
+body .landing-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5rem;
+  padding: 6rem 12rem 2rem;
+  min-height: 100vh;
+}
+body .landing-page .bg-image {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-image: url(../media/sssssblack.png);
+  background-size: cover;
+  opacity: 0.2;
+  filter: blur(0.5px);
+}
+body .landing-page .content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+body .landing-page .content .team-logo {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(255, 255, 255, 0.422) 0 0 35px;
+}
+body .landing-page .content .team-logo img {
+  width: 80%;
+  height: auto;
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.352));
+}
+body .landing-page .content .description {
+  display: grid;
+  row-gap: 2rem;
+}
+body .landing-page .social {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  font-size: 3rem;
+}
+body .team-container {
+  padding-bottom: 8rem;
+  /*==== Video section ====*/
+  /*==== Achievements section ====*/
+}
+body .team-container .big-title {
+  text-align: center;
+  margin: 0 !important;
+  padding-block: 4rem 1.5rem;
+}
+body .team-container .video-container .big-title {
+  text-align: left;
+}
+body .team-container .video-container .team-video {
+  background-color: black;
+  width: 100%;
+}
+body .team-container .achievements .achievements-slider {
+  width: 90%;
+  padding-bottom: 6rem;
+}
+body .team-container .achievements .swiper-button-prev,
+body .team-container .achievements .swiper-button-next {
+  top: initial;
+  bottom: 0.1rem;
+  width: 50px;
+  height: 50px;
+  background-color: #0f2c59;
+  color: white;
+  border-radius: 50%;
+  transition: left 0.4s, right 0.4s;
+}
+body .team-container .achievements .swiper-button-prev::after,
+body .team-container .achievements .swiper-button-next::after {
+  content: "";
+}
+body .team-container .achievements .swiper-button-prev {
+  left: 38%;
+}
+body .team-container .achievements .swiper-button-prev:hover {
+  left: 37.8%;
+}
+body .team-container .achievements .swiper-button-next {
+  right: 38%;
+}
+body .team-container .achievements .swiper-button-next:hover {
+  right: 37.8%;
+}
+body .team-container .achievements .swiper-pagination {
+  bottom: 1.1rem;
+}
+body .team-container .achievements .swiper-pagination-bullet {
+  opacity: 0.2;
+  transition: opacity 0.6s;
+}
+body .team-container .achievements .swiper-pagination-bullet-active {
+  background-color: #0f2c59;
+  opacity: 1;
+}
+body .team-container .achievements .achievements__card .achievements__img {
+  width: 100%;
+}
+@media (max-width: 1200px) {
+  body .landing-page {
+    text-align: center;
+    row-gap: 3rem;
+    padding: 6rem 7.5rem;
+  }
+  body .landing-page .content {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+    place-items: center;
+  }
+  body .landing-page .content .team-logo {
+    width: 60%;
+  }
+  body .swiper-button-prev,
+  body .swiper-button-next {
+    display: none;
+  }
+  body .team-container .achievements .achievements-slider {
+    padding-bottom: 3.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  body .landing-page {
+    padding: 6rem 3.5rem;
+  }
+  body .landing-page .bg-image {
+    background-position: -50px;
+  }
+  body .team-container .big-title {
+    padding-block: 2rem 1rem;
+  }
+}
+@media screen and (max-width: 405px) {
+  body .landing-page .content .team-logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 150%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    box-shadow: none;
+    z-index: -1;
+  }
+}/*# sourceMappingURL=main.css.map */

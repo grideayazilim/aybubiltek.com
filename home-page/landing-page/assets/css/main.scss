@@ -1,298 +1,332 @@
-@import "../../../../assets/css/root.css";
+@import "../../../../assets/css/root";
 
-$first-color: #0f2c59;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-    a {
-        color: white;
-        text-decoration: none;
-    }
-    #landing-page {
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-        position: relative;
-        .bg-img {
-            height: 100%;
-            max-width: fit-content;
-            opacity: 0.04;
-            position: absolute;
-            z-index: -1;
-        }
-        .ornament {
-            position: absolute;
-            top: 175px;
-            width: 7%;
-        }
-        .container {
-            padding-inline: 12%;
-            display: flex;
-            justify-content: space-between;
+  #landing-page {
+    /*============== BASE ==============*/
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
 
-            .text-area {
-                width: 80%;
-                padding-top: 15rem;
-                .subtitle {
-                    font-style: italic;
-                    font-size: 1.4rem;
-                }
-                .bigger-title {
-                    font-size: 4.5rem;
-                    margin: 30px 0;
-                }
-                .text {
-                    width: 60%;
-                    line-height: 1.5;
-                }
-                .register-btn {
-                    background-color: white;
-                    color: $first-color;
-                    border: none;
-                    width: 12rem;
-                    height: 3.5rem;
-                    text-align: left;
-                    border-radius: 50px;
-                    font-weight: 500;
-                    font-size: 1.05rem;
-                    line-height: 3.5rem;
-                    cursor: pointer;
-                    transition: background-color 0.2s ease-in-out;
-                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-                    margin: 3rem 0;
-                    i {
-                        font-size: 1.2rem;
-                        margin-left: 0.4rem;
-                        margin-right: 10px;
-                        background-color: #0f2c59;
-                        color: white;
-                        padding: 0.6rem 0.8rem;
-                        border-radius: 50%;
-                    }
-                }
-
-                .register-btn:hover {
-                    background-color: #183460;
-                    color: white;
-                    i {
-                        background-color: white;
-                        color: $first-color;
-                    }
-                }
-            }
-            .social-media-area {
-                margin-top: 6rem;
-                width: 80%;
-                .social-media-button {
-                    display: inline-block;
-                    width: 3.5rem;
-                    height: 3.5rem;
-                    margin: 0 5px;
-                    background-color: white;
-                    overflow: hidden;
-                    color: $first-color;
-                    border-radius: 50px;
-                    cursor: pointer;
-                    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-                    transition: all 0.5s ease-out;
-                    &:hover {
-                        width: 12rem;
-                    }
-                    .icon {
-                        display: inline-block;
-                        width: 3.5rem;
-                        height: 3.5rem;
-                        text-align: center;
-                        border-radius: 50px;
-                        box-sizing: border-box;
-                        transition: all 0.3s ease-out;
-                        // vertical-align: middle;
-                        i {
-                            font-size: 1.5rem;
-                            line-height: 3.5rem;
-                            transition: all 0.5s ease-out;
-                            vertical-align: middle;
-                        }
-                        span {
-                            width: 60px;
-                            line-height: 2 rem;
-                        }
-                    }
-                }
-            }
-            .image-area {
-                img {
-                    position: absolute;
-                    right: -3rem;
-                    top: 0;
-                    width: 60%;
-                }
-            }
-        }
+    .bg-img {
+      height: 100%;
+      max-width: fit-content;
+      opacity: 0.04;
+      position: absolute;
+      z-index: -1;
     }
 
-    @media screen and (max-width: 1750px) {
+    .ornament {
+      position: absolute;
+      top: 175px;
+      width: 7%;
+    }
+
+    /*============== CONTAINER ==============*/
+    .container {
+      max-width: 1600px;
+      margin-block: 12rem 4rem;
+      padding-inline: 190px;
+      display: grid;
+      grid-template-columns: 5fr 2fr;
+      row-gap: 1.25rem;
+
+      /*============== LEFT BOX ==============*/
+      .left-box {
+        width: 80%;
+
         .subtitle {
-            font-size: 1.2rem !important;
+          font-style: italic;
+          font-size: 1.2rem;
         }
+
         .bigger-title {
-            font-size: 3.5rem !important;
+          font-size: 3.3rem;
+          margin-block: 1.25rem;
         }
-        .image-area img {
-            top: 40px !important;
+
+        .text {
+          width: 90%;
+          line-height: 1.5;
         }
+
+        .register-btn {
+          position: relative;
+          z-index: 0;
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: center;
+          column-gap: 0.5rem;
+          margin: 2.5rem 0;
+          background-color: white;
+          color: $first-color;
+          padding: 0.6rem 1.1rem;
+          border-radius: 50px;
+          font-weight: $font-medium;
+          box-shadow: (rgba(0, 0, 0, 0.378) 0px 5px 10px);
+          overflow: hidden;
+          transition: box-shadow 0.4s;
+
+          &:hover{
+            box-shadow: (rgba(0, 0, 0, 0.633) 0px 0px 20px);
+          }
+
+          .arrow {
+            display: grid;
+            place-items: center;
+            width: 30px;
+            height: 30px;
+            background-color: $first-color;
+            border-radius: 50%;
+            transition: background 0.4s;
+
+            .button-bg-circle {
+              position: absolute;
+              z-index: -1;
+              justify-self: left;
+              width: 15px;
+              height: 15px;
+              background-color: $first-color;
+              border-radius: 20px;
+              transition: all 0.4s;
+            }
+
+            i {
+              color: white;
+            }
+          }
+        }
+
+        .social-media-area {
+          font-weight: $font-medium;
+
+          .social-media-button {
+            display: inline-flex;
+            align-items: center;
+            margin-inline: 5px;
+            background-color: white;
+            overflow: hidden;
+            color: $first-color;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: (rgba(0, 0, 0, 0.378) 0px 5px 10px);
+            transition: all 0.4s;
+
+            .icon {
+              display: grid;
+              place-items: center;
+              width: 3.25rem;
+              height: 3.25rem;
+              text-align: center;
+              border-radius: 50px;
+              box-sizing: border-box;
+              transition: all 0.3s ease-out;
+              i {
+                font-size: 1.5rem;
+                transition: all 0.5s ease-out;
+              }
+            }
+
+            .social-text {
+              width: 0;
+              transition: width 0.4s, margin-right 0.4s;
+            }
+
+            &:hover {
+              box-shadow: (rgba(0, 0, 0, 0.633) 0px 0px 20px);
+
+              .social-text {
+                margin-right: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+
+      /*============== RIGHT BOX ==============*/
+      .right-box {
+        position: relative;
+        display: grid;
+        place-items: center;
+
+        img {
+          position: absolute;
+          max-width: 5000px; // override root
+          transform: translate(-60px, -30px);
+
+          &:nth-child(1) {
+            width: 170%;
+          }
+
+          &:nth-child(2) {
+            width: 150%;
+          }
+
+          &:nth-child(3) {
+            width: 120%;
+          }
+        }
+      }
     }
 
+    /*=============== RESPONSIVE DESIGN ===============*/
+    /* First breakpoint */
     @media screen and (max-width: 1450px) {
-        .bigger-title {
-            font-size: 3rem !important;
+      .container {
+        .left-box {
+          .bigger-title {
+            font-size: 2.9rem;
+          }
+
+          .subtitle{
+            font-size: 1.1rem;
+          }
+
+          .text {
+            font-size: 1rem;
+          }
         }
-        .image-area img {
-            top: 80px !important;
-        }
-        .text {
-            font-size: 1rem !important;
-        }
+      }
     }
+
+    /* Second breakpoint */
     @media screen and (max-width: 1300px) {
-        .bg-img {
-            height: 90% !important;
+      display: flex;
+      align-items: center;
+
+      .ornament {
+        width: 100px;
+      }
+
+      .bg-img {
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .container {
+        margin-block: 5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 550px 1fr;
+        padding-inline: 8%;
+
+        .left-box {
+          width: 100%;
+          text-align: center;
+
+          .subtitle {
+            font-size: 1.3rem;
+          }
+
+          .bigger-title {
+            font-size: 3.5rem;
+          }
+          
+          .text {
+            width: 80%;
+            margin: auto;
+            font-size: 1.2rem;
+          }
         }
-        .bigger-title {
-            font-size: 2.8rem !important;
+
+        .right-box {
+          position: relative;
+
+          img {
+            position: absolute;
+            width: auto;
+            right: 50%;
+            transform: translateX(50%);
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+              width: auto;
+            }
+
+            &:nth-child(1) {
+              height: 95%;
+            }
+
+            &:nth-child(2) {
+              height: 85%;
+            }
+
+            &:nth-child(3) {
+              height: 70%;
+            }
+          }
         }
-        .image-area img {
-            top: 120px !important;
-        }
-        .text {
-            font-size: 1rem !important;
-        }
+      }
     }
-    @media screen and (max-width: 1100px) {
-        .container {
-            padding-inline: 5% !important;
-        }
-        .bg-img {
-            width: 70% !important;
-            height: auto !important;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
 
-        .text-area {
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-            padding-top: 12rem !important;
-
-            .subtitle {
-                font-size: 1.4rem !important;
-            }
-            .bigger-title {
-                font-size: 4rem !important;
-            }
-            .text {
-                margin: 0 auto;
-                font-size: 1rem !important;
-            }
-
-            .social-media-area {
-                margin: 60px auto;
-            }
-        }
-
-        .image-area img {
-            display: none !important;
-        }
-    }
-
+    /* Third breakpoint */
     @media screen and (max-width: 1000px) {
-        .text-area {
-            .subtitle {
-                font-size: 1.2rem !important;
-            }
-            .bigger-title {
-                font-size: 3.5rem !important;
-            }
-            .register-btn{
-                width: 10rem !important;
-                height: 3rem !important;
-                font-size: 1rem !important;
-                line-height: 3rem !important;
-                i {
-                    font-size: 1rem !important;
-                    padding: 0.5rem 0.6rem !important;
-                }
-            }
+      .container {
+        grid-template-rows: 400px 1fr;
+        padding-inline: 9%;
+        row-gap: 1.5rem;
+
+        .left-box {
+          .subtitle {
+            font-size: 1.2rem;
+          }
+
+          .bigger-title {
+            font-size: 3rem;
+          }
         }
-        .social-media-area {
-            margin-top: 4rem !important;
-            .social-media-button {
-                width: 3rem !important;
-                height: 3rem !important;
-                .icon {
-                    width: 3rem !important;
-                    height: 3rem !important;
-                    i {
-                        line-height: 3rem !important;
-                        font-size: 1.2rem !important;
-                    }
-                }
-            }
-        }
+      }
     }
 
-    
-    @media screen and (max-width: 850px) {
-        .text-area {
-            padding-top: 10rem !important;
-            
-        }
-    }
-
+    /* Forth breakpoint */
     @media screen and (max-width: 650px) {
-        .text-area {
-            .subtitle {
-                font-size: 1rem !important;
-            }
-            .bigger-title {
-                font-size: 3rem !important;
-            }
-            .text {
-                font-size: 0.9rem !important;
-            }
+      .ornament {
+        top: 110px;
+        width: 15%;
+      }
+
+      .container {
+        padding-inline: 4%;
+
+        .left-box {
+          .subtitle {
+            font-size: 0.8rem;
+          }
+          .bigger-title {
+            margin-block: 15px;
+            font-size: 2rem;
+          }
         }
+      }
     }
 
-    @media screen and (max-width: 470px) {
-        .text-area {
-            .subtitle {
-                font-size: 0.8rem !important;
-            }
-            .bigger-title {
-                font-size: 2.5rem !important;
-            }
-        }
+    /* Fifth breakpoint */
+    @media screen and (max-width: 550px) {
+      .container {
+        grid-template-rows: 270px 1fr;
+
         .social-media-area {
-            margin-top: 2rem !important;
-            .social-media-button {
-                width: 2.5rem !important;
-                height: 2.5rem !important;
-                margin: 0 2px !important;
-                .icon {
-                    width: 2.5rem !important;
-                    height: 2.5rem !important;
-                    i {
-                        line-height: 2.5rem !important;
-                        font-size: 1rem !important;
-                    }
-                }
+          .social-media-button {
+            margin-inline: 2px;
+            .icon {
+              width: 3rem;
+              height: 3rem;
+              i {
+                font-size: 1.3rem;
+              }
             }
+          }
         }
+      }
+
+      .register-btn {
+        margin-block: 1.75rem 2.25rem !important;
+      }
     }
+  }
 }

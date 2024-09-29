@@ -1,25 +1,25 @@
-/*============== UPDATE SLIDER ==============*/
+/*============== DESCRIPTION SLIDER ==============*/
 document.addEventListener("DOMContentLoaded", () => {
   // Swiper initialization
-  const swiper = new Swiper(".swiper", {
+  const descriptionSwiper = new Swiper(".description-slider", {
     // Update slider line when slide changes
     on: {
       slideChange: function () {
-        updateSliderLine(this);
+        updateDescriptionSliderLine(this);
       },
     },
   });
 
-  updateSliderByTitle(swiper);
-  resetLineWidth(swiper);
+  updateDescriptionSliderByTitle(descriptionSwiper);
+  resetLineWidth(descriptionSwiper);
 });
 
 // Elements that are going to be used
 const line = document.querySelector(".current-line");
 const titles = document.querySelectorAll(".subtitle");
 
-/*=== Update slider line and titles when slider changes ===*/
-const updateSliderLine = (swiper) => {
+/*=== Update description slider line and titles when slider changes ===*/
+const updateDescriptionSliderLine = (swiper) => {
   const slideIndex = swiper.activeIndex;
   const activeSlide = swiper.slides[slideIndex];
   const slideWidth = activeSlide.clientWidth / 3.0;
@@ -38,7 +38,7 @@ const updateSliderLine = (swiper) => {
 };
 
 /*=== Update slider when a title is clicked ===*/
-const updateSliderByTitle = (swiper) => {
+const updateDescriptionSliderByTitle = (swiper) => {
   titles.forEach((title) => {
     title.addEventListener("click", () => {
       swiper.slideTo(parseInt(title.id));
@@ -49,6 +49,25 @@ const updateSliderByTitle = (swiper) => {
 /*=== Trigger updateSliderLine when resized to realign slider line ===*/
 const resetLineWidth = (swiper) => {
   window.addEventListener("resize", () => {
-    updateSliderLine(swiper);
+    updateDescriptionSliderLine(swiper);
   });
 };
+
+/*============== SWIPER IMAGES ==============*/
+const imageSwiper = new Swiper(".image-slider", {
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 8,
+  allowTouchMove: false,
+  simulateTouch: false,
+  speed: 3000,
+
+  autoplay: {
+    delay: 5000,
+  },
+
+  effect: "fade",
+  fadeEffect: {
+    crossFade: true,
+  },
+});
