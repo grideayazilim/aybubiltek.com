@@ -101,9 +101,7 @@ body {
               &:hover {
                 background-color: $first-color;
                 box-shadow: #0f2d5936 0px 8px 26px 0px;
-                a {
-                  color: $secondary-color;
-                }
+                color: $secondary-color;
               }
             }
           }

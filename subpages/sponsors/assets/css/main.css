@@ -16,6 +16,7 @@ html {
 
 body {
   /*=============== SETUP ===============*/
+  min-height: 100vh;
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
@@ -51,6 +52,7 @@ body .bigger-title {
 }
 body .big-title {
   font-size: 3.18rem;
+  font-weight: 700;
 }
 body .bigger-title {
   font-size: 3.95rem;
@@ -96,6 +98,9 @@ body .title-area img:nth-child(2) {
   transform: translateX(50%);
   right: 0;
 }
+body .ender {
+  padding-bottom: 15.5rem !important;
+}
 @media screen and (max-width: 1200px) {
   body .bigger-title,
   body .big-title {
@@ -128,7 +133,7 @@ body .root-test-div {
   height: 50vh;
 }
 
-body .white-container {
+body .sponsors {
   /*============== BASE ==============*/
   text-align: center;
   padding-block: 3rem;
@@ -142,20 +147,20 @@ body .white-container {
   /* First breakpoint */
   /* Second breakpoint */
 }
-body .white-container .division .subtitle {
+body .sponsors .division .subtitle {
   font-weight: 700;
   padding: 0.2rem;
 }
-body .white-container .division .line-image img {
+body .sponsors .division .line-image img {
   width: 100%;
   height: auto;
   filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg) brightness(40%);
 }
-body .white-container .division .line {
+body .sponsors .division .line {
   width: 80%;
   margin: auto;
 }
-body .white-container .division .image-area {
+body .sponsors .division .image-area {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,43 +168,43 @@ body .white-container .division .image-area {
   padding: 2rem;
   gap: 2rem;
 }
-body .white-container .division .image-area .sponsor-link {
+body .sponsors .division .image-area .sponsor-link {
   width: 90%;
   transition: transform 0.4s;
 }
-body .white-container .division .image-area .sponsor-link .img {
+body .sponsors .division .image-area .sponsor-link .img {
   width: 100%;
   height: auto;
 }
-body .white-container .division .image-area .sponsor-link:hover {
+body .sponsors .division .image-area .sponsor-link:hover {
   transform: scale(110%);
 }
-body .white-container .division:nth-child(1) {
+body .sponsors .division:nth-child(1) {
   margin-top: 2.5rem;
 }
-body .white-container .division:nth-child(3) {
+body .sponsors .division:nth-child(3) {
   margin-top: 5rem;
 }
 @media screen and (max-width: 1200px) {
-  body .white-container {
+  body .sponsors {
     grid-template-columns: 50%;
   }
-  body .white-container .division .subtitle {
+  body .sponsors .division .subtitle {
     font-size: 1.75rem;
   }
-  body .white-container .division .image-area .sponsor-link {
+  body .sponsors .division .image-area .sponsor-link {
     width: 75%;
   }
-  body .white-container .division:nth-child(1), body .white-container .division:nth-child(2), body .white-container .division:nth-child(3) {
+  body .sponsors .division:nth-child(1), body .sponsors .division:nth-child(2), body .sponsors .division:nth-child(3) {
     margin: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
-  body .white-container {
+  body .sponsors {
     padding-block: 1.75rem;
     grid-template-columns: 70%;
   }
-  body .white-container .division .subtitle {
+  body .sponsors .division .subtitle {
     font-size: 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

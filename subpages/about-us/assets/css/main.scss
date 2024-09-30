@@ -81,15 +81,15 @@ body {
     }
 
     .sponsors {
-      display: flex;
+      display: grid;
       justify-content: center;
       align-items: center;
+      grid-template-columns: repeat(4, 250px);
       gap: 1rem 2rem;
-      flex-wrap: wrap;
       padding: 1.25rem 10%;
 
       img {
-        width: 250px;
+        width: 100%;
       }
     }
 
@@ -116,9 +116,7 @@ body {
       }
 
       .sponsors {
-        img {
-          width: 150px;
-        }
+        grid-template-columns: repeat(2, 200px);
       }
     }
 
@@ -172,7 +170,7 @@ body {
     }
 
     /* Third breakpoint */
-    @media screen and (max-width: 495px) {
+    @media screen and (max-width: 500px) {
       .content {
         .description-area {
           .titles {
@@ -188,11 +186,8 @@ body {
       }
 
       .sponsors{
+        grid-template-columns: 170px;
         padding-block: 2.5rem;
-
-        img{
-          width: 120px;
-        }
       }
     }
   }

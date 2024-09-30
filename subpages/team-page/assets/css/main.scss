@@ -31,7 +31,8 @@ body {
   }
 
   /*============== LANDING PAGE ==============*/
-  .landing-page {
+  .sub-landing-page {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -41,10 +42,10 @@ body {
 
     .bg-image{
       position: absolute;
-      //top: 4rem; // space for navbar, add later
       left: 0;
+      top: 4.5rem;
       z-index: -1;
-      width: 100%;
+      width: 80%;
       height: 100%;
       background-image: url(../media/sssssblack.png);
       background-size: cover;
@@ -81,11 +82,49 @@ body {
     }
 
     .social {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      column-gap: 5%;
-      font-size: 3rem;
+      font-weight: $font-medium;
+      margin: 0 auto;
+
+      .social-media-button {
+        display: inline-flex;
+        align-items: center;
+        margin-inline: 5px;
+        background-color: white;
+        overflow: hidden;
+        color: $first-color;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: (rgba(0, 0, 0, 0.378) 0px 5px 10px);
+        transition: all 0.4s;
+
+        .icon {
+          display: grid;
+          place-items: center;
+          width: 4.5rem;
+          height: 4.5rem;
+          text-align: center;
+          border-radius: 50px;
+          box-sizing: border-box;
+          transition: all 0.3s ease-out;
+          i {
+            font-size: 2rem;
+            transition: all 0.5s ease-out;
+          }
+        }
+
+        .social-text {
+          width: 0;
+          transition: width 0.4s, margin-right 0.4s;
+        }
+
+        &:hover {
+          box-shadow: (rgba(0, 0, 0, 0.633) 0px 0px 20px);
+
+          .social-text {
+            margin-right: 1.1rem;
+          }
+        }
+      }
     }
   }
 
@@ -177,7 +216,7 @@ body {
   /*============== RESPONSIVE DESIGN ==============*/
   /* First breakpoint */
   @media (max-width: 1200px){
-    .landing-page {
+    .sub-landing-page {
       text-align: center;
       row-gap: 3rem;
       padding: 6rem 7.5rem;
@@ -209,11 +248,23 @@ body {
 
   /* Second breakpoint */
   @media screen and (max-width: 750px) {
-    .landing-page {
+    .sub-landing-page {
       padding: 6rem 3.5rem;
 
       .bg-image{
         background-position: -50px;
+      }
+
+      .social {
+        .social-media-button {
+          .icon {
+            width: 3rem;
+            height: 3rem;
+            i {
+              font-size: 1.25rem;
+            }
+          }
+        }
       }
     }
 
@@ -226,7 +277,7 @@ body {
 
   /* Third breakpoint */
   @media screen and (max-width: 405px) {
-    .landing-page {
+    .sub-landing-page {
       .content {
         // Put the team logo behind
         .team-logo {

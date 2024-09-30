@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Name</title>
 
-    <!--==============REMIX ICON==============-->
+    <!--==============FONTAWESOME==============-->
     <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!--==============SWIPER CSS==============-->
@@ -17,15 +20,25 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!--==============NAVBAR CSS==============-->
+    <link rel="stylesheet" href="/navbar/assets/css/main.css" />
+
+    <!--==============FOOTER CSS==============-->
+    <link rel="stylesheet" href="/footer/assets/css/main.css" />
+
     <!--==============CSS FOR BOARD MEMBERS PART==============-->
-    <link rel="stylesheet" href="../board-members/assets/css/main.css">
+    <link rel="stylesheet" href="../board-members/assets/css/main.css" />
 
     <!--==============MAIN CSS==============-->
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
 
   <body>
-    <div class="landing-page container">
+    <div id="home-page"></div>
+
+    <header id="navbar-placeholder"></header>
+
+    <section class="sub-landing-page container">
       <div class="bg-image"></div>
 
       <div class="content">
@@ -47,25 +60,37 @@
       </div>
 
       <div class="social">
-        <a href="#" class="social-link">
-          <i class="ri-instagram-fill"></i>
+        <a class="social-media-button">
+          <div class="icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <p class="social-text">Instagram</p>
         </a>
 
-        <a href="#" class="social-link">
-          <i class="ri-youtube-fill"></i>
+        <a class="social-media-button">
+          <div class="icon">
+            <i class="fab fa-youtube"></i>
+          </div>
+          <p class="social-text">Youtube</p>
         </a>
 
-        <a href="#" class="social-link">
-          <i class="ri-twitter-x-fill"></i>
+        <a class="social-media-button">
+          <div class="icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <p class="social-text">X</p>
         </a>
 
-        <a href="#" class="social-link">
-          <i class="ri-linkedin-box-fill"></i>
+        <a class="social-media-button">
+          <div class="icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <p class="social-text">Linkedin</p>
         </a>
       </div>
-    </div>
+    </section>
 
-    <div class="white-container team-container container">
+    <section class="white-container team-container container ender">
       <div class="video-container">
         <div class="big-title">Tanıtım Videosu</div>
         <video class="team-video" src="#"></video>
@@ -77,36 +102,68 @@
         <div class="achievements-slider swiper">
           <div class="swiper-wrapper">
             <div class="achievements__card swiper-slide">
-              <img src="assets/media/office.jpg" alt="" class="achievements__img">
+              <img
+                src="assets/media/office.jpg"
+                alt=""
+                class="achievements__img"
+              />
 
               <div class="achievements__title subtitle">achievements title</div>
-              <div class="achievements__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque esse blanditiis, dolorem voluptas tempora magnam provident aliquam impedit illum odit.</div>
+              <div class="achievements__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                esse blanditiis, dolorem voluptas tempora magnam provident
+                aliquam impedit illum odit.
+              </div>
             </div>
 
             <div class="achievements__card swiper-slide">
-              <img src="assets/media/office.jpg" alt="" class="achievements__img">
+              <img
+                src="assets/media/office.jpg"
+                alt=""
+                class="achievements__img"
+              />
 
               <div class="achievements__title subtitle">achievements title</div>
-              <div class="achievements__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque esse blanditiis, dolorem voluptas tempora magnam provident aliquam impedit illum odit.</div>
+              <div class="achievements__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                esse blanditiis, dolorem voluptas tempora magnam provident
+                aliquam impedit illum odit.
+              </div>
             </div>
 
             <div class="achievements__card swiper-slide">
-              <img src="assets/media/office.jpg" alt="" class="achievements__img">
+              <img
+                src="assets/media/office.jpg"
+                alt=""
+                class="achievements__img"
+              />
 
               <div class="achievements__title subtitle">achievements title</div>
-              <div class="achievements__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque esse blanditiis, dolorem voluptas tempora magnam provident aliquam impedit illum odit.</div>
+              <div class="achievements__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                esse blanditiis, dolorem voluptas tempora magnam provident
+                aliquam impedit illum odit.
+              </div>
             </div>
 
             <div class="achievements__card swiper-slide">
-              <img src="assets/media/office.jpg" alt="" class="achievements__img">
+              <img
+                src="assets/media/office.jpg"
+                alt=""
+                class="achievements__img"
+              />
 
               <div class="achievements__title subtitle">achievements title</div>
-              <div class="achievements__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque esse blanditiis, dolorem voluptas tempora magnam provident aliquam impedit illum odit.</div>
+              <div class="achievements__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                esse blanditiis, dolorem voluptas tempora magnam provident
+                aliquam impedit illum odit.
+              </div>
             </div>
           </div>
 
           <div class="swiper-pagination"></div>
-        
+
           <div class="swiper-button-prev">
             <i class="fa-solid fa-arrow-left"></i>
           </div>
@@ -124,17 +181,17 @@
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Kaptan</div>
               <p>Kaptan Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-  
+
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -144,22 +201,22 @@
               </a>
             </div>
           </div>
-  
+
           <div class="member-card">
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Kaptan</div>
               <p>Kaptan Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-  
+
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -176,42 +233,17 @@
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Core Team</div>
               <p>Core Team Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
-              </a>
-  
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-square-github"></i>
               </a>
 
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-square-behance"></i>
-              </a>
-            </div>
-          </div>
-  
-          <div class="member-card">
-            <div class="image-container">
-              <img src="assets/media/person.png" alt="" />
-            </div>
-  
-            <div class="member-info">
-              <div class="subtitle">Core Team</div>
-              <p>Core Team Adı</p>
-            </div>
-  
-            <div class="accounts">
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-  
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -226,17 +258,42 @@
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Core Team</div>
               <p>Core Team Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-  
+
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-square-behance"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="image-container">
+              <img src="assets/media/person.png" alt="" />
+            </div>
+
+            <div class="member-info">
+              <div class="subtitle">Core Team</div>
+              <p>Core Team Adı</p>
+            </div>
+
+            <div class="accounts">
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -257,42 +314,17 @@
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Emektar</div>
               <p>Emektar Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
-              </a>
-  
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-square-github"></i>
               </a>
 
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-square-behance"></i>
-              </a>
-            </div>
-          </div>
-  
-          <div class="member-card">
-            <div class="image-container">
-              <img src="assets/media/person.png" alt="" />
-            </div>
-  
-            <div class="member-info">
-              <div class="subtitle">Emektar</div>
-              <p>Emektar Adı</p>
-            </div>
-  
-            <div class="accounts">
-              <a href="#" class="member-link">
-                <i class="fa-brands fa-linkedin"></i>
-              </a>
-  
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -307,17 +339,42 @@
             <div class="image-container">
               <img src="assets/media/person.png" alt="" />
             </div>
-  
+
             <div class="member-info">
               <div class="subtitle">Emektar</div>
               <p>Emektar Adı</p>
             </div>
-  
+
             <div class="accounts">
               <a href="#" class="member-link">
                 <i class="fa-brands fa-linkedin"></i>
               </a>
-  
+
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-square-github"></i>
+              </a>
+
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-square-behance"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="member-card">
+            <div class="image-container">
+              <img src="assets/media/person.png" alt="" />
+            </div>
+
+            <div class="member-info">
+              <div class="subtitle">Emektar</div>
+              <p>Emektar Adı</p>
+            </div>
+
+            <div class="accounts">
+              <a href="#" class="member-link">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+
               <a href="#" class="member-link">
                 <i class="fa-brands fa-square-github"></i>
               </a>
@@ -329,16 +386,21 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <footer id="footer-placeholder"></footer>
 
     <!--==============SWIPER JS==============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <!--==============FONTAWESOME==============-->
-    <script
-      src="https://kit.fontawesome.com/9873272cda.js"
-      crossorigin="anonymous"
-    ></script>
+    <!--==============NAVBAR JS==============-->
+    <script src="/navbar/assets/js/script.js"></script>
+
+    <!--==============FOOTER JS==============-->
+    <script src="/footer/assets/js/script.js"></script>
+
+    <!--==============NAVBAR INITIALIZATOR==============-->
+    <script src="/assets/js/initializator.js"></script>
 
     <!--==============MAIN JS==============-->
     <script src="assets/js/script.js"></script>

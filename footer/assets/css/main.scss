@@ -4,12 +4,12 @@ body {
   position: relative;
 
   footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     padding-block: 2.2rem;
-    margin-top: 5rem;
     box-shadow: 0 0 16px hsla(0, 0%, 0%, 0.174);
     background-color: $first-color;
 

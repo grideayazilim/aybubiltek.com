@@ -16,6 +16,7 @@ html {
 
 body {
   /*=============== SETUP ===============*/
+  min-height: 100vh;
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
@@ -95,6 +96,9 @@ body .title-area img:nth-child(1) {
 body .title-area img:nth-child(2) {
   transform: translateX(50%);
   right: 0;
+}
+body .ender {
+  padding-bottom: 15.5rem !important;
 }
 @media screen and (max-width: 1200px) {
   body .bigger-title,

@@ -1,32 +1,3 @@
-/*============== SWIPER ==============*/
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: true,
-  slidesPerView: 3,
-  spaceBetween: 8,
-
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-// Responsive swiper function
-const activateResponsiveSwiper = () => {
-  if (window.innerWidth < 600) swiper.params.slidesPerView = 1;
-  else if (window.innerWidth < 1200) swiper.params.slidesPerView = 2;
-  else swiper.params.slidesPerView = 3;
-
-  swiper.update();
-};
-
-window.addEventListener("resize", activateResponsiveSwiper);
-window.onload = activateResponsiveSwiper;
-
 /*============== SET PAGE ==============*/
 // Team id that got from the links
 const id = sessionStorage.getItem("selectedTeamId");
@@ -66,3 +37,50 @@ async function loadPage() {
 }
 
 loadPage();
+
+/*============== SWIPER ==============*/
+const swiper = new Swiper(".swiper", {
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 8,
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+// Responsive swiper function
+const activateResponsiveSwiper = () => {
+  if (window.innerWidth < 600) swiper.params.slidesPerView = 1;
+  else if (window.innerWidth < 1200) swiper.params.slidesPerView = 2;
+  else swiper.params.slidesPerView = 3;
+
+  swiper.update();
+};
+
+window.addEventListener("resize", activateResponsiveSwiper);
+window.onload = activateResponsiveSwiper;
+
+/*============== SOCIAL BUTTON HOVER ==============*/
+const socialButtons = document.querySelectorAll(".social-media-button");
+
+socialButtons.forEach((button) => {
+  const text = button.querySelector(".social-text");
+  console.log(text.scrollWidth);
+
+  // Show dropdown menu
+  button.addEventListener("mouseover", () => {
+    text.style.width = text.scrollWidth + "px";
+  });
+
+  // Hide dropdown menu
+  button.addEventListener("mouseout", () => {
+    text.removeAttribute("style");
+  });
+});

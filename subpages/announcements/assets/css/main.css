@@ -17,6 +17,7 @@ html {
 
 body {
   /*=============== SETUP ===============*/
+  min-height: 100vh;
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
@@ -52,6 +53,10 @@ body .bigger-title {
 }
 body .big-title {
   font-size: 3.18rem;
+  font-weight: 700;
+}
+body .bigger-title {
+  font-size: 3.95rem;
   font-weight: 700;
 }
 body .subtitle {
@@ -93,6 +98,9 @@ body .title-area img:nth-child(1) {
 body .title-area img:nth-child(2) {
   transform: translateX(50%);
   right: 0;
+}
+body .ender {
+  padding-bottom: 15.5rem !important;
 }
 @media screen and (max-width: 1200px) {
   body .bigger-title,
@@ -227,8 +235,6 @@ body .announcements-container .announcements .announcement .content .info .annou
 body .announcements-container .announcements .announcement .content .info .announcement-link:hover {
   background-color: #0f2c59;
   box-shadow: rgba(15, 45, 89, 0.2117647059) 0px 8px 26px 0px;
-}
-body .announcements-container .announcements .announcement .content .info .announcement-link:hover a {
   color: #f4f4f4;
 }
 body .announcements-container .announcements .announcement:hover {

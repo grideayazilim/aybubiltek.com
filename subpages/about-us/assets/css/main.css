@@ -16,6 +16,7 @@ html {
 
 body {
   /*=============== SETUP ===============*/
+  min-height: 100vh;
   background-color: #0f2c59;
   font-family: "Montserrat", sans-serif;
   font-size: 1.05rem;
@@ -42,9 +43,7 @@ body img {
   height: auto;
 }
 body .container {
-  max-width: 1800px;
   width: 100%;
-  margin: auto;
   padding-inline: 10%;
 }
 body .bigger-title {
@@ -53,6 +52,10 @@ body .bigger-title {
 }
 body .big-title {
   font-size: 3.18rem;
+  font-weight: 700;
+}
+body .bigger-title {
+  font-size: 3.95rem;
   font-weight: 700;
 }
 body .subtitle {
@@ -79,7 +82,7 @@ body .title-area {
   padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
-  margin-top: 5rem;
+  margin-top: 5rem; /* space for navbar */
 }
 body .title-area img {
   position: absolute;
@@ -95,8 +98,8 @@ body .title-area img:nth-child(2) {
   transform: translateX(50%);
   right: 0;
 }
-body #before-footer-container {
-  padding-bottom: 20rem;
+body .ender {
+  padding-bottom: 15.5rem !important;
 }
 @media screen and (max-width: 1200px) {
   body .bigger-title,
@@ -107,7 +110,7 @@ body #before-footer-container {
     font-size: 1.2rem;
   }
   body .title-area {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     height: 85px;
   }
 }
@@ -204,15 +207,15 @@ body .about-us .content .image-slider img {
   height: 100%;
 }
 body .about-us .sponsors {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-columns: repeat(4, 250px);
   gap: 1rem 2rem;
-  flex-wrap: wrap;
   padding: 1.25rem 10%;
 }
 body .about-us .sponsors img {
-  width: 250px;
+  width: 100%;
 }
 @media screen and (max-width: 1300px) {
   body .about-us .content {
@@ -228,8 +231,8 @@ body .about-us .sponsors img {
   body .about-us .content .image-slider {
     width: 70%;
   }
-  body .about-us .sponsors img {
-    width: 150px;
+  body .about-us .sponsors {
+    grid-template-columns: repeat(2, 200px);
   }
 }
 @media screen and (max-width: 850px) {
@@ -261,7 +264,7 @@ body .about-us .sponsors img {
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 495px) {
+@media screen and (max-width: 500px) {
   body .about-us .content .description-area .titles .subtitle {
     font-size: 0.75rem;
   }
@@ -269,9 +272,7 @@ body .about-us .sponsors img {
     width: 85%;
   }
   body .about-us .sponsors {
+    grid-template-columns: 170px;
     padding-block: 2.5rem;
-  }
-  body .about-us .sponsors img {
-    width: 120px;
   }
 }/*# sourceMappingURL=main.css.map */
