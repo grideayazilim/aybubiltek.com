@@ -30,26 +30,21 @@ body {
     }
   }
 
-  /*============== LANDING PAGE ==============*/
+  /*============== SUBLANDING PAGE ==============*/
   .sub-landing-page {
     position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
-    row-gap: 5rem;
+    row-gap: 2rem;
     padding: 6rem 12rem 2rem;
     min-height: 100vh;
 
     .bg-image{
       position: absolute;
       left: 0;
-      top: 4.5rem;
       z-index: -1;
-      width: 80%;
-      height: 100%;
-      background-image: url(../media/sssssblack.png);
-      background-size: cover;
-      opacity: 0.2;
+      opacity: 0.04;
       filter: blur(.5px);
     }
 
@@ -75,9 +70,13 @@ body {
         }
       }
 
-      .description{
+      .main-description{
         display: grid;
-        row-gap: 2rem;
+        row-gap: 1rem;
+
+        p{
+          line-height: 1.4;
+        }
       }
     }
 
@@ -89,6 +88,7 @@ body {
         display: inline-flex;
         align-items: center;
         margin-inline: 5px;
+        font-size: 1.2rem;
         background-color: white;
         overflow: hidden;
         color: $first-color;
@@ -100,8 +100,8 @@ body {
         .icon {
           display: grid;
           place-items: center;
-          width: 4.5rem;
-          height: 4.5rem;
+          width: 4rem;
+          height: 4rem;
           text-align: center;
           border-radius: 50px;
           box-sizing: border-box;
@@ -271,25 +271,6 @@ body {
     .team-container{
       .big-title{
         padding-block: 2rem 1rem;
-      }
-    }
-  }
-
-  /* Third breakpoint */
-  @media screen and (max-width: 405px) {
-    .sub-landing-page {
-      .content {
-        // Put the team logo behind
-        .team-logo {
-          position: absolute;
-          top: 50%;
-          left: 0;
-          width: 150%;
-          transform: translate(-50%, -50%);
-          background-color: transparent;
-          box-shadow: none;
-          z-index: -1;
-        }
       }
     }
   }

@@ -68,7 +68,6 @@ showSlides();
 /*===================||| TEAMS |||===================*/
 const teamSlider = new Swiper('.team-area-slider', {
   effect: 'coverflow',
-  grabCursor: true,
   centeredSlides: true,
   loop: true,
   slidesPerView: '3',

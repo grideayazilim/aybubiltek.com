@@ -1,27 +1,29 @@
 /*============== SET PAGE ==============*/
-// Team id that got from the links
-const id = sessionStorage.getItem("selectedTeamId");
-
-/*==== PROPERTIES TO SET ====*/
-// Landing page
-const title = document.querySelector(".bigger-title");
-const logo = document.querySelector(".team-logo");
-const mainDescription = document.querySelector(".landing-page__description");
-
-// Achievements
-const achievementsContainer = document.querySelector(".swiper-wrapper");
-
-/*==== FUNCTION TO SET PROPER INFOS ====*/
 async function loadPage() {
+  // Team key that got from the links
+  const key = localStorage.getItem("teamKey");
+  console.log(localStorage.getItem("teamKey") + "xxx");
+
+  /*==== PROPERTIES TO SET ====*/
+  // Landing page
+  const title = document.querySelector(".bigger-title");
+  const logo = document.querySelector(".team-logo");
+  const mainDescription = document.querySelector(".main-description > p");
+
+  // Achievements
+  const achievementsContainer = document.querySelector(".swiper-wrapper");
+
   // Get json data and initialize it as object
   const response = await fetch("assets/data/teams.json");
   const teams = await response.json();
 
   // Find the correct team info according to 'id' variable
-  const selectedTeam = teams.find((team) => team.id === parseInt(id));
+  const selectedTeam = teams.find((team) => team.key === key);
+
+  console.log(selectedTeam);
 
   // Set the selected team's info to the site
-  title.textContent = selectedTeam.teamName;
+  title.textContent = selectedTeam.name;
   logo.src = selectedTeam.logo;
   mainDescription.textContent = selectedTeam.description;
 
@@ -29,10 +31,10 @@ async function loadPage() {
   achievementsContainer.innerHTML = "";
   selectedTeam.achievements.forEach((achievement) => {
     achievementsContainer.innerHTML += `<div class="achievements__card swiper-slide">
-                <img src="${achievement.imgSrc}" alt="" class="achievements__img">
-                <div class="achievements__title subtitle">${achievement.title}</div>
-                <div class="achievements__description">${achievement.description}</div>
-             </div>`;
+        <img src="${achievement.imgSrc}" alt="" class="achievements__img">
+        <div class="achievements__title subtitle">${achievement.title}</div>
+        <div class="achievements__description">${achievement.description}</div>
+      </div>`;
   });
 }
 
@@ -46,7 +48,7 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 8,
 
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
 
   navigation: {
@@ -72,7 +74,6 @@ const socialButtons = document.querySelectorAll(".social-media-button");
 
 socialButtons.forEach((button) => {
   const text = button.querySelector(".social-text");
-  console.log(text.scrollWidth);
 
   // Show dropdown menu
   button.addEventListener("mouseover", () => {

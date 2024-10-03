@@ -1,5 +1,62 @@
 @import "../../../assets/css/root";
 
+// sonra değiştir!!!
+.more-button {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: $text-color-alt;
+  transition: 0.4s;
+
+  /*======= more-button animation =======*/
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: $text-color-black;
+    transition: 0.4s;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  &:hover {
+    background: #5286ce;
+    box-shadow: 0 0 8px #5286ce;
+    border-radius: 5px;
+    font-weight: $font-medium;
+    letter-spacing: .6px;
+    color: $text-color;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+      border-color: #5286ce;
+    }
+  }
+}
+
+
 body {
   /*===================||| LANDING PAGE |||===================*/
   #landing-page {
@@ -12,11 +69,9 @@ body {
     align-items: center;
 
     .bg-img {
-      height: 100%;
-      max-width: fit-content;
-      opacity: 0.04;
       position: absolute;
       z-index: -1;
+      opacity: 0.04;
     }
 
     .ornament {
@@ -482,12 +537,8 @@ body {
         row-gap: 0.8rem;
         padding: 2rem 2rem;
         text-align: center;
-        background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%),
-          radial-gradient(
-            at top left,
-            rgba(255, 255, 255, 0.3) 0%,
-            rgba(0, 0, 0, 0.3) 100%
-          );
+        color: $text-color-black;
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         background-blend-mode: screen;
         border-radius: 15px;
 
@@ -503,6 +554,10 @@ body {
             height: auto;
             object-fit: contain;
           }
+        }
+
+        .subtitle{
+          color: $first-color;
         }
 
         .social-media-links {
@@ -521,25 +576,60 @@ body {
           }
         }
 
-        .more-info-btn {
+        // more button responsive'ini unutma
+        .more-button {
+          position: relative;
           display: inline-block;
-          padding: 0.75rem 1.5rem;
-          background: #007bff;
-          color: #ffffff;
-          border: none;
-          border-radius: 0.5rem;
-          font-size: 1.2rem;
-          text-decoration: none;
-          text-align: center;
-          transition: background-color 0.3s ease, box-shadow 0.3s ease;
+          margin: 0 auto;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          overflow: hidden;
+          color: $text-color-black;
+          transition: 0.4s;
 
-          &:hover {
-            background-color: #0056b3;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          /*======= more-button animation =======*/
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            color: $text-color-black;
+            transition: 0.4s;
           }
 
-          &:active {
-            background-color: #004085;
+          &::before {
+            top: 0;
+            left: 0;
+            border-top: 2px solid;
+            border-left: 2px solid;
+          }
+
+          &::after {
+            bottom: 0;
+            right: 0;
+            border-bottom: 2px solid;
+            border-right: 2px solid;
+          }
+
+          &:hover {
+            background: #5286ce;
+            box-shadow: 0 0 8px #5286ce;
+            border-radius: 5px;
+            font-weight: $font-medium;
+            letter-spacing: .6px;
+            color: $text-color;
+
+            &::before,
+            &::after {
+              width: 100%;
+              height: 100%;
+              border-color: #5286ce;
+            }
           }
         }
       }
@@ -715,18 +805,18 @@ body {
       width: 10px;
       height: 10px;
     }
-    
+
     ::-webkit-scrollbar-track {
       background: #f0f0f0;
       border-radius: 5px;
     }
-    
+
     ::-webkit-scrollbar-thumb {
       background: #0f2c59;
       border-radius: 5px;
       border: 2px solid #f0f0f0;
     }
-    
+
     ::-webkit-scrollbar-thumb:hover {
       background: #4e4e4e;
     }

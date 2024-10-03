@@ -24,9 +24,9 @@ function switchContents() {
     announcementDate.style.display = "block";
     othersTitle.textContent = "Diğer Duyurular";
   }
-};
+}
 
-/*============== FILL THE CONTENT ==============*/
+/*============== FILL PAGE ==============*/
 async function fillPage() {
   const aaType = localStorage.getItem("aaType");
   const aaId = localStorage.getItem("aaId");
@@ -48,6 +48,8 @@ async function fillPage() {
     const articles = await response.json();
     const selectedArticle = articles.find((article) => article.id === aaId);
 
+    console.log(selectedArticle);
+
     // Fill the content
     aaSubtitle.textContent = selectedArticle.title;
     authorLogo.src = selectedArticle.authorLogo;
@@ -55,23 +57,26 @@ async function fillPage() {
     articleDate.textContent = selectedArticle.date;
     aaText.textContent = selectedArticle.articleItself;
 
-    // Add each 'other' article item
-    othersParent.innerHTML = "";
-    let count = 1;
-
+    // Add each 'other' article item with 'id'
+    let idCount = 1;
     articles.forEach((article) => {
-      othersParent.innerHTML += `<a id="aa${count}" class="item article-link aa-link" href="index.html">
-        <img src="${article.authorLogo}" alt="author-logo" />
-        <div class="title">${article.title}</div>
-      </a>
+      if (idCount < 9) {
+        othersParent.innerHTML += `
+        <a
+          href="index.html"
+          class="item article-link aa-link"
+          onclick="navigateAa(this, ${idCount})"
+        >
+          <img src="${article.authorLogo}" alt="Yazar takım logosu" />
+          <div class="title">${article.title}</div>
+        </a>
       `;
 
-      count++;
+        idCount++;
+      }
     });
-  }
-
-  /*======== ARTICLE PART ========*/
-  else if (aaType === "announcement") {
+  } else if (aaType === "announcement") {
+    /*======== ARTICLE PART ========*/
     // Get the proper announcement from json file
     const response = await fetch("assets/data/announcements.json");
     const announcements = await response.json();
@@ -81,39 +86,41 @@ async function fillPage() {
 
     // Fill the page
     aaSubtitle.textContent = selectedAnnouncement.title;
-    announcementDate.innerHTML = selectedAnnouncement.date;
+    announcementDate.textContent = selectedAnnouncement.date;
     aaText.textContent = selectedAnnouncement.announcementItself;
 
-    // Add each 'other' announcement item
-    othersParent.innerHTML = "";
-    let count = 1;
-
+    // Add each 'other' announcement item with 'id'
+    let idCount = 1;
     announcements.forEach((announcement) => {
-      othersParent.innerHTML += `<a id="aa${count}" class="item announcement-link aa-link" href="index.html">
-        <img src="assets/media/bmw-logo.png" alt="author-logo" />
-        <div class="title">${announcement.title}</div>
-      </a>
-      `;
+      if (idCount < 9) {
+        othersParent.innerHTML += `
+        <a
+          href="index.html"
+          class="item announcement-link aa-link"
+          onclick="navigateAa(this, ${idCount})"
+        >
+          <img src="assets/media/bmw-logo.png" alt="" />
+          <div class="title">${announcement.title}</div>
+        </a>
+        `;
 
-      count++;
+        idCount++;
+      }
     });
   }
-
-  // Add event listeners to new items from json with proper aaType
-  const links = document.querySelectorAll(".aa-link");
-
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (link.classList.contains("announcement-link")) {
-        localStorage.setItem("aaType", "announcement");
-      } else if (link.classList.contains("article-link")) {
-        localStorage.setItem("aaType", "article");
-      }
-
-      localStorage.setItem("aaId", link.id);
-    });
-  });
 }
 
 switchContents();
 fillPage();
+
+/*============== NAVIGATE TO INNER AA ==============*/
+function navigateAa(link, linkId) {
+  // Set aaType depending on which type the link belongs to
+  if (link.classList.contains("announcement-link"))
+    localStorage.setItem("aaType", "announcement");
+  else if (link.classList.contains("article-link"))
+    localStorage.setItem("aaType", "article");
+
+  // Set the id of the article/announcement
+  localStorage.setItem("aaId", linkId);
+}

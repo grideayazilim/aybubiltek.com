@@ -35,12 +35,6 @@ body {
         box-shadow: #0f2d5932 0px 7px 29px 0px;
         transform: translateY(-5px);
       }
-
-      &:first-child{
-        .images{
-          width: 50%;
-        }
-      }
     }
 
     /*============== RESPONSIVE DESIGN ==============*/
@@ -53,12 +47,6 @@ body {
 
         .images{
           width: 50%;
-        }
-
-        &:first-child{
-          .images{
-            width: 40%;
-          }
         }
       }
     }

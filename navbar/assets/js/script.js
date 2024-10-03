@@ -66,7 +66,6 @@ function initializeNavbar() {
 
   // Handle navbar background color
   const handleNavbarBackground = () => {
-    console.log(document.getElementById("home-page"));
     // Get scroll position
     if (!isHomePage) navbar.classList.add("white-container");
 
@@ -88,15 +87,8 @@ function initializeNavbar() {
   if (!document.getElementById("home-page")) {
     handleNavbarBackground();
   }
-
-  /*============== NAVIGATE TO TEAM SUBPAGE ==============*/
-  const navigateToTeams = (teamId) =>
-    sessionStorage.setItem("selectedTeamId", teamId);
 }
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   initializeNavbar();
-//   window.addEventListener("scroll", () => {
-//     console.log("Scroll Y:", window.scrollY);
-//   });
-// });
+/*============== NAVIGATE TO TEAM SUBPAGE ==============*/
+const navigateToTeams = (teamKey) =>
+  localStorage.setItem("teamKey", teamKey);

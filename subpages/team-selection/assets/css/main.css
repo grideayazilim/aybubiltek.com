@@ -168,9 +168,6 @@ body .tad-container .team-card:hover {
   box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
   transform: translateY(-5px);
 }
-body .tad-container .team-card:first-child .images {
-  width: 50%;
-}
 @media screen and (max-width: 1200px) {
   body .tad-container .team-card {
     width: 275px;
@@ -179,9 +176,6 @@ body .tad-container .team-card:first-child .images {
   }
   body .tad-container .team-card .images {
     width: 50%;
-  }
-  body .tad-container .team-card:first-child .images {
-    width: 40%;
   }
 }
 @media screen and (max-width: 620px) {

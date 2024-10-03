@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "key": "grideaYazilim",
     "name": "Gridea Yazılım",
     "logo": "assets/media/gridea-yazilim/logo",
     "description": "Gridea Yazılım açıklaması",
@@ -11,16 +11,19 @@
         "title": "1",
         "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
       },
+
       {
         "image": "../assets/media/gridea-yazilim/xxx",
         "title": "2",
         "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
       },
+
       {
         "image": "../assets/media/gridea-yazilim/xxx",
         "title": "3",
         "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
       },
+      
       {
         "image": "../assets/media/gridea-yazilim/xxx",
         "title": "4",
@@ -39,6 +42,7 @@
         "behance": "#"
       },
       {
+        "type": "member",
         "id": 2,
         "image": "../assets/media/gridea-yazilim/xxx",
         "name": "Ad Soyad",
@@ -48,6 +52,7 @@
         "behance": "#"
       },
       {
+        "type": "member",
         "id": 3,
         "image": "../assets/media/gridea-yazilim/xxx",
         "name": "Ad Soyad",
@@ -57,8 +62,384 @@
         "behance": "#"
       },
       {
+        "type": "retired",
         "id": 4,
         "image": "../assets/media/gridea-yazilim/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      }
+    ]
+  },
+
+  {
+    "key": "grideaTasarim",
+    "name": "Gridea Tasarım",
+    "logo": "assets/media/gridea-tasarim/logo",
+    "description": "Gridea Yazılım açıklaması",
+    "video": "url",
+    "achievements": [
+      {
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "title": "1",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "title": "2",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "title": "3",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+      
+      {
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "title": "4",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 2,
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 3,
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "retired",
+        "id": 4,
+        "image": "../assets/media/gridea-tasarim/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      }
+    ]
+  },
+
+  {
+    "key": "biltekCyber",
+    "name": "BiltekCyber",
+    "logo": "assets/media/biltekcyber/logo",
+    "description": "Gridea Yazılım açıklaması",
+    "video": "url",
+    "achievements": [
+      {
+        "image": "../assets/media/biltekcyber/xxx",
+        "title": "1",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/biltekcyber/xxx",
+        "title": "2",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/biltekcyber/xxx",
+        "title": "3",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+      
+      {
+        "image": "../assets/media/biltekcyber/xxx",
+        "title": "4",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "../assets/media/biltekcyber/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 2,
+        "image": "../assets/media/biltekcyber/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 3,
+        "image": "../assets/media/biltekcyber/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "retired",
+        "id": 4,
+        "image": "../assets/media/biltekcyber/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      }
+    ]
+  },
+
+  {
+    "key": "yildirimTeam",
+    "name": "Yıldırım Team",
+    "logo": "assets/media/yildirim-team/logo",
+    "description": "Gridea Yazılım açıklaması",
+    "video": "url",
+    "achievements": [
+      {
+        "image": "../assets/media/yildirim-team/xxx",
+        "title": "1",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/yildirim-team/xxx",
+        "title": "2",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/yildirim-team/xxx",
+        "title": "3",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+      
+      {
+        "image": "../assets/media/yildirim-team/xxx",
+        "title": "4",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "../assets/media/yildirim-team/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 2,
+        "image": "../assets/media/yildirim-team/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 3,
+        "image": "../assets/media/yildirim-team/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "retired",
+        "id": 4,
+        "image": "../assets/media/yildirim-team/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      }
+    ]
+  },
+
+  {
+    "key": "typhoonHelikopter",
+    "name": "Typhoon Helikopter",
+    "logo": "assets/media/typhoon-helikopter/logo",
+    "description": "Gridea Yazılım açıklaması",
+    "video": "url",
+    "achievements": [
+      {
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "title": "1",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "title": "2",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "title": "3",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+      
+      {
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "title": "4",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 2,
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 3,
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "retired",
+        "id": 4,
+        "image": "../assets/media/typhoon-helikopter/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      }
+    ]
+  },
+
+  {
+    "key": "biltekAI",
+    "name": "BiltekAI",
+    "logo": "assets/media/biltekai/logo",
+    "description": "Gridea Yazılım açıklaması",
+    "video": "url",
+    "achievements": [
+      {
+        "image": "../assets/media/biltekai/xxx",
+        "title": "1",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/biltekai/xxx",
+        "title": "2",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+
+      {
+        "image": "../assets/media/biltekai/xxx",
+        "title": "3",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      },
+      
+      {
+        "image": "../assets/media/biltekai/xxx",
+        "title": "4",
+        "description": "Bla bla bla bla lolo lolo lolo lolo roro roro roro bla bla lolo lo bla bla lolo lo"
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "../assets/media/biltekai/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 2,
+        "image": "../assets/media/biltekai/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "member",
+        "id": 3,
+        "image": "../assets/media/biltekai/xxx",
+        "name": "Ad Soyad",
+        "position": "Pozisyon",
+        "linkedin": "#",
+        "github": "#",
+        "behance": "#"
+      },
+      {
+        "type": "retired",
+        "id": 4,
+        "image": "../assets/media/biltekai/xxx",
         "name": "Ad Soyad",
         "position": "Pozisyon",
         "linkedin": "#",

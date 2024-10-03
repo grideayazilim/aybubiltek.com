@@ -9,7 +9,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: $header-height;
+    height: 5rem;
     padding-inline: 9%;
     display: flex;
     justify-content: space-between;
@@ -267,9 +267,15 @@ body {
     /*============== WHITE BUTTON AREA ==============*/
     .button-area {
       .register-button {
+        color: $first-color;
+
         &::before,
         &::after {
           border-color: #5286ce;
+        }
+
+        &:hover{
+          color: white;
         }
       }
     }
@@ -359,10 +365,8 @@ body {
      match the responsive design in the root
   */
   @media screen and (max-width: 1200px) {
-    $responsive__nav-height: 3.5rem;
-
     nav {
-      height: $responsive__nav-height;
+      height: 3.5rem;
     }
   }
 

@@ -52,6 +52,7 @@ body .bigger-title {
 }
 body .big-title {
   font-size: 3.18rem;
+  font-weight: 700;
 }
 body .bigger-title {
   font-size: 3.95rem;
@@ -132,6 +133,54 @@ body .root-test-div {
   height: 50vh;
 }
 
+.more-button {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #0f2c59;
+  transition: 0.4s;
+  /*======= more-button animation =======*/
+}
+.more-button::before, .more-button::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: #4e4e4e;
+  transition: 0.4s;
+}
+.more-button::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+.more-button::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+.more-button:hover {
+  background: #5286ce;
+  box-shadow: 0 0 8px #5286ce;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: white;
+}
+.more-button:hover::before, .more-button:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #5286ce;
+}
+
 body {
   /*===================||| LANDING PAGE |||===================*/
   /*===================||| ABOUT US |||===================*/
@@ -156,12 +205,9 @@ body #landing-page {
   /* Fifth breakpoint */
 }
 body #landing-page .bg-img {
-  height: 100%;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  opacity: 0.04;
   position: absolute;
   z-index: -1;
+  opacity: 0.04;
 }
 body #landing-page .ornament {
   position: absolute;
@@ -538,7 +584,8 @@ body #team-area .team-area-slider .team-area-slide {
   row-gap: 0.8rem;
   padding: 2rem 2rem;
   text-align: center;
-  background: linear-gradient(-180deg, #bcc5ce 0%, #929ead 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  color: #4e4e4e;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   background-blend-mode: screen;
   border-radius: 15px;
 }
@@ -555,6 +602,9 @@ body #team-area .team-area-slider .team-area-slide .team-area-slide-img img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+body #team-area .team-area-slider .team-area-slide .subtitle {
+  color: #0f2c59;
+}
 body #team-area .team-area-slider .team-area-slide .social-media-links {
   display: flex;
   justify-content: center;
@@ -569,24 +619,53 @@ body #team-area .team-area-slider .team-area-slide .social-media-links a {
 body #team-area .team-area-slider .team-area-slide .social-media-links a:hover {
   transform: translateY(-3px);
 }
-body #team-area .team-area-slider .team-area-slide .more-info-btn {
+body #team-area .team-area-slider .team-area-slide .more-button {
+  position: relative;
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  text-align: center;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  color: #4e4e4e;
+  transition: 0.4s;
+  /*======= more-button animation =======*/
 }
-body #team-area .team-area-slider .team-area-slide .more-info-btn:hover {
-  background-color: #0056b3;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+body #team-area .team-area-slider .team-area-slide .more-button::before, body #team-area .team-area-slider .team-area-slide .more-button::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: #4e4e4e;
+  transition: 0.4s;
 }
-body #team-area .team-area-slider .team-area-slide .more-info-btn:active {
-  background-color: #004085;
+body #team-area .team-area-slider .team-area-slide .more-button::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+body #team-area .team-area-slider .team-area-slide .more-button::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+body #team-area .team-area-slider .team-area-slide .more-button:hover {
+  background: #5286ce;
+  box-shadow: 0 0 8px #5286ce;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: white;
+}
+body #team-area .team-area-slider .team-area-slide .more-button:hover::before, body #team-area .team-area-slider .team-area-slide .more-button:hover::after {
+  width: 100%;
+  height: 100%;
+  border-color: #5286ce;
 }
 body #team-area .team-area-slider .swiper-slide-shadow-left,
 body #team-area .team-area-slider .swiper-slide-shadow-right {
