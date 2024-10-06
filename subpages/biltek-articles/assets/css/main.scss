@@ -1,8 +1,12 @@
 @import "../../../../assets/css/root";
 
 body {
+  background-color: $secondary-color;
+
   .white-container {
     .articles {
+      max-width: 2000px;
+      margin: 0 auto;
       display: grid;
       row-gap: 2rem;
       padding-block: 3.5rem;

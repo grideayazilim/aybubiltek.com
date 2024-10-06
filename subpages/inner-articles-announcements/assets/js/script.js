@@ -48,9 +48,8 @@ async function fillPage() {
     const articles = await response.json();
     const selectedArticle = articles.find((article) => article.id === aaId);
 
-    console.log(selectedArticle);
-
     // Fill the content
+    document.title = selectedArticle.title;
     aaSubtitle.textContent = selectedArticle.title;
     authorLogo.src = selectedArticle.authorLogo;
     authorName.textContent = selectedArticle.authorName;
@@ -85,6 +84,7 @@ async function fillPage() {
     );
 
     // Fill the page
+    document.title = selectedAnnouncement.title;
     aaSubtitle.textContent = selectedAnnouncement.title;
     announcementDate.textContent = selectedAnnouncement.date;
     aaText.textContent = selectedAnnouncement.announcementItself;
@@ -112,15 +112,3 @@ async function fillPage() {
 
 switchContents();
 fillPage();
-
-/*============== NAVIGATE TO INNER AA ==============*/
-function navigateAa(link, linkId) {
-  // Set aaType depending on which type the link belongs to
-  if (link.classList.contains("announcement-link"))
-    localStorage.setItem("aaType", "announcement");
-  else if (link.classList.contains("article-link"))
-    localStorage.setItem("aaType", "article");
-
-  // Set the id of the article/announcement
-  localStorage.setItem("aaId", linkId);
-}

@@ -2,15 +2,14 @@
 @import "../../../../assets/css/root";
 
 body {
+  background-color: $secondary-color;
+
   .announcements-container {
+    margin: 0 auto;
+    max-width: 1800px;
     position: relative;
-    padding: 3rem;
     text-align: center;
     width: 100%;
-    padding: 6rem;
-    .big-title {
-      margin-block: 6rem 2rem;
-    }
 
     .announcements {
       display: grid;
@@ -23,9 +22,8 @@ body {
       overflow: visible;
 
       .announcement {
-        margin: 1rem auto;
+        height: 100%;
         display: grid;
-        place-items: center;
         padding-bottom: 1rem;
         background-color: hsla(0, 0%, 100%, 0.447);
         box-shadow: #0f2d5936 0px 0px 5px 0px;
@@ -38,7 +36,7 @@ body {
         .img-container {
           width: 100%;
           overflow: hidden;
-          margin-bottom: 1rem;
+          margin-bottom: .5rem;
 
           img {
             width: 100%;

@@ -3,11 +3,10 @@
 body {
   .members-container {
     position: relative;
-    padding-block: 4rem;
     text-align: center;
 
     .big-title {
-      margin-block: 6rem 2rem;
+      margin-block: 4rem 2rem;
     }
 
     .members {
@@ -111,7 +110,7 @@ body {
 
     @media screen and (max-width: 1200px) {
       .big-title {
-        margin-block: 3rem 2rem;
+        margin-block: 3rem 1.5rem;
       }
 
       .members {

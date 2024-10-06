@@ -20,7 +20,6 @@ function initializeFooter() {
 
   socialButtons.forEach((button) => {
     const text = button.querySelector(".social-text");
-    console.log(text.scrollWidth);
 
     // Show dropdown menu
     button.addEventListener("mouseover", () => {

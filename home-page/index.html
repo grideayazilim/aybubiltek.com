@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AYBÜ BİLTEK</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/media/logo-no-text.png"
+    />
 
     <!--==============FONTAWESOME==============-->
     <link
@@ -36,14 +41,14 @@
     <div id="home-page"></div>
 
     <!--==============LANDING PAGE==============-->
-    <section id="landing-page" class="scrollable-element">
+    <section id="landing-page">
       <img class="bg-img" src="/assets/media/yeni-logo.png" alt="" />
       <img class="ornament" src="/assets/media/texture.png" alt="" />
 
       <div class="container">
         <div class="left-box">
           <p class="subtitle">Ankara Yıldırım Beyazıt Üniversitesi</p>
-          <p class="bigger-title">
+          <p class="big-title">
             BİLİM VE TEKNOLOJİ
             <br />
             TOPLULUĞU
@@ -54,37 +59,56 @@
             expedita illum vitae.
           </p>
 
-          <a href="#" class="register-btn">
+          <a
+            target="_blank"
+            href="https://linktr.ee/biltek?fbclid=PAZXh0bgNhZW0CMTEAAaZUw6dBiC783GX44EDVC7QFXCa66PbbcBXXVObG1_cAGl9YpV_TdQXmzcg_aem_MhP_wy2OsfAMjoMen1OH3Q"
+            class="register-btn"
+          >
             <div class="arrow">
-              <div class="button-bg-circle"></div>
-              <i class="fa-solid fa-chevron-right"></i>
+              <i class="fa-solid fa-angle-right"></i>
             </div>
-            Kayıt Ol
+            <span class="register-text">Kayıt Ol</span>
           </a>
 
           <div class="social-media-area">
-            <a class="social-media-button">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/aybubiltek/"
+              class="social-media-button"
+            >
               <div class="icon">
                 <i class="fab fa-instagram"></i>
               </div>
               <p class="social-text">Instagram</p>
             </a>
 
-            <a class="social-media-button">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/c/ybubiltek"
+              class="social-media-button"
+            >
               <div class="icon">
                 <i class="fab fa-youtube"></i>
               </div>
               <p class="social-text">Youtube</p>
             </a>
 
-            <a class="social-media-button">
+            <a
+              target="_blank"
+              href="https://x.com/aybubiltek"
+              class="social-media-button"
+            >
               <div class="icon">
-                <i class="fab fa-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
               </div>
               <p class="social-text">X</p>
             </a>
 
-            <a class="social-media-button">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/company/aybubiltek/posts/?feedView=all"
+              class="social-media-button"
+            >
               <div class="icon">
                 <i class="fab fa-linkedin"></i>
               </div>
@@ -108,15 +132,17 @@
     <!--==============ABOUT US==============-->
     <section class="white-container">
       <div class="about-section container">
-        <div class="slideshow-container">
-          <div class="mySlides">
-            <img src="assets/media/toplanti.png" alt="About Us Image 1" />
-          </div>
-          <div class="mySlides">
-            <img src="assets/media/kahveK.jpg" alt="About Us Image 2" />
-          </div>
-          <div class="mySlides">
-            <img src="assets/media/kahve.jpg" alt="About Us Image 3" />
+        <div class="about-us-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/media/kahve.jpg" alt="Image 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/media/kahveK.jpg" alt="Image 2" />
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/media/office.jpg" alt="Image 3" />
+            </div>
           </div>
         </div>
 
@@ -137,16 +163,17 @@
             ediyoruz.
           </p>
           <div class="counter big-title" id="counter">1+ BİLTEK'li</div>
-          <a href="../subpages/about-us/index.html" class="more-button">Daha Fazla</a>
+          <a href="../subpages/about-us/index.html" class="animated-button"
+            >Daha Fazla</a
+          >
         </div>
       </div>
     </section>
 
     <!--==============TEAMS==============-->
     <section id="team-area">
-      <div class="big-title">TAKIMLARIMIZ</div>
-
       <div class="container">
+        <div class="big-title">TAKIMLARIMIZ</div>
         <div class="swiper team-area-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide team-area-slide">
@@ -157,25 +184,15 @@
               <p class="subtitle">Typhoon</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('typhoonHelikopter')"
                 >Daha Fazla</a
               >
@@ -189,25 +206,15 @@
               <p class="subtitle">Biltek AI</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('biltekAI')"
                 >Daha Fazla</a
               >
@@ -224,25 +231,15 @@
               <p class="subtitle">BiltekCyber</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('biltekCyber')"
                 >Daha Fazla</a
               >
@@ -256,25 +253,15 @@
               <p class="subtitle">Gridea Yazılım</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('grideaYazilim')"
                 >Daha Fazla</a
               >
@@ -288,25 +275,15 @@
               <p class="subtitle">Gridea Tasarım</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('grideaTasarim')"
                 >Daha Fazla</a
               >
@@ -320,25 +297,15 @@
               <p class="subtitle">Yıldırım Team</p>
 
               <div class="team-description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, repellendus! Aliquam rerum, voluptatum perferendis
-                itaque vero temporibus reprehenderit repellendus cumque
-                molestiae eaque dignissimos laudantium assumenda doloribus sunt
-                quo. Laudantium, vitae.
-              </div>
-
-              <div class="social-media-links">
-                <a href="https://www.instagram.com" target="_blank">
-                  <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
+                The purpose of lorem ipsum is to create a natural looking block
+                of text (sentence, paragraph, page, etc.) that doesn't distract
+                from the layout. A practice not without controversy, laying out
+                pages with
               </div>
 
               <a
                 href="../subpages/team-page/index.html"
-                class="more-button"
+                class="animated-button"
                 onclick="navigateToTeams('yildirimTeam')"
                 >Daha Fazla</a
               >
@@ -349,32 +316,37 @@
     </section>
 
     <!--==============DEPARTMANTS==============-->
-    <section class="white-container departmants">
-      <div class="big-title">DEPARTMANLARIMIZ</div>
+    <section class="white-container">
+      <div class="container departmants">
+        <div class="big-title">DEPARTMANLARIMIZ</div>
 
-      <div class="cards-container">
-        <div class="card">
-          <img src="../assets/media/logo-no-text.png" alt="" />
-          <div class="subtitle">Etkinlik Koordinatörlüğü Departmanı</div>
-          The purpose of lorem ipsum is to create a natural looking block of
-          text (sentence, paragraph, page, etc.) that doesn't distract from the
-          layout. A practice not without controversy, laying out pages with
-        </div>
+        <div class="cards-container">
+          <div class="card">
+            <img src="../assets/media/logo-no-text.png" alt="" />
+            <div class="subtitle">Etkinlik Koordinatörlüğü Departmanı</div>
+            The purpose of lorem ipsum is to create a natural looking block of
+            text (sentence, paragraph, page, etc.) that doesn't distract from
+            the layout. A practice not without controversy, laying out pages
+            with
+          </div>
 
-        <div class="card">
-          <img src="../assets/media/logo-no-text.png" alt="" />
-          <div class="subtitle">İletişim Ve Sosyal Medya Departmanı</div>
-          The purpose of lorem ipsum is to create a natural looking block of
-          text (sentence, paragraph, page, etc.) that doesn't distract from the
-          layout. A practice not without controversy, laying out pages with
-        </div>
+          <div class="card">
+            <img src="../assets/media/logo-no-text.png" alt="" />
+            <div class="subtitle">İletişim Ve Sosyal Medya Departmanı</div>
+            The purpose of lorem ipsum is to create a natural looking block of
+            text (sentence, paragraph, page, etc.) that doesn't distract from
+            the layout. A practice not without controversy, laying out pages
+            with
+          </div>
 
-        <div class="card">
-          <img src="../assets/media/logo-no-text.png" alt="" />
-          <div class="subtitle">Dış İlişkiler Ve Sponsorluk Departmanı</div>
-          The purpose of lorem ipsum is to create a natural looking block of
-          text (sentence, paragraph, page, etc.) that doesn't distract from the
-          layout. A practice not without controversy, laying out pages with
+          <div class="card">
+            <img src="../assets/media/logo-no-text.png" alt="" />
+            <div class="subtitle">Dış İlişkiler Ve Sponsorluk Departmanı</div>
+            The purpose of lorem ipsum is to create a natural looking block of
+            text (sentence, paragraph, page, etc.) that doesn't distract from
+            the layout. A practice not without controversy, laying out pages
+            with
+          </div>
         </div>
       </div>
     </section>
@@ -600,6 +572,8 @@
     <!-- sonra sil-->
 
     <ender id="footer-placeholder"></ender>
+
+    <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
 
     <!--==============SWIPER JS==============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

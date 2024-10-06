@@ -2,7 +2,11 @@
 
 body {
   $hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-  $white-container__hover-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  $white-container__hover-gradient: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
 
   nav {
     /*============== BASE ==============*/
@@ -14,20 +18,20 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: $font-medium;
+    font-weight: $font-regular;
     z-index: 100;
-    transition: color .4s, background .8s;
+    transition: color 0.4s, background 0.8s;
 
     i {
       background-image: $hover-gradient;
       background-clip: text;
-      transition: transform .4s;
+      transition: transform 0.4s;
     }
 
     /*============== LOGO ==============*/
     .nav-logo {
       height: 75%;
-      transition: filter .4s;
+      transition: filter 0.4s;
 
       .nav-img {
         height: 100%;
@@ -37,25 +41,25 @@ body {
     /*============== NAV MENU ==============*/
     .nav-menu {
       background-color: transparent;
-      transition: right .4s, background .4s;
+      transition: right 0.4s, background 0.4s;
 
       .nav-list {
         display: flex;
         flex-direction: row;
         position: relative;
-        column-gap: .5rem;
+        column-gap: 0.5rem;
 
         .nav-item {
           position: relative;
-          transition: color .4s;
+          transition: color 0.4s;
 
           .nav-link {
             position: relative;
             display: block;
-            padding: 1.8rem .8rem;
+            padding: 1.8rem 0.8rem;
             background-image: $hover-gradient;
             background-clip: text;
-            transition: color .4s, font-weight .4s;
+            transition: color 0.4s, font-weight 0.4s;
           }
 
           /*======= Features to use in item slide effect =======*/
@@ -70,7 +74,7 @@ body {
             transform-origin: left;
             border-radius: 2px;
             background-image: $hover-gradient;
-            transition: .3s;
+            transition: 0.3s;
           }
 
           &::before {
@@ -112,18 +116,18 @@ body {
 
           .sublist {
             position: absolute;
-            top: 4.65rem;
+            top: 5rem;
             left: -28.5%;
             width: 160%;
             height: 0;
             opacity: 1;
             overflow: hidden;
             text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.385) 0px 2px 2px;
-            transition: height .7s background .4s;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
+            transition: height 0.7s background 0.4s;
 
             .sublist-item {
-              transition: background .4s;
+              transition: background 0.4s;
 
               .nav-link {
                 color: $text-color;
@@ -155,6 +159,7 @@ body {
     /*============== BUTTON AREA ==============*/
     .button-area {
       display: flex;
+      align-items: center;
       column-gap: 20px;
 
       /*======= REGISTER BUTTON =======*/
@@ -168,7 +173,7 @@ body {
         cursor: pointer;
         overflow: hidden;
         color: $text-color;
-        transition: .4s;
+        transition: 0.4s;
 
         /*======= register-button animation =======*/
         &::before,
@@ -177,7 +182,7 @@ body {
           position: absolute;
           width: 10px;
           height: 10px;
-          transition: .4s;
+          transition: 0.4s;
         }
 
         &::before {
@@ -254,7 +259,7 @@ body {
               &:hover {
                 background-color: #dfdfdf;
 
-                .nav-link{
+                .nav-link {
                   color: transparent;
                 }
               }
@@ -271,11 +276,16 @@ body {
 
         &::before,
         &::after {
-          border-color: #5286ce;
+          border-color: $first-color;
         }
 
-        &:hover{
+        &:hover {
           color: white;
+
+          &::before,
+          &::after {
+            border-color: #5286ce;
+          }
         }
       }
     }
@@ -338,8 +348,17 @@ body {
 
       .button-area {
         .register-button {
-          width: 125px;
-          height: 40px;
+          background: #5286ce;
+          box-shadow: 0 0 8px #5286ce;
+          border-radius: 5px;
+          font-weight: $font-medium;
+
+          &::before,
+          &::after {
+            width: 100%;
+            height: 100%;
+            border-color: #5286ce !important;
+          }
         }
 
         .nav-toggle {
@@ -357,6 +376,12 @@ body {
       .nav-menu {
         background-color: white;
       }
+
+      .button-area {
+        .register-button {
+          color: white;
+        }
+      }
     }
   }
 
@@ -364,9 +389,16 @@ body {
      Navbar height adjustment to 
      match the responsive design in the root
   */
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 450px) {
     nav {
-      height: 3.5rem;
+      height: 4rem;
+
+      .button-area {
+        .register-button {
+          width: 105px;
+          height: 35px;
+        }
+      }
     }
   }
 
@@ -380,11 +412,6 @@ body {
       }
 
       .button-area {
-        .register-button {
-          width: 100px;
-          height: 30px;
-        }
-
         .nav-toggle {
           font-size: 1.25rem;
         }
@@ -401,7 +428,7 @@ body {
     Check js file to see the algorithm
   =======*/
   .blur-div {
-    transition: .4s;
+    transition: 0.4s;
   }
 
   .blur-container {

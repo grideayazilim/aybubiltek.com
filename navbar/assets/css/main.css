@@ -23,13 +23,13 @@ body {
   font-weight: 400;
   color: white;
   letter-spacing: 0.2px;
+  line-height: 1.4;
   /*=============== REUSABLE CSS CLASSES ===============*/
   /* To create a container with a white background and contrasted texts */
   /* Top part of the subpages */
   /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
   /* First breakpoint */
   /* Second breakpoint */
-  /* test class */
 }
 body ul {
   list-style: none;
@@ -44,18 +44,15 @@ body img {
 }
 body .container {
   width: 100%;
-  padding-inline: 10%;
+  padding: 3.35rem 10%;
 }
 body .bigger-title {
   font-size: 3.18rem;
   font-weight: 700;
+  padding: 1.25rem 3rem;
 }
 body .big-title {
   font-size: 3.18rem;
-  font-weight: 700;
-}
-body .bigger-title {
-  font-size: 3.95rem;
   font-weight: 700;
 }
 body .subtitle {
@@ -77,9 +74,8 @@ body .title-area {
   display: grid;
   align-content: center;
   width: 100%;
-  height: 107px;
+  min-height: 85px;
   text-align: center;
-  padding-inline: 3rem;
   background-color: #0f2c59;
   overflow: hidden;
   margin-top: 5rem; /* space for navbar */
@@ -99,38 +95,61 @@ body .title-area img:nth-child(2) {
   right: 0;
 }
 body .ender {
-  padding-bottom: 15.5rem !important;
+  padding-bottom: 13.5rem !important;
+}
+@media screen and (max-width: 750px) {
+  body .ender {
+    padding-bottom: 17.5rem !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  body .ender {
+    padding-bottom: 21.5rem !important;
+  }
 }
 @media screen and (max-width: 1200px) {
-  body .bigger-title,
+  body .bigger-title {
+    font-size: 2rem;
+  }
   body .big-title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   body .subtitle {
     font-size: 1.2rem;
   }
-  body .title-area {
-    margin-top: 3.5rem;
-    height: 85px;
+}
+@media screen and (max-width: 800px) {
+  body .bigger-title {
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 768px) {
   body {
-    font-size: 0.89rem;
+    font-size: 0.9rem;
   }
   body .container {
-    padding-inline: 5%;
+    padding: 2.75rem 5%;
   }
-  body .bigger-title,
+  body .bigger-title {
+    padding: 0.5rem 3rem;
+  }
   body .big-title {
-    font-size: 1.25rem;
-  }
-  body .title-area {
-    height: 68px;
+    font-size: 2rem;
   }
 }
-body .root-test-div {
-  height: 50vh;
+@media screen and (max-width: 450px) {
+  body .container {
+    padding: 2.15rem 5%;
+  }
+  body .bigger-title {
+    font-size: 1.5rem;
+  }
+  body .big-title {
+    font-size: 1.75rem;
+  }
+  body .title-area {
+    margin-top: 4rem;
+  }
 }
 
 body {
@@ -162,7 +181,7 @@ body nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-weight: 500;
+  font-weight: 400;
   z-index: 100;
   transition: color 0.4s, background 0.8s;
   /*============== LOGO ==============*/
@@ -246,14 +265,14 @@ body nav .nav-menu .nav-list .activator-item .anti-blur {
 }
 body nav .nav-menu .nav-list .activator-item .sublist {
   position: absolute;
-  top: 4.65rem;
+  top: 5rem;
   left: -28.5%;
   width: 160%;
   height: 0;
   opacity: 1;
   overflow: hidden;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.385) 0px 2px 2px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
   transition: height 0.7s background 0.4s;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
@@ -279,6 +298,7 @@ body nav .nav-menu .nav-close {
 }
 body nav .button-area {
   display: flex;
+  align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
   /*======= REGISTER BUTTON =======*/
@@ -365,10 +385,13 @@ body .white-container:is(nav) .button-area .register-button {
   color: #0f2c59;
 }
 body .white-container:is(nav) .button-area .register-button::before, body .white-container:is(nav) .button-area .register-button::after {
-  border-color: #5286ce;
+  border-color: #0f2c59;
 }
 body .white-container:is(nav) .button-area .register-button:hover {
   color: white;
+}
+body .white-container:is(nav) .button-area .register-button:hover::before, body .white-container:is(nav) .button-area .register-button:hover::after {
+  border-color: #5286ce;
 }
 @media screen and (max-width: 1300px) {
   body {
@@ -417,8 +440,15 @@ body .white-container:is(nav) .button-area .register-button:hover {
     font-size: 1.5rem;
   }
   body nav .button-area .register-button {
-    width: 125px;
-    height: 40px;
+    background: #5286ce;
+    box-shadow: 0 0 8px #5286ce;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  body nav .button-area .register-button::before, body nav .button-area .register-button::after {
+    width: 100%;
+    height: 100%;
+    border-color: #5286ce !important;
   }
   body nav .button-area .nav-toggle {
     display: block;
@@ -429,10 +459,17 @@ body .white-container:is(nav) .button-area .register-button:hover {
   body .white-container:is(nav) .nav-menu {
     background-color: white;
   }
+  body .white-container:is(nav) .button-area .register-button {
+    color: white;
+  }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 450px) {
   body nav {
-    height: 3.5rem;
+    height: 4rem;
+  }
+  body nav .button-area .register-button {
+    width: 105px;
+    height: 35px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -441,10 +478,6 @@ body .white-container:is(nav) .button-area .register-button:hover {
   }
   body nav .nav-menu {
     width: 80%;
-  }
-  body nav .button-area .register-button {
-    width: 100px;
-    height: 30px;
   }
   body nav .button-area .nav-toggle {
     font-size: 1.25rem;

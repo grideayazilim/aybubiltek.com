@@ -1,4 +1,4 @@
-/*============== CUT DESCRIPTION ==============*/
+/*============== CUT DESCRIPTION AND TITLE ==============*/
 function cutDescription(description) {
   const originalText = description;
 

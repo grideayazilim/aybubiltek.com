@@ -1,6 +1,8 @@
 @import "../../../../assets/css/root";
 
 body {
+  background-color: $secondary-color;
+
   .tad-container {
     display: flex;
     justify-content: center;
@@ -8,7 +10,6 @@ body {
     flex-wrap: wrap;
     gap: 3.5rem 3rem;
     text-align: center;
-    padding: 4rem 10%;
     
     .team-card {
       display: grid;

@@ -6,7 +6,7 @@ async function loadPage() {
 
   /*==== PROPERTIES TO SET ====*/
   // Landing page
-  const title = document.querySelector(".bigger-title");
+  const title = document.querySelector(".big-title");
   const logo = document.querySelector(".team-logo");
   const mainDescription = document.querySelector(".main-description > p");
 
@@ -20,9 +20,8 @@ async function loadPage() {
   // Find the correct team info according to 'id' variable
   const selectedTeam = teams.find((team) => team.key === key);
 
-  console.log(selectedTeam);
-
   // Set the selected team's info to the site
+  document.title = selectedTeam.name;
   title.textContent = selectedTeam.name;
   logo.src = selectedTeam.logo;
   mainDescription.textContent = selectedTeam.description;

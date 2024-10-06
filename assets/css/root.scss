@@ -19,7 +19,6 @@ $font-bold: 700;
 
 /*========== Font Sizes ==========*/
 $big-font-size: 3.18rem;
-$bigger-font-size: 3.95rem;
 $subtitle-font-size: 1.55rem;
 $normal-font-size: 1.05rem;
 $small-font-size: 0.813rem;
@@ -44,6 +43,7 @@ body {
   font-weight: $font-regular;
   color: $text-color;
   letter-spacing: 0.2px;
+  line-height: 1.4;
 
   ul {
     list-style: none;
@@ -62,21 +62,17 @@ body {
   /*=============== REUSABLE CSS CLASSES ===============*/
   .container {
     width: 100%;
-    padding-inline: 10%;
+    padding: 3.35rem 10%;
   }
 
   .bigger-title {
     font-size: $big-font-size;
     font-weight: $font-bold;
+    padding: 1.25rem 3rem;
   }
 
   .big-title {
     font-size: $big-font-size;
-    font-weight: $font-bold;
-  }
-
-  .bigger-title {
-    font-size: $bigger-font-size;
     font-weight: $font-bold;
   }
 
@@ -104,9 +100,8 @@ body {
     display: grid;
     align-content: center;
     width: 100%;
-    height: 107px;
+    min-height: 85px;
     text-align: center;
-    padding-inline: 3rem;
     background-color: $first-color;
     overflow: hidden;
     margin-top: 5rem; /* space for navbar */
@@ -129,18 +124,30 @@ body {
     }
   }
 
-  .ender{
-    padding-bottom: 15.5rem !important;
+  .ender {
+    padding-bottom: 13.5rem !important;
+
+    @media screen and (max-width: 750px) {
+      padding-bottom: 17.5rem !important;
+    }
+
+    @media screen and (max-width: 500px) {
+      padding-bottom: 21.5rem !important;
+    }
   }
 
   /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
   /* First breakpoint */
   @media screen and (max-width: 1200px) {
-    $responsive__big-font-size: 2.2rem;
+    $responsive__bigger-font-size: 2rem;
+    $responsive__big-font-size: 2.5rem;
     $responsive__subtitle-font-size: 1.2rem;
     $responsive__normal-font-size: 0.983rem;
 
-    .bigger-title,
+    .bigger-title {
+      font-size: $responsive__bigger-font-size;
+    }
+
     .big-title {
       font-size: $responsive__big-font-size;
     }
@@ -148,37 +155,56 @@ body {
     .subtitle {
       font-size: $responsive__subtitle-font-size;
     }
+  }
 
-    .title-area {
-      margin-top: 3.5rem;
-      height: 85px;
+  @media screen and (max-width: 800px) {
+    $responsive__bigger-font-size: 1.5rem;
+
+    .bigger-title {
+      font-size: $responsive__bigger-font-size;
     }
   }
 
   /* Second breakpoint */
   @media screen and (max-width: 768px) {
-    $responsive__big-font-size: 1.25rem;
-    $responsive__subtitle-font-size: 1rem;
-    $responsive__normal-font-size: 0.89rem;
+    $responsive__big-font-size: 2rem;
+    $responsive__subtitle-font-size: 1.05rem;
+    $responsive__normal-font-size: 0.9rem;
 
     font-size: $responsive__normal-font-size;
 
     .container {
-      padding-inline: 5%;
+      padding: 2.75rem 5%;
     }
 
-    .bigger-title,
+    .bigger-title{
+      padding: .5rem 3rem;
+    }
+
+    .big-title {
+      font-size: $responsive__big-font-size;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    $responsive__bigger-font-size: 1.5rem;
+    $responsive__big-font-size: 1.75rem;
+    $responsive__normal-font-size: 0.9rem;
+
+    .container {
+      padding: 2.15rem 5%;
+    }
+
+    .bigger-title {
+      font-size: $responsive__bigger-font-size;
+    }
+
     .big-title {
       font-size: $responsive__big-font-size;
     }
 
     .title-area {
-      height: 68px;
+      margin-top: 4rem;
     }
-  }
-
-  /* test class */
-  .root-test-div {
-    height: 50vh;
   }
 }

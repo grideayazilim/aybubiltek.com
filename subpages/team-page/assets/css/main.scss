@@ -30,6 +30,11 @@ body {
     }
   }
 
+  .container{
+    margin: 0 auto;
+    max-width: 1800px;
+  }
+
   /*============== SUBLANDING PAGE ==============*/
   .sub-landing-page {
     position: relative;
@@ -130,12 +135,13 @@ body {
 
   /*============== WHITE-CONTAINER AREA ==============*/
   .team-container {
-    padding-bottom: 8rem;
+    .container{
+      padding-top: 0;
+    }
 
     .big-title {
       text-align: center;
-      margin: 0 !important;
-      padding-block: 4rem 1.5rem;
+      padding-block: 4rem 2rem;
     }
 
     /*==== Video section ====*/
