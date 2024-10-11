@@ -134,19 +134,16 @@ body .root-test-div {
 }
 
 body {
-  background-color: #f4f4f4;
   margin-top: 80px;
 }
 body .gallery {
   background-color: #f4f4f4;
-  padding: 1.5rem 0 17rem 0;
+  padding: 1.5rem 6rem 17rem 6rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem;
   margin: auto;
-  overflow: hidden;
 }
 body .gallery .first-photo {
   margin: auto;
@@ -154,15 +151,36 @@ body .gallery .first-photo {
   display: flex;
   justify-content: center;
 }
-body .gallery .slider {
-  background-color: #e1e1e1;
-  padding: 1rem;
+body .gallery .photo-container-2023 {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   justify-content: center;
-  width: 70%;
-  overflow: auto;
-  height: 14rem;
-  gap: 2rem;
+  flex-direction: column;
+}
+body .gallery .photo-container-2023 .big-title {
+  color: #0f2c59;
+  margin-bottom: 1rem;
+}
+body .gallery .photo-container-2023 .mini-photos-2023 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+body .gallery .photo-container-2024 {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+body .gallery .photo-container-2024 .big-title {
+  color: #0f2c59;
+  margin-bottom: 1rem;
+}
+body .gallery .photo-container-2024 .mini-photos-2024 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }/*# sourceMappingURL=main.css.map */
