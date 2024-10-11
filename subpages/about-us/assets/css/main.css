@@ -1,159 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-/*=============== VARIABLES ===============*/
-/*========== Font Style ==========*/
-/*========== Colors ==========*/
-/*========== Font Weights ==========*/
-/*========== Font Sizes ==========*/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  /*=============== SETUP ===============*/
-  min-height: 100vh;
-  background-color: #0f2c59;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: white;
-  letter-spacing: 0.2px;
-  line-height: 1.4;
-  /*=============== REUSABLE CSS CLASSES ===============*/
-  /* To create a container with a white background and contrasted texts */
-  /* Top part of the subpages */
-  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
-  /* First breakpoint */
-  /* Second breakpoint */
-}
-body ul {
-  list-style: none;
-}
-body a {
-  color: white;
-  text-decoration: none;
-}
-body img {
-  max-width: 100%;
-  height: auto;
-}
-body .container {
-  width: 100%;
-  padding: 3.35rem 10%;
-}
-body .bigger-title {
-  font-size: 3.18rem;
-  font-weight: 700;
-  padding: 1.25rem 3rem;
-}
-body .big-title {
-  font-size: 3.18rem;
-  font-weight: 700;
-}
-body .subtitle {
-  font-size: 1.55rem;
-  font-weight: 600;
-}
-body .white-container {
-  background-color: #f4f4f4;
-  color: #4e4e4e;
-}
-body .white-container .bigger-title,
-body .white-container .big-title,
-body .white-container .subtitle,
-body .white-container a {
-  color: #0f2c59;
-}
-body .title-area {
-  position: relative;
-  display: grid;
-  align-content: center;
-  width: 100%;
-  min-height: 85px;
-  text-align: center;
-  background-color: #0f2c59;
-  overflow: hidden;
-  margin-top: 5rem; /* space for navbar */
-}
-body .title-area img {
-  position: absolute;
-  height: 100%;
-  width: auto;
-  top: 0;
-}
-body .title-area img:nth-child(1) {
-  transform: translateX(-50%);
-  left: 0;
-}
-body .title-area img:nth-child(2) {
-  transform: translateX(50%);
-  right: 0;
-}
-body .ender {
-  padding-bottom: 13.5rem !important;
-}
-@media screen and (max-width: 750px) {
-  body .ender {
-    padding-bottom: 17.5rem !important;
-  }
-}
-@media screen and (max-width: 500px) {
-  body .ender {
-    padding-bottom: 21.5rem !important;
-  }
-}
-@media screen and (max-width: 1200px) {
-  body .bigger-title {
-    font-size: 2rem;
-  }
-  body .big-title {
-    font-size: 2.5rem;
-  }
-  body .subtitle {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (max-width: 800px) {
-  body .bigger-title {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 0.9rem;
-  }
-  body .container {
-    padding: 2.75rem 5%;
-  }
-  body .bigger-title {
-    padding: 0.5rem 3rem;
-  }
-  body .big-title {
-    font-size: 2rem;
-  }
-}
-@media screen and (max-width: 450px) {
-  body .container {
-    padding: 2.15rem 5%;
-  }
-  body .bigger-title {
-    font-size: 1.5rem;
-  }
-  body .big-title {
-    font-size: 1.75rem;
-  }
-  body .title-area {
-    margin-top: 4rem;
-  }
-}
-
-body {
-  background-color: #f4f4f4;
+  background-color: var(--secondary-color);
 }
 body .about-us {
   /*=============== RESPONSIVE DESIGN ===============*/
@@ -183,12 +29,12 @@ body .about-us .content .description-area .titles {
 body .about-us .content .description-area .titles .subtitle {
   cursor: pointer;
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: var(--font-medium);
   transition: font-weight 0.4s, transform 0.4s, text-shadow 0.4s;
 }
 body .about-us .content .description-area .titles .active-title {
   text-shadow: rgba(15, 45, 89, 0.2980392157) 0 0 2px;
-  font-weight: 700;
+  font-weight: var(--font-bold);
   transform: translateY(-5px);
 }
 body .about-us .content .description-area .line-slider {
@@ -203,7 +49,7 @@ body .about-us .content .description-area .line-slider .current-line {
   left: 0;
   width: 33.3%;
   height: 7px;
-  background-color: #0f2c59;
+  background-color: var(--first-color);
   box-shadow: rgba(15, 45, 89, 0.3803921569) 0 3px 7px;
   transition: width 0.3s, transform 0.3s;
 }

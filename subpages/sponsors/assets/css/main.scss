@@ -1,7 +1,5 @@
-@import "../../../../assets/css/root";
-
 body {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
 
   .sponsors {
     /*============== BASE ==============*/
@@ -15,7 +13,7 @@ body {
     /*============== SPONSOR CONTAINER ==============*/
     .division {
       .subtitle {
-        font-weight: $font-bold;
+        font-weight: var(--font-bold);
         padding: 0.2rem;
       }
 

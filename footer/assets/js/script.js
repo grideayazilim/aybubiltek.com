@@ -16,7 +16,7 @@ function initializeFooter() {
   }
 
   /*============== SOCIAL BUTTON HOVER ==============*/
-  const socialButtons = document.querySelectorAll(".social-media-icon");
+  const socialButtons = document.querySelectorAll(".social-media-button");
 
   socialButtons.forEach((button) => {
     const text = button.querySelector(".social-text");

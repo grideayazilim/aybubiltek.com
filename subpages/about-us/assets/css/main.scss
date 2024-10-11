@@ -1,7 +1,5 @@
-@import "../../../../assets/css/root";
-
 body {
-  background-color: $secondary-color;
+  background-color: var(--secondary-color);
 
   .about-us {
     .content {
@@ -21,13 +19,13 @@ body {
           .subtitle {
             cursor: pointer;
             font-size: 1.5rem;
-            font-weight: $font-medium;
+            font-weight: var(--font-medium);
             transition: font-weight 0.4s, transform 0.4s, text-shadow 0.4s;
           }
 
           .active-title {
             text-shadow: #0f2d594c 0 0 2px;
-            font-weight: $font-bold;
+            font-weight: var(--font-bold);
             transform: translateY(-5px);
           }
         }
@@ -45,7 +43,7 @@ body {
             left: 0;
             width: 33.3%;
             height: 7px;
-            background-color: $first-color;
+            background-color: var(--first-color);
             box-shadow: #0f2d5961 0 3px 7px;
             transition: width 0.3s, transform 0.3s;
           }

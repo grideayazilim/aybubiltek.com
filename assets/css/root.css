@@ -1,9 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
-/*========== Colors ==========*/
-/*========== Font Weights ==========*/
-/*========== Font Sizes ==========*/
+:root {
+  --navbar-height: 5rem;
+  --font-family: "Montserrat", sans-serif;
+  /*========== Colors ==========*/
+  --first-color: #0f2c59;
+  --secondary-color: #f4f4f4;
+  --text-color: #ffff;
+  --text-color-alt: #0f2c59;
+  --text-color-black: #4e4e4e;
+  /*========== Font Weights ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  /*========== Font Sizes ==========*/
+  --bigger-font-size: 3.18rem;
+  --big-font-size: 3.18rem;
+  --subtitle-font-size: 1.55rem;
+  --normal-font-size: 1.05rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,25 +37,22 @@ html {
 body {
   /*=============== SETUP ===============*/
   min-height: 100vh;
-  background-color: #0f2c59;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: white;
+  background-color: var(--first-color);
+  font-family: var(--font-family);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
   letter-spacing: 0.2px;
   line-height: 1.4;
   /*=============== REUSABLE CSS CLASSES ===============*/
   /* To create a container with a white background and contrasted texts */
   /* Top part of the subpages */
-  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
-  /* First breakpoint */
-  /* Second breakpoint */
 }
 body ul {
   list-style: none;
 }
 body a {
-  color: white;
+  color: var(--text-color);
   text-decoration: none;
 }
 body img {
@@ -47,38 +64,38 @@ body .container {
   padding: 3.35rem 10%;
 }
 body .bigger-title {
-  font-size: 3.18rem;
-  font-weight: 700;
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-bold);
   padding: 1.25rem 3rem;
 }
 body .big-title {
-  font-size: 3.18rem;
-  font-weight: 700;
+  font-size: var(--big-font-size);
+  font-weight: var(--font-bold);
 }
 body .subtitle {
-  font-size: 1.55rem;
-  font-weight: 600;
+  font-size: var(--subtitle-font-size);
+  font-weight: var(--font-semibold);
 }
 body .white-container {
-  background-color: #f4f4f4;
-  color: #4e4e4e;
+  background-color: var(--secondary-color);
+  color: var(--text-color-black);
 }
 body .white-container .bigger-title,
 body .white-container .big-title,
 body .white-container .subtitle,
 body .white-container a {
-  color: #0f2c59;
+  color: var(--text-color-alt);
 }
 body .title-area {
   position: relative;
   display: grid;
   align-content: center;
   width: 100%;
-  min-height: 85px;
+  min-height: 45px;
   text-align: center;
-  background-color: #0f2c59;
+  background-color: var(--first-color);
   overflow: hidden;
-  margin-top: 5rem; /* space for navbar */
+  margin-top: var(--navbar-height);
 }
 body .title-area img {
   position: absolute;
@@ -107,47 +124,50 @@ body .ender {
     padding-bottom: 21.5rem !important;
   }
 }
+
+/* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+/* First breakpoint */
 @media screen and (max-width: 1200px) {
-  body .bigger-title {
-    font-size: 2rem;
-  }
-  body .big-title {
-    font-size: 2.5rem;
-  }
-  body .subtitle {
-    font-size: 1.2rem;
+  :root {
+    --bigger-font-size: 2rem;
+    --big-font-size: 2.5rem;
+    --subtitle-font-size: 1.2rem;
+    --normal-font-size: 0.983rem;
   }
 }
+/* Second breakpoint */
 @media screen and (max-width: 800px) {
+  :root {
+    --bigger-font-size: 1.5rem;
+    --navbar-height: 3.8rem;
+  }
   body .bigger-title {
-    font-size: 1.5rem;
+    padding: 1rem 3rem;
   }
 }
+/* Second breakpoint */
 @media screen and (max-width: 768px) {
-  body {
-    font-size: 0.9rem;
+  :root {
+    --big-font-size: 2rem;
+    --subtitle-font-size: 1.05rem;
+    --normal-font-size: 0.9rem;
   }
-  body .container {
+  .container {
     padding: 2.75rem 5%;
   }
-  body .bigger-title {
+  .bigger-title {
     padding: 0.5rem 3rem;
-  }
-  body .big-title {
-    font-size: 2rem;
   }
 }
 @media screen and (max-width: 450px) {
-  body .container {
+  :root {
+    --bigger-font-size: 1.5rem;
+    --big-font-size: 1.75rem;
+  }
+  .container {
     padding: 2.15rem 5%;
   }
-  body .bigger-title {
-    font-size: 1.5rem;
-  }
-  body .big-title {
-    font-size: 1.75rem;
-  }
-  body .title-area {
+  .title-area {
     margin-top: 4rem;
   }
 }/*# sourceMappingURL=root.css.map */

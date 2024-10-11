@@ -2,27 +2,31 @@
 
 /*=============== VARIABLES ===============*/
 /*========== Font Style ==========*/
-$font-family: "Montserrat", sans-serif;
+:root {
+  --navbar-height: 5rem;
+  --font-family: "Montserrat", sans-serif;
 
-/*========== Colors ==========*/
-$first-color: #0f2c59;
-$secondary-color: #f4f4f4;
-$text-color: #ffff;
-$text-color-alt: #0f2c59;
-$text-color-black: #4e4e4e;
+  /*========== Colors ==========*/
+  --first-color: #0f2c59;
+  --secondary-color: #f4f4f4;
+  --text-color: #ffff;
+  --text-color-alt: #0f2c59;
+  --text-color-black: #4e4e4e;
 
-/*========== Font Weights ==========*/
-$font-regular: 400;
-$font-medium: 500;
-$font-semibold: 600;
-$font-bold: 700;
+  /*========== Font Weights ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
 
-/*========== Font Sizes ==========*/
-$big-font-size: 3.18rem;
-$subtitle-font-size: 1.55rem;
-$normal-font-size: 1.05rem;
-$small-font-size: 0.813rem;
-$smaller-font-size: 0.75rem;
+  /*========== Font Sizes ==========*/
+  --bigger-font-size: 3.18rem; // title-area font size
+  --big-font-size: 3.18rem;
+  --subtitle-font-size: 1.55rem;
+  --normal-font-size: 1.05rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+}
 
 * {
   margin: 0;
@@ -37,11 +41,11 @@ html {
 body {
   /*=============== SETUP ===============*/
   min-height: 100vh;
-  background-color: $first-color;
-  font-family: $font-family;
-  font-size: $normal-font-size;
-  font-weight: $font-regular;
-  color: $text-color;
+  background-color: var(--first-color);
+  font-family: var(--font-family);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-regular);
+  color: var(--text-color);
   letter-spacing: 0.2px;
   line-height: 1.4;
 
@@ -50,7 +54,7 @@ body {
   }
 
   a {
-    color: $text-color;
+    color: var(--text-color);
     text-decoration: none;
   }
 
@@ -66,31 +70,31 @@ body {
   }
 
   .bigger-title {
-    font-size: $big-font-size;
-    font-weight: $font-bold;
+    font-size: var(--bigger-font-size);
+    font-weight: var(--font-bold);
     padding: 1.25rem 3rem;
   }
 
   .big-title {
-    font-size: $big-font-size;
-    font-weight: $font-bold;
+    font-size: var(--big-font-size);
+    font-weight: var(--font-bold);
   }
 
   .subtitle {
-    font-size: $subtitle-font-size;
-    font-weight: $font-semibold;
+    font-size: var(--subtitle-font-size);
+    font-weight: var(--font-semibold);
   }
 
   /* To create a container with a white background and contrasted texts */
   .white-container {
-    background-color: $secondary-color;
-    color: $text-color-black;
+    background-color: var(--secondary-color);
+    color: var(--text-color-black);
 
     .bigger-title,
     .big-title,
     .subtitle,
     a {
-      color: $text-color-alt;
+      color: var(--text-color-alt);
     }
   }
 
@@ -100,11 +104,11 @@ body {
     display: grid;
     align-content: center;
     width: 100%;
-    min-height: 85px;
+    min-height: 45px;
     text-align: center;
-    background-color: $first-color;
+    background-color: var(--first-color);
     overflow: hidden;
-    margin-top: 5rem; /* space for navbar */
+    margin-top: var(--navbar-height);
 
     img {
       position: absolute;
@@ -135,76 +139,61 @@ body {
       padding-bottom: 21.5rem !important;
     }
   }
+}
 
-  /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
-  /* First breakpoint */
-  @media screen and (max-width: 1200px) {
-    $responsive__bigger-font-size: 2rem;
-    $responsive__big-font-size: 2.5rem;
-    $responsive__subtitle-font-size: 1.2rem;
-    $responsive__normal-font-size: 0.983rem;
+/* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
+/* First breakpoint */
+@media screen and (max-width: 1200px) {
+  :root {
+    --bigger-font-size: 2rem;
+    --big-font-size: 2.5rem;
+    --subtitle-font-size: 1.2rem;
+    --normal-font-size: 0.983rem;
+  }
+}
 
-    .bigger-title {
-      font-size: $responsive__bigger-font-size;
-    }
-
-    .big-title {
-      font-size: $responsive__big-font-size;
-    }
-
-    .subtitle {
-      font-size: $responsive__subtitle-font-size;
-    }
+/* Second breakpoint */
+@media screen and (max-width: 800px) {
+  :root{
+    --bigger-font-size: 1.5rem;
+    --navbar-height: 3.8rem;
   }
 
-  @media screen and (max-width: 800px) {
-    $responsive__bigger-font-size: 1.5rem;
-
-    .bigger-title {
-      font-size: $responsive__bigger-font-size;
-    }
-  }
-
-  /* Second breakpoint */
-  @media screen and (max-width: 768px) {
-    $responsive__big-font-size: 2rem;
-    $responsive__subtitle-font-size: 1.05rem;
-    $responsive__normal-font-size: 0.9rem;
-
-    font-size: $responsive__normal-font-size;
-
-    .container {
-      padding: 2.75rem 5%;
-    }
-
+  body{
     .bigger-title{
-      padding: .5rem 3rem;
-    }
-
-    .big-title {
-      font-size: $responsive__big-font-size;
+      padding: 1rem 3rem;
     }
   }
+}
 
-  @media screen and (max-width: 450px) {
-    $responsive__bigger-font-size: 1.5rem;
-    $responsive__big-font-size: 1.75rem;
-    $responsive__normal-font-size: 0.9rem;
+/* Second breakpoint */
+@media screen and (max-width: 768px) {
+  :root{
+    --big-font-size: 2rem;
+    --subtitle-font-size: 1.05rem;
+    --normal-font-size: 0.9rem;
+  }
 
-    .container {
-      padding: 2.15rem 5%;
-    }
+  .container {
+    padding: 2.75rem 5%;
+  }
 
-    .bigger-title {
-      font-size: $responsive__bigger-font-size;
-    }
+  .bigger-title {
+    padding: 0.5rem 3rem;
+  }
+}
 
-    .big-title {
-      font-size: $responsive__big-font-size;
-    }
+@media screen and (max-width: 450px) {
+  :root{
+    --bigger-font-size: 1.5rem;
+    --big-font-size: 1.75rem;
+  }
 
-    .title-area {
-      margin-top: 4rem;
-    }
+  .container {
+    padding: 2.15rem 5%;
+  }
+
+  .title-area {
+    margin-top: 4rem;
   }
 }

@@ -1,5 +1,3 @@
-@import "../../../assets/css/root";
-
 body {
   $hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   $white-container__hover-gradient: linear-gradient(
@@ -13,12 +11,12 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 5rem;
+    height: var(--navbar-height);
     padding-inline: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-weight: $font-regular;
+    font-weight: var(--font-regular);
     z-index: 100;
     transition: color 0.4s, background 0.8s;
 
@@ -84,7 +82,7 @@ body {
           /*======= nav-item hover =======*/
           &:hover {
             .nav-link {
-              font-weight: $font-semibold;
+              font-weight: var(--font-semibold);
               color: transparent;
 
               i {
@@ -111,7 +109,7 @@ body {
           // Force dropdown menu to get background on the top of the page
           // Added here to suppress hierarchy
           .anti-blur {
-            background-color: $first-color;
+            background-color: var(--first-color);
           }
 
           .sublist {
@@ -130,8 +128,8 @@ body {
               transition: background 0.4s;
 
               .nav-link {
-                color: $text-color;
-                font-weight: $font-regular;
+                color: var(--text-color);
+                font-weight: var(--font-regular);
                 /* Realignment on the nav-link inside dropdown menu */
                 padding: 1.4rem 1.6rem;
               }
@@ -141,7 +139,7 @@ body {
 
                 .nav-link {
                   color: transparent;
-                  font-weight: $font-semibold;
+                  font-weight: var(--font-semibold);
                 }
               }
             }
@@ -172,7 +170,7 @@ body {
         align-items: center;
         cursor: pointer;
         overflow: hidden;
-        color: $text-color;
+        color: var(--text-color);
         transition: 0.4s;
 
         /*======= register-button animation =======*/
@@ -203,7 +201,7 @@ body {
           background: #5286ce;
           box-shadow: 0 0 8px #5286ce;
           border-radius: 5px;
-          font-weight: $font-medium;
+          font-weight: var(--font-medium);
 
           &::before,
           &::after {
@@ -253,7 +251,7 @@ body {
 
             .sublist-item {
               .nav-link {
-                color: $text-color-alt;
+                color: var(--text-color-alt);
               }
 
               &:hover {
@@ -272,11 +270,11 @@ body {
     /*============== WHITE BUTTON AREA ==============*/
     .button-area {
       .register-button {
-        color: $first-color;
+        color: var(--first-color);
 
         &::before,
         &::after {
-          border-color: $first-color;
+          border-color: var(--first-color);
         }
 
         &:hover {
@@ -351,7 +349,7 @@ body {
           background: #5286ce;
           box-shadow: 0 0 8px #5286ce;
           border-radius: 5px;
-          font-weight: $font-medium;
+          font-weight: var(--font-medium);
 
           &::before,
           &::after {
@@ -389,10 +387,8 @@ body {
      Navbar height adjustment to 
      match the responsive design in the root
   */
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 800px) {
     nav {
-      height: 4rem;
-
       .button-area {
         .register-button {
           width: 105px;
@@ -413,7 +409,7 @@ body {
 
       .button-area {
         .nav-toggle {
-          font-size: 1.25rem;
+          font-size: 1.5rem;
         }
       }
     }

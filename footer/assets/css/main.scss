@@ -1,5 +1,3 @@
-@import "../../../assets/css/root";
-
 body {
   position: relative;
 
@@ -11,7 +9,7 @@ body {
     width: 100%;
     padding-block: 2.2rem;
     box-shadow: 0 0 16px hsla(0, 0%, 0%, 0.174);
-    background-color: $first-color;
+    background-color: var(--first-color);
 
     .text-button-container {
       position: absolute;
@@ -25,15 +23,15 @@ body {
       .text {
         text-align: center;
         font-size: 1.1rem;
-        font-weight: $font-medium;
+        font-weight: var(--font-medium);
         background-color: #e0ebfa;
-        color: $first-color;
+        color: var(--first-color);
         width: 100%;
         height: 6rem;
         padding: 2rem;
         border-radius: 5px;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-        border: 1px solid $first-color;
+        border: 1px solid var(--first-color);
       }
 
       .button {
@@ -41,19 +39,19 @@ body {
         position: absolute;
         bottom: -1.55rem;
         padding: 1rem 2rem;
-        background-color: $first-color;
+        background-color: var(--first-color);
         color: #fff;
         border-radius: 5px;
-        border: 3px solid $secondary-color;
+        border: 3px solid var(--secondary-color);
         font-size: 1rem;
-        font-weight: $font-medium;
+        font-weight: var(--font-medium);
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
         transition: all 0.4s;
 
         &:hover{
           background: #5286ce;
-          box-shadow: 0 0 8px #5286ceaa;
+          transform: translateY(-2px);
         }
 
         &:active {
@@ -63,6 +61,7 @@ body {
         &::before,
         &::after {
           content: "";
+          pointer-events: none;
           position: absolute;
           height: 100%;
           width: 150%;
@@ -158,7 +157,7 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: $text-color-alt;
+      background-color: var(--text-color-alt);
       width: 100%;
       padding-inline: 4%;
 
@@ -198,20 +197,20 @@ body {
       }
 
       .social-media-area {
-        font-weight: $font-medium;
+        font-weight: var(--font-medium);
         display: flex;
         justify-content: flex-end;
 
-        .social-media-icon {
+        .social-media-button {
           display: inline-flex;
           align-items: center;
           margin-inline: 5px;
-          background-color: white;
+          background-color: var(--secondary-color);
           overflow: hidden;
-          color: $first-color;
+          color: var(--first-color);
           border-radius: 50px;
           cursor: pointer;
-          box-shadow: (rgba(0, 0, 0, 0.378) 0px 5px 10px);
+          box-shadow: rgba(0, 0, 0, 0.378) 0px 5px 10px;
           transition: all 0.4s;
 
           .icon {
@@ -223,6 +222,7 @@ body {
             border-radius: 50px;
             box-sizing: border-box;
             transition: all 0.3s ease-out;
+
             i {
               font-size: 1.5rem;
               transition: all 0.5s ease-out;
@@ -279,7 +279,7 @@ body {
         }
 
         .social-media-area {
-          .social-media-icon {
+          .social-media-button {
             margin-inline: 3px;
             .icon {
               width: 3rem;

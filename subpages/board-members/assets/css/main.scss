@@ -1,5 +1,3 @@
-@import "../../../../assets/css/root";
-
 body {
   .members-container {
     position: relative;
@@ -69,7 +67,7 @@ body {
             align-items: center;
             column-gap: 0.5rem;
             color: #e5e5e5;
-            background-color: $first-color;
+            background-color: var(--first-color);
             padding: 0.5rem 1.2rem;
             border-radius: 25px;
             transition: 0.4s;
