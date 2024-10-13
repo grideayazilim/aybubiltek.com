@@ -1,4 +1,17 @@
+/*============== DARK THEME ==============*/
+:root{
+  --card-shadow: #0f2d5936 0px 0px 5px 0px;
+  --card-hover-shadow: #0f2d5939 0 0 10px 0px;
+}
+
+body.darkTheme{
+  --card-shadow: #00000036 0px 0px 5px 0px;
+  --card-hover-shadow: #00000039 0 0 10px 0px;
+}
+
 body {
+  background-color: var(--secondary-color);
+
   .members-container {
     position: relative;
     text-align: center;
@@ -84,13 +97,13 @@ body {
             &:hover {
               text-shadow: 0 0 3px #e5e5e569;
               transform: scale(102%);
-              box-shadow: #0f2d5996 0 0 10px 0px;
+              box-shadow: var(--card-shadow);
             }
           }
         }
 
         &:hover {
-          box-shadow: #0f2d5932 0px 7px 29px 0px;
+          box-shadow: var(--card-hover-shadow);
           transform: translateY(-5px);
 
           .image-container {
@@ -113,7 +126,7 @@ body {
 
       .members {
         .member-card {
-          box-shadow: #0f2d5932 0px 7px 29px 0px;
+          box-shadow: var(--card-hover-shadow);
 
           .image-container {
             img {

@@ -1,5 +1,7 @@
 body {
   /*==== Reset CSS from the board-members to fit this page ====*/
+  background-color: var(--first-color);
+
   .members-container {
     display: grid;
     row-gap: 2.5rem;

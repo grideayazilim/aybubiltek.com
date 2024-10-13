@@ -1,3 +1,13 @@
+/*============== DARK THEME ==============*/
+:root {
+  --register-button-color: #5286ce;
+}
+
+body.darkTheme {
+  --register-button-color: #3a3a3a;
+}
+
+/*============== FOOTER ==============*/
 body {
   position: relative;
 }
@@ -49,7 +59,7 @@ body footer .text-button-container .button {
   transition: all 0.4s;
 }
 body footer .text-button-container .button:hover {
-  background: #5286ce;
+  background: var(--register-button-color);
   transform: translateY(-2px);
 }
 body footer .text-button-container .button:active {

@@ -1,3 +1,12 @@
+/*============== DARK THEME ==============*/
+:root{
+  --line-slider-shadow: #0f2d5961 0 3px 7px;
+}
+
+body.darkTheme{
+  --line-slider-shadow: #00000061 0 3px 7px;
+}
+
 body {
   background-color: var(--secondary-color);
 
@@ -44,7 +53,7 @@ body {
             width: 33.3%;
             height: 7px;
             background-color: var(--first-color);
-            box-shadow: #0f2d5961 0 3px 7px;
+            box-shadow: var(--line-slider-shadow);
             transition: width 0.3s, transform 0.3s;
           }
         }

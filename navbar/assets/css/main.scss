@@ -1,11 +1,30 @@
-body {
-  $hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-  $white-container__hover-gradient: linear-gradient(
+/*============== DARK THEME ==============*/
+:root{
+  --navbar-bg-blur: #091a34a9;
+  --hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  --white-container__hover-gradient: linear-gradient(
     135deg,
     #667eea 0%,
     #764ba2 100%
   );
+  --nonwhite-dropdown__shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
+  --nonwhite-dropdown__bg: hsla(217, 70%, 6%, 0.4);
+  --register-button-color: #5286ce;
+  --navbar-logo-filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+}
 
+body.darkTheme{
+  --navbar-bg-blur: #1e1e1ec9;
+  --hover-gradient: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  --white-container__hover-gradient: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  --nonwhite-dropdown__shadow: rgba(179, 179, 179, 0.068) 0px 8px 8px 0px;
+  --nonwhite-dropdown__bg: hsla(0, 0%, 23%, 0.197);
+  --register-button-color: #3a3a3a;
+  --navbar-logo-filter: brightness(0) contrast(100%);
+}
+
+/*============== NAVBAR ==============*/
+body {
   nav {
     /*============== BASE ==============*/
     position: fixed;
@@ -21,7 +40,7 @@ body {
     transition: color 0.4s, background 0.8s;
 
     i {
-      background-image: $hover-gradient;
+      background-image: var(--hover-gradient);
       background-clip: text;
       transition: transform 0.4s;
     }
@@ -55,7 +74,7 @@ body {
             position: relative;
             display: block;
             padding: 1.8rem 0.8rem;
-            background-image: $hover-gradient;
+            background-image: var(--hover-gradient);
             background-clip: text;
             transition: color 0.4s, font-weight 0.4s;
           }
@@ -71,7 +90,7 @@ body {
             width: 0;
             transform-origin: left;
             border-radius: 2px;
-            background-image: $hover-gradient;
+            background-image: var(--hover-gradient);
             transition: 0.3s;
           }
 
@@ -121,7 +140,7 @@ body {
             opacity: 1;
             overflow: hidden;
             text-align: center;
-            box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
+            box-shadow: var(--nonwhite-dropdown__shadow);
             transition: height 0.7s background 0.4s;
 
             .sublist-item {
@@ -135,7 +154,7 @@ body {
               }
 
               &:hover {
-                background-color: hsla(217, 70%, 6%, 0.4);
+                background-color: var(--nonwhite-dropdown__bg);
 
                 .nav-link {
                   color: transparent;
@@ -198,8 +217,8 @@ body {
         }
 
         &:hover {
-          background: #5286ce;
-          box-shadow: 0 0 8px #5286ce;
+          background: var(--register-button-color);
+          box-shadow: 0 0 8px var(--register-button-color);
           border-radius: 5px;
           font-weight: var(--font-medium);
 
@@ -207,7 +226,7 @@ body {
           &::after {
             width: 100%;
             height: 100%;
-            border-color: #5286ce;
+            border-color: var(--register-button-color);
           }
         }
       }
@@ -226,11 +245,11 @@ body {
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
 
     i {
-      background-image: $white-container__hover-gradient;
+      background-image: var(--white-container__hover-gradient);
     }
 
     .nav-logo {
-      filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+      filter: var(--navbar-logo-filter);
     }
 
     /*============== WHITE NAV MENU ==============*/
@@ -240,7 +259,7 @@ body {
           .nav-link,
           &::before,
           &::after {
-            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background-image: var(--white-container__hover-gradient);
           }
         }
 
@@ -282,7 +301,7 @@ body {
 
           &::before,
           &::after {
-            border-color: #5286ce;
+            border-color: var(--register-button-color);
           }
         }
       }
@@ -346,8 +365,8 @@ body {
 
       .button-area {
         .register-button {
-          background: #5286ce;
-          box-shadow: 0 0 8px #5286ce;
+          background: var(--register-button-color);
+          box-shadow: 0 0 8px var(--register-button-color);
           border-radius: 5px;
           font-weight: var(--font-medium);
 
@@ -355,7 +374,7 @@ body {
           &::after {
             width: 100%;
             height: 100%;
-            border-color: #5286ce !important;
+            border-color: var(--register-button-color) !important;
           }
         }
 
@@ -432,7 +451,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #091a34cd;
+    background-color: var(--navbar-bg-blur);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);

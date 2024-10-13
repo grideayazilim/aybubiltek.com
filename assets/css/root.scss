@@ -28,6 +28,12 @@
   --smaller-font-size: 0.75rem;
 }
 
+/*=============== DARK THEME ===============*/
+body.darkTheme{
+  --first-color: #000000;
+  --text-color-alt: #000000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +54,7 @@ body {
   color: var(--text-color);
   letter-spacing: 0.2px;
   line-height: 1.4;
+  transition: background 2.4s ease; /* for dark mode animation */
 
   ul {
     list-style: none;
@@ -78,6 +85,7 @@ body {
   .big-title {
     font-size: var(--big-font-size);
     font-weight: var(--font-bold);
+    transition: color 2.4s ease; /* for dark mode animation */
   }
 
   .subtitle {

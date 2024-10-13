@@ -1,3 +1,17 @@
+/*============== DARK THEME ==============*/
+:root {
+  --card-shadow: #0f2d5936 0px 0px 5px 0px;
+  --card-hover-shadow: #0f2d5939 0 0 10px 0px;
+}
+
+body.darkTheme {
+  --card-shadow: #00000036 0px 0px 5px 0px;
+  --card-hover-shadow: #00000039 0 0 10px 0px;
+}
+
+body {
+  background-color: var(--secondary-color);
+}
 body .members-container {
   position: relative;
   text-align: center;
@@ -78,10 +92,10 @@ body .members-container .members .member-card .contact .member-link i {
 body .members-container .members .member-card .contact .member-link:hover {
   text-shadow: 0 0 3px rgba(229, 229, 229, 0.4117647059);
   transform: scale(102%);
-  box-shadow: rgba(15, 45, 89, 0.5882352941) 0 0 10px 0px;
+  box-shadow: var(--card-shadow);
 }
 body .members-container .members .member-card:hover {
-  box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
+  box-shadow: var(--card-hover-shadow);
   transform: translateY(-5px);
 }
 body .members-container .members .member-card:hover .image-container img {
@@ -95,7 +109,7 @@ body .members-container .members .member-card:hover .image-container::before {
     margin-block: 3rem 1.5rem;
   }
   body .members-container .members .member-card {
-    box-shadow: rgba(15, 45, 89, 0.1960784314) 0px 7px 29px 0px;
+    box-shadow: var(--card-hover-shadow);
   }
   body .members-container .members .member-card .image-container img {
     transform: scale(110%);

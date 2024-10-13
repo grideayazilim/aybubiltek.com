@@ -1,3 +1,17 @@
+/*============== DARK THEME ==============*/
+:root{
+  --animated-button-color: #5286ce;
+  --departmants-card-shadow: #0f2d5936 0px 0px 5px 0px;
+  --departmants-card-hover-shadow: #0f2d5939 0 0 10px 0px;
+}
+
+body.darkTheme{
+  --animated-button-color: #3a3a3a;
+  --departmants-card-shadow: #00000036 0px 0px 5px 0px;
+  --departmants-card-hover-shadow: #00000039 0 0 10px 0px;
+}
+
+/*===================||| HOME PAGE |||===================*/
 body {
   /*============== REUSEABLE ANIMATED BUTTON ==============*/
   .animated-button {
@@ -38,8 +52,8 @@ body {
     }
 
     &:hover {
-      background: #5286ce;
-      box-shadow: 0 0 8px #5286ce;
+      background: var(--animated-button-color);
+      box-shadow: 0 0 8px var(--animated-button-color);
       border-radius: 5px;
       font-weight: var(--font-medium);
       letter-spacing: 0.6px;
@@ -49,14 +63,14 @@ body {
       &::after {
         width: 100%;
         height: 100%;
-        border-color: #5286ce;
+        border-color: var(--animated-button-color);
       }
     }
 
     @media screen and (max-width: 1300px) {
       margin: 0 auto;
-      background: #5286ce;
-      box-shadow: 0 0 8px #5286ce;
+      background: var(--animated-button-color);
+      box-shadow: 0 0 8px var(--animated-button-color);
       border-radius: 5px;
       font-weight: var(--font-medium);
       letter-spacing: 0.6px;
@@ -66,7 +80,7 @@ body {
       &::after {
         width: 100%;
         height: 100%;
-        border-color: #5286ce;
+        border-color: var(--animated-button-color);
       }
     }
   }
@@ -224,6 +238,16 @@ body {
         position: relative;
         display: grid;
         place-items: center;
+
+        /* Dark theme transform */
+        .dark-transform{
+          transform: translate(-60px, -40px) rotateZ(360deg);
+        }
+
+        #theme-button{
+          cursor: pointer;
+          transition: transform 2.4s ease;
+        }
 
         img {
           position: absolute;
@@ -612,7 +636,7 @@ body {
         padding: 2.75rem 1.5rem;
         border-radius: 15px;
         background-color: #f4f4f4;
-        box-shadow: #0f2d5936 0px 0px 5px 0px;
+        box-shadow: var(--departmants-card-shadow);
         transition: all 0.4s;
 
         img {
@@ -620,7 +644,7 @@ body {
         }
 
         &:hover {
-          box-shadow: #0f2d5932 0px 7px 29px 0px;
+          box-shadow: var(--departmants-card-hover-shadow);
           transform: translateY(-5px);
         }
       }

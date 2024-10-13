@@ -87,7 +87,7 @@ const teamSlider = new Swiper(".team-area-slider", {
 });
 
 function alignTeamSlider() {
-  if(window.innerWidth <= 714) teamSlider.params.slidesPerView = 1;
+  if (window.innerWidth <= 714) teamSlider.params.slidesPerView = 1;
   else if (window.innerWidth <= 1250) teamSlider.params.slidesPerView = 2;
   else if (window.innerWidth > 1250) teamSlider.params.slidesPerView = 3;
 
@@ -97,15 +97,18 @@ function alignTeamSlider() {
 window.addEventListener("load", alignTeamSlider);
 window.addEventListener("resize", alignTeamSlider);
 
-/* =============== SCROLL REVEAL ANIMATION =============== */
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "80px",
-  duration: 2500,
-  delay: 300,
-});
+/*=============== DARK LIGHT THEME ===============*/
+// Note: Dark theme initialization is on root js!!
+const themeButton = document.getElementById("theme-button");
+const darkTheme = "darkTheme";
 
-sr.reveal(`.bg-img, .ornament`);
-sr.reveal(`.left-box, .right-box`, { delay: 1200 });
-sr.reveal(`.newCard`, { delay: 500, interval: 100 });
-sr.reveal(`.shopCard`, { interval: 100 });
+// Activate /deactivate theme manually with the biltek logo
+themeButton.addEventListener("click", () => {
+  const oppositeTheme = document.body.classList.contains(darkTheme)
+    ? "light"
+    : "dark";
+
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle("dark-transform");
+  localStorage.setItem("biltekTheme", oppositeTheme);
+});

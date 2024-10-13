@@ -1,5 +1,6 @@
 body {
   /*==== Reset CSS from the board-members to fit this page ====*/
+  background-color: var(--first-color);
   /*============== SUBLANDING PAGE ==============*/
   /*============== WHITE-CONTAINER AREA ==============*/
   /*============== RESPONSIVE DESIGN ==============*/

@@ -1,3 +1,29 @@
+/*============== DARK THEME ==============*/
+:root {
+  --navbar-bg-blur: #091a34a9;
+  --hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  --white-container__hover-gradient: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
+  --nonwhite-dropdown__shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
+  --nonwhite-dropdown__bg: hsla(217, 70%, 6%, 0.4);
+  --register-button-color: #5286ce;
+  --navbar-logo-filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+}
+
+body.darkTheme {
+  --navbar-bg-blur: #1e1e1ec9;
+  --hover-gradient: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+  --white-container__hover-gradient: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  --nonwhite-dropdown__shadow: rgba(179, 179, 179, 0.068) 0px 8px 8px 0px;
+  --nonwhite-dropdown__bg: hsla(0, 0%, 23%, 0.197);
+  --register-button-color: #3a3a3a;
+  --navbar-logo-filter: brightness(0) contrast(100%);
+}
+
+/*============== NAVBAR ==============*/
 body {
   /*========== WHITE NAVBAR FEATURES ==========*/
   /*=============== RESPONSIVE DESIGN ===============*/
@@ -35,7 +61,7 @@ body nav {
   /*============== BUTTON AREA ==============*/
 }
 body nav i {
-  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  background-image: var(--hover-gradient);
   -webkit-background-clip: text;
           background-clip: text;
   transition: transform 0.4s;
@@ -69,7 +95,7 @@ body nav .nav-menu .nav-list .nav-item .nav-link {
   position: relative;
   display: block;
   padding: 1.8rem 0.8rem;
-  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  background-image: var(--hover-gradient);
   -webkit-background-clip: text;
           background-clip: text;
   transition: color 0.4s, font-weight 0.4s;
@@ -83,7 +109,7 @@ body nav .nav-menu .nav-list .nav-item::before, body nav .nav-menu .nav-list .na
   width: 0;
   transform-origin: left;
   border-radius: 2px;
-  background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  background-image: var(--hover-gradient);
   transition: 0.3s;
 }
 body nav .nav-menu .nav-list .nav-item::before {
@@ -118,7 +144,7 @@ body nav .nav-menu .nav-list .activator-item .sublist {
   opacity: 1;
   overflow: hidden;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
+  box-shadow: var(--nonwhite-dropdown__shadow);
   transition: height 0.7s background 0.4s;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item {
@@ -131,7 +157,7 @@ body nav .nav-menu .nav-list .activator-item .sublist .sublist-item .nav-link {
   padding: 1.4rem 1.6rem;
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item:hover {
-  background-color: hsla(217, 70%, 6%, 0.4);
+  background-color: var(--nonwhite-dropdown__bg);
 }
 body nav .nav-menu .nav-list .activator-item .sublist .sublist-item:hover .nav-link {
   color: transparent;
@@ -183,15 +209,15 @@ body nav .button-area .register-button::after {
   border-right: 2px solid;
 }
 body nav .button-area .register-button:hover {
-  background: #5286ce;
-  box-shadow: 0 0 8px #5286ce;
+  background: var(--register-button-color);
+  box-shadow: 0 0 8px var(--register-button-color);
   border-radius: 5px;
   font-weight: var(--font-medium);
 }
 body nav .button-area .register-button:hover::before, body nav .button-area .register-button:hover::after {
   width: 100%;
   height: 100%;
-  border-color: #5286ce;
+  border-color: var(--register-button-color);
 }
 body nav .button-area .nav-toggle {
   display: none;
@@ -204,16 +230,16 @@ body .white-container:is(nav) {
   /*============== WHITE BUTTON AREA ==============*/
 }
 body .white-container:is(nav) i {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: var(--white-container__hover-gradient);
 }
 body .white-container:is(nav) .nav-logo {
-  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+  filter: var(--navbar-logo-filter);
 }
 body .white-container:is(nav) .nav-menu .nav-list {
   /*======= WHITE DROPDOWN AREA =======*/
 }
 body .white-container:is(nav) .nav-menu .nav-list .nav-item .nav-link, body .white-container:is(nav) .nav-menu .nav-list .nav-item::before, body .white-container:is(nav) .nav-menu .nav-list .nav-item::after {
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: var(--white-container__hover-gradient);
 }
 body .white-container:is(nav) .nav-menu .nav-list .activator-item .sublist {
   background-color: #f4f4f4;
@@ -237,7 +263,7 @@ body .white-container:is(nav) .button-area .register-button:hover {
   color: white;
 }
 body .white-container:is(nav) .button-area .register-button:hover::before, body .white-container:is(nav) .button-area .register-button:hover::after {
-  border-color: #5286ce;
+  border-color: var(--register-button-color);
 }
 @media screen and (max-width: 1300px) {
   body {
@@ -286,15 +312,15 @@ body .white-container:is(nav) .button-area .register-button:hover::before, body 
     font-size: 1.5rem;
   }
   body nav .button-area .register-button {
-    background: #5286ce;
-    box-shadow: 0 0 8px #5286ce;
+    background: var(--register-button-color);
+    box-shadow: 0 0 8px var(--register-button-color);
     border-radius: 5px;
     font-weight: var(--font-medium);
   }
   body nav .button-area .register-button::before, body nav .button-area .register-button::after {
     width: 100%;
     height: 100%;
-    border-color: #5286ce !important;
+    border-color: var(--register-button-color) !important;
   }
   body nav .button-area .nav-toggle {
     display: block;
@@ -334,7 +360,7 @@ body .blur-container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(9, 26, 52, 0.8039215686);
+  background-color: var(--navbar-bg-blur);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
