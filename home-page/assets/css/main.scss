@@ -88,6 +88,7 @@ body {
   /*===================||| LANDING PAGE |||===================*/
   #landing-page {
     /*============== BASE ==============*/
+    overflow: hidden;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -238,22 +239,23 @@ body {
         position: relative;
         display: grid;
         place-items: center;
+        transform: translate(-60px, -40px);
 
-        /* Dark theme transform */
-        .dark-transform{
-          transform: translate(-60px, -40px) rotateZ(360deg);
+        .theme-button{
+          cursor: pointer;
+          transform: rotateZ(-100deg);
+          transition: transform 2.4s ease;
         }
 
-        #theme-button{
-          cursor: pointer;
-          transition: transform 2.4s ease;
+        /* Dark theme transform */
+        .theme-button-dark {
+          transform: rotateZ(360deg) !important;
         }
 
         img {
           position: absolute;
           max-width: 5000px; // override root
-          transform: translate(-60px, -40px);
-
+          
           &:nth-child(1) {
             width: 170%;
           }
@@ -332,12 +334,11 @@ body {
 
         .right-box {
           position: relative;
+          transform: translate(0);
 
           img {
             position: absolute;
             width: auto;
-            right: 50%;
-            transform: translateX(50%);
 
             &:nth-child(1),
             &:nth-child(2),
@@ -429,6 +430,7 @@ body {
 
   /*===================||| ABOUT US |||===================*/
   .about-section {
+    overflow: hidden;
     max-width: 1600px;
     position: relative;
     z-index: 0;
@@ -443,11 +445,13 @@ body {
       width: 100%;
       height: 100%;
       overflow: hidden;
+      clip-path: polygon(0 0, 56% 0, 44% 100%, 0% 100%);
 
       .swiper-slide {
         transform-origin: bottom left;
         transition: transform 0.5s ease, opacity 0.5s ease, filter 0.5s ease;
         border-radius: 15px;
+        
 
         img {
           width: auto;
@@ -461,8 +465,8 @@ body {
       display: grid;
       row-gap: 1.5rem;
       width: 70%;
-      padding: 7rem 10% 7rem 12rem;
-      background: var(--secondary-color);
+      padding: 7rem 10% 7rem 15rem;
+      // background: var(--secondary-color);
       clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
 
       .about-title {
@@ -524,7 +528,7 @@ body {
   }
 
   /*===================||| TEAMS |||===================*/
-  #team-area {
+  .team-area {
     .big-title {
       text-align: center;
     }

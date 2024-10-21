@@ -30,6 +30,12 @@ socialButtons.forEach((button) => {
   });
 });
 
+/*============== ROTATE LOGO ON LOAD ==============*/
+function rotateLogoOnLoad() {
+  const landingPageLogo = document.querySelector(".landing-page__logo");
+  landingPageLogo.style.transform = "rotateZ(0)";
+}
+
 /*===================||| ABOUT US |||===================*/
 /*============== ABOUT US SWIPER ==============*/
 const swiper = new Swiper(".about-us-swiper", {
@@ -45,10 +51,10 @@ const swiper = new Swiper(".about-us-swiper", {
 });
 
 /*============== INCREASE MEMBER COUNT ==============*/
-let count = 0;
-const targetCount = 700;
+let count = 500;
+const targetCount = 2000;
 const increment = 9;
-const speed = 10;
+const speed = 15; // per second
 
 function updateCounter() {
   if (count < targetCount) {
@@ -60,8 +66,6 @@ function updateCounter() {
       targetCount + "+ BİLTEK'li";
   }
 }
-
-updateCounter();
 
 /*===================||| TEAMS |||===================*/
 const teamSlider = new Swiper(".team-area-slider", {
@@ -99,7 +103,7 @@ window.addEventListener("resize", alignTeamSlider);
 
 /*=============== DARK LIGHT THEME ===============*/
 // Note: Dark theme initialization is on root js!!
-const themeButton = document.getElementById("theme-button");
+const themeButton = document.querySelector(".theme-button");
 const darkTheme = "darkTheme";
 
 // Activate /deactivate theme manually with the biltek logo
@@ -109,6 +113,34 @@ themeButton.addEventListener("click", () => {
     : "dark";
 
   document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle("dark-transform");
+  themeButton.classList.toggle("theme-button-dark");
   localStorage.setItem("biltekTheme", oppositeTheme);
+});
+
+/* =============== SCROLL REVEAL ANIMATION =============== */
+sr.reveal(`.bg-img, .ornament`);
+
+sr.reveal(`.landing-page__container`, {
+  origin: "bottom",
+  delay: 900,
+  beforeReveal: function () {
+    setTimeout(function() {
+      rotateLogoOnLoad();
+    }, 1400);
+  },
+});
+
+sr.reveal(`.about-content, .section-title, .team-area`, { delay: 300 });
+
+sr.reveal(`.about-us-swiper`, {
+  origin: "bottom",
+  delay: 900,
+  beforeReveal: function () {
+    updateCounter();
+  },
+});
+
+sr.reveal(`.departmant-card`, {
+  delay: 500,
+  interval: 500,
 });

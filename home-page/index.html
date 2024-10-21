@@ -9,6 +9,9 @@
       type="image/x-icon"
       href="/assets/media/logo-no-text.png"
     />
+
+    <!--==============SCROLLREVEAL JS==============-->
+    <script src="/assets/js/scrollreveal.min.js"></script>
     
     <!--==============SWIPER CSS==============-->
     <link
@@ -39,10 +42,10 @@
 
     <!--==============LANDING PAGE==============-->
     <section id="landing-page">
-      <img class="bg-img" src="/assets/media/yeni-logo.png" alt="" />
-      <img class="ornament" src="/assets/media/texture.png" alt="" />
+      <img class="bg-img load-hidden" src="/assets/media/yeni-logo.png" alt="" />
+      <img class="ornament load-hidden" src="/assets/media/texture.png" alt="" />
 
-      <div class="container">
+      <div class="container landing-page__container load-hidden">
         <div class="left-box">
           <p class="subtitle">Ankara Yıldırım Beyazıt Üniversitesi</p>
           <p class="big-title">
@@ -118,8 +121,7 @@
           <img src="/assets/media/outer-elips.png" alt="" />
           <img src="/assets/media/inner-elips.png" alt="" />
           <img
-            id="theme-button"
-            class="landing-page__logo"
+            class="theme-button landing-page__logo"
             src="/assets/media/logo-no-text.png"
             alt=""
           />
@@ -145,7 +147,7 @@
         </div>
 
         <div class="about-content">
-          <div class="big-title">HAKKIMIZDA</div>
+          <div class="big-title section-title">HAKKIMIZDA</div>
           <p class="description">
             Ankara Yıldırım Beyazıt Üniversitesi Bilim ve Teknoloji Topluluğu,
             2011 yılında bilimsel düşünceyi teşvik etmek amacıyla kurulmuş
@@ -169,9 +171,9 @@
     </section>
 
     <!--==============TEAMS==============-->
-    <section id="team-area">
+    <section class="team-area">
       <div class="container">
-        <div class="big-title">TAKIMLARIMIZ</div>
+        <div class="big-title section-title">TAKIMLARIMIZ</div>
         <div class="swiper team-area-slider">
           <div class="swiper-wrapper">
             <div class="swiper-slide team-area-slide">
@@ -316,10 +318,10 @@
     <!--==============DEPARTMANTS==============-->
     <section class="white-container">
       <div class="container departmants">
-        <div class="big-title">DEPARTMANLARIMIZ</div>
+        <div class="big-title section-title">DEPARTMANLARIMIZ</div>
 
         <div class="cards-container">
-          <div class="card">
+          <div class="card departmant-card">
             <img src="../assets/media/logo-no-text.png" alt="" />
             <div class="subtitle">Etkinlik Koordinatörlüğü Departmanı</div>
             The purpose of lorem ipsum is to create a natural looking block of
@@ -328,7 +330,7 @@
             with
           </div>
 
-          <div class="card">
+          <div class="card departmant-card">
             <img src="../assets/media/logo-no-text.png" alt="" />
             <div class="subtitle">İletişim Ve Sosyal Medya Departmanı</div>
             The purpose of lorem ipsum is to create a natural looking block of
@@ -337,7 +339,7 @@
             with
           </div>
 
-          <div class="card">
+          <div class="card departmant-card">
             <img src="../assets/media/logo-no-text.png" alt="" />
             <div class="subtitle">Dış İlişkiler Ve Sponsorluk Departmanı</div>
             The purpose of lorem ipsum is to create a natural looking block of

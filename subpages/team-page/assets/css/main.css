@@ -7,25 +7,6 @@ body {
   /* First breakpoint */
   /* Second breakpoint */
 }
-body .members-container {
-  display: grid;
-  row-gap: 2.5rem;
-  padding-block: 0;
-}
-body .members-container .members .member-card .accounts {
-  display: flex;
-  gap: 0.7rem;
-  font-size: 2.25rem;
-}
-body .members-container .members .member-card .accounts .member-link {
-  transition: all 0.4s;
-}
-body .members-container .members .member-card .accounts .member-link:hover {
-  transform: translateY(-3px);
-}
-body .members-container .big-title {
-  padding: 0;
-}
 body .container {
   margin: 0 auto;
   max-width: 1800px;
@@ -178,6 +159,26 @@ body .team-container .achievements .swiper-pagination-bullet-active {
 body .team-container .achievements .achievements__card .achievements__img {
   width: 100%;
 }
+body .team-container .members-container .big-title {
+  padding-block: 4rem 1rem;
+}
+body .team-container .members-container .members {
+  margin-block: 2rem;
+}
+body .team-container .members-container .members .member-card {
+  row-gap: 1rem;
+}
+body .team-container .members-container .members .member-card .accounts {
+  display: flex;
+  gap: 0.7rem;
+  font-size: 2.6rem;
+}
+body .team-container .members-container .members .member-card .accounts .member-link {
+  transition: all 0.4s;
+}
+body .team-container .members-container .members .member-card .accounts .member-link:hover {
+  transform: translateY(-3px);
+}
 @media (max-width: 1200px) {
   body .sub-landing-page {
     text-align: center;
@@ -216,5 +217,8 @@ body .team-container .achievements .achievements__card .achievements__img {
   }
   body .team-container .big-title {
     padding-block: 2rem 1rem;
+  }
+  body .team-container .members-container .big-title {
+    padding-block: 2rem 0.5rem;
   }
 }/*# sourceMappingURL=main.css.map */

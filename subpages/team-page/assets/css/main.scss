@@ -2,35 +2,7 @@ body {
   /*==== Reset CSS from the board-members to fit this page ====*/
   background-color: var(--first-color);
 
-  .members-container {
-    display: grid;
-    row-gap: 2.5rem;
-    padding-block: 0;
-
-    .members {
-      .member-card {
-        .accounts {
-          display: flex;
-          gap: 0.7rem;
-          font-size: 2.25rem;
-
-          .member-link {
-            transition: all 0.4s;
-
-            &:hover {
-              transform: translateY(-3px);
-            }
-          }
-        }
-      }
-    }
-
-    .big-title {
-      padding: 0;
-    }
-  }
-
-  .container{
+  .container {
     margin: 0 auto;
     max-width: 1800px;
   }
@@ -45,12 +17,12 @@ body {
     padding: 6rem 12rem 2rem;
     min-height: 100vh;
 
-    .bg-image{
+    .bg-image {
       position: absolute;
       left: 0;
       z-index: -1;
       opacity: 0.04;
-      filter: blur(.5px);
+      filter: blur(0.5px);
     }
 
     .content {
@@ -75,11 +47,11 @@ body {
         }
       }
 
-      .main-description{
+      .main-description {
         display: grid;
         row-gap: 1rem;
 
-        p{
+        p {
           line-height: 1.4;
         }
       }
@@ -135,7 +107,7 @@ body {
 
   /*============== WHITE-CONTAINER AREA ==============*/
   .team-container {
-    .container{
+    .container {
       padding-top: 0;
     }
 
@@ -166,7 +138,7 @@ body {
       // Swiper button adjustment
       .swiper-button-prev,
       .swiper-button-next {
-        &::after{
+        &::after {
           content: "";
         }
 
@@ -217,11 +189,39 @@ body {
         }
       }
     }
+
+    .members-container {
+      .big-title {
+        padding-block: 4rem 1rem;
+      }
+
+      .members {
+        margin-block: 2rem;
+
+        .member-card {
+          row-gap: 1rem;
+
+          .accounts {
+            display: flex;
+            gap: 0.7rem;
+            font-size: 2.6rem;
+
+            .member-link {
+              transition: all 0.4s;
+
+              &:hover {
+                transform: translateY(-3px);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   /*============== RESPONSIVE DESIGN ==============*/
   /* First breakpoint */
-  @media (max-width: 1200px){
+  @media (max-width: 1200px) {
     .sub-landing-page {
       text-align: center;
       row-gap: 3rem;
@@ -257,7 +257,7 @@ body {
     .sub-landing-page {
       padding: 6rem 3.5rem;
 
-      .bg-image{
+      .bg-image {
         background-position: -50px;
       }
 
@@ -274,9 +274,15 @@ body {
       }
     }
 
-    .team-container{
-      .big-title{
+    .team-container {
+      .big-title {
         padding-block: 2rem 1rem;
+      }
+
+      .members-container {
+        .big-title {
+          padding-block: 2rem 0.5rem;
+        }
       }
     }
   }

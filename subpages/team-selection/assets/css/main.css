@@ -33,7 +33,7 @@ body .tad-container .team-card {
   border-radius: 15px;
   padding: 3rem 0;
   box-shadow: var(--card-shadow);
-  transition: all 0.4s;
+  transition: box-shadow 0.4s;
 }
 body .tad-container .team-card .images {
   width: 70%;
@@ -44,7 +44,6 @@ body .tad-container .team-card p {
 }
 body .tad-container .team-card:hover {
   box-shadow: var(--card-hover-shadow);
-  transform: translateY(-5px);
 }
 @media screen and (max-width: 1200px) {
   body .tad-container .team-card {

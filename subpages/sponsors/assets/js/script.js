@@ -11,3 +11,7 @@ const realignSponsors = () => {
 
 window.addEventListener("resize", realignSponsors);
 window.addEventListener("load", realignSponsors);
+
+/* =============== SCROLL REVEAL ANIMATION =============== */
+sr.reveal(`.title-area`);
+sr.reveal(`.division`, { delay: 700, interval: 700 });

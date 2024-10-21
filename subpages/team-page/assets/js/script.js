@@ -2,7 +2,6 @@
 async function loadPage() {
   // Team key that got from the links
   const key = localStorage.getItem("teamKey");
-  console.log(localStorage.getItem("teamKey") + "xxx");
 
   /*==== PROPERTIES TO SET ====*/
   // Landing page
@@ -83,4 +82,16 @@ socialButtons.forEach((button) => {
   button.addEventListener("mouseout", () => {
     text.removeAttribute("style");
   });
+});
+
+/* =============== SCROLL REVEAL ANIMATION =============== */
+sr.reveal(`.bg-image, .big-title, .video-container, .achievements`);
+
+sr.reveal(`.content, .social`, {
+  origin: "bottom",
+  delay: 900,
+});
+
+sr.reveal(`.member-card`, {
+  interval: 500,
 });

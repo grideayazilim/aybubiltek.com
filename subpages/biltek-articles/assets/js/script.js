@@ -11,7 +11,7 @@ async function fillPage() {
     articlesContainer.innerHTML += `
         <a
           href="../inner-articles-announcements/index.html"
-          class="content-box aa-link article-link"
+          class="content-box aa-link article-link load-hidden"
           onclick="navigateAa(this, '${idCount}')"
         >
           <div class="left-area">
@@ -28,8 +28,11 @@ async function fillPage() {
           </div>
         </a>`;
 
-        idCount++;
+    idCount++;
   });
+
+  sr.reveal(`.article-link`, { origin: "left", delay: 700, interval: 300 });
 }
 
 fillPage();
+sr.reveal(`.title-area`);

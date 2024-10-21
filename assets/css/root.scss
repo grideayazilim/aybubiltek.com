@@ -44,6 +44,10 @@ html {
   scroll-behavior: smooth;
 }
 
+html.sr .load-hidden{
+  visibility: hidden;
+}
+
 body {
   /*=============== SETUP ===============*/
   min-height: 100vh;

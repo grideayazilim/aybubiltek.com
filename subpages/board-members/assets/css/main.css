@@ -16,16 +16,13 @@ body .members-container {
   position: relative;
   text-align: center;
 }
-body .members-container .big-title {
-  margin-block: 4rem 2rem;
-}
 body .members-container .members {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  padding-inline: 2rem;
+  margin-block: 2rem 4rem;
 }
 body .members-container .members .member-card {
   width: 300px;
@@ -96,7 +93,7 @@ body .members-container .members .member-card .contact .member-link:hover {
 }
 body .members-container .members .member-card:hover {
   box-shadow: var(--card-hover-shadow);
-  transform: translateY(-5px);
+  transform: translateY(-15px);
 }
 body .members-container .members .member-card:hover .image-container img {
   transform: scale(103%);
@@ -104,9 +101,12 @@ body .members-container .members .member-card:hover .image-container img {
 body .members-container .members .member-card:hover .image-container::before {
   transform: scale(400%) translateY(-40%);
 }
+body .members-container .chairmans {
+  margin-top: 0 !important;
+}
 @media screen and (max-width: 1200px) {
-  body .members-container .big-title {
-    margin-block: 3rem 1.5rem;
+  body .members-container .members {
+    margin-block: 2rem 3.5rem;
   }
   body .members-container .members .member-card {
     box-shadow: var(--card-hover-shadow);
@@ -116,5 +116,15 @@ body .members-container .members .member-card:hover .image-container::before {
   }
   body .members-container .members .member-card .image-container::before {
     transform: scale(400%) translateY(-40%);
+  }
+}
+@media screen and (max-width: 375px) {
+  body .members-container .members {
+    margin-block: 1.5rem 3rem;
+    padding-inline: 0.4rem;
+  }
+  body .members-container .members .member-card .image-container {
+    width: 150px;
+    height: 150px;
   }
 }/*# sourceMappingURL=main.css.map */

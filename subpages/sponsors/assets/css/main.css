@@ -45,7 +45,7 @@ body .sponsors .division .image-area .sponsor-link .img {
   height: auto;
 }
 body .sponsors .division .image-area .sponsor-link:hover {
-  transform: scale(110%);
+  transform: scale(101%);
 }
 body .sponsors .division:nth-child(1) {
   margin-top: 2.5rem;

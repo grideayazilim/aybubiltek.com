@@ -71,3 +71,8 @@ const imageSwiper = new Swiper(".image-slider", {
     crossFade: true,
   },
 });
+
+/* =============== SCROLL REVEAL ANIMATION =============== */
+sr.reveal(`.title-area`);
+sr.reveal(`.content`, { delay: 700 });
+sr.reveal('.sponsor', { delay: 1200, interval: 500 });

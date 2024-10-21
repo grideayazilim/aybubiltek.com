@@ -1,3 +1,7 @@
+/* =============== SCROLL REVEAL ANIMATION =============== */
+sr.reveal(`.title-area`);
+sr.reveal(`.left-box, .right-box`, { delay: 700, interval: 700 });
+
 /*============== SWITCH ANNOUNCEMENT-ARTICLES ==============*/
 /*
   This page is originally an article template. Content of the page

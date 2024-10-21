@@ -1,10 +1,10 @@
 /*============== DARK THEME ==============*/
-:root{
+:root {
   --card-shadow: #0f2d5936 0px 0px 5px 0px;
   --card-hover-shadow: #0f2d5939 0 0 10px 0px;
 }
 
-body.darkTheme{
+body.darkTheme {
   --card-shadow: #00000036 0px 0px 5px 0px;
   --card-hover-shadow: #00000039 0 0 10px 0px;
 }
@@ -16,17 +16,13 @@ body {
     position: relative;
     text-align: center;
 
-    .big-title {
-      margin-block: 4rem 2rem;
-    }
-
     .members {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
       gap: 2rem;
-      padding-inline: 2rem;
+      margin-block: 2rem 4rem;
 
       .member-card {
         width: 300px;
@@ -104,7 +100,7 @@ body {
 
         &:hover {
           box-shadow: var(--card-hover-shadow);
-          transform: translateY(-5px);
+          transform: translateY(-15px);
 
           .image-container {
             img {
@@ -119,12 +115,14 @@ body {
       }
     }
 
-    @media screen and (max-width: 1200px) {
-      .big-title {
-        margin-block: 3rem 1.5rem;
-      }
+    .chairmans {
+      margin-top: 0 !important;
+    }
 
+    @media screen and (max-width: 1200px) {
       .members {
+        margin-block: 2rem 3.5rem;
+
         .member-card {
           box-shadow: var(--card-hover-shadow);
 
@@ -136,6 +134,20 @@ body {
             &::before {
               transform: scale(400%) translateY(-40%);
             }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      .members {
+        margin-block: 1.5rem 3rem;
+        padding-inline: .4rem;
+
+        .member-card{
+          .image-container{
+            width: 150px;
+            height: 150px;
           }
         }
       }
