@@ -1,0 +1,61 @@
+@import "../../../assets/css/root";
+
+body {
+  margin-top: 80px;
+
+  .gallery {
+    background-color: $secondary-color;
+    padding: 1.5rem 6rem 17rem 6rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: auto;
+
+    .first-photo {
+      margin: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-container-2023 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .big-title {
+        color: $first-color;
+        margin-bottom: 1rem;
+      }
+
+      .mini-photos-2023 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+      }
+    }
+
+    .photo-container-2024 {
+      width: 100%;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      .big-title {
+        color: $first-color;
+        margin-bottom: 1rem;
+      }
+
+      .mini-photos-2024 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: .5rem;
+      }
+    }
+  }
+}
