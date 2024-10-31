@@ -322,7 +322,7 @@ body {
         width: 50%;
         padding-top: 6rem;
         box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
-        background-color: #091a34cd;
+        background-color: var(--navbar-bg-blur);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 

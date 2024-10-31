@@ -23,7 +23,7 @@ async function fillPage() {
     announcementsContainer.innerHTML += `
         <div class="announcement load-hidden">
           <div class="img-container" id="img-container">
-            <img src="${announcement.photo}" alt="Duyuru fotoğrafı" />
+            <img src="${announcement.photo}" alt="duyuru fotoğrafı" />
           </div>
 
           <div class="content">
@@ -52,7 +52,7 @@ async function fillPage() {
     idCount++;
   });
 
-  sr.reveal(`.announcement`, { delay: 700, interval: 300 });
+  sr.reveal(`.announcement`, { delay: 300, interval: 300 });
 }
 
 fillPage();

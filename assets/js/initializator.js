@@ -9,8 +9,8 @@ const sr = ScrollReveal({
 
 /*============== NAVBAR & FOOTER INITIALIZATION ==============*/
 fetch("/navbar/index.html")
-  .then((response) => response.text())
-  .then((data) => {
+  .then(response => response.text())
+  .then(data => {
     document.getElementById("navbar-placeholder").innerHTML = data;
     initializeNavbar();
     if (document.getElementById("home-page")) {
@@ -21,8 +21,8 @@ fetch("/navbar/index.html")
   .catch((error) => console.error("Error loading navbar:", error));
 
 fetch("/footer/index.html")
-  .then((response) => response.text())
-  .then((data) => {
+  .then(response => response.text())
+  .then(data => {
     document.getElementById("footer-placeholder").innerHTML = data;
     initializeFooter();
   })

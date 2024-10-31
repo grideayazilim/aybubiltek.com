@@ -1,10 +1,12 @@
 /*============== DARK THEME ==============*/
 :root {
   --register-button-color: #5286ce;
+  --register-button-animation-color: #404fed;
 }
 
 body.darkTheme {
   --register-button-color: #3a3a3a;
+  --register-button-animation-color: #868686;
 }
 
 /*============== FOOTER ==============*/
@@ -78,7 +80,7 @@ body footer .text-button-container .button::before, body footer .text-button-con
 }
 body footer .text-button-container .button.animate::before {
   top: -70%;
-  background-image: radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, transparent 20%, #404fed 20%, transparent 30%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, transparent 10%, #404fed 15%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%);
+  background-image: radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, transparent 20%, var(--register-button-animation-color) 20%, transparent 30%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--register-button-animation-color) 15%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%);
   background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
   background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
   animation: top-bubbles 0.4s ease-in-out forwards;
@@ -94,7 +96,7 @@ body footer .text-button-container .button.animate::before {
 }
 body footer .text-button-container .button.animate::after {
   bottom: -70%;
-  background-image: radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, transparent 10%, #404fed 15%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%), radial-gradient(circle, #404fed 20%, transparent 20%);
+  background-image: radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, transparent 10%, var(--register-button-animation-color) 15%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%), radial-gradient(circle, var(--register-button-animation-color) 20%, transparent 20%);
   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
   background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
   animation: bottom-bubbles 0.4s ease-in-out forwards;

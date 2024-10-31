@@ -31,7 +31,7 @@ async function fillPage() {
     idCount++;
   });
 
-  sr.reveal(`.article-link`, { origin: "left", delay: 700, interval: 300 });
+  sr.reveal(`.article-link`, { origin: "left", delay: 300, interval: 300 });
 }
 
 fillPage();

@@ -278,7 +278,7 @@ body .white-container:is(nav) .button-area .register-button:hover::before, body 
     width: 50%;
     padding-top: 6rem;
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
-    background-color: rgba(9, 26, 52, 0.8039215686);
+    background-color: var(--navbar-bg-blur);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }

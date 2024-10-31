@@ -1,10 +1,12 @@
 /*============== DARK THEME ==============*/
 :root{
   --line-slider-shadow: #0f2d5961 0 3px 7px;
+  --box-shadow: 0px 0px 25px #0f2d5965;
 }
 
 body.darkTheme{
   --line-slider-shadow: #00000061 0 3px 7px;
+  --box-shadow: 0px 0px 25px #00000065;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
       display: grid;
       justify-content: center;
       align-items: center;
-      grid-template-columns: 380px 700px;
+      grid-template-columns: 400px 720px;
       gap: 1.5rem 2rem;
 
       /* Container that contains line slider and description slider */
@@ -75,9 +77,9 @@ body {
       /*============== SWIPER IMAGES ==============*/
       .image-slider {
         width: 100%;
-        height: 100%;
+        height: 90%;
         border-radius: 8px;
-        box-shadow: #0f2d597b 0px 25px 20px -20px;
+        box-shadow: var(--box-shadow);
 
         img {
           width: 100%;
@@ -86,16 +88,21 @@ body {
       }
     }
 
-    .sponsors {
-      display: grid;
+    .collaborators {
+      display: flex;
       justify-content: center;
-      align-items: center;
-      grid-template-columns: repeat(4, 250px);
-      gap: 1rem 2rem;
-      padding: 1.25rem 10%;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      padding: 2.5rem 10%;
 
-      img {
-        width: 100%;
+      img{
+        width: 125px;
+        border-radius: 50%;
+        transition: transform .4s;
+
+        &:hover{
+          transform: translateY(-3px);
+        }
       }
     }
 
@@ -119,10 +126,6 @@ body {
         .image-slider {
           width: 70%;
         }
-      }
-
-      .sponsors {
-        grid-template-columns: repeat(2, 200px);
       }
     }
 
@@ -153,6 +156,15 @@ body {
               }
             }
           }
+        }
+      }
+
+      .collaborators{
+        padding-block: 2.25rem;
+        gap: 1rem;
+
+        img{
+          width: 100px;
         }
       }
     }
@@ -191,9 +203,13 @@ body {
         }
       }
 
-      .sponsors{
-        grid-template-columns: 170px;
-        padding-block: 2.5rem;
+      .collaborators{
+        padding-block: 1.25rem;
+        gap: .75rem;
+
+        img{
+          width: 85px;
+        }
       }
     }
   }

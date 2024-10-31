@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team Name</title>
-    <link rel="icon" type="image/x-icon" href="/assets/media/logo-no-text.png">
-    
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/media/logo-no-text.png"
+    />
+
     <!--==============SWIPER CSS==============-->
     <link
       rel="stylesheet"
@@ -40,53 +44,30 @@
 
     <header id="navbar-placeholder"></header>
 
+    <!--==============SUBLANDING PAGE==============-->
     <section class="sub-landing-page container load-hidden">
       <img src="/assets/media/bg-logo-w-text.png" class="bg-image" />
 
       <div class="content">
         <div class="team-logo">
-          <img src="assets/media/white 1.png" alt="" />
+          <img class="team-logo-img" src="assets/media/white 1.png" alt="takım logosu" />
         </div>
 
         <div class="main-description">
           <div class="big-title">Team Name</div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus,
-            iste! Sunt doloribus quisquam illo officiis quaerat nobis libero
-            incidunt est. Animi accusantium ex at nesciunt repudiandae
-            recusandae illum rem harum quis nam repellendus minus aspernatur
-            officia, facere impedit exercitationem itaque iste, inventore earum
-            nisi, neque eum. Vel accusantium, quos laboriosam neque consequuntur
-            laborum corrupti ullam repellendus placeat officia quasi, iste
-            cupiditate deleniti animi ipsa voluptatem, ea facere ipsam ducimus
-            exercitationem!
-          </p>
+           <div class="descriptions-wrapper"></div>
         </div>
       </div>
 
       <div class="social">
-        <a class="social-media-button">
+        <a href="#" class="social-media-button" target="_blank">
           <div class="icon">
             <i class="fab fa-instagram"></i>
           </div>
           <p class="social-text">Instagram</p>
         </a>
 
-        <a class="social-media-button">
-          <div class="icon">
-            <i class="fab fa-youtube"></i>
-          </div>
-          <p class="social-text">Youtube</p>
-        </a>
-
-        <a class="social-media-button">
-          <div class="icon">
-            <i class="fab fa-twitter"></i>
-          </div>
-          <p class="social-text">X</p>
-        </a>
-
-        <a class="social-media-button">
+        <a href="#" class="social-media-button" target="_blank">
           <div class="icon">
             <i class="fab fa-linkedin"></i>
           </div>
@@ -95,19 +76,21 @@
       </div>
     </section>
 
-    <section class="white-container team-container ender">
-      <div class="container">
-        <div class="video-container">
+    <section class="white-container team-container">
+      <div class="container ender">
+        <!-- <div class="video-container">
           <div class="big-title">Tanıtım Videosu</div>
           <video class="team-video" src="#"></video>
-        </div>
+        </div> -->
 
+        <!--==============ACHIEVEMENTS==============-->
         <div class="achievements">
           <div class="big-title">Neler Yaptık</div>
 
           <div class="achievements-slider swiper">
             <div class="swiper-wrapper">
-              <div class="achievements__card swiper-slide">
+              <!--==============ACHIEVEMENT CARD TEMPLATE==============-->
+              <!-- <div class="achievements__card swiper-slide">
                 <img
                   src="assets/media/office.jpg"
                   alt=""
@@ -122,58 +105,7 @@
                   Neque esse blanditiis, dolorem voluptas tempora magnam
                   provident aliquam impedit illum odit.
                 </div>
-              </div>
-
-              <div class="achievements__card swiper-slide">
-                <img
-                  src="assets/media/office.jpg"
-                  alt=""
-                  class="achievements__img"
-                />
-
-                <div class="achievements__title subtitle">
-                  achievements title
-                </div>
-                <div class="achievements__description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Neque esse blanditiis, dolorem voluptas tempora magnam
-                  provident aliquam impedit illum odit.
-                </div>
-              </div>
-
-              <div class="achievements__card swiper-slide">
-                <img
-                  src="assets/media/office.jpg"
-                  alt=""
-                  class="achievements__img"
-                />
-
-                <div class="achievements__title subtitle">
-                  achievements title
-                </div>
-                <div class="achievements__description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Neque esse blanditiis, dolorem voluptas tempora magnam
-                  provident aliquam impedit illum odit.
-                </div>
-              </div>
-
-              <div class="achievements__card swiper-slide">
-                <img
-                  src="assets/media/office.jpg"
-                  alt=""
-                  class="achievements__img"
-                />
-
-                <div class="achievements__title subtitle">
-                  achievements title
-                </div>
-                <div class="achievements__description">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Neque esse blanditiis, dolorem voluptas tempora magnam
-                  provident aliquam impedit illum odit.
-                </div>
-              </div>
+              </div> -->
             </div>
 
             <div class="swiper-pagination"></div>
@@ -187,11 +119,14 @@
           </div>
         </div>
 
+        <!--==============MEMBERS==============-->
         <div class="members-container">
           <div class="big-title">Kaptanlar Ve Core Team Üyeleri</div>
 
-          <div class="members">
-            <div class="member-card">
+          <!--=========LEADERS=========-->
+          <div class="members leaders">
+            <!--====MEMBER CARD TEMPLATE====-->
+            <!-- <div class="member-card">
               <div class="image-container">
                 <img src="assets/media/person.png" alt="" />
               </div>
@@ -214,190 +149,21 @@
                   <i class="fa-brands fa-square-behance"></i>
                 </a>
               </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Kaptan</div>
-                <p>Kaptan Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
+            </div> -->
           </div>
 
-          <div class="members">
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Core Team</div>
-                <p>Core Team Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Core Team</div>
-                <p>Core Team Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Core Team</div>
-                <p>Core Team Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
+          <!--=========CORE MEMBERS=========-->
+          <div class="members cores">
+            
           </div>
         </div>
 
-        <div class="members-container">
+        <!--=========RETIREDS=========-->
+        <div class="members-container retireds-outer-container">
           <div class="big-title">Emeği Geçenler...</div>
 
-          <div class="members">
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
+          <div class="members retireds">
 
-              <div class="member-info">
-                <div class="subtitle">Emektar</div>
-                <p>Emektar Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Emektar</div>
-                <p>Emektar Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
-
-            <div class="member-card">
-              <div class="image-container">
-                <img src="assets/media/person.png" alt="" />
-              </div>
-
-              <div class="member-info">
-                <div class="subtitle">Emektar</div>
-                <p>Emektar Adı</p>
-              </div>
-
-              <div class="accounts">
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-github"></i>
-                </a>
-
-                <a href="#" class="member-link">
-                  <i class="fa-brands fa-square-behance"></i>
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -22,12 +22,17 @@
   --normal-font-size: 1.05rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
+  /*========== Scrollbar Features ==========*/
+  --sb-track-color: #232e33;
+  --sb-thumb-color: #3a4061;
+  --sb-size: 18px;
 }
 
 /*=============== DARK THEME ===============*/
 body.darkTheme {
-  --first-color: #000000;
-  --text-color-alt: #000000;
+  --first-color: #111111;
+  --text-color-alt: #111111;
+  --sb-thumb-color: #626262;
 }
 
 * {
@@ -42,6 +47,22 @@ html {
 
 html.sr .load-hidden {
   visibility: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 4px;
+  border: 3px solid #232E33;
+  -webkit-transition: background 2.4s;
+  transition: background 2.4s;
 }
 
 body {
@@ -72,7 +93,7 @@ body img {
 }
 body .container {
   width: 100%;
-  padding: 3.35rem 10%;
+  padding: 3rem 10% 4.25rem;
 }
 body .bigger-title {
   font-size: var(--bigger-font-size);
@@ -97,6 +118,9 @@ body .white-container .big-title,
 body .white-container .subtitle,
 body .white-container a {
   color: var(--text-color-alt);
+}
+body .hovered {
+  transform: translateY(-5px) !important;
 }
 body .title-area {
   position: relative;
@@ -124,16 +148,16 @@ body .title-area img:nth-child(2) {
   right: 0;
 }
 body .ender {
-  padding-bottom: 13.5rem !important;
+  padding-bottom: 17.5rem !important;
 }
 @media screen and (max-width: 750px) {
   body .ender {
-    padding-bottom: 17.5rem !important;
+    padding-bottom: 21.5rem !important;
   }
 }
 @media screen and (max-width: 500px) {
   body .ender {
-    padding-bottom: 21.5rem !important;
+    padding-bottom: 25.5rem !important;
   }
 }
 
@@ -164,11 +188,8 @@ body .ender {
     --subtitle-font-size: 1.05rem;
     --normal-font-size: 0.9rem;
   }
-  .container {
-    padding: 2.75rem 5%;
-  }
-  .bigger-title {
-    padding: 0.5rem 3rem;
+  body .container {
+    padding: 2.75rem 5% 3.65rem;
   }
 }
 @media screen and (max-width: 450px) {
@@ -176,10 +197,7 @@ body .ender {
     --bigger-font-size: 1.5rem;
     --big-font-size: 1.75rem;
   }
-  .container {
-    padding: 2.15rem 5%;
-  }
-  .title-area {
-    margin-top: 4rem;
+  body .container {
+    padding: 2.15rem 5% 3.05rem;
   }
 }/*# sourceMappingURL=root.css.map */

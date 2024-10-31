@@ -1,8 +1,8 @@
 function initializeNavbar() {
   /*============== DROPDOWN MENU ==============*/
-  const activatorItem = document.querySelectorAll(".activator-item");
+  const activatorItems = document.querySelectorAll(".activator-item");
 
-  activatorItem.forEach((item) => {
+  activatorItems.forEach((item) => {
     const openSubmenu = item.querySelector(".sublist");
 
     // Show dropdown menu

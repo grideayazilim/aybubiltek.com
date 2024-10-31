@@ -44,8 +44,7 @@ body .sub-landing-page .content .team-logo {
   box-shadow: rgba(255, 255, 255, 0.422) 0 0 35px;
 }
 body .sub-landing-page .content .team-logo img {
-  width: 80%;
-  height: auto;
+  height: 90%;
   filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.352));
 }
 body .sub-landing-page .content .main-description {
@@ -53,7 +52,10 @@ body .sub-landing-page .content .main-description {
   row-gap: 1rem;
 }
 body .sub-landing-page .content .main-description p {
-  line-height: 1.4;
+  line-height: 1.5;
+}
+body .sub-landing-page .content .main-description .descriptions-wrapper p {
+  margin-bottom: 0.4rem;
 }
 body .sub-landing-page .social {
   font-weight: var(--font-medium);
@@ -97,7 +99,6 @@ body .sub-landing-page .social .social-media-button:hover .social-text {
   margin-right: 1.1rem;
 }
 body .team-container {
-  /*==== Video section ====*/
   /*==== Achievements section ====*/
 }
 body .team-container .container {
@@ -106,13 +107,6 @@ body .team-container .container {
 body .team-container .big-title {
   text-align: center;
   padding-block: 4rem 2rem;
-}
-body .team-container .video-container .big-title {
-  text-align: left;
-}
-body .team-container .video-container .team-video {
-  background-color: black;
-  width: 100%;
 }
 body .team-container .achievements .achievements-slider {
   width: 90%;
@@ -127,7 +121,7 @@ body .team-container .achievements .swiper-button-next {
   background-color: var(--first-color);
   color: var(--text-color);
   border-radius: 50%;
-  transition: left 0.4s, right 0.4s;
+  transition: left 0.4s, right 0.4s, opacity 0.4s;
 }
 body .team-container .achievements .swiper-button-prev::after,
 body .team-container .achievements .swiper-button-next::after {
@@ -158,6 +152,7 @@ body .team-container .achievements .swiper-pagination-bullet-active {
 }
 body .team-container .achievements .achievements__card .achievements__img {
   width: 100%;
+  height: 13vw;
 }
 body .team-container .members-container .big-title {
   padding-block: 4rem 1rem;
@@ -200,6 +195,9 @@ body .team-container .members-container .members .member-card .accounts .member-
   body .team-container .achievements .achievements-slider {
     padding-bottom: 3.5rem;
   }
+  body .team-container .achievements .achievements__card .achievements__img {
+    height: 20vw;
+  }
 }
 @media screen and (max-width: 750px) {
   body .sub-landing-page {
@@ -220,5 +218,10 @@ body .team-container .members-container .members .member-card .accounts .member-
   }
   body .team-container .members-container .big-title {
     padding-block: 2rem 0.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .team-container .achievements .achievements__card .achievements__img {
+    height: 40vw;
   }
 }/*# sourceMappingURL=main.css.map */

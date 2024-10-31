@@ -1,10 +1,12 @@
 /*============== DARK THEME ==============*/
 :root {
   --line-slider-shadow: #0f2d5961 0 3px 7px;
+  --box-shadow: 0px 0px 25px #0f2d5965;
 }
 
 body.darkTheme {
   --line-slider-shadow: #00000061 0 3px 7px;
+  --box-shadow: 0px 0px 25px #00000065;
 }
 
 body {
@@ -21,7 +23,7 @@ body .about-us .content {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 380px 700px;
+  grid-template-columns: 400px 720px;
   gap: 1.5rem 2rem;
   /* Container that contains line slider and description slider */
   /*============== SWIPER IMAGES ==============*/
@@ -72,24 +74,28 @@ body .about-us .content .description-area .description-slider .description .big-
 }
 body .about-us .content .image-slider {
   width: 100%;
-  height: 100%;
+  height: 90%;
   border-radius: 8px;
-  box-shadow: rgba(15, 45, 89, 0.4823529412) 0px 25px 20px -20px;
+  box-shadow: var(--box-shadow);
 }
 body .about-us .content .image-slider img {
   width: 100%;
   height: 100%;
 }
-body .about-us .sponsors {
-  display: grid;
+body .about-us .collaborators {
+  display: flex;
   justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(4, 250px);
-  gap: 1rem 2rem;
-  padding: 1.25rem 10%;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  padding: 2.5rem 10%;
 }
-body .about-us .sponsors img {
-  width: 100%;
+body .about-us .collaborators img {
+  width: 125px;
+  border-radius: 50%;
+  transition: transform 0.4s;
+}
+body .about-us .collaborators img:hover {
+  transform: translateY(-3px);
 }
 @media screen and (max-width: 1300px) {
   body .about-us .content {
@@ -104,9 +110,6 @@ body .about-us .sponsors img {
   }
   body .about-us .content .image-slider {
     width: 70%;
-  }
-  body .about-us .sponsors {
-    grid-template-columns: repeat(2, 200px);
   }
 }
 @media screen and (max-width: 850px) {
@@ -126,6 +129,13 @@ body .about-us .sponsors img {
   body .about-us .content .description-area .description-slider .description .big-title {
     margin-block: 1.25rem 0.5rem;
     font-size: 1.5rem;
+  }
+  body .about-us .collaborators {
+    padding-block: 2.25rem;
+    gap: 1rem;
+  }
+  body .about-us .collaborators img {
+    width: 100px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -147,8 +157,11 @@ body .about-us .sponsors img {
   body .about-us .content .image-slider {
     width: 85%;
   }
-  body .about-us .sponsors {
-    grid-template-columns: 170px;
-    padding-block: 2.5rem;
+  body .about-us .collaborators {
+    padding-block: 1.25rem;
+    gap: 0.75rem;
+  }
+  body .about-us .collaborators img {
+    width: 85px;
   }
 }/*# sourceMappingURL=main.css.map */

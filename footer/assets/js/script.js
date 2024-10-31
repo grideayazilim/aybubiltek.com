@@ -8,6 +8,7 @@ function initializeFooter() {
 
     setTimeout(() => {
       button.classList.remove("animate");
+      window.open("https://linktr.ee/biltek?fbclid=PAZXh0bgNhZW0CMTEAAaZUw6dBiC783GX44EDVC7QFXCa66PbbcBXXVObG1_cAGl9YpV_TdQXmzcg_aem_MhP_wy2OsfAMjoMen1OH3Q", "_blank");
     }, 400);
   });
 

@@ -1,12 +1,12 @@
 /*============== DARK THEME ==============*/
 :root{
   --card-shadow: #0f2d5936 0px 0px 5px 0px;
-  --card-hover-shadow: #0f2d5939 0 0 10px 0px;
+  --card-hover-shadow: #0f2d5932 0px 7px 29px 0px;
 }
 
 body.darkTheme{
   --card-shadow: #00000036 0px 0px 5px 0px;
-  --card-hover-shadow: #00000039 0 0 10px 0px;
+  --card-hover-shadow: #00000032 0px 7px 29px 0px;
 }
 
 body {
@@ -42,6 +42,7 @@ body {
       }
 
       &:hover {
+        transform: translateY(-3px) !important;
         box-shadow: var(--card-hover-shadow);
       }
     }

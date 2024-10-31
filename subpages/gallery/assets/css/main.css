@@ -1,1 +1,34 @@
-/*============== TOPIC NAME ==============*//*# sourceMappingURL=main.css.map */
+body {
+  background-color: var(--secondary-color);
+}
+body .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: auto;
+}
+body .gallery .first-photo {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+body .gallery .first-photo img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+body .gallery .first-photo p {
+  text-align: center;
+}
+body .gallery .big-title {
+  margin-inline: 2.5rem;
+  margin-bottom: 1rem;
+}
+body .gallery .photos-container {
+  display: grid;
+  justify-content: center;
+  row-gap: 3rem;
+}
+body .gallery .photos-container img {
+  width: 19%;
+}/*# sourceMappingURL=main.css.map */

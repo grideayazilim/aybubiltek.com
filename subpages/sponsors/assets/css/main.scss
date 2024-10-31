@@ -1,100 +1,68 @@
 body {
   background-color: var(--secondary-color);
 
-  .sponsors {
-    /*============== BASE ==============*/
-    text-align: center;
-    padding-block: 3rem;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(3, 25%);
-    column-gap: 3rem;
-    
-    /*============== SPONSOR CONTAINER ==============*/
-    .division {
-      .subtitle {
-        font-weight: var(--font-bold);
-        padding: 0.2rem;
-      }
+  .container {
+    .ender {
+      display: flex;
+      row-gap: 4rem;
+      text-align: center;
 
-      .line-image {
-        img {
-          width: 100%;
-          height: auto;
-          filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg)
-            brightness(40%);
+      /*============== COLLABORATIONS CONTAINER ==============*/
+      .collaborations-container {
+        width: 75%;
+        margin: 0 auto;
+
+        .collaborations {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 1.75rem;
+          margin-top: 2rem;
+
+          img {
+            width: 175px;
+            border-radius: 50%;
+            transition: transform 0.4s;
+
+            &:hover {
+              transform: translateY(-3px);
+            }
+          }
         }
       }
 
-      .line {
-        width: 80%;
-        margin: auto;
+      /*============== RESPONSIVE DESIGN ==============*/
+      // First breakpoint
+      @media screen and (max-width: 1200px) {
+        row-gap: 3rem;
+
+        .collaborations-container {
+          .collaborations {
+            gap: 1rem;
+
+            img {
+              width: 125px;
+            }
+          }
+        }
       }
 
-      .image-area {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      //Second breakpoint
+      @media screen and (max-width: 850px) {
         flex-direction: column;
-        padding: 2rem;
-        gap: 2rem;
+      }
 
-        .sponsor-link {
-          width: 90%;
-          transition: transform 0.4s;
+      // Third breakpoint
+      @media screen and (max-width: 576px) {
+        row-gap: 2rem;
+        padding-top: 1.5rem;
 
-          .img {
-            width: 100%;
-            height: auto;
+        .collaborations-container {
+          .collaborations {
+            img {
+              width: 90px;
+            }
           }
-
-          &:hover {
-            transform: scale(101%);
-          }
-        }
-      }
-
-      &:nth-child(1) {
-        margin-top: 2.5rem;
-      }
-
-      &:nth-child(3) {
-        margin-top: 5rem;
-      }
-    }
-
-    /*============== RESPONSIVE DESIGN ==============*/
-    /* First breakpoint */
-    @media screen and (max-width: 1200px) {
-      grid-template-columns: 50%;
-
-      .division {
-        .subtitle {
-          font-size: 1.75rem;
-        }
-
-        .image-area {
-          .sponsor-link {
-            width: 75%;
-          }
-        }
-
-        &:nth-child(1),
-        &:nth-child(2),
-        &:nth-child(3) {
-          margin: 1rem;
-        }
-      }
-    }
-
-    /* Second breakpoint */
-    @media screen and (max-width: 768px) {
-      padding-block: 1.75rem;
-      grid-template-columns: 70%;
-
-      .division {
-        .subtitle {
-          font-size: 1rem;
         }
       }
     }

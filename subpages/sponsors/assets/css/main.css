@@ -1,78 +1,54 @@
 body {
   background-color: var(--secondary-color);
 }
-body .sponsors {
-  /*============== BASE ==============*/
+body .container .ender {
+  display: flex;
+  row-gap: 4rem;
   text-align: center;
-  padding-block: 3rem;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(3, 25%);
-  -moz-column-gap: 3rem;
-       column-gap: 3rem;
-  /*============== SPONSOR CONTAINER ==============*/
+  /*============== COLLABORATIONS CONTAINER ==============*/
   /*============== RESPONSIVE DESIGN ==============*/
-  /* First breakpoint */
-  /* Second breakpoint */
 }
-body .sponsors .division .subtitle {
-  font-weight: var(--font-bold);
-  padding: 0.2rem;
+body .container .ender .collaborations-container {
+  width: 75%;
+  margin: 0 auto;
 }
-body .sponsors .division .line-image img {
-  width: 100%;
-  height: auto;
-  filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg) brightness(40%);
-}
-body .sponsors .division .line {
-  width: 80%;
-  margin: auto;
-}
-body .sponsors .division .image-area {
+body .container .ender .collaborations-container .collaborations {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  margin-top: 2rem;
 }
-body .sponsors .division .image-area .sponsor-link {
-  width: 90%;
+body .container .ender .collaborations-container .collaborations img {
+  width: 175px;
+  border-radius: 50%;
   transition: transform 0.4s;
 }
-body .sponsors .division .image-area .sponsor-link .img {
-  width: 100%;
-  height: auto;
-}
-body .sponsors .division .image-area .sponsor-link:hover {
-  transform: scale(101%);
-}
-body .sponsors .division:nth-child(1) {
-  margin-top: 2.5rem;
-}
-body .sponsors .division:nth-child(3) {
-  margin-top: 5rem;
+body .container .ender .collaborations-container .collaborations img:hover {
+  transform: translateY(-3px);
 }
 @media screen and (max-width: 1200px) {
-  body .sponsors {
-    grid-template-columns: 50%;
+  body .container .ender {
+    row-gap: 3rem;
   }
-  body .sponsors .division .subtitle {
-    font-size: 1.75rem;
+  body .container .ender .collaborations-container .collaborations {
+    gap: 1rem;
   }
-  body .sponsors .division .image-area .sponsor-link {
-    width: 75%;
-  }
-  body .sponsors .division:nth-child(1), body .sponsors .division:nth-child(2), body .sponsors .division:nth-child(3) {
-    margin: 1rem;
+  body .container .ender .collaborations-container .collaborations img {
+    width: 125px;
   }
 }
-@media screen and (max-width: 768px) {
-  body .sponsors {
-    padding-block: 1.75rem;
-    grid-template-columns: 70%;
+@media screen and (max-width: 850px) {
+  body .container .ender {
+    flex-direction: column;
   }
-  body .sponsors .division .subtitle {
-    font-size: 1rem;
+}
+@media screen and (max-width: 576px) {
+  body .container .ender {
+    row-gap: 2rem;
+    padding-top: 1.5rem;
+  }
+  body .container .ender .collaborations-container .collaborations img {
+    width: 90px;
   }
 }/*# sourceMappingURL=main.css.map */
