@@ -344,7 +344,7 @@
         "image": "assets/media/yildirim-team/member-photos/alihan-ozer.png",
         "name": "Alihan Özer",
         "position": "Yıldırım Kaptanı",
-        "linkedin": "assets/media/yildirim-team/member-photos/bahadir-simsek.png"
+        "linkedin": "https://www.linkedin.com/in/alihan%C3%B6zer/"
       },
 
       {
@@ -360,7 +360,7 @@
         "type": "leader",
         "id": 3,
         "image": "assets/media/yildirim-team/member-photos/emre-cebeci.png",
-        "name": "Ad Soyad",
+        "name": "Emre Cebeci",
         "position": "Mekanik Lideri",
         "linkedin": "https://www.linkedin.com/in/emre-cebeci/"
       },

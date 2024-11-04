@@ -92,6 +92,7 @@ body nav .nav-menu .nav-list .nav-item {
   /*======= nav-item hover =======*/
 }
 body nav .nav-menu .nav-list .nav-item .nav-link {
+  cursor: pointer;
   position: relative;
   display: block;
   padding: 1.8rem 0.8rem;
@@ -222,7 +223,7 @@ body nav .button-area .register-button:hover::before, body nav .button-area .reg
 body nav .button-area .nav-toggle {
   display: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 2.25rem;
 }
 body .white-container:is(nav) {
   box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*============== DARK THEME ==============*/
 :root {
   --animated-button-color: #5286ce;
@@ -416,24 +415,11 @@ body .about-section .about-content .counter {
   font-weight: bold;
   font-size: 2.25rem;
 }
-body .about-section .about-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: inherit;
-  -webkit-clip-path: inherit;
-          clip-path: inherit;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gölge burada */
-  z-index: -1; /* Gölgeyi arka plana at */
-}
 @media screen and (max-width: 1300px) {
   body .about-section {
     text-align: center;
   }
-  body .about-section .about-us-swiper {
+  body .about-section .about-us-slider {
     display: none;
   }
   body .about-section .about-content {
@@ -559,6 +545,7 @@ body .departmants .cards-container .card img {
   width: 55%;
 }
 body .departmants .cards-container .card:hover {
+  transform: translateY(-5px);
   box-shadow: var(--departmants-card-hover-shadow);
 }
 @media screen and (max-width: 1200px) {
@@ -598,11 +585,15 @@ body .summary .summary-slider .even {
 }
 body .summary .summary-slider .summary-item {
   margin-block: 2rem;
+  transition: transform 0.4s;
 }
 body .summary .summary-slider .summary-item img {
   width: 100%;
   border-radius: 10px;
   box-shadow: var(--summary-card-shadow);
+}
+body .summary .summary-slider .summary-item:hover {
+  transform: translateY(-5px) scale(101%);
 }
 body .summary .summary-slider .swiper-button-prev,
 body .summary .summary-slider .swiper-button-next {
@@ -681,9 +672,6 @@ body .collaborations-container .collaborations img:hover {
   transform: translateY(-3px);
 }
 @media screen and (max-width: 1200px) {
-  body .collaborations-container {
-    width: 80%;
-  }
   body .collaborations-container .collaborations {
     gap: 1rem;
   }

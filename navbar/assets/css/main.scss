@@ -71,6 +71,7 @@ body {
           transition: color 0.4s;
 
           .nav-link {
+            cursor: pointer;
             position: relative;
             display: block;
             padding: 1.8rem 0.8rem;
@@ -235,7 +236,7 @@ body {
       .nav-toggle {
         display: none;
         cursor: pointer;
-        font-size: 2rem;
+        font-size: 2.25rem;
       }
     }
   }

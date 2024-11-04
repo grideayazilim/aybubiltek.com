@@ -108,7 +108,7 @@ function alignTeamArea() {
   // Align slider
   if (window.innerWidth <= 575) teamSlider.params.slidesPerView = 1.2;
   else if (window.innerWidth <= 875) teamSlider.params.slidesPerView = 1.8;
-  else if (window.innerWidth <= 1100) teamSlider.params.slidesPerView = 2.5;
+  else if (window.innerWidth <= 1100) teamSlider.params.slidesPerView = 2.6;
   else if (window.innerWidth <= 1483) teamSlider.params.slidesPerView = 3;
   else if (window.innerWidth > 1483) teamSlider.params.slidesPerView = 3.2;
   teamSlider.update();
@@ -126,29 +126,32 @@ window.addEventListener("resize", alignTeamArea);
 
 /*===================||| DEPARTMANTS |||===================*/
 // Swiper initialization
-const departmantSwiper = new Swiper(".departmant-swiper", {
+const departmantSwiper = new Swiper(".departmant-slider", {
   spaceBetween: 25,
   initialSlide: 1,
   speed: 800,
+  autoplay: false,
+  allowTouchMove: true,
+
   autoplay: {
-    delay: 8000,
+    delay: 5500,
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
+  },
+
+  breakpoints: {
+    // width > 1400px
+    1400: {
+      autoplay: true,
+      spaceBetween: 18,
+      allowTouchMove: false,
+    },
   },
 });
 
 function alignDepartmantArea() {
-  // Enable autoplay on small devices
-  if (window.innerWidth <= 1400) {
-    departmantSwiper.autoplay.start();
-    departmantSwiper.params.spaceBetween = 18;
-  } else {
-    departmantSwiper.autoplay.stop();
-    departmantSwiper.slideTo(1);
-    departmantSwiper.params.spaceBetween = 25;
-  }
-
-  departmantSwiper.update();
+  // Center slider in big devices
+  if (window.innerWidth > 1400) departmantSwiper.slideTo(1);
 }
 
 window.addEventListener("load", alignDepartmantArea);
@@ -159,6 +162,8 @@ window.addEventListener("resize", alignDepartmantArea);
 const summarySwiper = new Swiper(".summary-slider", {
   spaceBetween: 35,
   speed: 800,
+  slidesPerView: 1,
+  autoplay: true,
 
   autoplay: {
     delay: 12000,
@@ -174,22 +179,18 @@ const summarySwiper = new Swiper(".summary-slider", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
+  breakpoints: {
+    // width > 680px
+    680: {
+      slidesPerView: 2,
+    },
+    // width > 1150px
+    1150: {
+      slidesPerView: 3,
+    },
+  },
 });
-
-function alignSummaryArea() {
-  if (window.innerWidth <= 544) {
-    summarySwiper.params.slidesPerView = 1;
-  } else if (window.innerWidth <= 1150) {
-    summarySwiper.params.slidesPerView = 2;
-  } else {
-    summarySwiper.params.slidesPerView = 3;
-  }
-
-  summarySwiper.update();
-}
-
-window.addEventListener("load", alignSummaryArea);
-window.addEventListener("resize", alignSummaryArea);
 
 /*===================||| SCROLL REVEAL ANIMATION |||===================*/
 sr.reveal(`.bg-img, .ornament`);
@@ -210,46 +211,16 @@ sr.reveal(`.landing-page__container`, {
   },
 });
 
-sr.reveal(`.about-us-slider`, {
-  origin: "bottom",
-  delay: 900,
-  beforeReveal: function () {
-    updateCounter();
-  },
-});
+sr.reveal(`.about-us-slider`, { origin: "bottom", delay: 900 });
 
-sr.reveal(`.about-content, .section-title, .team-area, .summary`, {
+sr.reveal(`.section-title, .team-area, .summary, .departmants, .summary`, {
   delay: 300,
 });
 
-sr.reveal(`.departmant-card`, {
-  delay: 350,
-  interval: 250,
-  duration: 2000,
-  // Add the shadow and transform transitions after scroll reveal animation
-  afterReveal: function () {
-    document.querySelectorAll(".departmant-card").forEach((departmantCard) => {
-      departmantCard.style.transition =
-        "box-shadow 0.3s, transform 0.3s linear";
-      departmantCard.addEventListener("mouseover", function () {
-        departmantCard.classList.add("hovered");
-      });
-      departmantCard.addEventListener("mouseout", function () {
-        departmantCard.classList.remove("hovered");
-      });
-    });
-  },
-});
-
-sr.reveal(`.summary-item`, {
-  delay: 350,
-  interval: 250,
-  duration: 2000,
-  afterReveal: function () {
-    document.querySelectorAll(".departmant-card").forEach((departmantCard) => {
-      departmantCard.style.transition =
-        "box-shadow 0.3s, transform 0.3s linear";
-    });
+sr.reveal(`.about-content`, {
+  delay: 300,
+  beforeReveal: function () {
+    updateCounter();
   },
 });
 

@@ -16,6 +16,18 @@ function initializeNavbar() {
     });
   });
 
+  /*============== DEACTIVATE ACTIVATOR ITEM HREF ON MOBILE ==============*/
+  function manageHref() {
+    if(window.innerWidth <= 1300){
+      activatorItems.forEach(activatorItem => {
+        activatorItem.querySelector("a").removeAttribute("href");
+      });
+    }
+  }
+
+  manageHref();
+  window.addEventListener("resize", manageHref);
+  
   /*============== TOGGLE MENU ==============*/
   const closeButton = document.querySelector(".nav-close");
   const toggleButton = document.querySelector(".nav-toggle");

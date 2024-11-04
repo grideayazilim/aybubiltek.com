@@ -466,7 +466,6 @@ body {
       row-gap: 1.5rem;
       width: 70%;
       padding: 7rem 10% 7rem 15rem;
-      // background: var(--secondary-color);
       clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
 
       .about-title {
@@ -484,19 +483,6 @@ body {
         font-weight: bold;
         font-size: 2.25rem;
       }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: inherit;
-        clip-path: inherit;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Gölge burada */
-        z-index: -1; /* Gölgeyi arka plana at */
-      }
     }
 
     /*=============== RESPONSIVE DESIGN ===============*/
@@ -504,7 +490,7 @@ body {
     @media screen and (max-width: 1300px) {
       text-align: center;
 
-      .about-us-swiper {
+      .about-us-slider {
         display: none;
       }
 
@@ -651,6 +637,7 @@ body {
         }
 
         &:hover {
+          transform: translateY(-5px);
           box-shadow: var(--departmants-card-hover-shadow);
         }
       }
@@ -705,11 +692,16 @@ body {
 
       .summary-item {
         margin-block: 2rem;
+        transition: transform 0.4s;
 
         img {
           width: 100%;
           border-radius: 10px;
           box-shadow: var(--summary-card-shadow);
+        }
+
+        &:hover{
+          transform: translateY(-5px) scale(101%);
         }
       }
 
@@ -818,8 +810,6 @@ body {
     /*============== RESPONSIVE DESIGN ==============*/
     // First breakpoint
     @media screen and (max-width: 1200px) {
-      width: 80%;
-
       .collaborations {
         gap: 1rem;
 

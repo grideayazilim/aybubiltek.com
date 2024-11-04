@@ -5,16 +5,14 @@ sr.reveal(`.member-card`, {
   delay: 400,
   interval: 450,
   duration: 2000,
-  afterReveal: function () {
-    document.querySelectorAll(".member-card").forEach((memberCard) => {
-      memberCard.style.transition = "box-shadow 0.3s, transform 0.3s linear";
+  afterReveal: function (el) {
+    el.style.transition = "box-shadow 0.3s, transform 0.3s linear";
 
-      memberCard.addEventListener("mouseover", function () {
-        memberCard.classList.add("hovered");
-      });
-      memberCard.addEventListener("mouseout", function () {
-        memberCard.classList.remove("hovered");
-      });
+    el.addEventListener("mouseover", function () {
+      el.classList.add("hovered");
+    });
+    el.addEventListener("mouseout", function () {
+      el.classList.remove("hovered");
     });
   },
 });
