@@ -230,16 +230,16 @@ body {
   @media (max-width: 1200px) {
     .sub-landing-page {
       text-align: center;
-      row-gap: 3rem;
-      padding: 6rem 7.5rem;
+      row-gap: 2.25rem;
+      padding: 6rem 10%;
 
       .content {
         grid-template-columns: 1fr;
-        row-gap: 3rem;
+        row-gap: 1.75rem;
         place-items: center;
 
         .team-logo {
-          width: 60%;
+          width: 65%;
         }
       }
     }
@@ -267,14 +267,20 @@ body {
   /* Second breakpoint */
   @media screen and (max-width: 750px) {
     .sub-landing-page {
-      padding: 6rem 3.5rem;
-
       .bg-image {
         background-position: -50px;
       }
 
+      .content{
+        .team-logo{
+          padding: 1rem;
+        }
+      }
+
       .social {
         .social-media-button {
+          font-size: 1rem;
+
           .icon {
             width: 3rem;
             height: 3rem;

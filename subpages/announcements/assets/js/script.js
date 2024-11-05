@@ -12,15 +12,14 @@ function cutDescription(description) {
 
 /*============== FILL PAGE ==============*/
 async function fillPage() {
-  const response = await fetch(
-    "../inner-articles-announcements/assets/data/announcements.json"
-  );
-  const announcements = await response.json();
-  const announcementsContainer = document.querySelector(".announcements");
+  fetch("../inner-articles-announcements/assets/data/announcements.json")
+    .then((response) => response.json())
+    .then((announcements) => {
+      const announcementsContainer = document.querySelector(".announcements");
 
-  let idCount = 1;
-  announcements.forEach((announcement) => {
-    announcementsContainer.innerHTML += `
+      let idCount = 1;
+      announcements.forEach((announcement) => {
+        announcementsContainer.innerHTML += `
         <div class="announcement load-hidden">
           <div class="img-container" id="img-container">
             <img src="${announcement.photo}" alt="duyuru fotoğrafı" />
@@ -49,11 +48,20 @@ async function fillPage() {
           </div>
         </div>`;
 
-    idCount++;
-  });
+        idCount++;
+      });
 
-  sr.reveal(`.announcement`, { delay: 300, interval: 300 });
+      sr.reveal(`.announcement`, { delay: 300, interval: 300 });
+    })
+    .catch((error) => {
+      const message = document.querySelector(".system-message");
+      message.classList.add("error-message");
+      message.innerHTML = "Görüntülenecek duyuru yok. Henüz...";
+      console.error(error);
+    });
 }
 
 fillPage();
 sr.reveal(`.title-area`);
+
+sr.reveal(`.system-message`, { delay: 300 });

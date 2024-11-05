@@ -34,7 +34,6 @@ body footer .text-button-container {
 }
 body footer .text-button-container .text {
   text-align: center;
-  font-size: 1.1rem;
   font-weight: var(--font-medium);
   background-color: #e0ebfa;
   color: var(--first-color);
@@ -192,11 +191,14 @@ body footer .container-logo-icons .social-media-area .social-media-button:hover 
   body footer .text-button-container .text {
     padding: 1.3rem 5rem;
   }
+  body footer .text-button-container .button {
+    bottom: -1.7rem;
+  }
 }
 @media screen and (max-width: 950px) {
   body footer .text-button-container {
     top: -4.8rem;
-    width: 80%;
+    width: 75%;
   }
   body footer .container-logo-icons .logo img {
     width: 175px;
@@ -207,40 +209,39 @@ body footer .container-logo-icons .social-media-area .social-media-button:hover 
   body footer .container-logo-icons .text #text2 {
     font-size: 0.65rem;
   }
+  body footer .container-logo-icons .social-media-area {
+    -moz-column-gap: 0.2rem;
+         column-gap: 0.2rem;
+  }
   body footer .container-logo-icons .social-media-area .social-media-button {
     margin-inline: 3px;
   }
   body footer .container-logo-icons .social-media-area .social-media-button .icon {
-    width: 3rem;
-    height: 3rem;
+    width: 2.75rem;
+    height: 2.75rem;
   }
   body footer .container-logo-icons .social-media-area .social-media-button .icon i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 750px) {
-  body footer {
-    padding-block: 4rem;
-  }
   body footer .text-button-container .text {
-    padding-inline: 1rem;
-    font-size: 1rem;
+    padding-inline: 2rem;
   }
   body footer .text-button-container .button {
     bottom: -1rem;
-    padding: 0.8rem 1.3rem;
-    font-size: 0.78rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.9rem;
   }
 }
 @media screen and (max-width: 500px) {
   body footer {
-    padding-block: 3.75rem 4.5rem;
+    padding-block: 3.25rem 4.5rem;
   }
   body footer .text-button-container {
     width: 90%;
   }
   body footer .container-logo-icons {
-    flex-direction: column;
     row-gap: 1.25rem;
   }
   body footer .container-logo-icons > div:not(.text) {
@@ -249,7 +250,7 @@ body footer .container-logo-icons .social-media-area .social-media-button:hover 
     justify-content: center;
   }
   body footer .container-logo-icons .logo img {
-    width: 190px;
+    width: 130px;
   }
   body footer .container-logo-icons .text {
     position: absolute;
@@ -257,5 +258,16 @@ body footer .container-logo-icons .social-media-area .social-media-button:hover 
     transform: translateX(-50%);
     bottom: 1rem;
     padding: 0;
+  }
+  body footer .container-logo-icons .social-media-area {
+    -moz-column-gap: 0;
+         column-gap: 0;
+  }
+  body footer .container-logo-icons .social-media-area .social-media-button .icon {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  body footer .container-logo-icons .social-media-area .social-media-button .icon i {
+    font-size: 1.1rem;
   }
 }/*# sourceMappingURL=main.css.map */

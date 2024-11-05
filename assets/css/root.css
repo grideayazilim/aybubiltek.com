@@ -152,13 +152,17 @@ body .ender {
 }
 @media screen and (max-width: 750px) {
   body .ender {
-    padding-bottom: 21.5rem !important;
+    padding-bottom: 16.5rem !important;
   }
 }
 @media screen and (max-width: 500px) {
   body .ender {
-    padding-bottom: 25.5rem !important;
+    padding-bottom: 17.5rem !important;
   }
+}
+body .error-message {
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* =============== RESPONSIVE TYPOGRAPHY AND STRUCTURES =============== */
@@ -175,7 +179,7 @@ body .ender {
 @media screen and (max-width: 800px) {
   :root {
     --bigger-font-size: 1.5rem;
-    --navbar-height: 3.8rem;
+    --navbar-height: 4.5rem;
   }
   body .bigger-title {
     padding: 1rem 3rem;

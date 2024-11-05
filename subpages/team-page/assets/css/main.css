@@ -177,16 +177,16 @@ body .team-container .members-container .members .member-card .accounts .member-
 @media (max-width: 1200px) {
   body .sub-landing-page {
     text-align: center;
-    row-gap: 3rem;
-    padding: 6rem 7.5rem;
+    row-gap: 2.25rem;
+    padding: 6rem 10%;
   }
   body .sub-landing-page .content {
     grid-template-columns: 1fr;
-    row-gap: 3rem;
+    row-gap: 1.75rem;
     place-items: center;
   }
   body .sub-landing-page .content .team-logo {
-    width: 60%;
+    width: 65%;
   }
   body .swiper-button-prev,
   body .swiper-button-next {
@@ -200,11 +200,14 @@ body .team-container .members-container .members .member-card .accounts .member-
   }
 }
 @media screen and (max-width: 750px) {
-  body .sub-landing-page {
-    padding: 6rem 3.5rem;
-  }
   body .sub-landing-page .bg-image {
     background-position: -50px;
+  }
+  body .sub-landing-page .content .team-logo {
+    padding: 1rem;
+  }
+  body .sub-landing-page .social .social-media-button {
+    font-size: 1rem;
   }
   body .sub-landing-page .social .social-media-button .icon {
     width: 3rem;

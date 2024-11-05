@@ -34,7 +34,6 @@ body {
 
       .text {
         text-align: center;
-        font-size: 1.1rem;
         font-weight: var(--font-medium);
         background-color: #e0ebfa;
         color: var(--first-color);
@@ -260,9 +259,14 @@ body {
     // 1200, 768, 576, 320
 
     @media screen and (max-width: 1200px) {
+
       .text-button-container {
         .text {
           padding: 1.3rem 5rem;
+        }
+
+        .button{
+          bottom: -1.70rem;
         }
       }
     }
@@ -270,7 +274,7 @@ body {
     @media screen and (max-width: 950px) {
       .text-button-container {
         top: -4.8rem;
-        width: 80%;
+        width: 75%;
       }
 
       .container-logo-icons {
@@ -291,13 +295,15 @@ body {
         }
 
         .social-media-area {
+          column-gap: .2rem;
+
           .social-media-button {
             margin-inline: 3px;
             .icon {
-              width: 3rem;
-              height: 3rem;
+              width: 2.75rem;
+              height: 2.75rem;
               i {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
               }
             }
           }
@@ -306,31 +312,27 @@ body {
     }
 
     @media screen and (max-width: 750px) {
-      padding-block: 4rem;
-      
       .text-button-container {
         .text{
-          padding-inline: 1rem;
-          font-size: 1rem;
+          padding-inline: 2rem;
         }
 
         .button {
           bottom: -1rem;
-          padding: 0.8rem 1.3rem;
-          font-size: 0.78rem;
+          padding: 0.9rem 1.5rem;
+          font-size: 0.9rem;
         }
       }
     }
 
     @media screen and (max-width: 500px) {
-      padding-block: 3.75rem 4.5rem;
+      padding-block: 3.25rem 4.5rem;
 
       .text-button-container{
         width: 90%;
       }
       
       .container-logo-icons {
-        flex-direction: column;
         row-gap: 1.25rem;
   
         & > div:not(.text) {
@@ -341,15 +343,31 @@ body {
   
         .logo {
           img {
-            width: 190px;
+            width: 130px;
           }
         }
+
         .text {
           position: absolute;
           left: 50%;
           transform: translateX(-50%);
           bottom: 1rem;
           padding: 0;
+        }
+
+        .social-media-area{
+          column-gap: 0;
+
+          .social-media-button{
+            .icon{
+              width: 2.3rem;
+              height: 2.3rem;
+
+              i{
+                font-size: 1.1rem;
+              }
+            }
+          }
         }
       }
     }

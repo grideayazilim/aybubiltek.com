@@ -91,9 +91,8 @@ function initializeNavbar() {
     }
   };
 
+  handleNavbarBackground();
   window.addEventListener("scroll", handleNavbarBackground);
-
-  document.addEventListener("DOMContentLoaded", handleNavbarBackground);
 
   // interesting
   if (!document.getElementById("home-page")) {
