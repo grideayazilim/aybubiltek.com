@@ -193,40 +193,42 @@ const summarySwiper = new Swiper(".summary-slider", {
 });
 
 /*===================||| SCROLL REVEAL ANIMATION |||===================*/
-sr.reveal(`.bg-img, .ornament`);
+document.addEventListener("DOMContentLoaded", () => {
+  sr.reveal(`.bg-img, .ornament`);
 
-sr.reveal(`.bg-img`, {
-  afterReveal: function (el) {
-    el.style.transform = "";
-  },
-});
+  sr.reveal(`.bg-img`, {
+    afterReveal: function (el) {
+      el.style.transform = "";
+    },
+  });
 
-sr.reveal(`.landing-page__container`, {
-  origin: "bottom",
-  delay: 900,
-  beforeReveal: function () {
-    setTimeout(function () {
-      rotateLogoOnLoad();
-    }, 1400);
-  },
-});
+  sr.reveal(`.landing-page__container`, {
+    origin: "bottom",
+    delay: 900,
+    beforeReveal: function () {
+      setTimeout(function () {
+        rotateLogoOnLoad();
+      }, 1400);
+    },
+  });
 
-sr.reveal(`.about-us-slider`, { origin: "bottom", delay: 900 });
+  sr.reveal(`.about-us-slider`, { origin: "bottom", delay: 900 });
 
-sr.reveal(`.section-title, .team-area, .summary, .departmants, .summary`, {
-  delay: 300,
-});
+  sr.reveal(`.section-title, .team-area, .summary, .departmants, .summary`, {
+    delay: 300,
+  });
 
-sr.reveal(`.about-content`, {
-  delay: 300,
-  beforeReveal: function () {
-    updateCounter();
-  },
-});
+  sr.reveal(`.about-content`, {
+    delay: 300,
+    beforeReveal: function () {
+      updateCounter();
+    },
+  });
 
-sr.reveal(`.collaborator`, {
-  distance: "20px",
-  duration: 2000,
-  delay: 200,
-  interval: 100,
+  sr.reveal(`.collaborator`, {
+    distance: "20px",
+    duration: 2000,
+    delay: 200,
+    interval: 100,
+  });
 });

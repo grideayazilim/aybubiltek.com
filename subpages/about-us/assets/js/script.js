@@ -73,11 +73,13 @@ const imageSwiper = new Swiper(".image-slider", {
 });
 
 /* =============== SCROLL REVEAL ANIMATION =============== */
-sr.reveal(`.title-area`);
-sr.reveal(`.content`, { delay: 300 });
-sr.reveal(".collaborator", {
-  distance: "20px",
-  duration: 2000,
-  delay: 700,
-  interval: 200,
+document.addEventListener("DOMContentLoaded", () => {
+  sr.reveal(`.title-area`);
+  sr.reveal(`.content`, { delay: 300 });
+  sr.reveal(".collaborator", {
+    distance: "20px",
+    duration: 2000,
+    delay: 700,
+    interval: 200,
+  });
 });

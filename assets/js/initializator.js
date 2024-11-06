@@ -18,13 +18,11 @@ fetch("/navbar/index.html")
     /*
       inner items are animated instead of nav itself due to not to 
       lose backdrop-filter on load
-    */ 
-    if (document.getElementById("home-page")) {
-      document.querySelectorAll(".reveal-nav").forEach(revealItem => {
-        revealItem.classList.add("load-hidden");
-      });;
-      sr.reveal(`.reveal-nav`);
-    }
+    */
+    // document.querySelectorAll(".reveal-nav").forEach((revealItem) => {
+    //   revealItem.classList.add("load-hidden");
+    // });
+    sr.reveal(`nav`);
   })
   .catch((error) => console.error("Error loading navbar:", error));
 

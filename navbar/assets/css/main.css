@@ -174,7 +174,6 @@ body nav .button-area {
   align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
-  visibility: hidden;
   /*======= REGISTER BUTTON =======*/
   /*======= TOGGLE ICON =======*/
 }

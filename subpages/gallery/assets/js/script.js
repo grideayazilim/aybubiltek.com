@@ -1,3 +1,5 @@
 /* =============== SCROLL REVEAL ANIMATION =============== */
-sr.reveal(`.title-area`);
-sr.reveal(`.error-message`, { delay: 300 });
+document.addEventListener("DOMContentLoaded", () => {
+  sr.reveal(`.title-area`);
+  sr.reveal(`.error-message`, { delay: 300 });
+});

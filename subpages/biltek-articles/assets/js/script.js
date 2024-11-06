@@ -42,6 +42,8 @@ async function fillPage() {
 }
 
 fillPage();
-sr.reveal(`.title-area`);
 
-sr.reveal(`.system-message`, { delay: 300 });
+document.addEventListener("DOMContentLoaded", () => {
+  sr.reveal(`.title-area`);
+  sr.reveal(`.system-message`, { delay: 300 });
+});

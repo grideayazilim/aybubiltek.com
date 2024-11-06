@@ -20,13 +20,15 @@ async function loadPage() {
       const leadersContainer = document.querySelector(".leaders");
       const coresContainer = document.querySelector(".cores");
       const retiredsContainer = document.querySelector(".retireds");
-      const retiredsOuterContainer = document.querySelector(".retireds-outer-container");
+      const retiredsOuterContainer = document.querySelector(
+        ".retireds-outer-container"
+      );
 
       // General info
       document.title = selectedTeam.name;
       title.textContent = selectedTeam.name;
       logo.src = selectedTeam.logo;
-      selectedTeam.descriptions.forEach(description => {
+      selectedTeam.descriptions.forEach((description) => {
         mainDescription.innerHTML += `<p>${description}</p>`;
       });
       let socialCount = 0;
@@ -53,15 +55,14 @@ async function loadPage() {
       coresContainer.innerHTML = "";
       retiredsContainer.innerHTML = "";
       // To delete these containers if no member is exist in there
-      let leaderExist, coreExist, retiredExist = false;
+      let leaderExist,
+        coreExist,
+        retiredExist = false;
 
-      selectedTeam.members.forEach(member => {
-        if(member.type === "leader")
-          leaderExist = true;
-        if(member.type === "core")
-          coreExist = true;
-        if(member.type === "retired")
-          retiredExist = true;
+      selectedTeam.members.forEach((member) => {
+        if (member.type === "leader") leaderExist = true;
+        if (member.type === "core") coreExist = true;
+        if (member.type === "retired") retiredExist = true;
 
         let cardContent = `
             <div class="member-card">
@@ -75,23 +76,33 @@ async function loadPage() {
               </div>
 
               <div class="accounts">
-                <a href="${member.linkedin ? member.linkedin : "#"}" class="member-link" target="_blank">
+                <a href="${
+                  member.linkedin ? member.linkedin : "#"
+                }" class="member-link" target="_blank">
                   <i class="fa-brands fa-linkedin"></i>
                 </a>
 
-                <a href="${member.github ? member.github : "#"}" class="member-link" target="_blank">
+                <a href="${
+                  member.github ? member.github : "#"
+                }" class="member-link" target="_blank">
                   <i class="fa-brands fa-square-github"></i>
                 </a>
 
-                <a href="${member.behance ? member.behance : "#"}" class="member-link" target="_blank">
+                <a href="${
+                  member.behance ? member.behance : "#"
+                }" class="member-link" target="_blank">
                   <i class="fa-brands fa-square-behance"></i>
                 </a>
 
-                <a href="${member.dribble ? member.dribble : "#"}" class="member-link" target="_blank">
+                <a href="${
+                  member.dribble ? member.dribble : "#"
+                }" class="member-link" target="_blank">
                   <i class="fa-brands fa-dribbble"></i>
                 </a>
 
-                <a href="${member.pinterest ? member.pinterest : "#"}" class="member-link" target="_blank">
+                <a href="${
+                  member.pinterest ? member.pinterest : "#"
+                }" class="member-link" target="_blank">
                   <i class="fa-brands fa-pinterest"></i>
                 </a>
               </div>
@@ -119,9 +130,9 @@ async function loadPage() {
       });
 
       // Delete the empty member containers
-      if(!leaderExist) leadersContainer.style.display = "none";
-      if(!coreExist) coresContainer.style.display = "none";
-      if(!retiredExist) retiredsOuterContainer.style.display = "none";
+      if (!leaderExist) leadersContainer.style.display = "none";
+      if (!coreExist) coresContainer.style.display = "none";
+      if (!retiredExist) retiredsOuterContainer.style.display = "none";
 
       // Scroll reveal
       sr.reveal(`.member-card`, {
@@ -182,11 +193,11 @@ socialButtons.forEach((button) => {
 });
 
 /* =============== SCROLL REVEAL ANIMATION =============== */
-sr.reveal(`.bg-image`);
-
-sr.reveal(`.content, .social`, {
-  origin: "bottom",
-  delay: 900,
+document.addEventListener("DOMContentLoaded", () => {
+  sr.reveal(`.bg-image`);
+  sr.reveal(`.content, .social`, {
+    origin: "bottom",
+    delay: 900,
+  });
+  sr.reveal(`.big-title, .achievements`, { delay: 300 });
 });
-
-sr.reveal(`.big-title, .achievements`, { delay: 300 });
