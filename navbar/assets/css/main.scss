@@ -1,5 +1,5 @@
 /*============== DARK THEME ==============*/
-:root{
+:root {
   --navbar-bg-blur: #091a34a9;
   --hover-gradient: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
   --white-container__hover-gradient: linear-gradient(
@@ -10,13 +10,25 @@
   --nonwhite-dropdown__shadow: rgba(0, 0, 0, 0.2) 0px 8px 8px 0px;
   --nonwhite-dropdown__bg: hsla(217, 70%, 6%, 0.4);
   --register-button-color: #5286ce;
-  --navbar-logo-filter: invert(85%) sepia(100%) saturate(1000%) hue-rotate(190deg);
+  --navbar-logo-filter: invert(85%) sepia(100%) saturate(1000%)
+    hue-rotate(190deg);
 }
 
-body.darkTheme{
+body.darkTheme {
   --navbar-bg-blur: #1e1e1ec9;
-  --hover-gradient: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
-  --white-container__hover-gradient: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  --hover-gradient: linear-gradient(
+    to top,
+    #d5d4d0 0%,
+    #d5d4d0 1%,
+    #eeeeec 31%,
+    #efeeec 75%,
+    #e9e9e7 100%
+  );
+  --white-container__hover-gradient: linear-gradient(
+    60deg,
+    #29323c 0%,
+    #485563 100%
+  );
   --nonwhite-dropdown__shadow: rgba(179, 179, 179, 0.068) 0px 8px 8px 0px;
   --nonwhite-dropdown__bg: hsla(0, 0%, 23%, 0.197);
   --register-button-color: #3a3a3a;
@@ -59,11 +71,6 @@ body {
     .nav-menu {
       background-color: transparent;
       transition: right 0.4s, background 0.4s;
-
-      overflow: auto;
-      &::-webkit-scrollbar {
-        display: none;
-      }
 
       .nav-list {
         display: flex;
@@ -332,6 +339,12 @@ body {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
 
+        // Make menu scrollable
+        overflow: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
         .nav-list {
           flex-direction: column;
 
@@ -432,18 +445,18 @@ body {
     nav {
       padding-inline: 7%;
 
-      .nav-logo{
+      .nav-logo {
         height: 65%;
       }
 
-      .nav-menu{
+      .nav-menu {
         width: 100%;
       }
 
       .button-area {
         column-gap: 15px;
 
-        .register-button{
+        .register-button {
           width: 105px;
           height: 38px;
         }
