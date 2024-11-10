@@ -191,7 +191,6 @@ body {
       .achievements__card {
         .achievements__img {
           width: 100%;
-          height: 13vw;
         }
       }
     }
@@ -254,12 +253,6 @@ body {
         .achievements-slider {
           padding-bottom: 3.5rem;
         }
-
-        .achievements__card {
-          .achievements__img {
-            height: 20vw;
-          }
-        }
       }
     }
   }
@@ -300,18 +293,6 @@ body {
       .members-container {
         .big-title {
           padding-block: 2rem 0.5rem;
-        }
-      }
-    }
-  }
-
-  @media screen and (max-width: 600px) {
-    .team-container {
-      .achievements {
-        .achievements__card {
-          .achievements__img {
-            height: 40vw;
-          }
         }
       }
     }

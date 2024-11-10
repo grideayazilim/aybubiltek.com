@@ -421,10 +421,7 @@ body {
     }
   }
 
-  /* 
-     Navbar height adjustment to 
-     match the responsive design in the root
-  */
+  /* Second breakpoint */
   @media screen and (max-width: 820px) {
     nav {
       .nav-menu {
@@ -440,7 +437,7 @@ body {
     }
   }
 
-  /* Second breakpoint */
+  /* Third breakpoint */
   @media screen and (max-width: 500px) {
     nav {
       padding-inline: 7%;

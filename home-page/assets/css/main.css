@@ -187,7 +187,7 @@ body #landing-page .container .left-box .social-media-area {
 body #landing-page .container .left-box .social-media-area .social-media-button {
   display: inline-flex;
   align-items: center;
-  margin-inline: 5px;
+  margin-inline: 3.5px;
   background-color: var(--secondary-color);
   overflow: hidden;
   color: var(--first-color);
@@ -575,7 +575,7 @@ body .summary .big-title {
 body .summary .summary-slider {
   position: relative;
   padding-inline: 1rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
@@ -642,14 +642,15 @@ body .summary .summary-slider .swiper-pagination-bullet-active {
     display: none;
   }
 }
-@media screen and (max-width: 768px) {
-  body .summary .summary-slider {
-    width: 90%;
-  }
-}
 @media screen and (max-width: 544px) {
+  body .summary .summary-slider {
+    padding-bottom: 2rem;
+  }
   body .summary .summary-slider .even {
     margin-top: 0;
+  }
+  body .summary .summary-slider .summary-item {
+    margin-block: 1.25rem;
   }
 }
 body .collaborations-container {

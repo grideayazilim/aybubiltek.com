@@ -111,7 +111,8 @@
         "image": "assets/media/gridea-yazilim/member-photos/hatice-akkus.png",
         "name": "Hatice Akkuş",
         "position": "2023-2024 Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/hatice-akkus/"
+        "linkedin": "https://www.linkedin.com/in/hatice-akkus/",
+        "github": "https://github.com/haticeakkus"
       },
 
       {
@@ -127,9 +128,10 @@
         "type": "retired",
         "id": 10,
         "image": "assets/media/gridea-yazilim/member-photos/oguzhan-korkmaz.png",
-        "name": "Hatice Akkuş",
-        "position": "2021-2022 Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/oguzhan-korkmaz/"
+        "name": "Oğuzhan Korkmaz",
+        "position": "Kurucu Kaptan",
+        "linkedin": "https://www.linkedin.com/in/oguzhan-korkmaz/",
+        "dribble": "https://dribbble.com/oguzhanzz_"
       }
     ]
   },
@@ -207,7 +209,7 @@
         "id": 4,
         "image": "assets/media/gridea-tasarim/member-photos/rumeysa-akis.png",
         "name": "Rümeysa Akış",
-        "position": "2021-2023 Kaptanı",
+        "position": "Kurucu Kaptan",
         "linkedin": "https://www.linkedin.com/in/rumeysa-akis/"
       }
     ]
@@ -308,8 +310,8 @@
       "Yıldırım Team, bundan sonraki senelerde de üniversitemizi temsil ederek ülkemize katkıda bulunmak için çalışmalarına hız kesmeden devam edecektir."
     ],
     "social": [
-      "https://www.linkedin.com/company/y%C4%B1ld%C4%B1r%C4%B1m-roket-tak%C4%B1m%C4%B1/",
-      "https://www.instagram.com/yldrm_rocket/"
+      "https://www.instagram.com/yldrm_rocket/",
+      "https://www.linkedin.com/company/y%C4%B1ld%C4%B1r%C4%B1m-roket-tak%C4%B1m%C4%B1/"
     ],
     "video": "url",
     "achievements": [
@@ -433,7 +435,7 @@
         "id": 11,
         "image": "assets/media/yildirim-team/member-photos/necati-cakir.png",
         "name": "Necati Çakır",
-        "position": "2018-2021 Kaptanı",
+        "position": "Kurucu Kaptan",
         "linkedin": "https://www.linkedin.com/in/necaticakir/"
       }
     ]
@@ -509,7 +511,7 @@
         "id": 4,
         "image": "assets/media/typhoon/member-photos/mehmet-agdag.png",
         "name": "Mehmet Fatih Ağdağ",
-        "position": "2022-2023 Kaptanı",
+        "position": "Kurucu Kaptan",
         "linkedin": "https://www.linkedin.com/in/mehmet-fatih-agdag/"
       }
     ]
@@ -609,20 +611,11 @@
       },
 
       {
-        "type": "core",
-        "id": 7,
-        "image": "assets/media/biltekai/member-photos/kemal-albay.png",
-        "name": "Kemal Eren Albay",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/kemal-eren-albay/"
-      },
-
-      {
         "type": "retired",
         "id": 7,
         "image": "assets/media/biltekai/member-photos/beyza-karakurt.png",
         "name": "Beyza Karakurt",
-        "position": "2023-2024 Takım Kaptanı",
+        "position": "Kurucu Kaptan",
         "linkedin": "https://www.linkedin.com/in/beyza-karakurt-7b35a6267/"
       }
     ]

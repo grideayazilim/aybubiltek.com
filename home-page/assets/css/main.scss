@@ -194,7 +194,7 @@ body {
           .social-media-button {
             display: inline-flex;
             align-items: center;
-            margin-inline: 5px;
+            margin-inline: 3.5px;
             background-color: var(--secondary-color);
             overflow: hidden;
             color: var(--first-color);
@@ -681,7 +681,7 @@ body {
     .summary-slider {
       position: relative;
       padding-inline: 1rem;
-      padding-bottom: 3rem;
+      padding-bottom: 2.5rem;
       margin: 0 auto;
       width: 100%;
       overflow: hidden;
@@ -768,18 +768,17 @@ body {
       }
     }
 
-    // Second breakpoint
-    @media screen and (max-width: 768px) {
-      .summary-slider {
-        width: 90%;
-      }
-    }
-
     // Third breakpoint
     @media screen and (max-width: 544px) {
       .summary-slider {
+        padding-bottom: 2rem;
+
         .even {
           margin-top: 0;
+        }
+
+        .summary-item{
+          margin-block: 1.25rem;
         }
       }
     }
