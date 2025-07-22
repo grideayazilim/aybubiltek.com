@@ -1,0 +1,93 @@
+.member-card {
+  width: 300px;
+  display: grid;
+  place-items: center;
+  row-gap: 1.3rem;
+  padding: 2.4rem 1rem;
+  border-radius: 20px;
+  box-shadow: #0f2d5936 0px 0px 5px 0px;
+  transition: transform 0.4s, box-shadow 0.4s;
+
+  .image-container {
+    position: relative;
+    display: grid;
+    width: 180px;
+    height: 180px;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 65px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-image: var(--img-bg-hover);
+      background-blend-mode: normal, lighten, soft-light;
+      transition: transform 0.4s;
+    }
+
+    img {
+      position: relative; // to bring forward
+      justify-self: center;
+      align-self: flex-end;
+      width: 90%;
+      height: auto;
+      transition: transform 0.4s;
+    }
+  }
+
+  .accounts {
+    display: flex;
+    gap: 0.7rem;
+    font-size: 2.6rem;
+
+    .member-link {
+      transition: all 0.4s;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: var(--card-hover-shadow);
+    transform: translateY(-10px);
+
+    .image-container {
+      img {
+        transform: scale(103%);
+      }
+
+      &::before {
+        transform: scale(400%) translateY(-40%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    box-shadow: var(--card-hover-shadow);
+
+    .image-container {
+      img {
+        transform: scale(110%);
+      }
+
+      &::before {
+        transform: scale(400%) translateY(-40%);
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .image-container {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

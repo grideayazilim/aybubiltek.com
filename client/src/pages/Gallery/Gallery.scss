@@ -1,0 +1,37 @@
+.gallery-container {
+  display: grid;
+  row-gap: 1.75rem;
+
+  .photo-section {
+    display: grid;
+    row-gap: 0.75rem;
+
+    .big-title {
+      text-align: center;
+    }
+
+    .photo-area {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+
+      .photo-thumbnail {
+        width: 250px;
+        height: auto;
+        cursor: pointer;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .photo-section {
+      .photo-area {
+        .photo-thumbnail {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

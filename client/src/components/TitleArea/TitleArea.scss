@@ -1,0 +1,28 @@
+.title-area {
+  position: relative;
+  display: grid;
+  align-content: center;
+  width: 100%;
+  min-height: 45px;
+  text-align: center;
+  background-color: var(--first-color);
+  overflow: hidden;
+  margin-top: var(--navbar-height);
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    top: 0;
+
+    &:nth-child(1) {
+      transform: translateX(-50%);
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      transform: translateX(50%);
+      right: 0;
+    }
+  }
+}

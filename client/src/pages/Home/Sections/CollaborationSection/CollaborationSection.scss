@@ -1,0 +1,33 @@
+.collaborations-container {
+  width: 100%;
+  margin: 0 auto;
+
+  .collaborators {
+    gap: 1.75rem;
+
+    img {
+      width: 175px;
+    }
+  }
+
+  /*============== RESPONSIVE DESIGN ==============*/
+  // First breakpoint
+  @media screen and (max-width: 1200px) {
+    .collaborators {
+      gap: 1rem;
+
+      img {
+        width: 110px;
+      }
+    }
+  }
+
+  // Second breakpoint
+  @media screen and (max-width: 576px) {
+    .collaborators {
+      img {
+        width: 110px;
+      }
+    }
+  }
+}

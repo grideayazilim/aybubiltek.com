@@ -1,0 +1,88 @@
+/*============== DARK THEME ==============*/
+:root {
+  --animated-button-color: #5286ce;
+  --departmants-card-shadow: #0f2d5936 0px 0px 5px 0px;
+  --departmants-card-hover-shadow: #0f2d5932 0px 7px 29px 0px;
+  --summary-card-shadow: 0 0 15px rgba(0, 0, 0, 0.37);
+}
+
+body.darkTheme {
+  --animated-button-color: #3a3a3a;
+  --departmants-card-shadow: #00000036 0px 0px 5px 0px;
+  --departmants-card-hover-shadow: #00000032 0px 7px 29px 0px;
+  --summary-card-shadow: 0 0 15px rgba(191, 191, 191, 0.253);
+}
+
+/*===================||| HOME PAGE |||===================*/
+/*============== REUSEABLE ANIMATED BUTTON ==============*/
+.animated-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  color: var(--text-color-alt);
+  transition: 0.4s;
+
+  /*======= more-button animation =======*/
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: var(--text-color-black);
+    transition: 0.4s;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  &:hover {
+    background: var(--animated-button-color);
+    box-shadow: 0 0 8px var(--animated-button-color);
+    border-radius: 5px;
+    font-weight: var(--font-medium);
+    letter-spacing: 0.6px;
+    color: var(--text-color);
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+      border-color: var(--animated-button-color);
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    margin: 0 auto;
+    background: var(--animated-button-color);
+    box-shadow: 0 0 8px var(--animated-button-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: var(--font-medium);
+    letter-spacing: 0.6px;
+    color: var(--text-color) !important;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 100%;
+      border-color: var(--animated-button-color);
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.collaborators {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+
+  img {
+    width: 175px;
+    border-radius: 50%;
+    transition: transform 0.4s;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  /*============== RESPONSIVE DESIGN ==============*/
+  // First breakpoint
+  @media screen and (max-width: 1200px) {
+    gap: 1rem;
+
+    img {
+      width: 110px;
+    }
+  }
+
+  // Second breakpoint
+  @media screen and (max-width: 576px) {
+    img {
+      width: 110px;
+    }
+  }
+}

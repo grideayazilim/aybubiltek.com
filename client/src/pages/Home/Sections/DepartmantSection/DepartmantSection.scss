@@ -1,0 +1,65 @@
+.departmants {
+  row-gap: 2rem;
+  text-align: center;
+  overflow: hidden;
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .cards-container {
+    margin-top: 2rem;
+    align-items: stretch;
+
+    .card {
+      height: 550px;
+      display: grid;
+      place-items: center;
+      row-gap: 0.5rem;
+      padding: 2.75rem 1.5rem;
+      border-radius: 15px;
+      background-color: #f4f4f4;
+      box-shadow: var(--departmants-card-shadow);
+      transition: transform 0.4s, box-shadow 0.4s;
+
+      img {
+        width: 55%;
+      }
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--departmants-card-hover-shadow);
+      }
+    }
+  }
+
+  /*============== RESPONSIVE DESIGN ==============*/
+  @media screen and (max-width: 1200px) {
+    .cards-container {
+      .card {
+        height: 490px;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .cards-container {
+      .card {
+        box-shadow: #0f2d5932 0px 7px 29px 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .cards-container {
+      .card {
+        height: 430px;
+        padding: 2rem 1.25rem;
+
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

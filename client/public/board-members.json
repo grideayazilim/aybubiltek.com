@@ -1,0 +1,112 @@
+[
+  {
+    "section": "Başkan & Başkan Yardımcısı",
+    "members": [
+      {
+        "name": "Ayşenur Buldu",
+        "position": "Başkan",
+        "image": "/media/board-members-photos/aysenur.png",
+        "linkedin": "https://www.linkedin.com/in/aysenurbuldu/",
+        "gmail": "mailto:aysenur.bulduu@gmail.com"
+      },
+      {
+        "name": "Zeynep Sude Sasa",
+        "position": "Başkan Yardımcısı",
+        "image": "/media/board-members-photos/zeynep-sasa.png",
+        "linkedin": "https://www.linkedin.com/in/zeynepsudesasa/",
+        "gmail": "mailto:zeynepsudesasa@gmail.com"
+      }
+    ]
+  },
+  {
+    "section": "Etkinlik Departmanı",
+    "members": [
+      {
+        "name": "Ali Emre Durdu",
+        "position": "Etkinlik Direktörü",
+        "image": "/media/board-members-photos/ali-emre.png",
+        "linkedin": "https://www.linkedin.com/in/aliemredurdu/",
+        "gmail": "mailto:aliemredurdu0@gmail.com"
+      },
+      {
+        "name": "Duygu Köşeli",
+        "position": "Etkinlik Direktörü",
+        "image": "/media/board-members-photos/duygu-koseli.png",
+        "linkedin": "https://www.linkedin.com/in/duygukoseli/",
+        "gmail": "mailto:duygukoseli0@gmail.com"
+      }
+    ]
+  },
+  {
+    "section": "İletişim ve Medya Departmanı",
+    "members": [
+      {
+        "name": "Nurettin Karayeğen",
+        "position": "İletişim ve Medya Direktörü",
+        "image": "/media/board-members-photos/nuro.png",
+        "linkedin": "https://www.linkedin.com/in/nurettin-karaye%C4%9Fen-625703217/",
+        "gmail": "mailto:nurettinkarayegen@hotmail.com"
+      }
+    ]
+  },
+  {
+    "section": "Sponsorluk Departmanı",
+    "members": [
+      {
+        "name": "Elif Necla Bektaş",
+        "position": "Sponsorluk Direktörü",
+        "image": "/media/board-members-photos/elif-necla-bektas.png",
+        "linkedin": "https://www.linkedin.com/in/elifneclabekta%C8%99/",
+        "gmail": "mailto:elifnecla2003@gmail.com"
+      },
+      {
+        "name": "Ayşe Gül Kurnaz",
+        "position": "Sponsorluk Direktörü",
+        "image": "/media/board-members-photos/aysegul-kurnaz.png",
+        "linkedin": "https://www.linkedin.com/in/ay%C5%9Fe-g%C3%BCl-kurnaz-bb1116303/",
+        "gmail": "mailto:agkurnaz919@gmail.com"
+      }
+    ]
+  },
+  {
+    "section": "Emeği Geçenler",
+    "members": [
+      {
+        "name": "Şevval Çolak",
+        "position": "2023-2024 Başkanı",
+        "image": "/media/board-members-photos/sevval-colak.png",
+        "linkedin": "https://www.linkedin.com/in/sevvalcolak/"
+      },
+      {
+        "name": "Ayşenur Yeter",
+        "position": "2021-2023 Başkanı",
+        "image": "/media/board-members-photos/aysenur-yeter.png",
+        "linkedin": "https://www.linkedin.com/in/aysenuryeter/"
+      },
+      {
+        "name": "Osman Akol",
+        "position": "2019-2021 Başkanı",
+        "image": "/media/board-members-photos/osman-akol.png",
+        "linkedin": "https://www.linkedin.com/in/osmanakol/"
+      },
+      {
+        "name": "Can Umay",
+        "position": "2018-2019 Başkanı",
+        "image": "/media/board-members-photos/can-umay.png",
+        "linkedin": "https://www.linkedin.com/in/canumay/"
+      },
+      {
+        "name": "Emine Merve Balık",
+        "position": "2016-2018 Başkanı",
+        "image": "/media/board-members-photos/emine-merve-balik.png",
+        "linkedin": "https://www.linkedin.com/in/eminemervebalik/"
+      },
+      {
+        "name": "Enes Fındık",
+        "position": "Kurucu Başkan",
+        "image": "/media/board-members-photos/enes-findik.png",
+        "linkedin": "https://www.linkedin.com/in/enesfnd/"
+      }
+    ]
+  }
+]

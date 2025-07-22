@@ -1,0 +1,228 @@
+/*============== SUBLANDING PAGE ==============*/
+.sub-landing-page {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .bg-image {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+
+    // Scroll reveal fix
+    opacity: 0;
+    transition: opacity 1.8s cubic-bezier(0.5, 0, 0, 1) 0.2s;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 1800px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 2rem;
+    margin-top: 3rem;
+    padding-block: 0;
+
+    .social-media-area {
+      display: flex;
+      justify-content: center;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      justify-content: center;
+      align-items: center;
+      column-gap: 5rem;
+
+      .team-logo {
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        border-radius: 50%;
+        background-color: var(--text-color);
+        box-shadow: rgba(255, 255, 255, 0.422) 0 0 35px;
+
+        img {
+          height: 90%;
+          filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.352));
+        }
+      }
+
+      .main-description {
+        display: grid;
+        row-gap: 1rem;
+
+        p {
+          line-height: 1.5;
+        }
+
+        .descriptions-wrapper {
+          p {
+            margin-bottom: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*============== WHITE-CONTAINER AREA ==============*/
+.team-container {
+  .container {
+    padding-top: 0;
+  }
+
+  .big-title {
+    text-align: center;
+    padding-block: 4rem 2rem;
+  }
+
+  /*==== Achievements section ====*/
+  .achievements {
+    position: relative;
+
+    .achievements-slider {
+      width: 90%;
+      padding-bottom: 6rem;
+    }
+
+    // Swiper button adjustment
+    .swiper-button-prev,
+    .swiper-button-next {
+      &::after {
+        content: "";
+      }
+
+      top: initial;
+      bottom: 0.1rem;
+      width: 50px;
+      height: 50px;
+      background-color: var(--first-color);
+      color: var(--text-color);
+      border-radius: 50%;
+      transition: left 0.4s, right 0.4s, opacity 0.4s;
+
+      .i {
+        width: 20px;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 38%;
+
+      &:hover {
+        left: 37.8%;
+      }
+    }
+
+    .swiper-button-next {
+      right: 38%;
+
+      &:hover {
+        right: 37.8%;
+      }
+    }
+
+    // Swiper pagination adjustment
+    .swiper-pagination {
+      bottom: 1.1rem;
+    }
+
+    .swiper-pagination-bullet {
+      opacity: 0.2;
+      transition: opacity 0.6s;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--first-color);
+      opacity: 1;
+    }
+
+    .achievements__card {
+      .achievements__img {
+        width: 100%;
+      }
+    }
+  }
+
+  .members-container {
+    .big-title {
+      padding-block: 4rem 1rem;
+    }
+
+    .members {
+      margin-block: 2rem;
+    }
+  }
+}
+
+/*============== RESPONSIVE DESIGN ==============*/
+/* First breakpoint */
+@media (max-width: 1200px) {
+  .sub-landing-page {
+    text-align: center;
+    row-gap: 2.25rem;
+
+    .container {
+      margin-top: 4rem;
+
+      .content {
+        grid-template-columns: 1fr;
+        row-gap: 1.75rem;
+        place-items: center;
+
+        .team-logo {
+          width: 65%;
+        }
+      }
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+
+  .team-container {
+    .achievements {
+      .achievements-slider {
+        padding-bottom: 3.5rem;
+      }
+    }
+  }
+}
+
+/* Second breakpoint */
+@media screen and (max-width: 750px) {
+  .sub-landing-page {
+    .bg-image {
+      background-position: -50px;
+    }
+
+    .container {
+      margin-top: 5rem;
+
+      .content {
+        .team-logo {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  .team-container {
+    .big-title {
+      padding-block: 2rem 1rem;
+    }
+
+    .members-container {
+      .big-title {
+        padding-block: 2rem 0.5rem;
+      }
+    }
+  }
+}

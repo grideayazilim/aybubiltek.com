@@ -1,0 +1,94 @@
+// Olur da birisi burayı düzeltmeye çalışırsa, Allah yardımcın olsun
+.about-section {
+  overflow: hidden;
+  max-width: 1600px;
+  position: relative;
+  z-index: 0;
+  padding: 0 !important;
+  display: flex;
+  align-items: stretch;
+  min-height: 95vh;
+
+  .left-box,
+  .about-content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  .about-us-slider-wrapper {
+    height: 100%;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+    overflow: hidden;
+  }
+
+  .about-us-slider {
+    height: 100%;
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.5rem;
+    width: 70%;
+    padding: 60px;
+
+    .about-title {
+      font-size: 4.5rem;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      line-height: 1.5;
+    }
+
+    .counter {
+      font-family: "Lora", serif;
+      color: #64ccc5;
+      font-weight: bold;
+      font-size: 2.25rem;
+    }
+  }
+
+  /*=============== RESPONSIVE DESIGN ===============*/
+  /* First breakpoint */
+  @media screen and (max-width: 1300px) {
+    min-height: 60vh;
+    text-align: center;
+
+    .left-box {
+      display: none;
+    }
+
+    .about-content {
+      clip-path: none;
+      width: 100%;
+      padding: 2.15rem 10%;
+    }
+  }
+
+  /* Second breakpoint */
+  @media screen and (max-width: 1100px) {
+    .about-content {
+      row-gap: 1rem;
+
+      .counter {
+        font-size: 2rem;
+        margin: 0;
+      }
+
+      .animated-button {
+        width: 100%;
+      }
+    }
+  }
+}
