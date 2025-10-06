@@ -1,11 +1,12 @@
 [
   {
-    "key": "GrideaYazılım",
-    "name": "Gridea Yazılım",
+    "key": "Gridea",
+    "name": "Gridea",
     "logo": "/media/team-logos/gridea.png",
     "descriptions": [
-      "2020-2021 döneminde BİLTEK ailesine katılan Gridea takımı, artan ve özelleşen ihtiyaçları doğrultusunda ikiye ayrıldı. Bu ayrılıktan sonucu oluşan takımlardan biri olan Gridea Yazılım, 2023-2024 dönemine kadar üyelerine frontend geliştiriciliği üzerine eğitimler verdi.",
-      "2024-2025 dönemine ise yeni bir hedefle başlayan Gridea Yazılım, eğitim sürecine backend geliştiriciliğini de ekleyerek kendi kendine yetebilen bir fullstack takım olmayı ve BİLTEK sitesini inşa ettiği gibi başka büyük çaplı projelerde de yer almayı da hedefliyor."
+      "2020-2021 döneminde BİLTEK ailesine katılan Gridea takımı, kurulduğu günden bu yana web geliştiriciliği üzerine eğitimler vermekte ve bünyesinde bulunan üyelerin birçoğunu da ilk defa yazılım dünyasıyla tanıştırmaktadır.",
+      "Bir sene boyunca verilen derslerin içeriğinde üyelerinin frontend tarafında HTML, CSS, JS, React; backend tarafında ise MongoDB, MySQL ve Node.js gibi nice teknolojileri kullanarak bir sitenin görünür tarafını diledikleri estetikle kodlayıp bu siteyi veri tabanlarına bağlayabilme yetisi kazandırmaktadır.",
+      "Yeni Proje Takımı ile 'aybubiltek.com' gibi birçok proje yapmayı, hem kendi hem de üyelerinin portfolyosunu genişletmeyi amaçlamaktadır."
     ],
     "social": [
       {
@@ -28,15 +29,21 @@
       },
 
       {
-        "image": "/media/team-photos/gridea-yazilim/egitim.jpg",
-        "title": "Eğitimlerimiz",
-        "description": "Üyelerini yazılım dünyasıyla tanıştıran ekibimizin frontend ve backend eğitimleri her sene devam ediyor"
+        "image": "/media/team-photos/gridea-yazilim/piknik.jpg",
+        "title": "Piknik & Sertifika",
+        "description": "Dönemin son etkinliği olan pikniğimizde eğitimi başarıyla tamamlayan üyelerimize sertifikalarını teslim ediyoruz."
       },
 
       {
-        "image": "/media/team-photos/gridea-yazilim/egitim2.jpg",
+        "image": "/media/team-photos/gridea-yazilim/board-game.jpg",
+        "title": "Sosyal Etkinliklerimiz",
+        "description": "Dönem boyunca eğitimlerin yanısıra sosyal etkinlikler de yaparak birbirimizi daha iyi tanıyıp kaynaşıyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/gridea-yazilim/egitim.jpg",
         "title": "Eğitimlerimiz",
-        "description": "Üyelerini yazılım dünyasıyla tanıştıran ekibimizin frontend ve backend eğitimleri her sene devam ediyor"
+        "description": "Üyelerini yazılım dünyasıyla tanıştıran ekibimizin frontend ve backend eğitimleri her sene devam ediyor."
       }
     ],
     "members": [
@@ -53,67 +60,86 @@
       {
         "type": "leader",
         "id": 2,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/bilgenur-erkan.png",
-        "name": "Bilgenur Erkan",
-        "position": "Kaptan Yardımcısı",
-        "linkedin": "https://www.linkedin.com/in/bilgenur-erkan-050i060/",
-        "github": "https://github.com/bilgerkan"
-      },
-
-      {
-        "type": "core",
-        "id": 3,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/anil-seref.png",
-        "name": "Anıl Şeref",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/an%C4%B1l-%C5%9Feref-5300b2285/"
-      },
-
-      {
-        "type": "core",
-        "id": 4,
         "image": "/media/team-photos/gridea-yazilim/member-photos/aysenur-kislioglu.png",
         "name": "Ayşenur Kışlıoğlu",
-        "position": "Core Team Üyesi",
+        "position": "Proje Takım Kaptanı",
         "linkedin": "https://www.linkedin.com/in/ay%C5%9Fenur-k%C4%B1%C5%9Fl%C4%B1o%C4%9Flu-665b0829a/",
         "github": "https://github.com/Aysenurkislioglu"
       },
 
       {
         "type": "core",
+        "id": 3,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/aslihan-genc.png",
+        "name": "Aslıhan Genç",
+        "position": "Eğitim Takımı Üyesi",
+        "github": "https://github.com/Asli0112"
+      },
+
+      {
+        "type": "core",
+        "id": 4,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/derya-cavli.png",
+        "name": "Derya Çavlı",
+        "position": "Eğitim Takımı Üyesi",
+        "github": "https://github.com/deryacavli"
+      },
+
+      {
+        "type": "core",
         "id": 5,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/salih-kelkit.png",
-        "name": "Mahmut Salih Kelkit",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/mahmut-salih-k-a22391212/"
+        "image": "/media/team-photos/gridea-yazilim/member-photos/recep-akkus.png",
+        "name": "Recep Akkuş",
+        "position": "Eğitim Takımı Üyesi",
+        "github": "https://github.com/PeQMeZ7"
       },
 
       {
         "type": "core",
         "id": 6,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/melek-candan.png",
-        "name": "Melek Candan",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/melek-candan-3a40ab29b/",
-        "github": "https://github.com/mlkcandan"
+        "image": "/media/team-photos/gridea-yazilim/member-photos/selma-sahanturk.png",
+        "name": "Selma Şahantürk",
+        "position": "Eğitim Takımı Üyesi",
+        "github": "https://github.com/shntrk13"
       },
 
       {
         "type": "core",
         "id": 7,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/sare-simsek.png",
-        "name": "Sare Kübra Şimşek",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/sare-k%C3%BCbra-%C5%9Fim%C5%9Fek-8651342a3/"
+        "image": "/media/team-photos/gridea-yazilim/member-photos/elcin-kaya.png",
+        "name": "Elçin Kaya",
+        "position": "Proje Takımı Üyesi",
+        "linkedin": "https://www.linkedin.com/in/el%C3%A7in-kaya-bb1087389/",
+        "github": "https://github.com/elcinkaya"
       },
 
       {
         "type": "core",
         "id": 12,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/emirhan-erbay.png",
-        "name": "Emirhan Erbay",
-        "position": "S. Medya Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/emirhanerbay/"
+        "image": "/media/team-photos/gridea-yazilim/member-photos/elifsu-aydos.png",
+        "name": "Elifsu Aydos",
+        "position": "Proje Takımı Üyesi",
+        "linkedin": "https://www.linkedin.com/in/elifsuaydos/",
+        "github": "https://github.com/elifsuaydos"
+      },
+
+      {
+        "type": "core",
+        "id": 13,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/talha-sozen.png",
+        "name": "Muhammet Talha Sözen",
+        "position": "Proje Takımı Üyesi",
+        "linkedin": "https://www.linkedin.com/in/muhammet-talha-s%C3%B6zen-145a5b321/",
+        "github": "https://github.com/soztalha"
+      },
+
+      {
+        "type": "core",
+        "id": 14,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/mustafa-bulut.png",
+        "name": "Mustafa Bulut",
+        "position": "Proje Takımı Üyesi",
+        "github": "https://github.com/mustafaBulut1"
       },
 
       {
@@ -371,74 +397,83 @@
     "members": [
       {
         "type": "leader",
-        "id": 1,
-        "image": "/media/team-photos/yildirim-team/member-photos/alihan-ozer.png",
-        "name": "Alihan Özer",
-        "position": "Yıldırım Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/alihan%C3%B6zer/"
-      },
-
-      {
-        "type": "leader",
         "id": 2,
-        "image": "/media/team-photos/yildirim-team/member-photos/bahadir-simsek.png",
-        "name": "Bahadır Şimşek",
-        "position": "Model Uydu Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/bahad%C4%B1r%C5%9Fim%C5%9Fek/"
-      },
-
-      {
-        "type": "leader",
-        "id": 3,
-        "image": "/media/team-photos/yildirim-team/member-photos/emre-cebeci.png",
-        "name": "Emre Cebeci",
-        "position": "Mekanik Lideri",
-        "linkedin": "https://www.linkedin.com/in/emre-cebeci/"
+        "image": "/media/team-photos/yildirim-team/member-photos/tugbanur-kucuk.png",
+        "name": "Tuğbanur Küçük",
+        "position": "Yıldırım Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/tu%C4%9Fbanur-k%C3%BC%C3%A7%C3%BCk-2415702a7/"
       },
 
       {
         "type": "leader",
         "id": 4,
-        "image": "/media/team-photos/yildirim-team/member-photos/burak-kaya.png",
-        "name": "Burak Yaşar Kaya",
-        "position": "Aviyonik Lideri",
-        "linkedin": "https://www.linkedin.com/in/burak-ya%C5%9Far-kaya-67301321a/"
+        "image": "/media/team-photos/yildirim-team/member-photos/alpdogan-kurt.png",
+        "name": "Alpdoğan Kurt",
+        "position": "Model Uydu Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/alpdo%C4%9Fan-kurt-bb3341307/"
       },
 
       {
-        "type": "core",
+        "type": "leader",
+        "id": 3,
+        "image": "/media/team-photos/yildirim-team/member-photos/tugbanur-kucuk.png",
+        "name": "Tuğbanur Küçük",
+        "position": "Uydu Mekanik Lideri",
+        "linkedin": "https://www.linkedin.com/in/tu%C4%9Fbanur-k%C3%BC%C3%A7%C3%BCk-2415702a7/"
+      },
+
+      {
+        "type": "leader",
+        "id": 12,
+        "image": "/media/team-photos/yildirim-team/member-photos/ahmet-yilmaz.png",
+        "name": "Ahmet Yılmaz",
+        "position": "Rkt Mekanik Lideri",
+        "linkedin": "https://www.linkedin.com/in/ahmet-y%C4%B1lmaz-1a7416267/"
+      },
+
+      {
+        "type": "leader",
         "id": 5,
-        "image": "/media/team-photos/yildirim-team/member-photos/burak-ozercik.png",
-        "name": "Burak Burhan Özercik",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/burak-burhan-%C3%B6zercik-8a5033255/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        "image": "/media/team-photos/yildirim-team/member-photos/alpdogan-kurt.png",
+        "name": "Alpdoğan Kurt",
+        "position": "Rkt Aviyonik Lideri",
+        "linkedin": "https://www.linkedin.com/in/alpdo%C4%9Fan-kurt-bb3341307/"
       },
 
       {
         "type": "core",
         "id": 6,
-        "image": "/media/team-photos/yildirim-team/member-photos/dogukan-sainkaplan.png",
-        "name": "Doğukan Sainkaplan",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/sainkaplan/"
+        "image": "/media/team-photos/yildirim-team/member-photos/hamza-guzel.png",
+        "name": "Muhammed Hamza Güzel",
+        "position": "Aviyonik Üyesi",
+        "linkedin": "https://www.linkedin.com/in/hamza-g%C3%BCzel-39164a30b/"
       },
 
       {
         "type": "core",
         "id": 7,
-        "image": "/media/team-photos/yildirim-team/member-photos/gamze-oskan.png",
-        "name": "Gamze Oskan",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/gamze-oskan-083388290/"
+        "image": "/media/team-photos/yildirim-team/member-photos/zeynep-tokat.png",
+        "name": "Zeynep Sudem Tokat",
+        "position": "Aviyonik Üyesi",
+        "linkedin": "https://www.linkedin.com/in/zeynep-sudem-tokat-047461288/"
       },
 
       {
         "type": "core",
         "id": 8,
-        "image": "/media/team-photos/yildirim-team/member-photos/zeynep-tokat.png",
-        "name": "Zeynep Sudem Tokat",
-        "position": "Core Team Üyesi",
+        "image": "/media/team-photos/yildirim-team/member-photos/hira-nur-yildirim.png",
+        "name": "Hira Nur Yıldırım",
+        "position": "S. Medya Sorumlusu",
         "linkedin": "https://www.linkedin.com/in/zeynep-sudem-tokat-047461288/"
+      },
+
+      {
+        "type": "retired",
+        "id": 1,
+        "image": "/media/team-photos/yildirim-team/member-photos/alihan-ozer.png",
+        "name": "Alihan Özer",
+        "position": "2024-2025 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/alihan%C3%B6zer/"
       },
 
       {
@@ -529,6 +564,50 @@
       },
 
       {
+        "type": "core",
+        "id": 5,
+        "image": "/media/team-photos/typhoon/member-photos/burcu-alparslan.png",
+        "name": "Burcu Alparslan",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/typhoon/member-photos/efekan-karsavuranoglu.png",
+        "name": "Efekan Karsavuranoğlu",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/efekan-karsavurano%C4%9Flu-90a093236/"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/typhoon/member-photos/eren-biyik.png",
+        "name": "Eren Bıyık",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/eren-b%C4%B1y%C4%B1k-5917ba1a4/"
+      },
+
+      {
+        "type": "core",
+        "id": 7,
+        "image": "/media/team-photos/typhoon/member-photos/gozde-nur-sarac.png",
+        "name": "Gözde Nur Saraç",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/g%C3%B6zde-nur-sara%C3%A7-646005335/"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/typhoon/member-photos/mustafa-sahin.png",
+        "name": "Mustafa Şahin",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/mustafa-%C5%9Fahin-88b792305/"
+      },
+
+      {
         "type": "retired",
         "id": 3,
         "image": "/media/team-photos/typhoon/member-photos/cise-cakil.png",
@@ -553,7 +632,7 @@
     "name": "BiltekAI",
     "logo": "/media/team-logos/biltekai.png",
     "descriptions": [
-      "2024 Mart ayında Bilim ve Teknoloji Topluluğu çatısı altında kurulan BiltekAI Takımı 7 kişilik dinamik core ekibiyle, üyelerine yapay zeka ve benzeri teknolojiler konusunda bilgi ve deneyim kazandırmayı hedefleyerek bu süreçte iş birliği kültürünü benimsemektedir.Takımın amacı, üyelerine yapay zeka alanında uzmanlaşma fırsatları sunarak yapay zeka trenine öğrencilerin erkenden atılmasını sağlamak, yapay zekanın  günlük rutinlerde kullanımı konusunda bir bilinç oluşturmak topluma fayda sağlayacak projeler geliştirmektir."
+      "2024 Mart ayında Bilim ve Teknoloji Topluluğu çatısı altında kurulan BiltekAI Takımı 7 kişilik dinamik core ekibiyle, üyelerine yapay zeka ve benzeri teknolojiler konusunda bilgi ve deneyim kazandırmayı hedefleyerek bu süreçte iş birliği kültürünü benimsemektedir. Takımın amacı, üyelerine yapay zeka alanında uzmanlaşma fırsatları sunarak yapay zeka trenine öğrencilerin erkenden atılmasını sağlamak, yapay zekanın  günlük rutinlerde kullanımı konusunda bir bilinç oluşturmak topluma fayda sağlayacak projeler geliştirmektir."
     ],
     "social": [
       {
@@ -591,46 +670,46 @@
       {
         "type": "leader",
         "id": 1,
-        "image": "/media/team-photos/biltekai/member-photos/emre-akpinar.png",
-        "name": "Emre Akpınar",
+        "image": "/media/team-photos/biltekai/member-photos/ali-secim.png",
+        "name": "Ali Seçim",
         "position": "Kaptan",
-        "linkedin": "https://www.linkedin.com/in/emre-akp%C4%B1nar-7298a1284/"
+        "linkedin": "https://www.linkedin.com/in/ali-se%C3%A7im-305661328/"
       },
 
       {
-        "type": "core",
+        "type": "leader",
         "id": 3,
-        "image": "/media/team-photos/biltekai/member-photos/busenur-ileri.png",
-        "name": "Buse Nur İleri",
-        "position": "Eğitim Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/busenurileri/"
+        "image": "/media/team-photos/biltekai/member-photos/nur-demirkan.png",
+        "name": "Emine Nur Demirkan",
+        "position": "Kaptan Yardımcısı",
+        "linkedin": "https://www.linkedin.com/in/emine-nur-demirkan-22261033a/"
       },
 
       {
-        "type": "core",
+        "type": "leader",
         "id": 4,
-        "image": "/media/team-photos/biltekai/member-photos/firat-ozcan.png",
-        "name": "Hasan Sakar",
+        "image": "/media/empty-person.png",
+        "name": "Enes Köstekli",
         "position": "Etkinlik Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/f%C4%B1rat-%C3%B6zcan-208578216/"
+        "linkedin": "https://www.linkedin.com/in/enes-k%C3%B6stekli-011103330/"
       },
 
       {
-        "type": "core",
+        "type": "leader",
         "id": 5,
-        "image": "/media/team-photos/biltekai/member-photos/zeynep-ustun.png",
-        "name": "Zeynep Üstün",
+        "image": "/media/team-photos/biltekai/member-photos/zohre-aydin.png",
+        "name": "Zöhre İrem Aydın",
         "position": "S. Medya Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/zeynep-%C3%BCst%C3%BCn01/"
+        "linkedin": "https://www.linkedin.com/in/z%C3%B6hreiremayd%C4%B1n/"
       },
 
       {
         "type": "core",
         "id": 6,
-        "image": "/media/empty-person.png",
-        "name": "Merve Çankaya",
+        "image": "/media/team-photos/biltekai/member-photos/ertugrul-tohma.png",
+        "name": "Ertuğrul Tohma",
         "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/merve-%C3%A7ankaya-08b03429a/"
+        "linkedin": "https://www.linkedin.com/in/ertu%C4%9Frul-tohma-08555a25a/"
       },
 
       {
@@ -640,6 +719,131 @@
         "name": "Beyza Karakurt",
         "position": "Kurucu Kaptan",
         "linkedin": "https://www.linkedin.com/in/beyza-karakurt-7b35a6267/"
+      }
+    ]
+  },
+  {
+    "key": "Stride",
+    "name": "Stride",
+    "logo": "/media/team-logos/gridea.png",
+    "descriptions": [
+      "2020-2021 döneminde BİLTEK ailesine katılan Gridea takımı, artan ve özelleşen ihtiyaçları doğrultusunda ikiye ayrıldı. Bu ayrılıktan sonucu oluşan takımlardan biri olan Gridea Yazılım, 2023-2024 dönemine kadar üyelerine frontend geliştiriciliği üzerine eğitimler verdi.",
+      "2024-2025 dönemine ise yeni bir hedefle başlayan Gridea Yazılım, eğitim sürecine backend geliştiriciliğini de ekleyerek kendi kendine yetebilen bir fullstack takım olmayı ve BİLTEK sitesini inşa ettiği gibi başka büyük çaplı projelerde de yer almayı da hedefliyor."
+    ],
+    "social": [
+      {
+        "instagram": "https://www.instagram.com/grideayazilim/",
+        "linkedin": "#"
+      }
+    ],
+    "video": "url",
+    "achievements": [
+      
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/enes-eldes.png",
+        "name": "Enes Eldeş",
+        "position": "Kaptan",
+        "linkedin": "https://www.linkedin.com/in/eneseldes/",
+        "github": "https://github.com/eneseldes"
+      },
+
+      {
+        "type": "leader",
+        "id": 2,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/bilgenur-erkan.png",
+        "name": "Bilgenur Erkan",
+        "position": "Kaptan Yardımcısı",
+        "linkedin": "https://www.linkedin.com/in/bilgenur-erkan-050i060/",
+        "github": "https://github.com/bilgerkan"
+      },
+
+      {
+        "type": "core",
+        "id": 3,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/anil-seref.png",
+        "name": "Anıl Şeref",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/an%C4%B1l-%C5%9Feref-5300b2285/"
+      },
+
+      {
+        "type": "core",
+        "id": 4,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/aysenur-kislioglu.png",
+        "name": "Ayşenur Kışlıoğlu",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/ay%C5%9Fenur-k%C4%B1%C5%9Fl%C4%B1o%C4%9Flu-665b0829a/",
+        "github": "https://github.com/Aysenurkislioglu"
+      },
+
+      {
+        "type": "core",
+        "id": 5,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/salih-kelkit.png",
+        "name": "Mahmut Salih Kelkit",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/mahmut-salih-k-a22391212/"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/melek-candan.png",
+        "name": "Melek Candan",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/melek-candan-3a40ab29b/",
+        "github": "https://github.com/mlkcandan"
+      },
+
+      {
+        "type": "core",
+        "id": 7,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/sare-simsek.png",
+        "name": "Sare Kübra Şimşek",
+        "position": "Core Team Üyesi",
+        "linkedin": "https://www.linkedin.com/in/sare-k%C3%BCbra-%C5%9Fim%C5%9Fek-8651342a3/"
+      },
+
+      {
+        "type": "core",
+        "id": 12,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/emirhan-erbay.png",
+        "name": "Emirhan Erbay",
+        "position": "S. Medya Sorumlusu",
+        "linkedin": "https://www.linkedin.com/in/emirhanerbay/"
+      },
+
+      {
+        "type": "retired",
+        "id": 8,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/hatice-akkus.png",
+        "name": "Hatice Akkuş",
+        "position": "2023-2024 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/hatice-akkus/",
+        "github": "https://github.com/haticeakkus"
+      },
+
+      {
+        "type": "retired",
+        "id": 10,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/aysenur-yeter.png",
+        "name": "Ayşenur Yeter",
+        "position": "2022-2023 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/aysenuryeter/"
+      },
+
+      {
+        "type": "retired",
+        "id": 11,
+        "image": "/media/team-photos/gridea-yazilim/member-photos/oguzhan-korkmaz.png",
+        "name": "Oğuzhan Korkmaz",
+        "position": "Kurucu Kaptan",
+        "linkedin": "https://www.linkedin.com/in/oguzhan-korkmaz/",
+        "dribble": "https://dribbble.com/oguzhanzz_"
       }
     ]
   }

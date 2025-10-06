@@ -155,7 +155,9 @@
     }
 
     .members {
-      margin-block: 2rem;
+      .member-card {
+        height: 400px;
+      }
     }
   }
 }
