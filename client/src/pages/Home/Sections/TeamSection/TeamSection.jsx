@@ -88,7 +88,7 @@ const TeamSection = () => {
                   </div>
                   <p className="subtitle">{team.name}</p>
                   <div className="team-description">{team.desc}</div>
-                  <Link to={`/Takım:${team.path}`} className="animated-button">
+                  <Link to={`/Takım/${team.path}`} className="animated-button">
                     Daha Fazla
                   </Link>
                 </SwiperSlide>
