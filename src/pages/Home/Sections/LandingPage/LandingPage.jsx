@@ -56,17 +56,19 @@ const LandingPage = () => {
             fazla üyesiyle, teknik bilgi ve becerileri geliştirmeyi, yenilikçi
             projeler üretmeyi ve teknoloji farkındalığını artırmayı hedefler.
           </p>
-          <a
-            target="_blank"
-            href="https://linktr.ee/biltek?fbclid=PAZXh0bgNhZW0CMTEAAaZUw6dBiC783GX44EDVC7QFXCa66PbbcBXXVObG1_cAGl9YpV_TdQXmzcg_aem_MhP_wy2OsfAMjoMen1OH3Q"
-            className="register-btn"
-            rel="noopener noreferrer"
-          >
-            <div className="arrow">
-              <MdKeyboardArrowRight className="i" />
-            </div>
-            <span className="register-text">Kayıt Ol</span>
-          </a>
+          <div className="landing-page__buttons">
+            <a
+              target="_blank"
+              href="https://linktr.ee/biltek?fbclid=PAZXh0bgNhZW0CMTEAAaZUw6dBiC783GX44EDVC7QFXCa66PbbcBXXVObG1_cAGl9YpV_TdQXmzcg_aem_MhP_wy2OsfAMjoMen1OH3Q"
+              className="register-btn"
+              rel="noopener noreferrer"
+            >
+              <div className="arrow">
+                <MdKeyboardArrowRight className="i" />
+              </div>
+              <span className="register-text">Kayıt Ol</span>
+            </a>
+          </div>
           <SocialMediaGroup
             instagram="https://www.instagram.com/aybubiltek/"
             youtube="https://www.youtube.com/c/ybubiltek"

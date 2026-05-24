@@ -25,6 +25,7 @@ const navLinks = [
       { label: "BiltekCyber", to: "/Takım/BiltekCyber" },
       { label: "Gridea", to: "/Takım/Gridea" },
       { label: "BiltekAI", to: "/Takım/BiltekAI" },
+      { label: "Stride", to: "/Takım/Stride" },
     ],
   },
   {

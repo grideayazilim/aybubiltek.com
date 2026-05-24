@@ -26,22 +26,22 @@ const teamInfos = [
     path: "BiltekCyber",
   },
   {
-    name: "Gridea Yazılım",
+    name: "Gridea",
     image: "media/team-logos/gridea.png",
     desc: 'Web alanında nitelikli frontend ve backend eğitimi verir. Onların tabiriyle: "Kodla site boyayıp tablolara bağlıyoruz arkadaşlar, gelin."',
-    path: "GrideaYazılım",
+    path: "Gridea",
     mostHeight: true,
-  },
-  {
-    name: "Gridea Tasarım",
-    image: "media/team-logos/gridea.png",
-    desc: "Üyelerinin çeşitli programlarda tasarım yeteneklerini geliştirmeyi amaçlar. Nitelikli kadrosuyla Biltek'in tasarım ihtiyacını karşılar.",
-    path: "GrideaTasarım",
   },
   {
     name: "Yıldırım Team",
     image: "media/team-logos/yildirim-team.png",
     desc: "Projelerinde mükemmelliği hedefleyerek ulusal ve uluslararası yarışmalarda üstün performans sergilemeye odaklıdır.",
+    path: "YildirimTeam",
+  },
+  {
+    name: "Stride",
+    image: "media/team-logos/stride.png",
+    desc: "BİLTEK'in yepyeni oyun geliştirme takımı. Hayal gücü bu takımda gerçekliğe dönüşüyor.",
     path: "YildirimTeam",
   },
 ];

@@ -725,14 +725,14 @@
   {
     "key": "Stride",
     "name": "Stride",
-    "logo": "/media/team-logos/gridea.png",
+    "logo": "/media/team-logos/stride.png",
     "descriptions": [
-      "2020-2021 döneminde BİLTEK ailesine katılan Gridea takımı, artan ve özelleşen ihtiyaçları doğrultusunda ikiye ayrıldı. Bu ayrılıktan sonucu oluşan takımlardan biri olan Gridea Yazılım, 2023-2024 dönemine kadar üyelerine frontend geliştiriciliği üzerine eğitimler verdi.",
-      "2024-2025 dönemine ise yeni bir hedefle başlayan Gridea Yazılım, eğitim sürecine backend geliştiriciliğini de ekleyerek kendi kendine yetebilen bir fullstack takım olmayı ve BİLTEK sitesini inşa ettiği gibi başka büyük çaplı projelerde de yer almayı da hedefliyor."
+      "Stride, oyun geliştirme sürecine ilgi duyan öğrencileri bir araya getirerek fikirlerini oyun dünyasına dönüştürmelerine fırsat sunuyor.",
+      "Bizim için oyun geliştirmek yalnızca kod yazmak değil; yaratıcılığı teşvik eden, paylaşım ve işbirliği kültürünü büyüten bir ekip oluşturmaktır."
     ],
     "social": [
       {
-        "instagram": "https://www.instagram.com/grideayazilim/",
+        "instagram": "https://www.instagram.com/biltekstride/",
         "linkedin": "#"
       }
     ],
@@ -741,110 +741,7 @@
       
     ],
     "members": [
-      {
-        "type": "leader",
-        "id": 1,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/enes-eldes.png",
-        "name": "Enes Eldeş",
-        "position": "Kaptan",
-        "linkedin": "https://www.linkedin.com/in/eneseldes/",
-        "github": "https://github.com/eneseldes"
-      },
 
-      {
-        "type": "leader",
-        "id": 2,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/bilgenur-erkan.png",
-        "name": "Bilgenur Erkan",
-        "position": "Kaptan Yardımcısı",
-        "linkedin": "https://www.linkedin.com/in/bilgenur-erkan-050i060/",
-        "github": "https://github.com/bilgerkan"
-      },
-
-      {
-        "type": "core",
-        "id": 3,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/anil-seref.png",
-        "name": "Anıl Şeref",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/an%C4%B1l-%C5%9Feref-5300b2285/"
-      },
-
-      {
-        "type": "core",
-        "id": 4,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/aysenur-kislioglu.png",
-        "name": "Ayşenur Kışlıoğlu",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/ay%C5%9Fenur-k%C4%B1%C5%9Fl%C4%B1o%C4%9Flu-665b0829a/",
-        "github": "https://github.com/Aysenurkislioglu"
-      },
-
-      {
-        "type": "core",
-        "id": 5,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/salih-kelkit.png",
-        "name": "Mahmut Salih Kelkit",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/mahmut-salih-k-a22391212/"
-      },
-
-      {
-        "type": "core",
-        "id": 6,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/melek-candan.png",
-        "name": "Melek Candan",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/melek-candan-3a40ab29b/",
-        "github": "https://github.com/mlkcandan"
-      },
-
-      {
-        "type": "core",
-        "id": 7,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/sare-simsek.png",
-        "name": "Sare Kübra Şimşek",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/sare-k%C3%BCbra-%C5%9Fim%C5%9Fek-8651342a3/"
-      },
-
-      {
-        "type": "core",
-        "id": 12,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/emirhan-erbay.png",
-        "name": "Emirhan Erbay",
-        "position": "S. Medya Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/emirhanerbay/"
-      },
-
-      {
-        "type": "retired",
-        "id": 8,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/hatice-akkus.png",
-        "name": "Hatice Akkuş",
-        "position": "2023-2024 Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/hatice-akkus/",
-        "github": "https://github.com/haticeakkus"
-      },
-
-      {
-        "type": "retired",
-        "id": 10,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/aysenur-yeter.png",
-        "name": "Ayşenur Yeter",
-        "position": "2022-2023 Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/aysenuryeter/"
-      },
-
-      {
-        "type": "retired",
-        "id": 11,
-        "image": "/media/team-photos/gridea-yazilim/member-photos/oguzhan-korkmaz.png",
-        "name": "Oğuzhan Korkmaz",
-        "position": "Kurucu Kaptan",
-        "linkedin": "https://www.linkedin.com/in/oguzhan-korkmaz/",
-        "dribble": "https://dribbble.com/oguzhanzz_"
-      }
     ]
   }
 ]
