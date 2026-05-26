@@ -31,12 +31,14 @@ const LandingPage = () => {
         src="/media/bg-logo.png"
         alt="biltek logo"
         opacity={0.04}
+        animateOnMount={true}
       />
       <AnimatedImage
         className="ornament"
         loading="eager"
         src="/media/texture.png"
         alt="ornament"
+        animateOnMount={true}
       />
       <AnimatedItem
         className="container landing-page__container"

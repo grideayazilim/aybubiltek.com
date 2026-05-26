@@ -87,7 +87,7 @@ body {
   color: var(--text-color);
   letter-spacing: 0.2px;
   line-height: 1.4;
-  transition: background 1.2s ease; /* for dark mode animation */
+  transition: background-color 0.3s ease-out;
 
   ul {
     list-style: none;
@@ -101,10 +101,6 @@ body {
   img {
     max-width: 100%;
     height: auto;
-  }
-
-  &.no-transition {
-    transition: none !important;
   }
 }
 

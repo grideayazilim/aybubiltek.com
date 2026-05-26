@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 
-const Sublist = forwardRef(({ items }, ref) => {
+const Sublist = forwardRef(({ items, onItemClick }, ref) => {
   return (
     <ul
       ref={ref}
@@ -14,7 +14,7 @@ const Sublist = forwardRef(({ items }, ref) => {
     >
       {items.map(({ to, label }) => (
         <li className="sublist-item" key={to}>
-          <Link to={to} className="nav-link">
+          <Link to={to} className="nav-link" onClick={onItemClick}>
             {label}
           </Link>
         </li>

@@ -20,7 +20,7 @@
     "react-router-dom": "^7.6.0",
     "remixicon-react": "^1.0.0",
     "scrollreveal": "^4.0.9",
-    "swiper": "^11.2.6",
+    "swiper": "^12.1.4",
     "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {

@@ -1,3 +1,4 @@
+// UYARI: Bu sayfa artık aktif olarak kullanılmamaktadır.
 import { useEffect, useState } from "react";
 import "./Articles.scss";
 import TitleArea from "../../components/TitleArea/TitleArea";

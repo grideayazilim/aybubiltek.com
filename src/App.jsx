@@ -8,9 +8,9 @@ import HomePage from "./pages/Home/HomePage";
 import Footer from "./components/Footer/Footer";
 import TeamPage from "./pages/TeamPage/TeamPage";
 import ScrollToTop from "./components/ScrollToTop";
-import Announcements from "./pages/Announcements/Announcements";
-import Articles from "./pages/Articles/Articles";
-import TextPage from "./pages/TextPage/TextPage";
+// import Announcements from "./pages/Announcements/Announcements";
+// import Articles from "./pages/Articles/Articles";
+// import TextPage from "./pages/TextPage/TextPage";
 import Gallery from "./pages/Gallery/Gallery";
 
 function AppContent() {
@@ -22,13 +22,16 @@ function AppContent() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/hakkimizda" element={<AboutUs />} />
         <Route path="/Hakkımızda" element={<AboutUs />} />
+        <Route path="/ekibimiz" element={<BoardMembers />} />
         <Route path="/Ekibimiz" element={<BoardMembers />} />
+        <Route path="/isbirliklerimiz" element={<Collaborations />} />
         <Route path="/İşbirliklerimiz" element={<Collaborations />} />
+        <Route path="/takim/:teamName" element={<TeamPage key={location.pathname} />} />
         <Route path="/Takım/:teamName" element={<TeamPage key={location.pathname} />} />
-        <Route path="/Duyurular" element={<Announcements />} />
-        <Route path="/Makaleler" element={<Articles />} />
-        <Route path="/:type/:id" element={<TextPage key={location.pathname} />} />
+        <Route path="/Takim/:teamName" element={<TeamPage key={location.pathname} />} />
+        <Route path="/galeri" element={<Gallery />} />
         <Route path="/Galeri" element={<Gallery />} />
       </Routes>
       <Footer />

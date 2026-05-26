@@ -1,3 +1,4 @@
+// UYARI: Bu sayfa artık aktif olarak kullanılmamaktadır.
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ScrollReveal from "scrollreveal";
@@ -10,7 +11,7 @@ const TextPage = () => {
   const [data, setData] = useState(null);
   const [others, setOthers] = useState([]);
   const [error, setError] = useState("");
-  const isArticle = type === "Makaleler";
+  const isArticle = type?.toLowerCase() === "makaleler";
 
   setPageTitle(data?.title);
 

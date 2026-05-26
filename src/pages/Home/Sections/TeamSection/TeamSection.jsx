@@ -11,38 +11,38 @@ const teamInfos = [
     name: "Typhoon",
     image: "media/team-logos/typhoon.png",
     desc: "TEKNOFEST Helikopter Tasarım Yarışması’nda yenilikçi çözümler üretir ve öğrencilerin mühendislik becerilerini geliştirmeye öncülük eder.",
-    path: "TyphoonHelikopter",
+    path: "typhoon-helikopter",
   },
   {
     name: "Biltek AI",
     image: "media/team-logos/biltekai.png",
     desc: "Yapay zeka alanında farkındalık yaratan projeler, eğitimler ve araştırmalar ortaya koyarak üyelerine ve topluma fayda sağlamayı amaçlar.",
-    path: "BiltekAI",
+    path: "biltek-ai",
   },
   {
     name: "BiltekCyber",
     image: "media/team-logos/biltekcyber.png",
     desc: "Geleceğin dünyası Siber dünyanın dinamiklerini merak mı ediyorsun? BiltekCyber ile bu yeni dünyada kendini nasıl koruyacağını öğren.",
-    path: "BiltekCyber",
+    path: "biltek-cyber",
   },
   {
     name: "Gridea",
     image: "media/team-logos/gridea.png",
     desc: 'Web alanında nitelikli frontend ve backend eğitimi verir. Onların tabiriyle: "Kodla site boyayıp tablolara bağlıyoruz arkadaşlar, gelin."',
-    path: "Gridea",
+    path: "gridea",
     mostHeight: true,
   },
   {
     name: "Yıldırım Team",
     image: "media/team-logos/yildirim-team.png",
     desc: "Projelerinde mükemmelliği hedefleyerek ulusal ve uluslararası yarışmalarda üstün performans sergilemeye odaklıdır.",
-    path: "YildirimTeam",
+    path: "yildirim-team",
   },
   {
     name: "Stride",
     image: "media/team-logos/stride.png",
     desc: "BİLTEK'in yepyeni oyun geliştirme takımı. Hayal gücü bu takımda gerçekliğe dönüşüyor.",
-    path: "YildirimTeam",
+    path: "stride",
   },
 ];
 
@@ -88,7 +88,7 @@ const TeamSection = () => {
                   </div>
                   <p className="subtitle">{team.name}</p>
                   <div className="team-description">{team.desc}</div>
-                  <Link to={`/Takım/${team.path}`} className="animated-button">
+                  <Link to={`/takim/${team.path}`} className="animated-button">
                     Daha Fazla
                   </Link>
                 </SwiperSlide>

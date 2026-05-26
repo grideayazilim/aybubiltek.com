@@ -11,6 +11,7 @@ const AnimatedImage = forwardRef(({
   delay = 0.4,
   opacity = 1,
   rotate = 0,
+  animateOnMount = false,
   ...rest
 }, ref) => {
   let x = 0;
@@ -33,6 +34,10 @@ const AnimatedImage = forwardRef(({
       y = distance;
   }
 
+  const animationProps = animateOnMount
+    ? { animate: { opacity: opacity, x: 0, y: 0, rotate: 0 } }
+    : { whileInView: { opacity: opacity, x: 0, y: 0, rotate: 0 } };
+
   return (
     <motion.img
       ref={ref}
@@ -41,9 +46,9 @@ const AnimatedImage = forwardRef(({
       className={className}
       loading="eager"
       initial={{ opacity: 0, x, y, rotate }}
-      whileInView={{ opacity: opacity, x: 0, y: 0, rotate: 0 }}
       transition={{ delay, duration, ease: [0.25, 0.1, 0.25, 1] }}
       viewport={{ once: true, amount: 0.3 }}
+      {...animationProps}
       {...rest}
     />
   );

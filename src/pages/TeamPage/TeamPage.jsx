@@ -12,21 +12,45 @@ import setPageTitle from "../../hooks/setPageTitle";
 import AnimatedItem from "../../components/AnimatedItem";
 import AnimatedImage from "../../components/AnimatedImage";
 import "./TeamPage.scss";
+let cachedTeamsData = null;
 
 const TeamPage = () => {
   const { teamName } = useParams();
-  const [teamData, setTeamData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [teamData, setTeamData] = useState(() => {
+    if (cachedTeamsData) {
+      return cachedTeamsData.find((team) => {
+        const key = team.key.toLowerCase();
+        const param = teamName.toLowerCase();
+        return key === param || (key === "gridea" && param === "grideayazilim");
+      });
+    }
+    return null;
+  });
+  const [isLoading, setIsLoading] = useState(!teamData);
 
   setPageTitle(teamData?.name || "Takım Sayfası");
 
   useEffect(() => {
+    if (cachedTeamsData) {
+      const matched = cachedTeamsData.find((team) => {
+        const key = team.key.toLowerCase();
+        const param = teamName.toLowerCase();
+        return key === param || (key === "gridea" && param === "grideayazilim");
+      });
+      setTeamData(matched);
+      setIsLoading(false);
+      return;
+    }
+
     fetch("/teams.json")
       .then((res) => res.json())
       .then((data) => {
-        const matched = data.find(
-          (team) => team.key.toLowerCase() === teamName.toLowerCase()
-        );
+        cachedTeamsData = data;
+        const matched = data.find((team) => {
+          const key = team.key.toLowerCase();
+          const param = teamName.toLowerCase();
+          return key === param || (key === "gridea" && param === "grideayazilim");
+        });
         setTeamData(matched);
         setIsLoading(false);
       })
@@ -56,6 +80,7 @@ const TeamPage = () => {
           src="/media/bg-logo.png"
           className="bg-image"
           opacity={0.04}
+          animateOnMount={true}
         />
 
         <AnimatedItem className="container" origin="bottom" delay={1}>

@@ -1,6 +1,6 @@
 [
   {
-    "key": "Gridea",
+    "key": "gridea",
     "name": "Gridea",
     "logo": "/media/team-logos/gridea.png",
     "descriptions": [
@@ -174,7 +174,7 @@
   },
 
   {
-    "key": "GrideaTasarım",
+    "key": "gridea-tasarim",
     "name": "Gridea Tasarım",
     "logo": "/media/team-logos/gridea.png",
     "descriptions": [
@@ -255,7 +255,7 @@
   },
 
   {
-    "key": "BiltekCyber",
+    "key": "biltek-cyber",
     "name": "BiltekCyber",
     "logo": "/media/team-logos/biltekcyber.png",
     "descriptions": [
@@ -342,7 +342,7 @@
   },
 
   {
-    "key": "YıldırımTeam",
+    "key": "yildirim-team",
     "name": "Yıldırım Team",
     "logo": "/media/team-logos/yildirim-team.png",
     "descriptions": [
@@ -506,7 +506,7 @@
   },
 
   {
-    "key": "TyphoonHelikopter",
+    "key": "typhoon-helikopter",
     "name": "Typhoon Helikopter",
     "logo": "/media/team-logos/typhoon.png",
     "descriptions": [
@@ -628,7 +628,7 @@
   },
 
   {
-    "key": "BiltekAI",
+    "key": "biltek-ai",
     "name": "BiltekAI",
     "logo": "/media/team-logos/biltekai.png",
     "descriptions": [
@@ -723,7 +723,7 @@
     ]
   },
   {
-    "key": "Stride",
+    "key": "stride",
     "name": "Stride",
     "logo": "/media/team-logos/stride.png",
     "descriptions": [

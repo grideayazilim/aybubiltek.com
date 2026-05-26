@@ -12,40 +12,32 @@ const navLinks = [
   {
     label: "Hakkımızda",
     sublist: [
-      { label: "Misyon & Vizyon", to: "/Hakkımızda" },
-      { label: "Ekibimiz", to: "/Ekibimiz" },
-      { label: "İş Birliklerimiz", to: "/İşbirliklerimiz" },
+      { label: "Misyon & Vizyon", to: "/hakkimizda" },
+      { label: "Ekibimiz", to: "/ekibimiz" },
+      { label: "İş Birliklerimiz", to: "/isbirliklerimiz" },
     ],
   },
   {
     label: "Takımlarımız",
     sublist: [
-      { label: "Yıldırım Team", to: "/Takım/YıldırımTeam" },
-      { label: "Typhoon Helikopter", to: "/Takım/TyphoonHelikopter" },
-      { label: "BiltekCyber", to: "/Takım/BiltekCyber" },
-      { label: "Gridea", to: "/Takım/Gridea" },
-      { label: "BiltekAI", to: "/Takım/BiltekAI" },
-      { label: "Stride", to: "/Takım/Stride" },
+      { label: "Yıldırım Team", to: "/takim/yildirim-team" },
+      { label: "Typhoon Helikopter", to: "/takim/typhoon-helikopter" },
+      { label: "BiltekCyber", to: "/takim/biltek-cyber" },
+      { label: "Gridea", to: "/takim/gridea" },
+      { label: "BiltekAI", to: "/takim/biltek-ai" },
+      { label: "Stride", to: "/takim/stride" },
     ],
   },
   {
-    label: "Makaleler",
-    to: "/Makaleler",
-  },
-  {
-    label: "Duyurular",
-    to: "/Duyurular",
-  },
-  {
     label: "Galeri",
-    to: "/Galeri",
+    to: "/galeri",
   },
 ];
 
 const Navbar = () => {
   const location = useLocation();
-  const path = decodeURIComponent(location.pathname).toLocaleLowerCase("tr");
-  const isHomePage = path === "/" || path.startsWith("/takım");
+  const path = location.pathname.toLowerCase();
+  const isHomePage = path === "/" || path.startsWith("/takim");
 
   const [menuOpen, setMenuOpen] = useState(false);
   const sublistRefs = useRef([]);
@@ -61,17 +53,19 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    document.body.classList.remove("body__second-color", "no-transition");
-    if (!isHomePage) {
-      document.body.classList.add("no-transition");
+    setMenuOpen(false);
+    if (isHomePage) {
+      document.body.classList.remove("body__second-color");
+    } else {
       document.body.classList.add("body__second-color");
     }
 
     const navbar = document.querySelector(".nav");
     const blurDivs = document.querySelectorAll(".blur-div");
 
-    const handleNavbarBackground = () => {
-      if (window.scrollY >= 50) {
+    const handleNavbarBackground = (forcedScrollY) => {
+      const scrollY = typeof forcedScrollY === "number" ? forcedScrollY : window.scrollY;
+      if (scrollY >= 50) {
         blurDivs.forEach((div) => div.classList.remove("anti-blur"));
         if (!isHomePage) navbar.classList.remove("white-container");
       } else {
@@ -80,13 +74,17 @@ const Navbar = () => {
       }
     };
 
-    handleNavbarBackground();
-    window.addEventListener("scroll", handleNavbarBackground);
+    // Force scroll position to 0 on initial page load / route change
+    // to prevent navbar flashing/lagging before ScrollToTop executes
+    handleNavbarBackground(0);
+
+    const onScroll = () => handleNavbarBackground();
+    window.addEventListener("scroll", onScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleNavbarBackground);
+      window.removeEventListener("scroll", onScroll);
     };
-  }, [location.pathname]);
+  }, [location.pathname, isHomePage]);
 
   return (
     <AnimatedItem className={`nav${isHomePage ? "" : " white-container"}`}>
@@ -101,10 +99,19 @@ const Navbar = () => {
           {navLinks.map(({ to, label, sublist }, index) => (
             <li
               className="nav-item"
+              key={index}
               onMouseEnter={() => handleSublistOpen(index)}
               onMouseLeave={() => handleSublistClose(index)}
             >
-              <Link to={to} className="nav-link activator-item-title">
+              <Link
+                to={to}
+                className="nav-link activator-item-title"
+                onClick={() => {
+                  if (!sublist) {
+                    setMenuOpen(false);
+                  }
+                }}
+              >
                 {label}
                 {sublist && <i className="ri-arrow-down-s-line"></i>}
               </Link>
@@ -112,6 +119,7 @@ const Navbar = () => {
                 <Sublist
                   ref={(el) => (sublistRefs.current[index] = el)}
                   items={sublist}
+                  onItemClick={() => setMenuOpen(false)}
                 />
               )}
             </li>
