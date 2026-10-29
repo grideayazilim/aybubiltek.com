@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="text">
           <p id="text1">AYBÜ Bilim ve Teknoloji Topluluğu</p>
-          <p id="text2">© 2024 AYBÜ BİLTEK. Tüm hakları saklıdır.</p>
+          <p id="text2">© {new Date().getFullYear()} AYBÜ BİLTEK. Tüm hakları saklıdır.</p>
         </div>
 
         <SocialMediaGroup

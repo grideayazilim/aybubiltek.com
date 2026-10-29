@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import { Pagination, Navigation } from "swiper/modules";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,46 +12,21 @@ import setPageTitle from "../../hooks/setPageTitle";
 import AnimatedItem from "../../components/AnimatedItem";
 import AnimatedImage from "../../components/AnimatedImage";
 import "./TeamPage.scss";
-let cachedTeamsData = null;
+import { fetchActiveTeams, findTeam, getCachedActiveTeams } from "../../utils/teams";
 
 const TeamPage = () => {
   const { teamName } = useParams();
-  const [teamData, setTeamData] = useState(() => {
-    if (cachedTeamsData) {
-      return cachedTeamsData.find((team) => {
-        const key = team.key.toLowerCase();
-        const param = teamName.toLowerCase();
-        return key === param || (key === "gridea" && param === "grideayazilim");
-      });
-    }
-    return null;
-  });
+  const [teamData, setTeamData] = useState(() =>
+    findTeam(getCachedActiveTeams(), teamName)
+  );
   const [isLoading, setIsLoading] = useState(!teamData);
 
   setPageTitle(teamData?.name || "Takım Sayfası");
 
   useEffect(() => {
-    if (cachedTeamsData) {
-      const matched = cachedTeamsData.find((team) => {
-        const key = team.key.toLowerCase();
-        const param = teamName.toLowerCase();
-        return key === param || (key === "gridea" && param === "grideayazilim");
-      });
-      setTeamData(matched);
-      setIsLoading(false);
-      return;
-    }
-
-    fetch("/teams.json")
-      .then((res) => res.json())
-      .then((data) => {
-        cachedTeamsData = data;
-        const matched = data.find((team) => {
-          const key = team.key.toLowerCase();
-          const param = teamName.toLowerCase();
-          return key === param || (key === "gridea" && param === "grideayazilim");
-        });
-        setTeamData(matched);
+    fetchActiveTeams()
+      .then((teams) => {
+        setTeamData(findTeam(teams, teamName));
         setIsLoading(false);
       })
       .catch((err) => {
@@ -69,6 +44,8 @@ const TeamPage = () => {
     return () => clearTimeout(timeout);
   }, [teamData]);
 
+  // olmayan ya da aktif olmayan takımın sayfası açılmaz
+  if (!teamData && !isLoading) return <Navigate to="/" replace />;
   if (!teamData) return <div className="page-placeholder"></div>;
 
   return (

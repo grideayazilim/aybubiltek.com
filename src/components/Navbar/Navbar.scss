@@ -89,9 +89,14 @@ body.darkTheme {
           cursor: pointer;
           position: relative;
           padding: 1.8rem 0.8rem;
-          background-image: var(--hover-gradient);
-          background-clip: text;
           transition: color 0.4s, font-weight 0.4s;
+
+          /* Gradient is clipped to the label only. On the whole link it would
+             also clip to the arrow glyph unrotated, doubling the arrow on hover */
+          .nav-link-text {
+            background-image: var(--hover-gradient);
+            background-clip: text;
+          }
         }
 
         /*======= Features to use in item slide effect =======*/
@@ -263,7 +268,7 @@ body.darkTheme {
   .nav-menu {
     .nav-list {
       .nav-item {
-        .nav-link,
+        .nav-link-text,
         &::before,
         &::after {
           background-image: var(--white-container__hover-gradient);

@@ -9,6 +9,96 @@ import AnimatedItem from "../../components/AnimatedItem";
 
 const galleries = [
   {
+    title: "2026-2027 Galerisi",
+    images: [
+      {
+        src: "media/gallery/2026-2027/img1.jpg",
+        description: "Yeni dönem yönetim kurulumuz ve takımlarımız bir arada.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img2.jpg",
+        description: "2026-2027 Biltek ailesi.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img11.jpg",
+        description: "Kafe buluşmamızda ekibimiz bir arada.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img3.jpg",
+        description: "Üyelerimizle kafe buluşmamızdan bir kare.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img4.jpg",
+        description: "Biltek çerçevesinden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img7.jpg",
+        description: "Biltek çerçevesinden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2026-2027/img10.jpg",
+        description: "Biltek çerçevesinden bir kare.",
+      },
+    ],
+  },
+
+  {
+    title: "2025-2026 Galerisi",
+    images: [
+      {
+        src: "media/gallery/2025-2026/img2.jpg",
+        description: "Fibabanka etkinliğimizden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img3.jpg",
+        description: "Yılbaşı film gecemizden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img4.jpg",
+        description: "Yılbaşı film gecemizde Biltek çerçevesiyle.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img5.jpg",
+        description: "Yılbaşı film gecemizde ekibimizden arkadaşlarımız.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img7.jpg",
+        description: "Kahoot etkinliğimizden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img9.jpg",
+        description: "Söyleşimizden bir kare.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img10.jpg",
+        description: "Söyleşimizin ardından konuğumuzla hatıra fotoğrafı.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img11.jpg",
+        description: "Panelimizde konuklarımız.",
+      },
+
+      {
+        src: "media/gallery/2025-2026/img12.jpg",
+        description: "Panelimizin ardından toplu bir kare.",
+      },
+    ],
+  },
+
+  {
     title: "2024-2025 Galerisi",
     images: [
       {
@@ -366,6 +456,8 @@ const Gallery = () => {
                   key={i}
                   src={img.src}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   onClick={() => handleOpen(gallery.images, i)}
                 />
               ))}

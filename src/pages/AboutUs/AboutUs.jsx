@@ -1,6 +1,6 @@
 import sliderPhoto1 from "./media/SliderPhoto1.JPG";
 import sliderPhoto2 from "./media/SliderPhoto2.jpg";
-import sliderPhoto3 from "./media/SliderPhoto3.png";
+import sliderPhoto3 from "./media/SliderPhoto3.jpg";
 import sliderPhoto4 from "./media/SliderPhoto4.jpg";
 import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";

@@ -15,7 +15,7 @@ const Sublist = forwardRef(({ items, onItemClick }, ref) => {
       {items.map(({ to, label }) => (
         <li className="sublist-item" key={to}>
           <Link to={to} className="nav-link" onClick={onItemClick}>
-            {label}
+            <span className="nav-link-text">{label}</span>
           </Link>
         </li>
       ))}

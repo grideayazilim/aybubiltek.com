@@ -11,6 +11,7 @@ const AnimatedImage = forwardRef(({
   delay = 0.4,
   opacity = 1,
   rotate = 0,
+  targetRotate = 0,
   animateOnMount = false,
   ...rest
 }, ref) => {
@@ -34,9 +35,10 @@ const AnimatedImage = forwardRef(({
       y = distance;
   }
 
+  const target = { opacity: opacity, x: 0, y: 0, rotate: targetRotate };
   const animationProps = animateOnMount
-    ? { animate: { opacity: opacity, x: 0, y: 0, rotate: 0 } }
-    : { whileInView: { opacity: opacity, x: 0, y: 0, rotate: 0 } };
+    ? { animate: target }
+    : { whileInView: target };
 
   return (
     <motion.img

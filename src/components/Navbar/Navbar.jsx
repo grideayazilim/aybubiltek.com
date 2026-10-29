@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import Sublist from "./Sublist/Sublist";
 import AnimatedItem from "../AnimatedItem";
+import { fetchActiveTeams } from "../../utils/teams";
 
 const navLinks = [
   {
@@ -19,14 +20,8 @@ const navLinks = [
   },
   {
     label: "Takımlarımız",
-    sublist: [
-      { label: "Yıldırım Team", to: "/takim/yildirim-team" },
-      { label: "Typhoon Helikopter", to: "/takim/typhoon-helikopter" },
-      { label: "BiltekCyber", to: "/takim/biltek-cyber" },
-      { label: "Gridea", to: "/takim/gridea" },
-      { label: "BiltekAI", to: "/takim/biltek-ai" },
-      { label: "Stride", to: "/takim/stride" },
-    ],
+    sublist: [], // teams.json'daki aktif takımlarla doldurulur
+    isTeamList: true,
   },
   {
     label: "Galeri",
@@ -40,7 +35,22 @@ const Navbar = () => {
   const isHomePage = path === "/" || path.startsWith("/takim");
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [teamLinks, setTeamLinks] = useState([]);
   const sublistRefs = useRef([]);
+
+  useEffect(() => {
+    fetchActiveTeams()
+      .then((teams) =>
+        setTeamLinks(
+          teams.map((team) => ({ label: team.name, to: `/takim/${team.key}` }))
+        )
+      )
+      .catch((err) => console.error("Takımlar alınamadı:", err));
+  }, []);
+
+  const links = navLinks.map((link) =>
+    link.isTeamList ? { ...link, sublist: teamLinks } : link
+  );
 
   const handleSublistOpen = (index) => {
     const el = sublistRefs.current[index];
@@ -96,7 +106,7 @@ const Navbar = () => {
 
       <div className={`nav-menu ${menuOpen ? "show-menu" : ""}`}>
         <ul className="nav-list">
-          {navLinks.map(({ to, label, sublist }, index) => (
+          {links.map(({ to, label, sublist }, index) => (
             <li
               className="nav-item"
               key={index}
@@ -112,7 +122,7 @@ const Navbar = () => {
                   }
                 }}
               >
-                {label}
+                <span className="nav-link-text">{label}</span>
                 {sublist && <i className="ri-arrow-down-s-line"></i>}
               </Link>
               {sublist && (

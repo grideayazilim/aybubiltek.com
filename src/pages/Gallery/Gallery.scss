@@ -13,12 +13,16 @@
     .photo-area {
       display: flex;
       justify-content: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 1rem;
 
+      // dikey ve yatay fotoğraflar aynı boyutta görünsün, tamamı lightbox'ta
       .photo-thumbnail {
         width: 250px;
         height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
         cursor: pointer;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       }

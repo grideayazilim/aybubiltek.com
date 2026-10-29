@@ -2,6 +2,9 @@
   {
     "key": "gridea",
     "name": "Gridea",
+    "active": false,
+    "summary": "Web alanında nitelikli frontend ve backend eğitimi verir. Onların tabiriyle: \"Kodla site boyayıp tablolara bağlıyoruz arkadaşlar, gelin.\"",
+    "mostHeight": true,
     "logo": "/media/team-logos/gridea.png",
     "descriptions": [
       "2020-2021 döneminde BİLTEK ailesine katılan Gridea takımı, kurulduğu günden bu yana web geliştiriciliği üzerine eğitimler vermekte ve bünyesinde bulunan üyelerin birçoğunu da ilk defa yazılım dünyasıyla tanıştırmaktadır.",
@@ -176,6 +179,8 @@
   {
     "key": "gridea-tasarim",
     "name": "Gridea Tasarım",
+    "active": false,
+    "summary": "Topluluğumuzun tasarım ihtiyaçlarını karşılar; üyelerine Photoshop ve Illustrator başta olmak üzere tasarım araçlarını öğretir.",
     "logo": "/media/team-logos/gridea.png",
     "descriptions": [
       "2020-2021 yıllarında Bilim ve Teknoloji Topluluğu'nun tasarım ihtiyaçlarını karşılamak amacıyla kurulan Gridea Tasarım Takımı, kreatif düşünen ve tasarım alanında aktif rol almak isteyen üyelerine fikir ve teknik bilgi desteği sunmaktadır. Amacımız, üyelerimizi tasarım alanında yetkinleştirip uygulamalar konusunda donanımlı hale getirmektir. Edindiğimiz bilgi ve tecrübelerle, üyelerimizle birlikte çağdaş ve trend tasarımlar oluşturarak Biltek projelerine görsel katkı sağlamaktayız. \n\nBu doğrultuda, Adobe Photoshop ve Illustrator başta olmak üzere temel tasarım araçlarını öğreterek, üyelerimizin yetkinliklerini artırmayı hedefliyoruz.",
@@ -257,6 +262,8 @@
   {
     "key": "biltek-cyber",
     "name": "BiltekCyber",
+    "active": false,
+    "summary": "Geleceğin dünyası Siber dünyanın dinamiklerini merak mı ediyorsun? BiltekCyber ile bu yeni dünyada kendini nasıl koruyacağını öğren.",
     "logo": "/media/team-logos/biltekcyber.png",
     "descriptions": [
       "Ankara Yıldırım Beyazıt Üniversitesi Bilim ve Teknoloji Topluluğu bünyesinde faaliyetlerini sürdüren BiltekCyber Takımı, 2015 yılında üniversitemizin öğrencileri tarafından kurulmuştur. Kurulduğu tarihten itibaren gerek üniversite içi gerekse üniveriste dışı düzenlediği etkinliklerle siber güvenlik alanına ilgi duyan bireylere çalışma ortamı sağlamak ve üyelerini siber tehditler hakkında bilinçlendirmek amacıyla çalışmalarını sürdürmektedir."
@@ -344,11 +351,13 @@
   {
     "key": "yildirim-team",
     "name": "Yıldırım Team",
+    "active": true,
+    "summary": "Projelerinde mükemmelliği hedefleyerek ulusal ve uluslararası yarışmalarda üstün performans sergilemeye odaklıdır.",
     "logo": "/media/team-logos/yildirim-team.png",
     "descriptions": [
-      "Yıldırım Roket Takımı, üniversitemizde savunma ve uzay teknolojileri alanlarına ilgili ve bu alanlarda projeler üreterek kendilerini geliştirmek isteyen öğrenci arkadaşlarımıza öncülük etmek ve ülkemiz için tecrübeli ve eğitimli bireyler yetiştirmek adına 2018 yılında BİLTEK bünyesinde kurulmuştur ve katıldığı senelerde çoğunlukla finale kalarak tasarlamış olduğu roketi gökyüzü ile buluşturmayı başarmıştır.",
-      "Yıldırım Model Uydu Takımı ise uzay teknolojisi alanına ilgi duyan ve bu alanda yenilikçi projeler üretip kendini geliştirmek isteyen öğrenci arkadaşlarımıza öncülük etmek ve ülkemizin yükselmesinde rol oynayacak tecrübeli ve eğitimli bireyler yetiştirmek adına 2024 yılında BİLTEK bünyesinde kurulmuştur.",
-      "Yıldırım Team, bundan sonraki senelerde de üniversitemizi temsil ederek ülkemize katkıda bulunmak için çalışmalarına hız kesmeden devam edecektir."
+      "Yıldırım Takımı, 2018 yılında BİLTEK bünyesinde kurulmuş, TEKNOFEST yarışmalarına katılan bir öğrenci takımıdır. 8 yıldır TEKNOFEST Roket Yarışması'na katılan ekibimiz; tasarım, üretim, test ve raporlama aşamalarını başarıyla tamamlayarak sekiz yılda altı kez finalde uçuş hakkı kazanmıştır.",
+      "Model Uydu ve Su Altı Roketi yarışmalarıyla kapsamını genişleten Yıldırım Takımı, bu sene de TEKNOFEST Roket Yarışması, Model Uydu Yarışması ve Su Altı Roketi Yarışması kapsamında çalışmalarına başlamıştır.",
+      "Amacımız; disiplinler arası takım çalışmasını ön planda tutan, hata yapmaktan çekinilmeyen, öğrenciler olarak hep beraber mühendisliğimizi geliştirdiğimiz bir öğrenme ortamı kurmak ve Yıldırım kültürünü devam ettirmektir."
     ],
     "social": [
       {
@@ -391,85 +400,77 @@
       {
         "image": "/media/team-photos/yildirim-team/yildirim-2024.jpg",
         "title": "TEKNOFEST 2024 Çifte Başarı",
-        "description": "Takımımız ile TEKNOFEST 2024'te Atışa Uygunluk testlerini başarıyla geçip yarışma sürecini tamamladık. Ek olarak, Model Uydu Yarışması’na ilk defa katılım sağlayarak POR, PDR ve CDR aşamalarını başarıyla geçerek QR aşamasına kadar ilerleme kaydettik."
+        "description": "Takımımız ile TEKNOFEST 2024'te Orta İrtifa Kategorisi'nde tüm aşamaları tamamlayarak uçuş hakkı kazandık ve Türkiye 31.si olduk. Ek olarak, Model Uydu Yarışması’na ilk defa katılım sağlayarak POR, PDR ve CDR aşamalarını başarıyla geçerek QR aşamasına kadar ilerleme kaydettik."
+      },
+
+      {
+        "image": "/media/team-photos/yildirim-team/yildirim-2026.jpg",
+        "title": "TEKNOFEST 2026 Türkiye 6.sı",
+        "description": "Takımımız ile TEKNOFEST 2026 Roket Yarışması Orta İrtifa Kategorisi'nde tüm aşamaları başarıyla geçerek uçuş hakkı kazandık ve Türkiye 6.sı olduk."
       }
     ],
     "members": [
       {
         "type": "leader",
+        "id": 1,
+        "image": "/media/team-photos/yildirim-team/member-photos/emre-cebeci.png",
+        "name": "Emre Cebeci",
+        "position": "Takım Kaptanı"
+      },
+
+      {
+        "type": "leader",
         "id": 2,
-        "image": "/media/team-photos/yildirim-team/member-photos/tugbanur-kucuk.png",
-        "name": "Tuğbanur Küçük",
-        "position": "Yıldırım Kaptanı",
-        "linkedin": "https://www.linkedin.com/in/tu%C4%9Fbanur-k%C3%BC%C3%A7%C3%BCk-2415702a7/"
-      },
-
-      {
-        "type": "leader",
-        "id": 4,
         "image": "/media/team-photos/yildirim-team/member-photos/alpdogan-kurt.png",
         "name": "Alpdoğan Kurt",
-        "position": "Model Uydu Kaptanı",
+        "position": "Takım Kaptanı",
         "linkedin": "https://www.linkedin.com/in/alpdo%C4%9Fan-kurt-bb3341307/"
       },
 
       {
-        "type": "leader",
+        "type": "core",
         "id": 3,
-        "image": "/media/team-photos/yildirim-team/member-photos/tugbanur-kucuk.png",
-        "name": "Tuğbanur Küçük",
-        "position": "Uydu Mekanik Lideri",
-        "linkedin": "https://www.linkedin.com/in/tu%C4%9Fbanur-k%C3%BC%C3%A7%C3%BCk-2415702a7/"
+        "image": "/media/team-photos/yildirim-team/member-photos/salih-toker.png",
+        "name": "Salih Toker",
+        "position": "Core Team Üyesi"
       },
 
       {
-        "type": "leader",
-        "id": 12,
-        "image": "/media/team-photos/yildirim-team/member-photos/ahmet-yilmaz.png",
-        "name": "Ahmet Yılmaz",
-        "position": "Rkt Mekanik Lideri",
-        "linkedin": "https://www.linkedin.com/in/ahmet-y%C4%B1lmaz-1a7416267/"
+        "type": "core",
+        "id": 4,
+        "image": "/media/team-photos/yildirim-team/member-photos/batuhan-koc.png",
+        "name": "Batuhan Koç",
+        "position": "Core Team Üyesi"
       },
 
       {
-        "type": "leader",
+        "type": "core",
         "id": 5,
-        "image": "/media/team-photos/yildirim-team/member-photos/alpdogan-kurt.png",
-        "name": "Alpdoğan Kurt",
-        "position": "Rkt Aviyonik Lideri",
-        "linkedin": "https://www.linkedin.com/in/alpdo%C4%9Fan-kurt-bb3341307/"
+        "image": "/media/team-photos/yildirim-team/member-photos/cahit-onur-enoglu.png",
+        "name": "Cahit Onur Enoğlu",
+        "position": "Core Team Üyesi"
       },
 
       {
         "type": "core",
         "id": 6,
-        "image": "/media/team-photos/yildirim-team/member-photos/hamza-guzel.png",
-        "name": "Muhammed Hamza Güzel",
-        "position": "Aviyonik Üyesi",
-        "linkedin": "https://www.linkedin.com/in/hamza-g%C3%BCzel-39164a30b/"
-      },
-
-      {
-        "type": "core",
-        "id": 7,
-        "image": "/media/team-photos/yildirim-team/member-photos/zeynep-tokat.png",
-        "name": "Zeynep Sudem Tokat",
-        "position": "Aviyonik Üyesi",
-        "linkedin": "https://www.linkedin.com/in/zeynep-sudem-tokat-047461288/"
-      },
-
-      {
-        "type": "core",
-        "id": 8,
-        "image": "/media/team-photos/yildirim-team/member-photos/hira-nur-yildirim.png",
-        "name": "Hira Nur Yıldırım",
-        "position": "S. Medya Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/zeynep-sudem-tokat-047461288/"
+        "image": "/media/team-photos/yildirim-team/member-photos/nurcan-baloglu.png",
+        "name": "Nurcan Baloğlu",
+        "position": "Core Team Üyesi"
       },
 
       {
         "type": "retired",
-        "id": 1,
+        "id": 7,
+        "image": "/media/team-photos/yildirim-team/member-photos/tugbanur-kucuk.png",
+        "name": "Tuğbanur Küçük",
+        "position": "2025-2026 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/tu%C4%9Fbanur-k%C3%BC%C3%A7%C3%BCk-2415702a7/"
+      },
+
+      {
+        "type": "retired",
+        "id": 8,
         "image": "/media/team-photos/yildirim-team/member-photos/alihan-ozer.png",
         "name": "Alihan Özer",
         "position": "2024-2025 Kaptanı",
@@ -506,110 +507,106 @@
   },
 
   {
-    "key": "typhoon-helikopter",
-    "name": "Typhoon Helikopter",
-    "logo": "/media/team-logos/typhoon.png",
+    "key": "typhoon-iha",
+    "name": "Typhoon İHA",
+    "active": true,
+    "summary": "Helikopter mirasını İnsansız Hava Araçları'na taşıyarak TEKNOFEST Uluslararası İHA Yarışması için özgün ve otonom bir İHA geliştirir.",
+    "logo": "/media/team-logos/typhoon-takimlari.png",
     "descriptions": [
-      "Typhoon Helikopter Takımı, 2022 senesinde Ankara Yıldırım Beyazıt Üniversitesi öğrencileri tarafından kurulmuş bir takımdır. Typhoon Helikopter Takımı’nın kurulma amacı TEKNOFEST Helikopter Tasarım Yarışması’na katılmak ve şartname sınırları içerisinde bir helikopter tasarımı ortaya çıkartmaktır. Takıma yeni gelen arkadaşlarımıza gerekli programların eğitimlerini vererek ve yarışma süresince elde ettiğimiz tecrübeleri kullanarak takımımızın devamlılığını ve başarı oranını arttırmak istemekteyiz."
+      "Typhoon İHA Takımı, 2022 yılında kurulan Typhoon Helikopter Takımı’nın mühendislik mirasını devralarak gelişen, BİLTEK çatısı altında faaliyet gösteren bir öğrenci mühendislik takımıdır. Döner kanatlı helikopter sistemleri üzerine çalışan ekibimiz, 2024 yılında yeniden yapılanarak İnsansız Hava Araçları (İHA) alanına yönelmiştir.",
+      "TEKNOFEST Uluslararası İnsansız Hava Araçları Yarışması (Döner Kanat Kategorisi) şartnamesindeki görev gereksinimlerini karşılayan; aerodinamik açıdan optimize edilmiş, özgün, güvenilir ve otonom görev kabiliyetine sahip bir İHA geliştirmeyi amaçlıyoruz. Mekanik tasarım, yazılım, elektronik ve aviyonik alt ekiplerimiz, akran mentorluğu kültürüyle yeni üyelerimizi de bu sürecin bir parçası yapıyor."
     ],
     "social": [
       {
-        "instagram": "https://www.instagram.com/typhoonhelikopter/",
+        "instagram": "https://www.instagram.com/typhoontakimlari/",
         "linkedin": "https://www.linkedin.com/in/typhoon-helikopter-tak%C4%B1m%C4%B1-099932252/"
       }
     ],
     "video": "url",
     "achievements": [
       {
-        "image": "/media/team-photos/typhoon/teknofest.png",
-        "title": "TEKNOFEST 2023",
-        "description": "Typhoon Helikopter Takımı TEKNOFEST yarışmalarına helikopter tasarım alanında katılmıştır."
+        "image": "/media/team-photos/typhoon/iha-tasarim.jpg",
+        "title": "TEKNOFEST 2025 İHA",
+        "description": "Döner Kanat kategorisinde hazırladığımız Proje Sunum Raporu 77 puana ulaşarak 80 puanlık sonraki aşama barajını çok küçük bir farkla kaçırdı."
       },
 
       {
-        "image": "/media/team-photos/typhoon/teknofest.png",
-        "title": "TEKNOFEST 2024",
-        "description": "Typhoon Helikopter Takımı TEKNOFEST yarışmalarına helikopter tasarım alanında katılmıştır."
+        "image": "/media/team-photos/typhoon/iha-analiz.jpg",
+        "title": "Tasarım & Analiz",
+        "description": "Gövde ve kol yapılarını CAD ortamında modelliyor, ANSYS ile yapısal (FEA) ve akışkanlar dinamiği (CFD) analizlerini gerçekleştiriyoruz."
       },
 
       {
-        "image": "/media/team-photos/typhoon/egitim.png",
+        "image": "/media/team-photos/typhoon/iha-egitim.jpg",
         "title": "Eğitimlerimiz",
-        "description": "Helikopter tasarımı üzerine eğitimlerimiz her sene olduğu gibi bu yıl da devam ediyor."
+        "description": "Yeni takım arkadaşlarımıza İHA tasarımı, simülasyon ve üretim süreçleri üzerine kapsamlı teknik eğitimler veriyoruz."
       },
 
       {
-        "image": "/media/team-photos/typhoon/calisma.png",
-        "title": "Core Çalışması",
-        "description": "Ekibimizle beraber başarıya ulaşmak için her zaman ve her yerde çalışmaya devam ediyoruz."
+        "image": "/media/team-photos/typhoon/iha-takim.jpg",
+        "title": "Typhoon Ailesi",
+        "description": "Sadece proje odaklı bir çalışma grubu değil, aynı zamanda güçlü sosyal bağlara sahip büyük bir aileyiz."
+      },
+
+      {
+        "image": "/media/team-photos/typhoon/teknofest.png",
+        "title": "TEKNOFEST 2023 & 2024",
+        "description": "Typhoon Helikopter Takımı olarak TEKNOFEST Helikopter Tasarım Yarışması'na katıldık."
       }
     ],
     "members": [
       {
         "type": "leader",
         "id": 1,
-        "image": "/media/team-photos/typhoon/member-photos/alaaddin-gunduz.png",
-        "name": "Alaaddin Gündüz",
-        "position": "Kaptan",
-        "linkedin": "https://www.linkedin.com/in/alaaddingunduz/"
+        "image": "/media/team-photos/typhoon/member-photos/mert-karakoc.png",
+        "name": "Mert Karakoç",
+        "position": "Takım Kaptanı"
       },
 
       {
-        "type": "leader",
+        "type": "core",
         "id": 2,
-        "image": "/media/team-photos/typhoon/member-photos/sina-uyar.png",
-        "name": "Sina Uyar",
-        "position": "Kaptan Yardımcısı",
-        "linkedin": "https://www.linkedin.com/in/sina-uyar-33875a301/"
+        "image": "/media/team-photos/typhoon/member-photos/mehmet-suna.png",
+        "name": "Mehmet Suna",
+        "position": "Mekanik"
+      },
+
+      {
+        "type": "core",
+        "id": 3,
+        "image": "/media/team-photos/typhoon/member-photos/arda-zencikiran.png",
+        "name": "Arda Zencikıran",
+        "position": "Aviyonik"
+      },
+
+      {
+        "type": "core",
+        "id": 4,
+        "image": "/media/team-photos/typhoon/member-photos/meliksah-doruk.png",
+        "name": "Melikşah Doruk",
+        "position": "Yazılım"
       },
 
       {
         "type": "core",
         "id": 5,
-        "image": "/media/team-photos/typhoon/member-photos/burcu-alparslan.png",
-        "name": "Burcu Alparslan",
-        "position": "Core Team Üyesi"
-      },
-
-      {
-        "type": "core",
-        "id": 6,
-        "image": "/media/team-photos/typhoon/member-photos/efekan-karsavuranoglu.png",
-        "name": "Efekan Karsavuranoğlu",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/efekan-karsavurano%C4%9Flu-90a093236/"
-      },
-
-      {
-        "type": "core",
-        "id": 6,
-        "image": "/media/team-photos/typhoon/member-photos/eren-biyik.png",
-        "name": "Eren Bıyık",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/eren-b%C4%B1y%C4%B1k-5917ba1a4/"
-      },
-
-      {
-        "type": "core",
-        "id": 7,
-        "image": "/media/team-photos/typhoon/member-photos/gozde-nur-sarac.png",
-        "name": "Gözde Nur Saraç",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/g%C3%B6zde-nur-sara%C3%A7-646005335/"
-      },
-
-      {
-        "type": "core",
-        "id": 6,
-        "image": "/media/team-photos/typhoon/member-photos/mustafa-sahin.png",
-        "name": "Mustafa Şahin",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/mustafa-%C5%9Fahin-88b792305/"
+        "image": "/media/team-photos/typhoon/member-photos/musa-oguz-dogan.png",
+        "name": "Musa Oğuz Doğan",
+        "position": "Yazılım"
       },
 
       {
         "type": "retired",
-        "id": 3,
+        "id": 6,
+        "image": "/media/team-photos/typhoon/member-photos/alaaddin-gunduz.png",
+        "name": "Alaaddin Gündüz",
+        "position": "2025-2026 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/alaaddingunduz/"
+      },
+
+      {
+        "type": "retired",
+        "id": 7,
         "image": "/media/team-photos/typhoon/member-photos/cise-cakil.png",
         "name": "Çise Gül Çakıl",
         "position": "2023-2024 Kaptanı",
@@ -618,7 +615,150 @@
 
       {
         "type": "retired",
+        "id": 8,
+        "image": "/media/team-photos/typhoon/member-photos/mehmet-agdag.png",
+        "name": "Mehmet Fatih Ağdağ",
+        "position": "Kurucu Kaptan",
+        "linkedin": "https://www.linkedin.com/in/mehmet-fatih-agdag/"
+      }
+    ]
+  },
+
+  {
+    "key": "typhoon-ika",
+    "name": "Typhoon İKA",
+    "active": true,
+    "summary": "TEKNOFEST İnsansız Kara Aracı Yarışması'na hazırlanan, mekanik, yazılım ve elektronik disiplinlerini bir araya getiren takımımız.",
+    "logo": "/media/team-logos/typhoon-takimlari.png",
+    "descriptions": [
+      "Typhoon İKA Takımı, 2022 yılında kurulan Typhoon Helikopter Takımı'nın devamı niteliğinde, yeniden yapılandırılmış bir öğrenci mühendislik takımıdır. Helikopter yarışma kategorisinin kaldırılmasıyla birlikte bilgi birikimini yeni bir alana taşıyan takımımız, bu dönem TEKNOFEST İnsansız Kara Aracı Yarışması'na hazırlanmaktadır.",
+      "Mekanik tasarım, yazılım, elektronik ve aviyonik alanlarından öğrencileri ortak bir hedef etrafında buluşturuyor; özgün, işlevsel ve güvenilir bir insansız kara aracı geliştirirken birlikte öğrenmeyi ve öğrendiklerimizi paylaşmayı önemsiyoruz."
+    ],
+    "social": [
+      {
+        "instagram": "https://www.instagram.com/typhoontakimlari/",
+        "linkedin": "https://www.linkedin.com/in/typhoon-helikopter-tak%C4%B1m%C4%B1-099932252/"
+      }
+    ],
+    "video": "url",
+    "achievements": [
+      {
+        "image": "/media/team-photos/typhoon/ika-tasarim.jpg",
+        "title": "Araç Tasarımımız",
+        "description": "Araç şasisi, süspansiyon sistemi, tekerlek yapısı ve motor-redüktör seçimi üzerine tasarım ve mühendislik analizleri yürütüyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/typhoon/ika-simulasyon.jpg",
+        "title": "Yazılım & Simülasyon",
+        "description": "Python, OpenCV ve ROS 2 ile aracın kontrol ve otonom görevlerine yönelik yazılım altyapısını geliştiriyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/typhoon/ika-egitim.jpg",
+        "title": "Eğitimlerimiz",
+        "description": "Üyelerimizin tasarım ve yazılım programlarını öğrenmelerini destekliyor, edinilen bilgileri takım içinde aktarıyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/typhoon/ika-takim.jpg",
+        "title": "Takım Çalışmalarımız",
+        "description": "Bu yıl İKA kategorisinde ilk kez yarışmaya hazırlanıyoruz; araştırma, tasarım, üretim ve test aşamalarını birlikte deneyimliyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/typhoon/teknofest.png",
+        "title": "TEKNOFEST 2023 & 2024",
+        "description": "Typhoon Helikopter Takımı olarak TEKNOFEST Helikopter Tasarım Yarışması'na katıldık."
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "/media/team-photos/typhoon/member-photos/gozde-nur-sarac.png",
+        "name": "Gözde Nur Saraç",
+        "position": "Takım Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/g%C3%B6zde-nur-sara%C3%A7-646005335/"
+      },
+
+      {
+        "type": "core",
+        "id": 2,
+        "image": "/media/team-photos/typhoon/member-photos/omar-ahmed-hussin.png",
+        "name": "Omar Ahmed Hussin",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 3,
+        "image": "/media/team-photos/typhoon/member-photos/ceyhun-arda-kazancioglu.png",
+        "name": "Ceyhun Arda Kazancıoğlu",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
         "id": 4,
+        "image": "/media/team-photos/typhoon/member-photos/melek-candan.png",
+        "name": "Melek Candan",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 5,
+        "image": "/media/team-photos/typhoon/member-photos/ayse-zulal-simsek.png",
+        "name": "Ayşe Zülal Şimşek",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/typhoon/member-photos/tugce-erdem.png",
+        "name": "Tuğçe Erdem",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 7,
+        "image": "/media/team-photos/typhoon/member-photos/aysenur-canpolat.png",
+        "name": "Ayşenur Canpolat",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 8,
+        "image": "/media/team-photos/typhoon/member-photos/burcu-alparslan.png",
+        "name": "Burcu Alparslan",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "retired",
+        "id": 9,
+        "image": "/media/team-photos/typhoon/member-photos/alaaddin-gunduz.png",
+        "name": "Alaaddin Gündüz",
+        "position": "2025-2026 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/alaaddingunduz/"
+      },
+
+      {
+        "type": "retired",
+        "id": 10,
+        "image": "/media/team-photos/typhoon/member-photos/cise-cakil.png",
+        "name": "Çise Gül Çakıl",
+        "position": "2023-2024 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/%C3%A7ise-g%C3%BCl-%C3%A7-2868a5248/"
+      },
+
+      {
+        "type": "retired",
+        "id": 11,
         "image": "/media/team-photos/typhoon/member-photos/mehmet-agdag.png",
         "name": "Mehmet Fatih Ağdağ",
         "position": "Kurucu Kaptan",
@@ -630,9 +770,12 @@
   {
     "key": "biltek-ai",
     "name": "BiltekAI",
+    "active": true,
+    "summary": "Havacılıkta yapay zeka üzerine çalışır; İHA'lar için nesne tespiti, iniş güvenliği ve görüntüden konum tahmini yazılımları geliştirir.",
     "logo": "/media/team-logos/biltekai.png",
     "descriptions": [
-      "2024 Mart ayında Bilim ve Teknoloji Topluluğu çatısı altında kurulan BiltekAI Takımı 7 kişilik dinamik core ekibiyle, üyelerine yapay zeka ve benzeri teknolojiler konusunda bilgi ve deneyim kazandırmayı hedefleyerek bu süreçte iş birliği kültürünü benimsemektedir. Takımın amacı, üyelerine yapay zeka alanında uzmanlaşma fırsatları sunarak yapay zeka trenine öğrencilerin erkenden atılmasını sağlamak, yapay zekanın  günlük rutinlerde kullanımı konusunda bir bilinç oluşturmak topluma fayda sağlayacak projeler geliştirmektir."
+      "2024 yılında Bilim ve Teknoloji Topluluğu çatısı altında mühendislik öğrencileri tarafından kurulan BiltekAI, üniversite derslerinde öğrenilen teorik bilgileri somut öğrenci projelerine dönüştürmeyi, yapay zeka alanında kendini geliştirmeyi ve ekip çalışması tecrübesi kazanmayı amaçlamaktadır.",
+      "Takım olarak havacılıkta yapay zeka üzerine çalışıyoruz: insansız hava araçlarının kamera görüntülerinden insan, taşıt ve iniş alanlarını tespit eden, iniş güvenliğini kontrol eden ve GPS sinyali kesildiğinde görüntüden konum tahmini yapan görüntü işleme yazılımları geliştiriyoruz."
     ],
     "social": [
       {
@@ -643,42 +786,42 @@
     "video": "url",
     "achievements": [
       {
-        "image": "/media/team-photos/biltekai/egitim1.jpg",
-        "title": "Eğitimlerimiz",
-        "description": "Eğitimlerimizden kareler..."
+        "image": "/media/team-photos/biltekai/egitim2.jpg",
+        "title": "TEKNOFEST ÖTR Başarısı",
+        "description": "Hazırladığımız proje planı ve yürüttüğümüz çalışmalarla TEKNOFEST Ön Tasarım Raporu aşamasını başarıyla geçtik ve projemizi geliştirmeye hak kazandık."
       },
 
       {
-        "image": "/media/team-photos/biltekai/egitim2.jpg",
-        "title": "Eğitimlerimiz",
-        "description": "Eğitimlerimizden kareler..."
+        "image": "/media/team-photos/biltekai/egitim1.jpg",
+        "title": "Seminerlerimiz",
+        "description": "Üniversitemizde alanında deneyimli konuşmacıları ağırladığımız seminerler organize ederek öğrenci arkadaşlarımızın sektörle buluşmasına katkı sağlıyoruz."
       },
 
       {
         "image": "/media/team-photos/biltekai/egitim3.jpg",
-        "title": "Eğitimlerimiz",
-        "description": "Eğitimlerimizden kareler..."
+        "title": "Zirve & Konferanslar",
+        "description": "BTK Akademi Yapay Zeka Zirvesi başta olmak üzere çeşitli konferanslara katılarak vizyonumuzu genişletiyor ve takımımızı tanıtıyoruz."
       },
 
       {
         "image": "/media/team-photos/biltekai/egitim4.jpg",
         "title": "Eğitimlerimiz",
-        "description": "Eğitimlerimizden kareler..."
+        "description": "Görüntü işleme temelleri ve veri hazırlığından nesne tespitine kadar birlikte öğrenip birlikte üretiyoruz."
       }
     ],
     "members": [
       {
         "type": "leader",
         "id": 1,
-        "image": "/media/team-photos/biltekai/member-photos/ali-secim.png",
-        "name": "Ali Seçim",
-        "position": "Kaptan",
-        "linkedin": "https://www.linkedin.com/in/ali-se%C3%A7im-305661328/"
+        "image": "/media/team-photos/biltekai/member-photos/ertugrul-tohma.png",
+        "name": "Mehmet Ertuğrul Tohma",
+        "position": "Takım Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/ertu%C4%9Frul-tohma-08555a25a/"
       },
 
       {
         "type": "leader",
-        "id": 3,
+        "id": 2,
         "image": "/media/team-photos/biltekai/member-photos/nur-demirkan.png",
         "name": "Emine Nur Demirkan",
         "position": "Kaptan Yardımcısı",
@@ -686,35 +829,25 @@
       },
 
       {
-        "type": "leader",
-        "id": 4,
-        "image": "/media/empty-person.png",
-        "name": "Enes Köstekli",
-        "position": "Etkinlik Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/enes-k%C3%B6stekli-011103330/"
-      },
-
-      {
-        "type": "leader",
-        "id": 5,
-        "image": "/media/team-photos/biltekai/member-photos/zohre-aydin.png",
-        "name": "Zöhre İrem Aydın",
-        "position": "S. Medya Sorumlusu",
-        "linkedin": "https://www.linkedin.com/in/z%C3%B6hreiremayd%C4%B1n/"
-      },
-
-      {
         "type": "core",
-        "id": 6,
-        "image": "/media/team-photos/biltekai/member-photos/ertugrul-tohma.png",
-        "name": "Ertuğrul Tohma",
-        "position": "Core Team Üyesi",
-        "linkedin": "https://www.linkedin.com/in/ertu%C4%9Frul-tohma-08555a25a/"
+        "id": 3,
+        "image": "/media/team-photos/biltekai/member-photos/zeynep-rana-turgay.png",
+        "name": "Zeynep Rana Turğay",
+        "position": "Core Team Üyesi"
       },
 
       {
         "type": "retired",
-        "id": 7,
+        "id": 4,
+        "image": "/media/team-photos/biltekai/member-photos/ali-secim.png",
+        "name": "Ali Seçim",
+        "position": "2025-2026 Kaptanı",
+        "linkedin": "https://www.linkedin.com/in/ali-se%C3%A7im-305661328/"
+      },
+
+      {
+        "type": "retired",
+        "id": 5,
         "image": "/media/team-photos/biltekai/member-photos/beyza-karakurt.png",
         "name": "Beyza Karakurt",
         "position": "Kurucu Kaptan",
@@ -722,9 +855,119 @@
       }
     ]
   },
+
+  {
+    "key": "coreframe",
+    "name": "CoreFrame",
+    "active": true,
+    "summary": "Mimarlık ve inşaat mühendisliği öğrencilerinin yapı takımı. Architecture Student Contest 2026'da Türkiye birincisi!",
+    "logo": "/media/team-logos/coreframe.png",
+    "descriptions": [
+      "CoreFrame, mimarlık ve inşaat mühendisliği öğrencilerinin bir araya gelerek kurduğu çok disiplinli bir BİLTEK yapı takımıdır. Takımımız, adını yüksek yapılarda yatay ve düşey yüklere karşı en kritik dayanımı sağlayan rijit \"merkez çekirdek çerçeve\" (core frame) sisteminden almaktadır.",
+      "Tasarım, mühendislik analizi, estetik ve yapım metodolojilerini bütüncül bir yaklaşımla ele alan CoreFrame; ulusal ve uluslararası yarışmalarda yenilikçi, sürdürülebilir ve depreme dayanıklı projeler geliştirmeyi, atölyeler ve saha uygulamalarıyla teoriyi pratiğe dönüştürmeyi amaçlamaktadır."
+    ],
+    "social": [
+      {
+        "instagram": "https://www.instagram.com/coreframeyapi/",
+        "linkedin": "#"
+      }
+    ],
+    "video": "url",
+    "achievements": [
+      {
+        "image": "/media/team-photos/coreframe/asc-2026.jpg",
+        "title": "Architecture Student Contest 2026",
+        "description": "Yarışmanın ulusal etabında projemiz Türkiye Birinciliği ödülüne layık görüldü ve ülkemizi uluslararası büyük finalde temsil etme hakkı kazandı."
+      },
+
+      {
+        "image": "/media/team-photos/coreframe/asc-2026-sunum.jpg",
+        "title": "Uluslararası Finale Doğru",
+        "description": "Ulusal aşamada elde ettiğimiz Türkiye Birinciliği vizyonunu uluslararası finallere taşımak için çalışmaya devam ediyoruz."
+      },
+
+      {
+        "image": "/media/team-photos/coreframe/tsmd-basamaklar-1.jpg",
+        "title": "TSMD Basamaklar 2026",
+        "description": "Türk Serbest Mimarlar Derneği tarafından düzenlenen Basamaklar 2026 sergisine takımımızdan 4 proje kabul edildi ve sergilendi."
+      },
+
+      {
+        "image": "/media/team-photos/coreframe/tugla-uygulamasi.jpg",
+        "title": "Kampüs Tuğla Uygulaması",
+        "description": "Işıklar Tuğla Yarışması kapsamında planlanan 3 projeden 2'sini bizzat ördük; bu yapılar şu anda kampüsümüzde aktif olarak kullanılıyor."
+      },
+
+      {
+        "image": "/media/team-photos/coreframe/photoshop-atolyesi.jpg",
+        "title": "Photoshop & Pafta Workshopu",
+        "description": "Fakültemizdeki öğrenciler için pafta kompozisyonu, görsel anlatım dili ve Photoshop tekniklerini kapsayan uygulamalı bir atölye gerçekleştirdik."
+      }
+    ],
+    "members": [
+      {
+        "type": "leader",
+        "id": 1,
+        "image": "/media/team-photos/coreframe/member-photos/zeynep-zehra-sifil.png",
+        "name": "Zeynep Zehra Sifil",
+        "position": "Takım Kaptanı"
+      },
+
+      {
+        "type": "leader",
+        "id": 2,
+        "image": "/media/team-photos/coreframe/member-photos/aleyna-gok.png",
+        "name": "Aleyna Gök",
+        "position": "Kaptan Yardımcısı"
+      },
+
+      {
+        "type": "core",
+        "id": 4,
+        "image": "/media/team-photos/coreframe/member-photos/nurullah-aslan.png",
+        "name": "Nurullah Aslan",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 5,
+        "image": "/media/team-photos/coreframe/member-photos/ogul-can-aydin.png",
+        "name": "Oğul Can Aydın",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 6,
+        "image": "/media/team-photos/coreframe/member-photos/azmi-kayhan.png",
+        "name": "Azmi Kayhan",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "core",
+        "id": 7,
+        "image": "/media/team-photos/coreframe/member-photos/emirhan-ozturk.png",
+        "name": "Emirhan Öztürk",
+        "position": "Core Team Üyesi"
+      },
+
+      {
+        "type": "retired",
+        "id": 8,
+        "image": "/media/team-photos/coreframe/member-photos/furkan-alas.png",
+        "name": "Furkan Alaş",
+        "position": "Eski Kaptan",
+        "linkedin": "https://www.linkedin.com/in/furkan-alas-f2a/"
+      }
+    ]
+  },
   {
     "key": "stride",
     "name": "Stride",
+    "active": false,
+    "summary": "BİLTEK'in oyun geliştirme takımı. Hayal gücü bu takımda gerçekliğe dönüşüyor.",
     "logo": "/media/team-logos/stride.png",
     "descriptions": [
       "Stride, oyun geliştirme sürecine ilgi duyan öğrencileri bir araya getirerek fikirlerini oyun dünyasına dönüştürmelerine fırsat sunuyor.",

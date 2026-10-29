@@ -234,3 +234,11 @@ body {
     padding: 2.15rem 5% 3.05rem;
   }
 }
+
+/*=============== THEME SWITCH ===============*/
+// Tema değişince yeni görünüm logodan dairesel yayılır (LandingPage.jsx)
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}

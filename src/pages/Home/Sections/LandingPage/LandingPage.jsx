@@ -1,27 +1,67 @@
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import SocialMediaGroup from "../../../../components/SocialMediaGroup/SocialMediaGroup";
 import AnimatedItem from "../../../../components/AnimatedItem";
 import AnimatedImage from "../../../../components/AnimatedImage";
 import "./LandingPage.scss";
 
-const LandingPage = () => {
-  const themeButtonRef = useRef(null);
+const darkTheme = "darkTheme";
 
-  useEffect(() => {
-    const themeButton = themeButtonRef.current;
-    const darkTheme = "darkTheme";
-    const handleThemeToggle = () => {
-      const oppositeTheme = document.body.classList.contains(darkTheme)
-        ? "light"
-        : "dark";
-      document.body.classList.toggle(darkTheme);
-      themeButton.classList.toggle("theme-button-dark");
-      localStorage.setItem("biltekTheme", oppositeTheme);
+// Logo dönüşü ve tema dalgası aynı süre ve eğriyle ilerlesin
+const themeSwitchDuration = 0.9;
+const themeSwitchEase = [0.65, 0, 0.35, 1];
+
+const LandingPage = () => {
+  const [isDark, setIsDark] = useState(() =>
+    document.body.classList.contains(darkTheme)
+  );
+  const [hasToggled, setHasToggled] = useState(false);
+
+  // Logoya tıklayınca logo döner, yeni tema logodan dışarı doğru yayılır
+  const handleThemeToggle = (event) => {
+    const nextIsDark = !isDark;
+    const applyTheme = () => {
+      document.body.classList.toggle(darkTheme, nextIsDark);
+      localStorage.setItem("biltekTheme", nextIsDark ? "dark" : "light");
     };
 
-    themeButton.addEventListener("click", handleThemeToggle);
-  }, []);
+    setIsDark(nextIsDark);
+    setHasToggled(true);
+
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (!document.startViewTransition || reduceMotion) {
+      applyTheme();
+      return;
+    }
+
+    const { left, top, width, height } =
+      event.currentTarget.getBoundingClientRect();
+    const x = left + width / 2;
+    const y = top + height / 2;
+    const radius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y)
+    );
+
+    const transition = document.startViewTransition(applyTheme);
+    transition.ready.then(() => {
+      document.documentElement.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${radius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: themeSwitchDuration * 1000,
+          easing: `cubic-bezier(${themeSwitchEase.join(", ")})`,
+          pseudoElement: "::view-transition-new(root)",
+        }
+      );
+    });
+  };
 
   return (
     <section id="landing-page">
@@ -84,13 +124,21 @@ const LandingPage = () => {
           <AnimatedImage
             loading="eager"
             className="landing-page__logo"
-            ref={themeButtonRef}
             src="/media/logo-no-text.png"
             alt="biltek logo"
             origin="bottom"
             delay={1.1}
             rotate={-100}
+            targetRotate={isDark ? 360 : 0}
             distance={0}
+            onClick={handleThemeToggle}
+            style={{ cursor: "pointer" }}
+            {...(hasToggled && {
+              transition: {
+                duration: themeSwitchDuration,
+                ease: themeSwitchEase,
+              },
+            })}
           />
         </div>
       </AnimatedItem>

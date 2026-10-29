@@ -6,6 +6,8 @@ import aisecPhoto from "./media/aisec.png";
 import talkversityPhoto from "./media/talkversity.png";
 import hidrojenPhoto from "./media/hidrojen.jpg";
 import partiPhoto from "./media/parti.jpeg";
+import panelPhoto from "./media/panel.jpg";
+import filmGecesiPhoto from "./media/film-gecesi.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,6 +19,20 @@ import AnimatedItem from "../../../../components/AnimatedItem";
 import "./SummarySection.scss";
 
 const slideData = [
+  [
+    {
+      img: panelPhoto,
+      alt: "panel fotoğrafı",
+      title: "Panellerimiz",
+      desc: "Alanında deneyimli konuklarımızı ağırladığımız panellerimizle öğrencileri sektörle buluşturuyoruz.",
+    },
+    {
+      img: filmGecesiPhoto,
+      alt: "yılbaşı film gecesi fotoğrafı",
+      title: "Yılbaşı Film Gecesi",
+      desc: "Yeni yıla girmeden üyelerimizle bir araya gelip birlikte film izledik.",
+    },
+  ],
   [
     {
       img: btkPhoto,
@@ -48,9 +64,9 @@ const slideData = [
   [
     {
       img: aisecPhoto,
-      alt: "aisec x biltek fotoğrafı",
-      title: "AISEC x BİLTEK",
-      desc: "AISEC ile işbirliğimizi duyurmaktan büyük mutluluk duyuyoruz!",
+      alt: "aiesec x biltek fotoğrafı",
+      title: "AIESEC x BİLTEK",
+      desc: "AIESEC ile iş birliğimizi duyurmaktan büyük mutluluk duyuyoruz!",
     },
     {
       img: talkversityPhoto,

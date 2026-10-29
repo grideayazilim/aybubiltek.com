@@ -3,18 +3,17 @@
     "section": "Başkan & Başkan Yardımcısı",
     "members": [
       {
-        "name": "Zeynep Sude Sasa",
+        "name": "Sena Çankal",
         "position": "Başkan",
-        "image": "/media/board-members-photos/zeynep-sasa.png",
-        "linkedin": "https://www.linkedin.com/in/zeynepsudesasa/",
-        "gmail": "mailto:zeynepsudesasa@gmail.com"
+        "image": "/media/board-members-photos/sena-cankal.png",
+        "linkedin": "https://www.linkedin.com/in/sena-%C3%A7ankal-733554299/",
+        "gmail": "mailto:cankalsena@gmail.com"
       },
       {
-        "name": "Duygu Köşeli",
+        "name": "Mehmet Mete Demir",
         "position": "Başkan Yardımcısı",
-        "image": "/media/board-members-photos/duygu-koseli.png",
-        "linkedin": "https://www.linkedin.com/in/duygukoseli/",
-        "gmail": "mailto:duygukoseli0@gmail.com"
+        "image": "/media/board-members-photos/mehmet-mete-demir.png",
+        "gmail": "mailto:dmete19033@gmail.com"
       }
     ]
   },
@@ -22,17 +21,10 @@
     "section": "İletişim ve Medya Departmanı",
     "members": [
       {
-        "name": "Nurettin Karayeğen",
-        "position": "İletişim ve Medya Direktörü",
-        "image": "/media/board-members-photos/nuro.png",
-        "linkedin": "https://www.linkedin.com/in/nurettin-karaye%C4%9Fen-625703217/",
-        "gmail": "mailto:nurettinkarayegen@hotmail.com"
-      },
-      {
-        "name": "Sena Çankal",
-        "position": "İletişim ve Medya Direktörü",
-        "image": "/media/board-members-photos/sena-cankal.png",
-        "linkedin": "https://www.linkedin.com/in/sena-%C3%A7ankal-733554299/"
+        "name": "Sudenur Kurt",
+        "position": "İletişim ve Sosyal Medya Direktörü",
+        "image": "/media/board-members-photos/sudenur-kurt.png",
+        "linkedin": "https://www.linkedin.com/in/sudenur-kurt-056535299/"
       }
     ]
   },
@@ -40,16 +32,16 @@
     "section": "Etkinlik Departmanı",
     "members": [
       {
-        "name": "Rojin Diker",
+        "name": "Eylül Doğu",
         "position": "Etkinlik Direktörü",
-        "image": "/media/board-members-photos/rojin-diker.png",
-        "linkedin": "https://www.linkedin.com/in/rojin-diker-9ab920336/"
+        "image": "/media/board-members-photos/eylul-dogu.png",
+        "linkedin": "https://www.linkedin.com/in/eyl%C3%BCl-d-22b522376/"
       },
       {
-        "name": "Bilge Yılmaz",
+        "name": "İzzet Onuralp Yeşil",
         "position": "Etkinlik Direktörü",
-        "image": "/media/board-members-photos/bilge-yilmaz.png",
-        "linkedin": "https://www.linkedin.com/in/bilge-y%C4%B1lmaz-938ab02b4/"
+        "image": "/media/board-members-photos/izzet-onuralp-yesil.png",
+        "linkedin": "https://www.linkedin.com/in/izzet-onuralp-ye%C5%9Fil-b125a731b/"
       }
     ]
   },
@@ -57,22 +49,28 @@
     "section": "Sponsorluk ve Dış İlişkiler Departmanı",
     "members": [
       {
-        "name": "Yemliha Demir",
+        "name": "Burcu Kahraman",
         "position": "Sponsorluk Direktörü",
-        "image": "/media/board-members-photos/yemliha-demir.png",
-        "linkedin": "https://www.linkedin.com/in/yemliha-demir-87301a2a5/"
+        "image": "/media/board-members-photos/burcu-kahraman.png",
+        "linkedin": "https://www.linkedin.com/in/burcu-kahraman-06362428b/"
       },
       {
-        "name": "Kevser Nur Sezer",
+        "name": "Gizem Bilir",
         "position": "Sponsorluk Direktörü",
-        "image": "/media/board-members-photos/kevser-sezen.png",
-        "linkedin": "https://www.linkedin.com/in/kevser-nur-sezen/"
+        "image": "/media/board-members-photos/gizem-bilir.png",
+        "linkedin": "https://www.linkedin.com/in/gizem-bilir-a75412398/"
       }
     ]
   },
   {
     "section": "Emeği Geçenler",
     "members": [
+      {
+        "name": "Zeynep Sude Sasa",
+        "position": "2025-2026 Başkanı",
+        "image": "/media/board-members-photos/zeynep-sasa.png",
+        "linkedin": "https://www.linkedin.com/in/zeynepsudesasa/"
+      },
       {
         "name": "Ayşenur Buldu",
         "position": "2024-2025 Başkanı",

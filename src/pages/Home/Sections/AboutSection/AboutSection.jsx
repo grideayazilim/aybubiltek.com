@@ -7,10 +7,10 @@ import "swiper/css/effect-fade";
 import "./AboutSection.scss";
 import AnimatedItem from "../../../../components/AnimatedItem";
 
-import aboutUsPhoto1 from "./media/giris-foto.JPG";
-import aboutUsPhoto2 from "./media/img10.jpg";
-import aboutUsPhoto3 from "./media/img3.jpg";
-import aboutUsPhoto4 from "./media/kahve-toplu-foto.png";
+import aboutUsPhoto1 from "./media/toplu-foto.jpg";
+import aboutUsPhoto2 from "./media/kafe-etkinlik.jpg";
+import aboutUsPhoto3 from "./media/yk-sahne.jpg";
+import aboutUsPhoto4 from "./media/kafe-toplu-foto.jpg";
 
 const aboutUsPhotos = [
   aboutUsPhoto1,
