@@ -6,6 +6,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import TitleArea from "../../components/TitleArea/TitleArea";
 import "./Gallery.scss";
 import AnimatedItem from "../../components/AnimatedItem";
+import setPageTitle from "../../hooks/setPageTitle";
 
 const galleries = [
   {
@@ -433,6 +434,8 @@ const galleries = [
 ];
 
 const Gallery = () => {
+  setPageTitle("Galeri");
+
   const [openIndex, setOpenIndex] = useState(-1);
   const [activeGallery, setActiveGallery] = useState([]);
 
