@@ -93,7 +93,7 @@ const AboutSection = () => {
             ediyoruz.
           </p>
           <div className="counter big-title">{counter}+ BİLTEK'li</div>
-          <Link to="Hakkımızda" className="animated-button">
+          <Link to="/hakkimizda" className="animated-button">
             Daha Fazla
           </Link>
         </AnimatedItem>

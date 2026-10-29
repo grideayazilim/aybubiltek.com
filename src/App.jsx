@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from "react-router-dom";
 
 import Navbar from './components/Navbar/Navbar';
 import AboutUs from './pages/AboutUs/AboutUs';
@@ -33,6 +33,8 @@ function AppContent() {
         <Route path="/Takim/:teamName" element={<TeamPage key={location.pathname} />} />
         <Route path="/galeri" element={<Gallery />} />
         <Route path="/Galeri" element={<Gallery />} />
+        {/* /index.html ve bilinmeyen adresler boş sayfa yerine ana sayfaya gider */}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </>
